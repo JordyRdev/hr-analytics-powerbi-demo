@@ -44,7 +44,7 @@ table FactVacancyMonthly
 			let
 			    v = Table.SelectColumns(FactVacancies, {"Vacancy ID", "Country", "Grade", "Source", "Opened Date", "Closed Date", "Planned Start Date"}),
 			    withMonths = Table.AddColumn(v, "Month End", each
-			        List.Select(AllMonthEnds, (m) => m >= [Opened Date] and ([Closed Date] = null or m < [Closed Date]))),
+			        List.Select(MonthEndsAll, (m) => m >= [Opened Date] and ([Closed Date] = null or m < [Closed Date]))),
 			    expanded = Table.SelectRows(Table.ExpandListColumn(withMonths, "Month End"), each [Month End] <> null),
 			    due = Table.AddColumn(expanded, "Is Due", each [Planned Start Date] <> null and [Planned Start Date] < [Month End], type logical),
 			    selected = Table.SelectColumns(due, {"Vacancy ID", "Month End", "Country", "Grade", "Source", "Is Due"}),

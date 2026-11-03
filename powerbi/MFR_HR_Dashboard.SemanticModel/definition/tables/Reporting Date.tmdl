@@ -19,7 +19,7 @@ table 'Reporting Date'
 		mode: import
 		source =
 			let
-			    t = Table.FromList(AllMonthEnds, Splitter.SplitByNothing(), {"Month End"}, null, ExtraValues.Error),
+			    t = Table.FromList(MonthEndsAll, Splitter.SplitByNothing(), {"Month End"}, null, ExtraValues.Error),
 			    typed = Table.TransformColumnTypes(t, {{"Month End", type date}}),
 			    lbl = Table.AddColumn(typed, "Label", each fx_D([Month End], "MMM yyyy", "en-US"), type text)
 			in

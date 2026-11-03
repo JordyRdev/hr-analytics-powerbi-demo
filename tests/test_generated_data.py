@@ -43,7 +43,7 @@ def test_one_tracker_per_field_country():
 
 def test_ids_are_pseudonymised():
     cs = M.core_staff()
-    assert cs["staff_id"].str.fullmatch(r"EMP-\d{6}").all()
+    assert cs["staff_id"].str.match(r"^EMP-\d{6}$").all()
     assert not any("name" in c.lower() for c in cs.columns)
 
 

@@ -209,9 +209,9 @@ expression Ref_VLabelRecord =
 		in Record.FromList(Table.Column(t, "Standard Label"), List.Transform(Table.ToRows(t), each _{0} & "|" & _{1}))
 	lineageTag: fa5ab206-5dfe-5613-bcca-3d3dde225e3b
 
-expression AllMonthEnds =
+expression MonthEndsAll =
 		List.Generate(() => HistoryStart, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
-	lineageTag: 297659b3-5454-57e0-88ef-1583a996b892
+	lineageTag: e33ef2a7-c3b3-55cb-860e-364270d1c989
 
 expression CurrentMonthEnds =
 		List.Generate(() => CutOver, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))

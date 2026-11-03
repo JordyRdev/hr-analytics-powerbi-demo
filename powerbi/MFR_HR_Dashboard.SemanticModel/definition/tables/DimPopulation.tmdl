@@ -1,0 +1,41 @@
+table DimPopulation
+	lineageTag: 38d7355b-b0bd-5db6-9a11-2ee7f22f0f7b
+
+	column 'Population Detail'
+		dataType: string
+		lineageTag: 31836bbe-fed6-57e7-8de6-9bf432445cd6
+		summarizeBy: none
+		sourceColumn: Population Detail
+		sortByColumn: 'Detail Sort'
+
+	column Population
+		dataType: string
+		lineageTag: 0a9c10a0-7795-5642-af1c-93e45ce98bdd
+		summarizeBy: none
+		sourceColumn: Population
+		sortByColumn: 'Population Sort'
+
+	column 'Population Sort'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: cc367d9c-fb47-526c-be98-1c14f3d2113e
+		summarizeBy: none
+		sourceColumn: Population Sort
+
+	column 'Detail Sort'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 7a29bf7e-73e6-5956-986f-5ee7fdaa013b
+		summarizeBy: none
+		sourceColumn: Detail Sort
+
+	partition DimPopulation = m
+		mode: import
+		source =
+			let
+			    t = #table(type table [#"Population Detail" = text, Population = text, #"Population Sort" = Int64.Type, #"Detail Sort" = Int64.Type],
+			        {{"Global - HQ", "Global", 1, 1}, {"Global - Field", "Global", 1, 2}, {"International", "International", 2, 3}, {"National", "National", 3, 4}})
+			in
+			    t

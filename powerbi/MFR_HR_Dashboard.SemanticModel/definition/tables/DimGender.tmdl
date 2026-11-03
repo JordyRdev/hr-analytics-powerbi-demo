@@ -1,0 +1,25 @@
+table DimGender
+	lineageTag: a3e525f8-6053-53ad-b185-a1d429454fb0
+
+	column Gender
+		dataType: string
+		lineageTag: 0da5a4dc-79a1-5633-b383-3f646c55da28
+		summarizeBy: none
+		sourceColumn: Gender
+		sortByColumn: 'Gender Sort'
+
+	column 'Gender Sort'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 4de8545a-40bd-5871-bf7a-d2d669a64948
+		summarizeBy: none
+		sourceColumn: Gender Sort
+
+	partition DimGender = m
+		mode: import
+		source =
+			let
+			    t = #table(type table [Gender = text, #"Gender Sort" = Int64.Type], {{"Female", 1}, {"Male", 2}, {"Other", 3}})
+			in
+			    t

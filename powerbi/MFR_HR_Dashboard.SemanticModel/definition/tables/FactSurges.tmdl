@@ -1,0 +1,69 @@
+table FactSurges
+	lineageTag: fc17b35c-d458-51d7-99b6-702b7462add1
+
+	column 'Surge ID'
+		dataType: string
+		lineageTag: 66ce44b3-9859-523f-b6e2-e363f838f015
+		summarizeBy: none
+		sourceColumn: Surge ID
+
+	column 'Request Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: c4d6ab2f-86ca-589a-865b-453fddda4115
+		summarizeBy: none
+		sourceColumn: Request Date
+
+	column Country
+		dataType: string
+		lineageTag: 17a0aec0-aff7-5bf7-af22-6c77fb095063
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Grade
+		dataType: string
+		lineageTag: f9ea1c1b-f5ee-5bff-b393-fffca29f462a
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column Status
+		dataType: string
+		lineageTag: 5facce19-92bd-523b-87d4-cc6b8d8835e5
+		summarizeBy: none
+		sourceColumn: Status
+
+	column 'Filled By'
+		dataType: string
+		lineageTag: 36eb35f0-9328-5116-839d-34b3550bff85
+		summarizeBy: none
+		sourceColumn: Filled By
+
+	column 'Planned Duration Months'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: f0cde4b6-600d-5361-8427-fe75c017cb44
+		summarizeBy: none
+		sourceColumn: Planned Duration Months
+
+	column Source
+		dataType: string
+		lineageTag: 0d95a56c-9ae3-5d92-8906-789eed2dc6ae
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition FactSurges = m
+		mode: import
+		source =
+			let
+			    hist = Table.SelectColumns(Stg_HistSurges, {"surge_id", "request_date", "country", "grade", "status", "filled_by", "planned_months"}),
+			    histSrc = Table.AddColumn(hist, "source", each "Historical", type text),
+			    j = Table.SelectRows(Stg_Jira, each [issue_type] = "Surge"),
+			    jm = Table.AddColumn(j, "surge_status", each if [status] = "Done" then "Filled" else if [status] = "Cancelled" then "Cancelled" else "Open", type text),
+			    jSel = Table.SelectColumns(jm, {"issue_key", "created", "country", "grade", "surge_status", "filled_by_staff_type", "planned_duration_months"}),
+			    jRen = Table.RenameColumns(jSel, {{"issue_key", "surge_id"}, {"created", "request_date"}, {"surge_status", "status"}, {"filled_by_staff_type", "filled_by"}, {"planned_duration_months", "planned_months"}}),
+			    jSrc = Table.AddColumn(jRen, "source", each "JIRA", type text),
+			    combined = Table.Combine({histSrc, jSrc}),
+			    renamed = Table.RenameColumns(combined, {{"surge_id", "Surge ID"}, {"request_date", "Request Date"}, {"country", "Country"}, {"grade", "Grade"},
+			        {"status", "Status"}, {"filled_by", "Filled By"}, {"planned_months", "Planned Duration Months"}, {"source", "Source"}})
+			in
+			    renamed

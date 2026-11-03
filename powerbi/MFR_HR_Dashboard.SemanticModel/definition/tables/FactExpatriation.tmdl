@@ -1,0 +1,56 @@
+table FactExpatriation
+	lineageTag: 15c1dfde-c088-5e37-89ef-6217769a90ba
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: d62b02b5-53e4-596f-9b50-55b81500d73d
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column Country
+		dataType: string
+		lineageTag: 07520156-ad4f-5597-ac53-a093a8c102fb
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Nationality
+		dataType: string
+		lineageTag: d39d69e2-ed6f-5288-a94d-208821e9a6ec
+		summarizeBy: none
+		sourceColumn: Nationality
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: ef17be2f-a0a2-55ec-b240-8f765f0d26dc
+		summarizeBy: none
+		sourceColumn: Start Date
+
+	column 'End Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: a4d3c373-e81d-53a8-b366-d29bfa7dfc61
+		summarizeBy: none
+		sourceColumn: End Date
+
+	column Source
+		dataType: string
+		lineageTag: 72a6c524-876e-5dba-9e6b-955ab1665c21
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition FactExpatriation = m
+		mode: import
+		source =
+			let
+			    derived = fx_Derive(Stg_CoreStaff, "staff_category"),
+			    cur = Table.SelectRows(derived, each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country]),
+			    curSel = Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "country", "nationality", "start_date", "end_date"}), {{"start_date", "start"}, {"end_date", "end"}}),
+			    curSrc = Table.AddColumn(curSel, "source", each "CORE", type text),
+			    curIds = List.Buffer(Table.Column(curSrc, "staff_id")),
+			    hist = Table.SelectRows(Stg_HistExpat, each not List.Contains(curIds, [staff_id])),
+			    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "country", "nationality", "start", "end"}), "source", each "Historical", type text),
+			    combined = Table.Combine({histSel, curSrc}),
+			    renamed = Table.RenameColumns(combined, {{"staff_id", "Staff ID"}, {"country", "Country"}, {"nationality", "Nationality"}, {"start", "Start Date"}, {"end", "End Date"}, {"source", "Source"}})
+			in
+			    renamed

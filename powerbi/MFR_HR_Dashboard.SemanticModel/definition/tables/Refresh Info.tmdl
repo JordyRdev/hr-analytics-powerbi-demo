@@ -1,0 +1,24 @@
+table 'Refresh Info'
+	lineageTag: 1cfc4f21-4173-55f4-8c0e-5b0685a7e0f5
+
+	column 'Last Refresh'
+		dataType: dateTime
+		formatString: yyyy-MM-dd HH:mm
+		lineageTag: 082fb483-c197-54eb-9cf1-0fd02e437201
+		summarizeBy: none
+		sourceColumn: Last Refresh
+
+	column 'Data Through'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 5c8acc37-8a83-5563-b075-ff50ebd8645e
+		summarizeBy: none
+		sourceColumn: Data Through
+
+	partition 'Refresh Info' = m
+		mode: import
+		source =
+			let
+			    t = #table(type table [#"Last Refresh" = datetime, #"Data Through" = date], {{DateTime.LocalNow(), DataThrough}})
+			in
+			    t

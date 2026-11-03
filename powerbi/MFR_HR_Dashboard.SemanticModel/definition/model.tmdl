@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimDate
+ref table 'Reporting Date'
+ref table DimCountry
+ref table DimNationality
+ref table DimGrade
+ref table DimPopulation
+ref table DimContractType
+ref table DimGender
+ref table FactStaffMonthly
+ref table FactContracts
+ref table FactExits
+ref table FactVacancies
+ref table FactVacancyMonthly
+ref table FactSurges
+ref table FactAppraisals
+ref table FactExpatriation
+ref table DQ_Issues
+ref table Recon_Overlap
+ref table 'Refresh Info'
+ref table Breakdown
+ref table _Measures

@@ -1,0 +1,94 @@
+table FactExits
+	lineageTag: 78037165-63e7-5560-b2d3-349eccb36cc4
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: f5e4ac71-c451-5e7b-ac61-bcf30119621b
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column 'Exit Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 91a0fe64-d55c-59cf-919f-0c692c77b700
+		summarizeBy: none
+		sourceColumn: Exit Date
+
+	column 'Exit Reason'
+		dataType: string
+		lineageTag: 7f8a3e9b-93b9-5f2b-be8f-1031cdbf5aa9
+		summarizeBy: none
+		sourceColumn: Exit Reason
+
+	column Voluntary
+		dataType: string
+		lineageTag: cc6f4d95-a2d4-5a0a-9f81-0f029ef32822
+		summarizeBy: none
+		sourceColumn: Voluntary
+
+	column Country
+		dataType: string
+		lineageTag: c537b87c-1fda-5a73-a007-e97c3b409820
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Nationality
+		dataType: string
+		lineageTag: f2ee21b2-6335-5908-b6e5-41ecac9e5120
+		summarizeBy: none
+		sourceColumn: Nationality
+
+	column Grade
+		dataType: string
+		lineageTag: 39df349c-d380-58de-b7b8-670ce168f901
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column 'Contract Type'
+		dataType: string
+		lineageTag: e64e20bb-bd45-5797-91a6-bf7309035536
+		summarizeBy: none
+		sourceColumn: Contract Type
+
+	column Gender
+		dataType: string
+		lineageTag: fae4d2fd-1a0a-5739-98a2-2338ffc88b21
+		summarizeBy: none
+		sourceColumn: Gender
+
+	column 'Population Detail'
+		dataType: string
+		lineageTag: 4fc8ae69-0eed-5a9a-a082-caf5115c4aeb
+		summarizeBy: none
+		sourceColumn: Population Detail
+
+	column Source
+		dataType: string
+		lineageTag: 9d41a86b-1e92-5372-aed8-4e105acb9585
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition FactExits = m
+		mode: import
+		source =
+			let
+			    cols = {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "grade", "unit", "nationality", "gender", "contract_type", "source"},
+			    hist = Table.AddColumn(Table.TransformColumns(Stg_HistLeavers, {{"voluntary", each if _ = "Yes" then "Y" else "N", type text}}), "source", each "Historical", type text),
+			    histSel = Table.SelectColumns(hist, cols),
+			    core = Table.SelectRows(Stg_CoreStaff, each [end_date] <> null and [end_date] > CutOver),
+			    coreSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(core, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
+			        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "CORE", type text), cols),
+			    trk0 = Table.NestedJoin(Stg_TrackerStaff, {"staff_id"}, Stg_CoreStaff, {"staff_id"}, "c", JoinKind.LeftAnti),
+			    trk = Table.SelectRows(trk0, each [end_date] <> null and [end_date] > CutOver),
+			    trkSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(trk, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
+			        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "Tracker", type text), cols),
+			    combined = Table.Combine({histSel, coreSel, trkSel}),
+			    derived = fx_Derive(combined, null),
+			    vol = Table.TransformColumns(derived, {{"voluntary", each if _ = "Y" then "Yes" else if _ = "N" then "No" else null, type text}}),
+			    unknownNat = Table.ReplaceValue(vol, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
+			    selected = Table.SelectColumns(unknownNat, {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "nationality", "grade", "contract_type", "gender", "population_detail", "source"}),
+			    renamed = Table.RenameColumns(selected, {{"staff_id", "Staff ID"}, {"exit_date", "Exit Date"}, {"exit_reason", "Exit Reason"}, {"voluntary", "Voluntary"},
+			        {"country", "Country"}, {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
+			        {"population_detail", "Population Detail"}, {"source", "Source"}})
+			in
+			    renamed

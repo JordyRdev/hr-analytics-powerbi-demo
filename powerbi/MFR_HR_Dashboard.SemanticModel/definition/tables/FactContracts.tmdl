@@ -1,0 +1,94 @@
+table FactContracts
+	lineageTag: 47b1f37e-9d6c-5c3c-ac60-34406dc4b772
+
+	column 'Contract ID'
+		dataType: string
+		lineageTag: 12286b29-123c-514c-8096-f4883d34e1d9
+		summarizeBy: none
+		sourceColumn: Contract ID
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: ea17dbc7-0808-5fc0-b6ab-8d6c6d4ce839
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column 'Contract Type'
+		dataType: string
+		lineageTag: e0bb186c-87b6-5132-9cc9-45590884a873
+		summarizeBy: none
+		sourceColumn: Contract Type
+
+	column Grade
+		dataType: string
+		lineageTag: 107528f6-8bd3-5def-94df-e47c06a90083
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column Country
+		dataType: string
+		lineageTag: 294a193e-c3df-502d-994e-e15c5d60a92f
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Unit
+		dataType: string
+		lineageTag: eeff879a-21cc-5bd3-aa66-21336009bfbc
+		summarizeBy: none
+		sourceColumn: Unit
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 41bf5b1e-084c-5176-a8f6-f1d8e994a9d4
+		summarizeBy: none
+		sourceColumn: Start Date
+
+	column 'End Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 73067c88-3220-5211-95e0-97de80fe12bd
+		summarizeBy: none
+		sourceColumn: End Date
+
+	column 'Granted Months'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: 91fbf03d-ee4f-5b2d-963d-07f2baa7c13e
+		summarizeBy: none
+		sourceColumn: Granted Months
+
+	column 'Is New Joiner Contract'
+		dataType: boolean
+		lineageTag: 56707d09-141f-5d8b-a43c-37305bfcd7b4
+		summarizeBy: none
+		sourceColumn: Is New Joiner Contract
+
+	column 'Population Detail'
+		dataType: string
+		lineageTag: 5a5cba64-c62f-52fe-bc85-aad93bcf87a4
+		summarizeBy: none
+		sourceColumn: Population Detail
+
+	column Source
+		dataType: string
+		lineageTag: c908ef7e-22c6-5f4e-a461-5e1f649aebaa
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition FactContracts = m
+		mode: import
+		source =
+			let
+			    startByStaff = Record.FromList(Table.Column(Stg_CoreStaff, "start_date"), Table.Column(Stg_CoreStaff, "staff_id")),
+			    withStart = Table.AddColumn(Stg_CoreContracts, "emp_start", each Record.FieldOrDefault(startByStaff, [staff_id], null), type nullable date),
+			    newJoiner = Table.AddColumn(withStart, "is_new_joiner", each [start_date] = [emp_start], type logical),
+			    derived = fx_Derive(newJoiner, null),
+			    withSource = Table.AddColumn(derived, "source", each "CORE", type text),
+			    selected = Table.SelectColumns(withSource, {"contract_id", "staff_id", "contract_type", "grade", "country", "unit", "start_date", "end_date_fixed",
+			        "granted_months", "is_new_joiner", "population_detail", "source"}),
+			    renamed = Table.RenameColumns(selected, {{"contract_id", "Contract ID"}, {"staff_id", "Staff ID"}, {"contract_type", "Contract Type"}, {"grade", "Grade"},
+			        {"country", "Country"}, {"unit", "Unit"}, {"start_date", "Start Date"}, {"end_date_fixed", "End Date"},
+			        {"granted_months", "Granted Months"}, {"is_new_joiner", "Is New Joiner Contract"}, {"population_detail", "Population Detail"}, {"source", "Source"}})
+			in
+			    renamed

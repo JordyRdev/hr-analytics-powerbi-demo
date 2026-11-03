@@ -1,0 +1,35 @@
+table Recon_Overlap
+	lineageTag: 97058efb-cca7-5989-be9d-af9db3daed22
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: 803793c7-f088-5ae8-8caa-176d0ca1e52c
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column 'Month End'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 113cd64d-29f0-519d-beb7-deef7241b7b8
+		summarizeBy: none
+		sourceColumn: Month End
+
+	column Source
+		dataType: string
+		lineageTag: b92e6477-1146-59c7-b84e-22f757897f22
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition Recon_Overlap = m
+		mode: import
+		source =
+			let
+			    months = {CutOver, Date.EndOfMonth(Date.AddMonths(CutOver, 1))},
+			    hist = Table.SelectRows(Stg_HistSnap, each List.Contains(months, [month_end])),
+			    histSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(hist, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Historical", type text),
+			    cur = Table.SelectRows(Stg_CurrentExpanded, each List.Contains(months, [month_end])),
+			    curSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Current", type text),
+			    combined = Table.Combine({histSel, curSel}),
+			    typed = Table.TransformColumnTypes(combined, {{"Month End", type date}})
+			in
+			    typed

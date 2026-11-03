@@ -1,0 +1,32 @@
+table DimContractType
+	lineageTag: 0a3d1b96-35b3-507f-9991-889a7f5e04a7
+
+	column 'Contract Type'
+		dataType: string
+		lineageTag: 5f154121-7437-5d81-91e4-fe20d8cbfae1
+		summarizeBy: none
+		sourceColumn: Contract Type
+		sortByColumn: Sort
+
+	column Sort
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 21d8d215-7ddf-51ff-b6d7-931fb1ce5503
+		summarizeBy: none
+		sourceColumn: Sort
+
+	column 'Has End Date'
+		dataType: boolean
+		lineageTag: 1c6a2381-0558-5de1-84fb-7df7d87a9d58
+		summarizeBy: none
+		sourceColumn: Has End Date
+
+	partition DimContractType = m
+		mode: import
+		source =
+			let
+			    t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Contract_Types"),
+			    typed = Table.TransformColumnTypes(t, {{"Contract Type", type text}, {"Sort", Int64.Type}, {"Has End Date", type logical}})
+			in
+			    typed

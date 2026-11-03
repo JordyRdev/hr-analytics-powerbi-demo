@@ -1,0 +1,138 @@
+table DQ_Issues
+	lineageTag: 13496cf2-b4f7-5dff-bc9a-d3714f1c90f1
+
+	column 'Issue ID'
+		dataType: int64
+		formatString: #,0
+		lineageTag: 71998623-36f3-5adb-9bff-c5f269267b10
+		summarizeBy: none
+		sourceColumn: Issue ID
+
+	column Check
+		dataType: string
+		lineageTag: 18d66aab-e8da-5b6a-9c1e-3658b8543af6
+		summarizeBy: none
+		sourceColumn: Check
+
+	column Severity
+		dataType: string
+		lineageTag: 8ebc1fd2-6302-5b63-8ec1-499c7636ac2c
+		summarizeBy: none
+		sourceColumn: Severity
+
+	column Source
+		dataType: string
+		lineageTag: 10738ccf-8eb0-583c-954e-fc0c6f5a42d3
+		summarizeBy: none
+		sourceColumn: Source
+
+	column Table
+		dataType: string
+		lineageTag: ff0241f4-f897-57f6-bd87-f4c434ee4ec3
+		summarizeBy: none
+		sourceColumn: Table
+
+	column Key
+		dataType: string
+		lineageTag: 09429b35-51a8-5009-a271-7a6c5a66c7c5
+		summarizeBy: none
+		sourceColumn: Key
+
+	column Detail
+		dataType: string
+		lineageTag: 42fc1ba0-cf01-5c36-9b2c-7b7aabbe0a10
+		summarizeBy: none
+		sourceColumn: Detail
+
+	column 'Record Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 24b747d0-f4cc-5dbd-9c7c-a0e538aa4fbd
+		summarizeBy: none
+		sourceColumn: Record Date
+
+	partition DQ_Issues = m
+		mode: import
+		source =
+			let
+			    dupes = Table.NestedJoin(Stg_CoreStaff, {"staff_id"}, Stg_TrackerStaff, {"staff_id"}, "t", JoinKind.Inner),
+			    dupRows = Table.AddColumn(Table.AddColumn(Table.AddColumn(dupes, "Key", each [staff_id], type text),
+			        "Detail", each "Held by CORE and by a country tracker; the CORE row is used", type text), "Record Date", each DataThrough, type date),
+			    c1 = fx_Issue(dupRows, "Duplicate staff ID", "Medium", "CORE / Tracker", "FactStaffMonthly"),
+
+			    badContracts = Table.SelectRows(Stg_CoreContracts, each [end_before_start]),
+			    c2src = Table.AddColumn(Table.AddColumn(Table.AddColumn(badContracts, "Key", each [contract_id], type text),
+			        "Detail", each "End " & fx_D([end_date], "yyyy-MM-dd") & " is before start " & fx_D([start_date], "yyyy-MM-dd") & "; end rebuilt from granted months", type text),
+			        "Record Date", each [start_date], type date),
+			    c2 = fx_Issue(c2src, "Contract end before start", "High", "CORE contracts", "FactContracts"),
+
+			    jiraVac = Table.SelectRows(Stg_Jira, each [issue_type] = "Vacancy"),
+			    early = Table.SelectRows(jiraVac, each [resolved] <> null and [created] <> null and [resolved] < [created]),
+			    c3src = Table.AddColumn(Table.AddColumn(Table.AddColumn(early, "Key", each [issue_key], type text),
+			        "Detail", each "Resolved " & fx_D([resolved], "yyyy-MM-dd") & " before created " & fx_D([created], "yyyy-MM-dd") & "; closed on creation date", type text),
+			        "Record Date", each [created], type date),
+			    c3 = fx_Issue(c3src, "Resolved before created", "High", "JIRA", "FactVacancies"),
+
+			    reopened = Table.SelectRows(jiraVac, each [reopened_count] > 0 or [status] = "Reopened"),
+			    c4src = Table.AddColumn(Table.AddColumn(Table.AddColumn(reopened, "Key", each [issue_key], type text),
+			        "Detail", each "Reopened " & Text.From([reopened_count]) & " time(s); latest resolution date used", type text),
+			        "Record Date", each [created], type date),
+			    c4 = fx_Issue(c4src, "Reopened ticket", "Low", "JIRA", "FactVacancies"),
+
+			    staffLatest = Table.Group(FactStaffMonthly, {"Staff ID"}, {{"dob", each List.Max([Date of Birth]), type nullable date}, {"nat", each List.Max([Nationality]), type text}, {"last", each List.Max([Month End]), type date}}),
+			    noDob = Table.SelectRows(staffLatest, each [dob] = null),
+			    c5src = Table.AddColumn(Table.AddColumn(Table.AddColumn(noDob, "Key", each [Staff ID], type text),
+			        "Detail", each "No date of birth in any source; excluded from age measures", type text), "Record Date", each [last], type date),
+			    c5 = fx_Issue(c5src, "Missing date of birth", "Medium", "All sources", "FactStaffMonthly"),
+			    noNat = Table.SelectRows(staffLatest, each [nat] = "Unknown"),
+			    c6src = Table.AddColumn(Table.AddColumn(Table.AddColumn(noNat, "Key", each [Staff ID], type text),
+			        "Detail", each "No nationality; shown as Unknown in GN/GS measures", type text), "Record Date", each [last], type date),
+			    c6 = fx_Issue(c6src, "Missing nationality", "Medium", "All sources", "FactStaffMonthly"),
+
+			    coreMis = Table.SelectRows(Stg_CoreStaff, each Record.FieldOrDefault(Ref_LegacyRecord, [staff_category] ?? "", null) <> [staff_type]),
+			    c7asrc = Table.AddColumn(Table.AddColumn(Table.AddColumn(coreMis, "Key", each [staff_id], type text),
+			        "Detail", each "Labelled " & [staff_category] & " but grade " & [grade] & " is " & [staff_type] & "; grade used", type text), "Record Date", each DataThrough, type date),
+			    c7a = fx_Issue(c7asrc, "Category label vs grade", "High", "CORE", "FactStaffMonthly"),
+			    histD = fx_Derive(Table.SelectRows(Stg_HistSnap, each [grade] <> null), "label"),
+			    histMis = Table.SelectRows(histD, each Record.FieldOrDefault(Ref_LegacyRecord, [label] ?? "", null) <> [staff_type]),
+			    histMisG = Table.Group(histMis, {"staff_id"}, {{"first", each List.Min([month_end]), type date}, {"label", each List.Min([label]), type text}, {"grade", each List.Min([grade]), type text}, {"stype", each List.Min([staff_type]), type text}}),
+			    c7bsrc = Table.AddColumn(Table.AddColumn(Table.AddColumn(histMisG, "Key", each [staff_id], type text),
+			        "Detail", each "Labelled " & [label] & " but grade " & [grade] & " is " & [stype] & "; grade used", type text), "Record Date", each [first], type date),
+			    c7b = fx_Issue(c7bsrc, "Category label vs grade", "High", "Historical", "FactStaffMonthly"),
+
+			    recon = Table.Group(Recon_Overlap, {"Staff ID", "Month End"}, {{"n", each Table.RowCount(_), Int64.Type}, {"src", each List.Min([Source]), type text}}),
+			    one = Table.SelectRows(recon, each [n] = 1),
+			    c8src = Table.AddColumn(Table.AddColumn(Table.AddColumn(one, "Key", each [Staff ID], type text),
+			        "Detail", each "Only in the " & Text.Lower([src]) & " feed for " & fx_D([Month End], "MMM yyyy", "en-US"), type text), "Record Date", each [Month End], type date),
+			    c8 = fx_Issue(c8src, "Overlap month mismatch", "Medium", "Historical / CORE", "Recon_Overlap"),
+
+			    openHist = Table.SelectRows(Stg_HistVacancies, each [closed] = null and not List.Contains(List.RemoveNulls(Table.Column(Stg_JiraVacancies, "legacy_vacancy_ref")), [vacancy_id])),
+			    c9src = Table.AddColumn(Table.AddColumn(Table.AddColumn(openHist, "Key", each [vacancy_id], type text),
+			        "Detail", each "Open in the legacy log at cut-over and never re-created in JIRA; stays open in the model", type text), "Record Date", each [opened], type date),
+			    c9 = fx_Issue(c9src, "Legacy vacancy not migrated", "High", "Historical", "FactVacancies"),
+
+			    v1 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_CoreStaff, "bad", each [country_raw] <> [country] or ([nationality_raw] <> null and [nationality_raw] <> [nationality]), type logical), "Key", each [staff_id], type text), each [bad]),
+			    v1i = fx_Issue(Table.AddColumn(Table.AddColumn(v1, "Detail", each "Duty country '" & [country_raw] & "' / nationality '" & ([nationality_raw] ?? "") & "'", type text), "Record Date", each DataThrough, type date), "Country spelling variant", "Low", "CORE staff", "FactStaffMonthly"),
+			    v2 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_CoreContracts, "bad", each [country_raw] <> [country], type logical), "Key", each [contract_id], type text), each [bad]),
+			    v2i = fx_Issue(Table.AddColumn(Table.AddColumn(v2, "Detail", each "Duty country '" & [country_raw] & "'", type text), "Record Date", each [start_date], type date), "Country spelling variant", "Low", "CORE contracts", "FactContracts"),
+			    v3 = Table.SelectRows(Table.AddColumn(Stg_Jira, "bad", each [country_raw] <> [country], type logical), each [bad]),
+			    v3i = fx_Issue(Table.AddColumn(Table.AddColumn(Table.AddColumn(v3, "Key", each [issue_key], type text), "Detail", each "Country '" & [country_raw] & "'", type text), "Record Date", each [created], type date), "Country spelling variant", "Low", "JIRA", "FactVacancies"),
+			    v4 = Table.SelectRows(Table.AddColumn(Stg_TrackerStaff, "bad", each [nationality_raw] <> null and [nationality_raw] <> [nationality], type logical), each [bad]),
+			    v4i = fx_Issue(Table.AddColumn(Table.AddColumn(Table.AddColumn(v4, "Key", each [staff_id], type text), "Detail", each "Nationality '" & [nationality_raw] & "'", type text), "Record Date", each DataThrough, type date), "Country spelling variant", "Low", "Country trackers", "FactStaffMonthly"),
+			    v4f = fx_Issue(#table(type table [Key = text, Detail = text, #"Record Date" = date], List.Transform(List.Select(List.Distinct(Table.Column(Stg_TrackerStaff, "country_raw")), each fx_CleanCountry(_) <> _), each {"tracker file", "File name uses '" & _ & "'", DataThrough})), "Country spelling variant", "Low", "Country trackers", "FactStaffMonthly"),
+			    v5 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_HistSnap, "bad", each [country_raw] <> [country] or ([nationality_raw] <> null and [nationality_raw] <> [nationality]), type logical), "Key", each [staff_id] & "|" & fx_D([month_end], "yyyy-MM"), type text), each [bad]),
+			    v5i = fx_Issue(Table.AddColumn(Table.AddColumn(v5, "Detail", each "Location '" & ([country_raw] ?? "") & "' / nationality '" & ([nationality_raw] ?? "") & "'", type text), "Record Date", each [month_end], type date), "Country spelling variant", "Low", "Historical", "FactStaffMonthly"),
+			    v6 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_HistVacancies, "bad", each [country_raw] <> [country], type logical), "Key", each [vacancy_id], type text), each [bad]),
+			    v6i = fx_Issue(Table.AddColumn(Table.AddColumn(v6, "Detail", each "Country '" & [country_raw] & "'", type text), "Record Date", each [opened], type date), "Country spelling variant", "Low", "Historical", "FactVacancies"),
+			    v7 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_HistSurges, "bad", each [country_raw] <> [country], type logical), "Key", each [surge_id], type text), each [bad]),
+			    v7i = fx_Issue(Table.AddColumn(Table.AddColumn(v7, "Detail", each "Country '" & [country_raw] & "'", type text), "Record Date", each [request_date], type date), "Country spelling variant", "Low", "Historical", "FactSurges"),
+			    v8 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_HistExpat, "bad", each [country_raw] <> [country] or ([nationality_raw] <> null and [nationality_raw] <> [nationality]), type logical), "Key", each [staff_id], type text), each [bad]),
+			    v8i = fx_Issue(Table.AddColumn(Table.AddColumn(v8, "Detail", each "Posted to '" & ([country_raw] ?? "") & "' / nationality '" & ([nationality_raw] ?? "") & "'", type text), "Record Date", each [start], type date), "Country spelling variant", "Low", "Historical", "FactExpatriation"),
+			    v9 = Table.SelectRows(Table.AddColumn(Table.AddColumn(Stg_HistLeavers, "bad", each [country_raw] <> [country] or ([nationality_raw] <> null and [nationality_raw] <> [nationality]), type logical), "Key", each [staff_id], type text), each [bad]),
+			    v9i = fx_Issue(Table.AddColumn(Table.AddColumn(v9, "Detail", each "Location '" & ([country_raw] ?? "") & "' / nationality '" & ([nationality_raw] ?? "") & "'", type text), "Record Date", each [exit_date], type date), "Country spelling variant", "Low", "Historical", "FactExits"),
+
+			    combined = Table.Combine({c1, c2, c3, c4, c5, c6, c7a, c7b, c8, c9, v1i, v2i, v3i, v4i, v4f, v5i, v6i, v7i, v8i, v9i}),
+			    indexed = Table.AddIndexColumn(combined, "Issue ID", 1, 1, Int64.Type),
+			    typed = Table.TransformColumnTypes(indexed, {{"Record Date", type date}})
+			in
+			    typed

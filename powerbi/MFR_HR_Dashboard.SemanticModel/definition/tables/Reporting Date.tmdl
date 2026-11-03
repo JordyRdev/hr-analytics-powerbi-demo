@@ -1,0 +1,26 @@
+table 'Reporting Date'
+	lineageTag: b8892f55-4510-57d3-8390-b5a28e49ee56
+
+	column 'Month End'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: b9d702ca-2b34-5e6a-998a-13f8da423e14
+		summarizeBy: none
+		sourceColumn: Month End
+
+	column Label
+		dataType: string
+		lineageTag: 405a25ae-b044-53c2-aec4-5d105766cd5e
+		summarizeBy: none
+		sourceColumn: Label
+		sortByColumn: 'Month End'
+
+	partition 'Reporting Date' = m
+		mode: import
+		source =
+			let
+			    t = Table.FromList(AllMonthEnds, Splitter.SplitByNothing(), {"Month End"}, null, ExtraValues.Error),
+			    typed = Table.TransformColumnTypes(t, {{"Month End", type date}}),
+			    lbl = Table.AddColumn(typed, "Label", each fx_D([Month End], "MMM yyyy", "en-US"), type text)
+			in
+			    lbl

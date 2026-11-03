@@ -1,0 +1,422 @@
+expression DataFolder = "C:\hr-analytics-powerbi\data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 072cbbd0-8bea-5f91-9d07-f9e2e33665b4
+	annotation PBI_ResultType = Text
+
+expression DataThrough = #date(2026, 10, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+	lineageTag: 825477a8-fa0a-52d6-8585-9e3bca8671e6
+	annotation PBI_ResultType = Date
+
+expression HistoryStart = #date(2022, 1, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+	lineageTag: bf62f1a6-4adc-5284-9e13-ceca063a3657
+	annotation PBI_ResultType = Date
+
+expression CutOver = #date(2024, 12, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+	lineageTag: 828f9b9e-f529-5201-a0b2-65524727a2db
+	annotation PBI_ResultType = Date
+
+expression fx_Path =
+		(sub as text, optional file as nullable text) as text =>
+		let
+		    root = Text.TrimEnd(DataFolder, "\")
+		in
+		    root & "\" & sub & (if file = null then "" else "\" & file)
+	lineageTag: 5e0adc9a-84a3-5d20-b315-b43e3fb0df87
+	annotation PBI_ResultType = Function
+
+expression fx_Sheet =
+		(sub as text, file as text, sheet as text) as table =>
+		let
+		    wb = Excel.Workbook(File.Contents(fx_Path(sub, file)), null, true),
+		    data = wb{[Item = sheet, Kind = "Sheet"]}[Data]
+		in
+		    Table.PromoteHeaders(data, [PromoteAllScalars = true])
+	lineageTag: 437653f6-2a09-5b6b-9f5b-85fcdf70ec60
+	annotation PBI_ResultType = Function
+
+expression fx_Csv =
+		(sub as text, file as text) as table =>
+		let
+		    src = Csv.Document(File.Contents(fx_Path(sub, file)), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    promoted = Table.PromoteHeaders(src, [PromoteAllScalars = true]),
+		    blanks = Table.ReplaceValue(promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(promoted))
+		in
+		    blanks
+	lineageTag: fa2daee2-7b82-5353-9481-e5e09c085d9a
+	annotation PBI_ResultType = Function
+
+expression fx_ToDate =
+		(v as any) as nullable date =>
+		let
+		    out =
+		        if v = null then null
+		        else if v is date then v
+		        else if v is datetime then Date.From(v)
+		        else if v is text then
+		            let t = Text.Trim(v) in
+		                if t = "" then null
+		                else if Text.Contains(t, "/") then try Date.FromText(t, [Format = "dd/MM/yyyy", Culture = "en-GB"]) otherwise null
+		                else try Date.FromText(Text.Start(t, 10), [Format = "yyyy-MM-dd", Culture = "en-US"]) otherwise null
+		        else null
+		in
+		    out
+	lineageTag: c8443b23-2244-5920-b403-b949893e77c4
+	annotation PBI_ResultType = Function
+
+expression fx_CleanCountry =
+		(value as nullable text) as nullable text =>
+		let
+		    t = if value = null then null else Text.Trim(value),
+		    key = if t = null or t = "" then null else Text.Lower(t),
+		    hit = if key = null then null else Record.FieldOrDefault(Ref_VariantRecord, key, null),
+		    out = if key = null then null else if hit <> null then hit else t
+		in
+		    out
+	lineageTag: 4102cc5c-2ce1-5523-8c11-94db0abbeee4
+	annotation PBI_ResultType = Function
+
+expression fx_Derive =
+		(t as table, labelColumn as nullable text) as table =>
+		let
+		    withType = Table.AddColumn(t, "staff_type", each
+		        let
+		            fromGrade = Record.FieldOrDefault(Ref_GradeRecord, [grade] ?? "", null),
+		            fromLabel = if labelColumn = null then null else Record.FieldOrDefault(Ref_LegacyRecord, Record.Field(_, labelColumn) ?? "", null)
+		        in
+		            if fromGrade <> null then fromGrade else fromLabel, type text),
+		    withDetail = Table.AddColumn(withType, "population_detail", each
+		        if [country] = HQCountry then "Global - HQ"
+		        else if [staff_type] = "International" and Record.FieldOrDefault(Ref_UnitScopeRecord, [unit] ?? "", null) = "Global" then "Global - Field"
+		        else if [staff_type] = "International" then "International"
+		        else "National", type text)
+		in
+		    withDetail
+	lineageTag: c54182f6-7de4-5fcd-8885-2b1f0935c6cc
+	annotation PBI_ResultType = Function
+
+expression fx_StandardiseTracker =
+		(raw as table, country as nullable text) as table =>
+		let
+		    isHeader = (r as list) as logical =>
+		        List.AnyTrue(List.Transform(r, each _ is text and Record.FieldOrDefault(Ref_AliasRecord, Text.Lower(Text.Trim(_)), null) = "staff_id")),
+		    headerIndex = List.PositionOf(List.Transform(Table.ToRows(raw), isHeader), true),
+		    body = Table.Skip(raw, headerIndex),
+		    promoted = Table.PromoteHeaders(body, [PromoteAllScalars = true]),
+		    renames = List.Transform(Table.ColumnNames(promoted), each {_, Record.FieldOrDefault(Ref_AliasRecord, Text.Lower(Text.Trim(_)), _)}),
+		    renamed = Table.RenameColumns(promoted, renames, MissingField.Ignore),
+		    standard = {"staff_id", "gender", "date_of_birth", "nationality", "grade", "contract_type", "team",
+		                "start_date", "end_date", "exit_reason", "voluntary_exit", "last_appraisal_date"},
+		    selected = Table.SelectColumns(renamed, standard, MissingField.UseNull),
+		    staffOnly = Table.SelectRows(selected, each [staff_id] is text and Text.StartsWith(Text.Trim([staff_id]), "EMP-")),
+		    typed = Table.TransformColumns(staffOnly, {
+		        {"date_of_birth", fx_ToDate, type nullable date}, {"start_date", fx_ToDate, type nullable date},
+		        {"end_date", fx_ToDate, type nullable date}, {"last_appraisal_date", fx_ToDate, type nullable date}}),
+		    withCountry = Table.AddColumn(typed, "country", each country, type text)
+		in
+		    withCountry
+	lineageTag: d8ea9052-be23-50a2-a2cf-effa9704db24
+	annotation PBI_ResultType = Function
+
+expression fx_D =
+		(d as nullable date, fmt as text, optional culture as nullable text) as nullable text =>
+		if d = null then null else Date.ToText(d, [Format = fmt, Culture = if culture = null then "en-US" else culture])
+	lineageTag: 5109b128-cdf8-5caa-9bd7-f9d08ec676c2
+	annotation PBI_ResultType = Function
+
+expression fx_Issue =
+		(t as table, check as text, severity as text, source as text, tableName as text) as table =>
+		let
+		    a = Table.AddColumn(t, "Check", each check, type text),
+		    b = Table.AddColumn(a, "Severity", each severity, type text),
+		    c = Table.AddColumn(b, "Source", each source, type text),
+		    d = Table.AddColumn(c, "Table", each tableName, type text),
+		    e = Table.SelectColumns(d, {"Check", "Severity", "Source", "Table", "Key", "Detail", "Record Date"})
+		in
+		    e
+	lineageTag: 1a86a514-4d00-5762-b117-9e1fe0d77834
+	annotation PBI_ResultType = Function
+
+expression Ref_Countries =
+		let
+		    t = fx_Sheet("reference", "country_list.xlsx", "Countries"),
+		    typed = Table.TransformColumnTypes(t, {{"Country", type text}, {"ISO3", type text}, {"Region", type text}, {"Is HQ", type logical}, {"Office Status", type text}})
+		in
+		    typed
+	lineageTag: f4242319-fa69-55a8-bc11-d56624351856
+
+expression Ref_Variants =
+		fx_Sheet("reference", "country_list.xlsx", "Variants")
+	lineageTag: 88e2883d-2fa4-5f4e-bd93-a78399a5cfda
+
+expression Ref_VariantRecord =
+		Record.FromList(
+		    Table.Column(Ref_Variants, "Country"),
+		    List.Transform(Table.Column(Ref_Variants, "Variant"), each Text.Lower(Text.Trim(_))))
+	lineageTag: 99fb6d33-cdad-539d-a750-9824ec889951
+
+expression HQCountry =
+		Table.SelectRows(Ref_Countries, each [Is HQ] = true){0}[Country]
+	lineageTag: 6abb1582-899c-5f8b-9d7f-6f061c6e14f1
+
+expression Ref_Grades =
+		let
+		    t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Grade_StaffType"),
+		    typed = Table.TransformColumnTypes(t, {{"Grade", type text}, {"Staff Type", type text}, {"Band", type text}, {"Sort", Int64.Type}})
+		in
+		    typed
+	lineageTag: b0d3ad3b-ee58-50f6-8501-0f52db3cbf31
+
+expression Ref_GradeRecord =
+		Record.FromList(Table.Column(Ref_Grades, "Staff Type"), Table.Column(Ref_Grades, "Grade"))
+	lineageTag: c2b905a0-d3d9-53f7-a7f8-1dd0faa171e8
+
+expression Ref_UnitScopeRecord =
+		let t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Unit_Scope")
+		in Record.FromList(Table.Column(t, "Scope"), Table.Column(t, "Unit"))
+	lineageTag: 28d0bd7f-6870-5f9a-a4c1-e97e58cc6e50
+
+expression Ref_LegacyRecord =
+		let t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Legacy_Labels")
+		in Record.FromList(Table.Column(t, "Staff Type"), Table.Column(t, "Legacy Label"))
+	lineageTag: 0e67a3a0-c5cb-533b-b692-7a7686271982
+
+expression Ref_ContractRecord =
+		let t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Contract_Labels")
+		in Record.FromList(Table.Column(t, "Contract Type"), Table.Column(t, "Label"))
+	lineageTag: 1697eb6c-a926-5461-b1ad-ce24bd0f3d0b
+
+expression Ref_GenderRecord =
+		let t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Gender_Labels")
+		in Record.FromList(Table.Column(t, "Gender"), Table.Column(t, "Label"))
+	lineageTag: 8387dbc9-72fe-5e5d-aed2-09fe955a4460
+
+expression Ref_ExitRecord =
+		let t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Exit_Labels")
+		in Record.FromList(Table.Column(t, "Exit Reason"), Table.Column(t, "Legacy Label"))
+	lineageTag: 82c57858-1758-5e26-905c-00c0aa3617f6
+
+expression Ref_GNGSRecord =
+		let t = fx_Sheet("reference", "gn_gs_nationality.xlsx", "Nationality_GNGS")
+		in Record.FromList(Table.Column(t, "GN/GS"), Table.Column(t, "Nationality"))
+	lineageTag: 6fa10796-ac73-5d15-b57d-eb3742afe133
+
+expression Ref_AliasRecord =
+		let t = fx_Sheet("reference", "tracker_column_map.xlsx", "Aliases")
+		in Record.FromList(Table.Column(t, "Standard Column"), Table.Column(t, "Alias"))
+	lineageTag: e8cf38a9-b5b9-56b1-88be-c8603f3adba1
+
+expression Ref_VLabelRecord =
+		let t = fx_Sheet("reference", "vacancy_label_mapping.xlsx", "Labels")
+		in Record.FromList(Table.Column(t, "Standard Label"), List.Transform(Table.ToRows(t), each _{0} & "|" & _{1}))
+	lineageTag: fa5ab206-5dfe-5613-bcca-3d3dde225e3b
+
+expression AllMonthEnds =
+		List.Generate(() => HistoryStart, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
+	lineageTag: 297659b3-5454-57e0-88ef-1583a996b892
+
+expression CurrentMonthEnds =
+		List.Generate(() => CutOver, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
+	lineageTag: 9c24e77f-b299-57fa-a5ad-46fa55c48882
+
+expression Stg_CoreStaff =
+		let
+		    src = fx_Csv("core_hris", "core_staff_export.csv"),
+		    typed = Table.TransformColumns(src, {
+		        {"date_of_birth", fx_ToDate, type nullable date}, {"start_date", fx_ToDate, type nullable date},
+		        {"end_date", fx_ToDate, type nullable date}, {"last_appraisal_date", fx_ToDate, type nullable date}}),
+		    raw = Table.AddColumn(Table.AddColumn(typed, "country_raw", each [duty_country], type text), "nationality_raw", each [nationality], type text),
+		    clean = Table.TransformColumns(raw, {{"duty_country", fx_CleanCountry, type text}, {"nationality", fx_CleanCountry, type text}}),
+		    renamed = Table.RenameColumns(clean, {{"duty_country", "country"}, {"team", "unit"}})
+		in
+		    fx_Derive(renamed, "staff_category")
+	lineageTag: 31bbc996-5b84-5393-99b9-8a2ae3498c9d
+
+expression Stg_CoreContracts =
+		let
+		    src = fx_Csv("core_hris", "core_contracts_export.csv"),
+		    typed = Table.TransformColumns(src, {
+		        {"start_date", fx_ToDate, type nullable date}, {"end_date", fx_ToDate, type nullable date},
+		        {"granted_months", each if _ = null then null else Number.From(_), type nullable number}}),
+		    raw = Table.AddColumn(typed, "country_raw", each [duty_country], type text),
+		    clean = Table.TransformColumns(raw, {{"duty_country", fx_CleanCountry, type text}}),
+		    flagged = Table.AddColumn(clean, "end_before_start", each [end_date] <> null and [start_date] <> null and [end_date] < [start_date], type logical),
+		    repaired = Table.AddColumn(flagged, "end_date_fixed", each
+		        if [end_before_start] then
+		            (if [granted_months] = null then [start_date] else Date.AddDays(Date.AddMonths([start_date], Number.Round([granted_months], 0)), -1))
+		        else [end_date], type nullable date),
+		    renamed = Table.RenameColumns(repaired, {{"duty_country", "country"}, {"team", "unit"}})
+		in
+		    renamed
+	lineageTag: 278e159a-d9e6-58e1-83a4-df9407b03187
+
+expression Stg_CoreAppraisals =
+		let
+		    src = fx_Csv("core_hris", "core_appraisals_export.csv"),
+		    typed = Table.TransformColumns(src, {{"appraisal_date", fx_ToDate, type nullable date}, {"cycle", each Number.From(_), Int64.Type}})
+		in
+		    typed
+	lineageTag: 2f121aeb-b1a9-5fb5-a109-7753bb309a4c
+
+expression Stg_TrackerStaff =
+		let
+		    files = Folder.Files(fx_Path("country_trackers")),
+		    xlsx = Table.SelectRows(files, each Text.EndsWith([Name], ".xlsx") and not Text.StartsWith([Name], "~$")),
+		    withCountry = Table.AddColumn(xlsx, "country_raw", each Text.Replace(Text.Replace([Name], "NS_tracker_", ""), ".xlsx", ""), type text),
+		    withData = Table.AddColumn(withCountry, "data", each fx_StandardiseTracker(Excel.Workbook([Content], null, true){0}[Data], fx_CleanCountry([country_raw]))),
+		    combined = Table.Combine(withData[data]),
+		    mapped = Table.TransformColumns(combined, {
+		        {"gender", each Record.FieldOrDefault(Ref_GenderRecord, Text.From(_ ?? ""), "Other"), type text},
+		        {"voluntary_exit", each if _ = null then null else if List.Contains({"Y", "YES", "TRUE"}, Text.Upper(Text.Trim(Text.From(_)))) then "Y" else "N", type text},
+		        {"nationality", each _, type text}}),
+		    nationalityRaw = Table.AddColumn(mapped, "nationality_raw", each [nationality], type text),
+		    cleaned = Table.TransformColumns(nationalityRaw, {{"nationality", fx_CleanCountry, type text}}),
+		    renamed = Table.RenameColumns(cleaned, {{"team", "unit"}})
+		in
+		    renamed
+	lineageTag: 495e6f61-b107-5d3a-b81b-8ff94f676f77
+
+expression Stg_HistSnap =
+		let
+		    files = Folder.Files(fx_Path("historical")),
+		    sel = Table.SelectRows(files, each Text.StartsWith([Name], "Staff_Snapshots_") and Text.EndsWith([Name], ".xlsx")),
+		    data = Table.AddColumn(sel, "d", each Table.PromoteHeaders(Excel.Workbook([Content], null, true){[Item = "Snapshot", Kind = "Sheet"]}[Data], [PromoteAllScalars = true])),
+		    combined = Table.Combine(data[d]),
+		    renamed = Table.RenameColumns(combined, {{"Snapshot Date", "month_end"}, {"Staff No", "staff_id"}, {"Sex", "gender"},
+		        {"Birth Date", "dob"}, {"Nationality", "nationality"}, {"Category", "label"}, {"Grade", "grade"},
+		        {"Location", "country"}, {"Unit", "unit"}, {"Contract", "contract_type"}, {"Start Date", "start_date"}}),
+		    dates = Table.TransformColumns(renamed, {{"month_end", fx_ToDate, type nullable date}, {"dob", fx_ToDate, type nullable date}, {"start_date", fx_ToDate, type nullable date}}),
+		    raw = Table.AddColumn(Table.AddColumn(dates, "country_raw", each [country], type text), "nationality_raw", each [nationality], type text),
+		    clean = Table.TransformColumns(raw, {
+		        {"country", fx_CleanCountry, type text}, {"nationality", fx_CleanCountry, type text},
+		        {"gender", each Record.FieldOrDefault(Ref_GenderRecord, Text.From(_ ?? ""), "Other"), type text},
+		        {"contract_type", each Record.FieldOrDefault(Ref_ContractRecord, Text.From(_ ?? ""), null), type text}})
+		in
+		    clean
+	lineageTag: 42060d3c-9add-54f8-8da0-f0d6a9eacb01
+
+expression Stg_HistLeavers =
+		let
+		    t = fx_Sheet("historical", "Leavers_Log_2022_2024.xlsx", "Leavers"),
+		    renamed = Table.RenameColumns(t, {{"Staff No", "staff_id"}, {"Leaving Date", "exit_date"}, {"Reason", "exit_reason"},
+		        {"Voluntary", "voluntary"}, {"Location", "country"}, {"Grade", "grade"}, {"Unit", "unit"},
+		        {"Nationality", "nationality"}, {"Sex", "gender"}, {"Contract", "contract_type"}}),
+		    raw = Table.AddColumn(Table.AddColumn(renamed, "country_raw", each [country], type text), "nationality_raw", each [nationality], type text),
+		    clean = Table.TransformColumns(raw, {
+		        {"exit_date", fx_ToDate, type nullable date},
+		        {"exit_reason", each Record.FieldOrDefault(Ref_ExitRecord, Text.From(_ ?? ""), null), type text},
+		        {"country", fx_CleanCountry, type text}, {"nationality", fx_CleanCountry, type text},
+		        {"gender", each Record.FieldOrDefault(Ref_GenderRecord, Text.From(_ ?? ""), "Other"), type text},
+		        {"contract_type", each Record.FieldOrDefault(Ref_ContractRecord, Text.From(_ ?? ""), null), type text}})
+		in
+		    clean
+	lineageTag: 19774d79-c6ed-58c3-a1f6-0fb5c470c528
+
+expression Stg_HistVacancies =
+		let
+		    t = fx_Sheet("historical", "Vacancy_Log_2022_2024.xlsx", "Vacancies"),
+		    renamed = Table.RenameColumns(t, {{"Vacancy Ref", "vacancy_id"}, {"Country", "country"}, {"Grade", "grade"},
+		        {"Reason", "opening_reason"}, {"Date Opened", "opened"}, {"Planned Start", "planned_start"},
+		        {"Planned Months", "planned_months"}, {"Date Closed", "closed"}, {"Outcome", "outcome"}, {"Candidate", "candidate_type"}}),
+		    raw = Table.AddColumn(renamed, "country_raw", each [country], type text),
+		    clean = Table.TransformColumns(raw, {
+		        {"country", fx_CleanCountry, type text},
+		        {"opened", fx_ToDate, type nullable date}, {"planned_start", fx_ToDate, type nullable date}, {"closed", fx_ToDate, type nullable date},
+		        {"planned_months", each if _ = null then null else Number.From(_), type nullable number},
+		        {"opening_reason", each Record.FieldOrDefault(Ref_VLabelRecord, "Reason|" & Text.From(_ ?? ""), null), type text},
+		        {"outcome", each if _ = null then null else Record.FieldOrDefault(Ref_VLabelRecord, "Outcome|" & Text.From(_), null), type text},
+		        {"candidate_type", each if _ = null then null else Record.FieldOrDefault(Ref_VLabelRecord, "Candidate|" & Text.From(_), null), type text}}),
+		    extras = Table.AddColumn(Table.AddColumn(Table.AddColumn(Table.AddColumn(clean,
+		        "time_to_done_hours", each null, type nullable number),
+		        "date_issue", each false, type logical),
+		        "reopened", each false, type logical),
+		        "source", each "Historical", type text)
+		in
+		    extras
+	lineageTag: 86fb8925-d759-51b2-a0d8-509bc7a52a0e
+
+expression Stg_Jira =
+		let
+		    src = fx_Csv("jira", "jira_recruitment_export.csv"),
+		    typed = Table.TransformColumns(src, {
+		        {"created", fx_ToDate, type nullable date}, {"resolved", fx_ToDate, type nullable date},
+		        {"planned_start_date", fx_ToDate, type nullable date},
+		        {"planned_duration_months", each if _ = null then null else Number.From(_), type nullable number},
+		        {"time_to_done_hours", each if _ = null then null else Number.From(_), type nullable number},
+		        {"reopened_count", each if _ = null then 0 else Number.From(_), Int64.Type}}),
+		    raw = Table.AddColumn(typed, "country_raw", each [country], type text),
+		    clean = Table.TransformColumns(raw, {{"country", fx_CleanCountry, type text}})
+		in
+		    clean
+	lineageTag: 54b209fc-25fc-5fda-b6e2-44cdce295c0d
+
+expression Stg_JiraVacancies =
+		let
+		    v = Table.SelectRows(Stg_Jira, each [issue_type] = "Vacancy"),
+		    histOpened = Record.FromList(Table.Column(Stg_HistVacancies, "opened"), Table.Column(Stg_HistVacancies, "vacancy_id")),
+		    a = Table.AddColumn(v, "closed_status", each List.Contains({"Done", "Cancelled"}, [status]), type logical),
+		    b = Table.AddColumn(a, "date_issue", each [closed_status] and [resolved] <> null and [created] <> null and [resolved] < [created], type logical),
+		    c = Table.AddColumn(b, "closed", each if [date_issue] then [created] else if [closed_status] then [resolved] else null, type nullable date),
+		    d = Table.AddColumn(c, "opened", each if [legacy_vacancy_ref] = null then [created] else Record.FieldOrDefault(histOpened, [legacy_vacancy_ref], [created]), type nullable date),
+		    e = Table.AddColumn(d, "outcome", each if [closed] = null then null else [closure_outcome], type text),
+		    f = Table.AddColumn(e, "candidate", each if [closed] = null then null else [candidate_type], type text),
+		    g = Table.AddColumn(f, "reopened", each [reopened_count] > 0, type logical),
+		    h = Table.AddColumn(g, "source", each if [legacy_vacancy_ref] <> null then "JIRA (migrated)" else "JIRA", type text),
+		    sel = Table.SelectColumns(h, {"issue_key", "country", "country_raw", "grade", "opening_reason", "opened", "planned_start_date",
+		        "planned_duration_months", "closed", "outcome", "candidate", "time_to_done_hours", "date_issue", "reopened", "source", "legacy_vacancy_ref"}),
+		    renamed = Table.RenameColumns(sel, {{"issue_key", "vacancy_id"}, {"planned_start_date", "planned_start"},
+		        {"planned_duration_months", "planned_months"}, {"candidate", "candidate_type"}})
+		in
+		    renamed
+	lineageTag: 0f54c709-dcc3-5b01-98b2-3aad60b47a5c
+
+expression Stg_HistSurges =
+		let
+		    t = fx_Sheet("historical", "Surge_Log_2022_2024.xlsx", "Surges"),
+		    renamed = Table.RenameColumns(t, {{"Request No", "surge_id"}, {"Date Requested", "request_date"}, {"Country", "country"},
+		        {"Grade", "grade"}, {"Filled By", "filled_by"}, {"Date Filled", "filled_date"}, {"Duration (months)", "planned_months"}, {"Status", "status"}}),
+		    raw = Table.AddColumn(renamed, "country_raw", each [country], type text),
+		    clean = Table.TransformColumns(raw, {
+		        {"country", fx_CleanCountry, type text}, {"request_date", fx_ToDate, type nullable date},
+		        {"planned_months", each if _ = null then null else Number.From(_), type nullable number},
+		        {"filled_by", each if _ = null then null else Record.FieldOrDefault(Ref_VLabelRecord, "FilledBy|" & Text.From(_), null), type text}})
+		in
+		    clean
+	lineageTag: 53a605a5-b03e-5545-940e-ef93dfa3c0bd
+
+expression Stg_HistExpat =
+		let
+		    t = fx_Sheet("historical", "Expatriation_Log_2022_2024.xlsx", "Deployments"),
+		    renamed = Table.RenameColumns(t, {{"Staff No", "staff_id"}, {"Nationality", "nationality"}, {"Posted To", "country"}, {"From", "start"}, {"To", "end"}}),
+		    raw = Table.AddColumn(Table.AddColumn(renamed, "country_raw", each [country], type text), "nationality_raw", each [nationality], type text),
+		    clean = Table.TransformColumns(raw, {
+		        {"country", fx_CleanCountry, type text}, {"nationality", fx_CleanCountry, type text},
+		        {"start", fx_ToDate, type nullable date}, {"end", fx_ToDate, type nullable date}})
+		in
+		    clean
+	lineageTag: f6f57537-2ca4-54fb-8427-266d6e855d86
+
+expression Stg_CurrentSpans =
+		let
+		    coreStaff = Table.SelectColumns(Stg_CoreStaff, {"staff_id", "date_of_birth", "gender", "nationality", "start_date"}),
+		    joined = Table.NestedJoin(Stg_CoreContracts, {"staff_id"}, coreStaff, {"staff_id"}, "s", JoinKind.LeftOuter),
+		    expanded = Table.ExpandTableColumn(joined, "s", {"date_of_birth", "gender", "nationality", "start_date"}, {"date_of_birth", "gender", "nationality", "emp_start"}),
+		    coreSpans = Table.SelectColumns(Table.AddColumn(expanded, "source", each "CORE", type text),
+		        {"staff_id", "start_date", "end_date_fixed", "grade", "contract_type", "country", "unit", "date_of_birth", "gender", "nationality", "emp_start", "source"}),
+		    coreRenamed = Table.RenameColumns(coreSpans, {{"start_date", "span_start"}, {"end_date_fixed", "span_end"}}),
+		    trackerOnly = Table.NestedJoin(Stg_TrackerStaff, {"staff_id"}, Stg_CoreStaff, {"staff_id"}, "c", JoinKind.LeftAnti),
+		    trackerSpans = Table.AddColumn(Table.RemoveColumns(trackerOnly, {"c"}), "source", each "Tracker", type text),
+		    trackerSel = Table.SelectColumns(trackerSpans, {"staff_id", "start_date", "end_date", "grade", "contract_type", "country", "unit", "date_of_birth", "gender", "nationality", "source"}),
+		    trackerRenamed = Table.AddColumn(Table.RenameColumns(trackerSel, {{"start_date", "span_start"}, {"end_date", "span_end"}}), "emp_start", each [span_start], type nullable date),
+		    combined = Table.Combine({coreRenamed, Table.SelectColumns(trackerRenamed, Table.ColumnNames(coreRenamed))})
+		in
+		    combined
+	lineageTag: f5bd301e-81dc-5547-a0eb-f02f57cb3d5d
+
+expression Stg_CurrentExpanded =
+		let
+		    withMonths = Table.AddColumn(Stg_CurrentSpans, "month_end", each
+		        List.Select(CurrentMonthEnds, (m) => m >= [span_start] and ([span_end] = null or m <= [span_end]))),
+		    expanded = Table.SelectRows(Table.ExpandListColumn(withMonths, "month_end"), each [month_end] <> null),
+		    typed = Table.TransformColumnTypes(expanded, {{"month_end", type date}})
+		in
+		    typed
+	lineageTag: a9c9a999-9b1c-58f7-a9b1-dd0bd0431157

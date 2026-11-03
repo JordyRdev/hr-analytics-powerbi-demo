@@ -1,0 +1,670 @@
+table _Measures
+	lineageTag: 945d8787-a30e-58ce-a08b-b55ce1cf4435
+	description: Holds the report measures. The Value column is a placeholder.
+
+	column Value
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: fd554e27-db6b-5c26-aa29-ff6ffbb69db8
+		summarizeBy: none
+		sourceColumn: Value
+
+	/// Month-end picked in the Reporting Date slicer. Latest month-end when nothing is selected.
+	measure 'Selected Reporting Date' = MAX ( 'Reporting Date'[Month End] )
+		formatString: yyyy-MM-dd
+		displayFolder: 00 Date logic
+		lineageTag: a7ee99cb-4059-5eac-a636-343267d56530
+
+	/// Month-end every 'at date' measure reads. Follows the date axis of a visual when one is present, otherwise the Reporting Date slicer.
+	measure 'Ref Date' = IF ( ISCROSSFILTERED ( DimDate ), MAX ( DimDate[Month End] ), [Selected Reporting Date] )
+		formatString: yyyy-MM-dd
+		displayFolder: 00 Date logic
+		lineageTag: 69c713e7-0dd2-5c4d-b08d-1f257aa4efc9
+
+	/// Last month-end before the 12-month window that ends at the reference date.
+	measure 'Window Start' = EOMONTH ( [Ref Date], -12 )
+		formatString: yyyy-MM-dd
+		displayFolder: 00 Date logic
+		lineageTag: 560e7e4e-d031-5121-8dd7-dc0b79ee769d
+
+	/// Earliest month-end in the staff snapshots. Used to blank rolling measures that would start before the data.
+	measure 'First Data Month' = CALCULATE ( MIN ( FactStaffMonthly[Month End] ), REMOVEFILTERS () )
+		formatString: yyyy-MM-dd
+		displayFolder: 00 Date logic
+		lineageTag: 305eef35-67cd-5fc7-ae02-75d07295f0f4
+
+	/// Distinct staff present at the reference month-end. Follows every slicer.
+	measure Headcount =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _d
+			    )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: 6919a6a0-674d-5973-83e0-6bd7a02819e0
+
+	/// Headcount at the same point one year earlier.
+	measure 'Headcount PY' =
+			VAR _d = EOMONTH ( [Ref Date], -12 )
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _d
+			    )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: 34518886-4e90-5a62-a11d-12ead238668b
+
+	/// Headcount minus headcount one year earlier.
+	measure 'Headcount Change vs PY' = [Headcount] - [Headcount PY]
+		formatString: +#,0;-#,0;0
+		displayFolder: 01 Workforce
+		lineageTag: 2baa6fc7-a21d-511f-a0e2-ec8011dce8ca
+
+	/// Headcount change as a share of headcount one year earlier.
+	measure 'Headcount Change % vs PY' = DIVIDE ( [Headcount] - [Headcount PY], [Headcount PY] )
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 01 Workforce
+		lineageTag: 44facf15-a484-5975-b5c5-d89cf45fbc05
+
+	/// Headcount of the Global population (HQ plus Global-unit field staff).
+	measure 'Headcount Global' = CALCULATE ( [Headcount], KEEPFILTERS ( DimPopulation[Population] = "Global" ) )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: 239fe106-76eb-52aa-b3ee-6a34571c598e
+
+	/// Headcount of the International population (International staff outside Global units).
+	measure 'Headcount International' = CALCULATE ( [Headcount], KEEPFILTERS ( DimPopulation[Population] = "International" ) )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: efa1f625-0233-5c2b-ba1d-a28077efa42f
+
+	/// Headcount of the National population.
+	measure 'Headcount National' = CALCULATE ( [Headcount], KEEPFILTERS ( DimPopulation[Population] = "National" ) )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: c382dce7-d362-5773-b2a3-147d5fe7f6c6
+
+	/// Headcount of HQ staff. A subset of Global.
+	measure 'Headcount HQ' = CALCULATE ( [Headcount], KEEPFILTERS ( DimPopulation[Population Detail] = "Global - HQ" ) )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: f79b6d0c-a335-5988-9435-d054c9f55f39
+
+	/// Headcount of female staff.
+	measure 'Female Headcount' = CALCULATE ( [Headcount], KEEPFILTERS ( DimGender[Gender] = "Female" ) )
+		formatString: #,0
+		displayFolder: 01 Workforce
+		lineageTag: 984c3899-8c4c-5f0d-822f-99c79829080b
+
+	/// Female headcount divided by headcount.
+	measure 'Female Share' = DIVIDE ( [Female Headcount], [Headcount] )
+		formatString: 0.0%
+		displayFolder: 01 Workforce
+		lineageTag: f676c9d6-9935-554f-8d60-147a91f489f2
+
+	/// Headcount as a share of the country total, ignoring the Staff Type split. Drives the 100% stacked National vs International bars.
+	measure 'Staff Type Share of Country' = DIVIDE ( [Headcount], CALCULATE ( [Headcount], REMOVEFILTERS ( DimGrade[Staff Type] ) ) )
+		formatString: 0.0%
+		displayFolder: 01 Workforce
+		lineageTag: 67d6645e-11ce-5df7-8e30-dc5a9517c482
+
+	/// Mean age in years of staff present at the reference month-end. Staff without a date of birth are skipped.
+	measure 'Average Age' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        AVERAGE ( FactStaffMonthly[Age] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _d
+			    )
+		formatString: 0.0
+		displayFolder: 02 Global and International
+		lineageTag: f0458059-78d9-5b28-bf1d-26ee12e70a54
+
+	/// Mean age one year earlier.
+	measure 'Average Age PY' =
+			VAR _d = EOMONTH ( [Ref Date], -12 )
+			RETURN
+			    CALCULATE (
+			        AVERAGE ( FactStaffMonthly[Age] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _d
+			    )
+		formatString: 0.0
+		displayFolder: 02 Global and International
+		lineageTag: 632f5dbd-84d9-55c3-b1ee-a78a4799ff18
+
+	/// Mean age minus mean age one year earlier, in years.
+	measure 'Average Age Change vs PY' = [Average Age] - [Average Age PY]
+		formatString: +0.0;-0.0;0.0
+		displayFolder: 02 Global and International
+		lineageTag: 103f4197-42d4-5cc6-ac70-a29e3f04980f
+
+	/// Headcount with a Global South nationality. Ignores the GN/GS slicer.
+	measure 'GS Headcount' = CALCULATE ( [Headcount], DimNationality[GN/GS] = "GS" )
+		formatString: #,0
+		displayFolder: 03 Diversity
+		lineageTag: 911fb7d5-0d49-5c11-bd48-efbb1cd1a231
+
+	/// Headcount with a Global North nationality. Ignores the GN/GS slicer.
+	measure 'GN Headcount' = CALCULATE ( [Headcount], DimNationality[GN/GS] = "GN" )
+		formatString: #,0
+		displayFolder: 03 Diversity
+		lineageTag: 28827ced-4c11-54da-81d6-72747bafa3a8
+
+	/// GS headcount divided by GS plus GN headcount. Staff with unknown nationality are excluded.
+	measure 'GS Share' = DIVIDE ( [GS Headcount], [GS Headcount] + [GN Headcount] )
+		formatString: 0.0%
+		displayFolder: 03 Diversity
+		lineageTag: 68e6f310-0cb1-51d1-bec8-2559f0e4c64d
+
+	/// GS headcount divided by GN headcount.
+	measure 'GS/GN Ratio' = DIVIDE ( [GS Headcount], [GN Headcount] )
+		formatString: 0.00
+		displayFolder: 03 Diversity
+		lineageTag: fef97591-4ff9-52d3-9b68-0c26baa1cf37
+
+	/// Distinct International field staff whose nationality differs from the duty country, from the monthly staff snapshots.
+	measure Expatriates = CALCULATE ( [Headcount], FactStaffMonthly[Is Expatriate] = TRUE () )
+		formatString: #,0
+		displayFolder: 03 Diversity
+		lineageTag: d5722db4-fa53-5e2c-a9f9-84345dad461e
+
+	/// Expatriate deployments active at the reference month-end, from the deployment table. Used to reconcile against the snapshot count.
+	measure 'Expatriates (deployment log)' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactExpatriation[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FILTER (
+			            ALL ( FactExpatriation[Start Date], FactExpatriation[End Date] ),
+			            FactExpatriation[Start Date] <= _d
+			                && ( ISBLANK ( FactExpatriation[End Date] ) || FactExpatriation[End Date] >= _d )
+			        )
+			    ) + 0
+		formatString: #,0
+		displayFolder: 03 Diversity
+		lineageTag: 21b81219-60c4-583b-976a-4015973e7039
+
+	/// Vacancies open at the reference month-end.
+	measure 'Open Vacancies' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactVacancyMonthly[Month End] = _d
+			    ) + 0
+		formatString: #,0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 0b9b5773-3c75-5257-b42d-72fce068cb04
+
+	/// Open vacancies whose planned start date is before the reference month-end.
+	measure 'Due Open Vacancies' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactVacancyMonthly[Month End] = _d,
+			        FactVacancyMonthly[Is Due] = TRUE ()
+			    ) + 0
+		formatString: #,0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 5c9f1fda-7caa-5164-9872-3cfe9af25776
+
+	/// Staff in post at the reference month-end, ignoring Population, Gender and GN/GS selections because vacancies carry none of them.
+	measure 'Filled Positions' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        REMOVEFILTERS ( DimPopulation ),
+			        REMOVEFILTERS ( DimNationality ),
+			        REMOVEFILTERS ( DimGender ),
+			        FactStaffMonthly[Month End] = _d
+			    )
+		formatString: #,0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: bb488653-ede0-5684-bdf4-0ba0fe80bdbf
+
+	/// Open vacancies divided by filled positions plus open vacancies.
+	measure 'Vacancy Rate' = DIVIDE ( [Open Vacancies], [Filled Positions] + [Open Vacancies] )
+		formatString: 0.0%
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 1118f984-e025-5f5e-97e7-9c1faf2d6466
+
+	/// Open vacancies past their planned start date divided by total positions (filled plus open).
+	measure 'Due Vacancy Rate' = DIVIDE ( [Due Open Vacancies], [Filled Positions] + [Open Vacancies] )
+		formatString: 0.0%
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 13fc844c-efce-57b9-9487-e67bc17d3d62
+
+	/// Vacancies opened. Uses the date axis when a visual has one, otherwise the 12 months to the reporting date.
+	measure 'Vacancies Opened' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        COUNTROWS ( FactVacancies ),
+			        CALCULATE ( COUNTROWS ( FactVacancies ), DATESBETWEEN ( DimDate[Date], _lo + 1, _ref ) )
+			    )
+		formatString: #,0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 0fdc142c-49da-5223-b148-3b8e8a960e72
+
+	/// Mean initial planned duration of the positions opened in the window.
+	measure 'Avg Planned Duration (months)' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        AVERAGE ( FactVacancies[Planned Duration Months] ),
+			        CALCULATE ( AVERAGE ( FactVacancies[Planned Duration Months] ), DATESBETWEEN ( DimDate[Date], _lo + 1, _ref ) )
+			    )
+		formatString: 0.0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 0a369a3b-fba7-5d24-8c6f-32f1d0ec8f84
+
+	/// Vacancies closed (filled or cancelled) in the window, by closed date.
+	measure 'Vacancies Closed' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        CALCULATE ( COUNTROWS ( FactVacancies ), USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ) ),
+			        CALCULATE (
+			            COUNTROWS ( FactVacancies ),
+			            USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ),
+			            DATESBETWEEN ( DimDate[Date], _lo + 1, _ref )
+			        )
+			    )
+		formatString: #,0
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 6f3d17da-d60b-5bf3-8e8d-f35453834288
+
+	/// Staff present 12 months before the reference date who are still present at it, divided by staff present 12 months before.
+	measure 'Retention Rate (12m)' =
+			VAR _end = [Ref Date]
+			VAR _start = EOMONTH ( _end, -12 )
+			VAR _startIds =
+			    CALCULATETABLE (
+			        VALUES ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _start
+			    )
+			VAR _endIds =
+			    CALCULATETABLE (
+			        VALUES ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _end
+			    )
+			RETURN
+			    IF (
+			        _start < [First Data Month],
+			        BLANK (),
+			        DIVIDE ( COUNTROWS ( INTERSECT ( _startIds, _endIds ) ), COUNTROWS ( _startIds ) )
+			    )
+		formatString: 0.0%
+		displayFolder: 04 Staffing and vacancies
+		lineageTag: 8bd0c6a5-6fdc-5d44-9bb2-b234aadfcf3b
+
+	/// Mean days from opened to closed date for filled vacancies. Cancelled vacancies and tickets with a date error are excluded.
+	measure 'Avg Days to Close' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        CALCULATE ( AVERAGE ( FactVacancies[Days to Close] ), USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ) ),
+			        CALCULATE (
+			            AVERAGE ( FactVacancies[Days to Close] ),
+			            USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ),
+			            DATESBETWEEN ( DimDate[Date], _lo + 1, _ref )
+			        )
+			    )
+		formatString: 0.0
+		displayFolder: 05 Recruitment duration
+		lineageTag: d7057789-f408-5b9d-bb8c-ec82b51dc35f
+
+	/// Mean JIRA time_to_done_hours converted to days, for the same vacancies as Avg Days to Close. It measures only the last workflow stage.
+	measure 'Avg Time To Done (days)' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        CALCULATE ( AVERAGE ( FactVacancies[Time To Done Days] ), USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ) ),
+			        CALCULATE (
+			            AVERAGE ( FactVacancies[Time To Done Days] ),
+			            USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ),
+			            DATESBETWEEN ( DimDate[Date], _lo + 1, _ref )
+			        )
+			    )
+		formatString: 0.0
+		displayFolder: 05 Recruitment duration
+		lineageTag: 97627aea-487f-5a4a-ab00-ee669cfcb929
+
+	/// Vacancies closed with a valid duration in the window. Sample size behind Avg Days to Close.
+	measure 'Filled Vacancies' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        CALCULATE ( COUNT ( FactVacancies[Days to Close] ), USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ) ),
+			        CALCULATE (
+			            COUNT ( FactVacancies[Days to Close] ),
+			            USERELATIONSHIP ( FactVacancies[Closed Date], DimDate[Date] ),
+			            DATESBETWEEN ( DimDate[Date], _lo + 1, _ref )
+			        )
+			    )
+		formatString: #,0
+		displayFolder: 05 Recruitment duration
+		lineageTag: 798b9af0-97cf-5450-8e84-52d96eac17dc
+
+	/// Surge requests raised. Uses the date axis when a visual has one, otherwise the 12 months to the reporting date.
+	measure 'Surge Requests' =
+			VAR _ref = [Ref Date]
+			VAR _lo = EOMONTH ( _ref, -12 )
+			RETURN
+			    IF (
+			        ISCROSSFILTERED ( DimDate ),
+			        COUNTROWS ( FactSurges ),
+			        CALCULATE ( COUNTROWS ( FactSurges ), DATESBETWEEN ( DimDate[Date], _lo + 1, _ref ) )
+			    )
+		formatString: #,0
+		displayFolder: 06 Surge deployments
+		lineageTag: 19b6c6ea-6096-5451-923b-d0acef32b93d
+
+	/// Surge requests with status Filled.
+	measure 'Surge Requests Filled' = CALCULATE ( [Surge Requests], FactSurges[Status] = "Filled" )
+		formatString: #,0
+		displayFolder: 06 Surge deployments
+		lineageTag: 5569db7e-82cf-5639-b853-38011b7c80e8
+
+	/// Filled surge requests where the post went to a National staff member.
+	measure 'Surge Filled by National' = CALCULATE ( [Surge Requests], FactSurges[Status] = "Filled", FactSurges[Filled By] = "National" )
+		formatString: #,0
+		displayFolder: 06 Surge deployments
+		lineageTag: 35dfdaa3-6d4b-5fc6-8cdc-53acf2f4e3a6
+
+	/// Filled surge requests where the post went to an International staff member.
+	measure 'Surge Filled by International' = CALCULATE ( [Surge Requests], FactSurges[Status] = "Filled", FactSurges[Filled By] = "International" )
+		formatString: #,0
+		displayFolder: 06 Surge deployments
+		lineageTag: e6167079-b370-5503-8d02-d1afb2be3ee6
+
+	/// Filled surge requests filled by National staff divided by all filled surge requests.
+	measure 'Surge National Share' = DIVIDE ( [Surge Filled by National], [Surge Requests Filled] )
+		formatString: 0.0%
+		displayFolder: 06 Surge deployments
+		lineageTag: 5c3efdad-414c-50c1-a434-6e7cba76c13e
+
+	/// Exit events in the 12 months to the reference date.
+	measure 'Exits (12m)' =
+			VAR _end = [Ref Date]
+			VAR _start = EOMONTH ( _end, -12 )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( FactExits ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactExits[Exit Date] > _start,
+			        FactExits[Exit Date] <= _end
+			    ) + 0
+		formatString: #,0
+		displayFolder: 07 Retention and turnover
+		lineageTag: 22b93d16-7f7e-59a7-82a5-a306c13348ce
+
+	/// Exits flagged voluntary in the 12 months to the reference date.
+	measure 'Voluntary Exits (12m)' = CALCULATE ( [Exits (12m)], FactExits[Voluntary] = "Yes" )
+		formatString: #,0
+		displayFolder: 07 Retention and turnover
+		lineageTag: 4ba00054-cfed-5d43-9d66-20285d2e4286
+
+	/// Exits flagged non-voluntary in the 12 months to the reference date.
+	measure 'Non-voluntary Exits (12m)' = CALCULATE ( [Exits (12m)], FactExits[Voluntary] = "No" )
+		formatString: #,0
+		displayFolder: 07 Retention and turnover
+		lineageTag: 471ec0b9-a42b-5a24-b5ae-493a377d7180
+
+	/// Mean of the 12 month-end headcounts in the window.
+	measure 'Average Headcount (12m)' =
+			VAR _end = [Ref Date]
+			VAR _start = EOMONTH ( _end, -12 )
+			VAR _months =
+			    FILTER (
+			        ALL ( 'Reporting Date'[Month End] ),
+			        'Reporting Date'[Month End] > _start && 'Reporting Date'[Month End] <= _end
+			    )
+			RETURN
+			    AVERAGEX (
+			        _months,
+			        CALCULATE (
+			            DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			            REMOVEFILTERS ( DimDate ),
+			            FactStaffMonthly[Month End] = 'Reporting Date'[Month End]
+			        )
+			    )
+		formatString: #,0.0
+		displayFolder: 07 Retention and turnover
+		lineageTag: 829bf1e3-348a-5fec-a49f-f564a8c833da
+
+	/// Exits in the 12 months divided by the mean headcount of the same months.
+	measure 'Turnover Rate (12m)' =
+			VAR _end = [Ref Date]
+			VAR _firstMonth = EOMONTH ( _end, -11 )
+			RETURN
+			    IF ( _firstMonth < [First Data Month], BLANK (), DIVIDE ( [Exits (12m)], [Average Headcount (12m)] ) )
+		formatString: 0.0%
+		displayFolder: 07 Retention and turnover
+		lineageTag: 68df7709-3b80-53eb-bb71-34295139eb09
+
+	/// Voluntary exits divided by mean headcount.
+	measure 'Voluntary Turnover Rate (12m)' =
+			VAR _end = [Ref Date]
+			VAR _firstMonth = EOMONTH ( _end, -11 )
+			RETURN
+			    IF ( _firstMonth < [First Data Month], BLANK (), DIVIDE ( [Voluntary Exits (12m)], [Average Headcount (12m)] ) )
+		formatString: 0.0%
+		displayFolder: 07 Retention and turnover
+		lineageTag: c47c26aa-4d3f-51c5-a1bc-6e6577a177b9
+
+	/// Non-voluntary exits divided by mean headcount.
+	measure 'Non-voluntary Turnover Rate (12m)' =
+			VAR _end = [Ref Date]
+			VAR _firstMonth = EOMONTH ( _end, -11 )
+			RETURN
+			    IF ( _firstMonth < [First Data Month], BLANK (), DIVIDE ( [Non-voluntary Exits (12m)], [Average Headcount (12m)] ) )
+		formatString: 0.0%
+		displayFolder: 07 Retention and turnover
+		lineageTag: ae33ffea-2149-550d-9beb-14edd033a598
+
+	/// Staff present at the reference date with at least 6 months of service.
+	measure 'Appraisal Eligible Staff' =
+			VAR _end = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _end,
+			        FactStaffMonthly[Start Date] <= EOMONTH ( _end, -6 )
+			    )
+		formatString: #,0
+		displayFolder: 07 Retention and turnover
+		lineageTag: 2398e95f-893c-5174-bb96-24f06f9437b6
+
+	/// Eligible staff with an appraisal dated in the 12 months to the reference date, divided by eligible staff.
+	measure 'Appraisal Completion' =
+			VAR _end = [Ref Date]
+			VAR _start = EOMONTH ( _end, -12 )
+			VAR _firstAppraisal = CALCULATE ( MIN ( FactAppraisals[Appraisal Date] ), REMOVEFILTERS () )
+			VAR _eligible =
+			    CALCULATETABLE (
+			        VALUES ( FactStaffMonthly[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactStaffMonthly[Month End] = _end,
+			        FactStaffMonthly[Start Date] <= EOMONTH ( _end, -6 )
+			    )
+			VAR _appraised =
+			    CALCULATETABLE (
+			        VALUES ( FactAppraisals[Staff ID] ),
+			        REMOVEFILTERS ( DimDate ),
+			        FactAppraisals[Appraisal Date] > _start,
+			        FactAppraisals[Appraisal Date] <= _end
+			    )
+			RETURN
+			    IF (
+			        _end < EOMONTH ( _firstAppraisal, 12 ),
+			        BLANK (),
+			        DIVIDE ( COUNTROWS ( INTERSECT ( _eligible, _appraised ) ), COUNTROWS ( _eligible ) )
+			    )
+		formatString: 0.0%
+		displayFolder: 07 Retention and turnover
+		lineageTag: 4f8795ef-8fb7-5cd5-8a5b-03b738a9a387
+
+	/// Contracts in force at the reference month-end.
+	measure 'Contracts in Force' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( FactContracts ),
+			        REMOVEFILTERS ( DimDate ),
+			        FILTER (
+			            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
+			            FactContracts[Start Date] <= _d
+			                && ( ISBLANK ( FactContracts[End Date] ) || FactContracts[End Date] >= _d )
+			        )
+			    ) + 0
+		formatString: #,0
+		displayFolder: 08 Contracts
+		lineageTag: 0c100b3f-de15-51fb-8c93-7738667920ea
+
+	/// Mean granted months of the International G3 and G4 contracts in force at the reference date. Open-ended contracts have no duration and are skipped.
+	measure 'Avg Current Contract Duration G3/G4 (months)' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        AVERAGE ( FactContracts[Granted Months] ),
+			        REMOVEFILTERS ( DimDate ),
+			        KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
+			        KEEPFILTERS ( DimGrade[Grade] IN { "G3", "G4" } ),
+			        FILTER (
+			            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
+			            FactContracts[Start Date] <= _d
+			                && ( ISBLANK ( FactContracts[End Date] ) || FactContracts[End Date] >= _d )
+			        )
+			    )
+		formatString: 0.0
+		displayFolder: 08 Contracts
+		lineageTag: c321a90b-4899-5c75-aa9f-f72a26b51b13
+
+	/// Mean granted months of the first contracts of International G3 and G4 staff that started in the 12 months to the reference date.
+	measure 'Avg Granted Duration New Joiners G3/G4 (months)' =
+			VAR _end = [Ref Date]
+			VAR _start = EOMONTH ( _end, -12 )
+			RETURN
+			    CALCULATE (
+			        AVERAGE ( FactContracts[Granted Months] ),
+			        REMOVEFILTERS ( DimDate ),
+			        KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
+			        KEEPFILTERS ( DimGrade[Grade] IN { "G3", "G4" } ),
+			        FactContracts[Is New Joiner Contract] = TRUE (),
+			        FactContracts[Start Date] > _start,
+			        FactContracts[Start Date] <= _end
+			    )
+		formatString: 0.0
+		displayFolder: 08 Contracts
+		lineageTag: 44a7fa43-6777-58c7-b07a-c56428508dfa
+
+	/// International contracts in force whose end date falls after the reference date and within the next 4 months.
+	measure 'Contracts Ending Within 4 Months' =
+			VAR _d = [Ref Date]
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( FactContracts ),
+			        REMOVEFILTERS ( DimDate ),
+			        KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
+			        FILTER (
+			            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
+			            FactContracts[Start Date] <= _d
+			                && FactContracts[End Date] > _d
+			                && FactContracts[End Date] <= EOMONTH ( _d, 4 )
+			        )
+			    ) + 0
+		formatString: #,0
+		displayFolder: 08 Contracts
+		lineageTag: f985286d-eadd-5898-b15a-24d27cf614d7
+
+	/// Contracts ending within 4 months divided by International headcount at the reference date.
+	measure 'Contracts Ending Within 4 Months %' = DIVIDE ( [Contracts Ending Within 4 Months], CALCULATE ( [Headcount], KEEPFILTERS ( DimGrade[Staff Type] = "International" ) ) )
+		formatString: 0.0%
+		displayFolder: 08 Contracts
+		lineageTag: 970dc60d-c8a3-5d1e-a61b-bd05bf160ce3
+
+	/// Days from the reference date to the end of a contract. Blank unless the contract ends within 4 months, so a table of contracts lists only those.
+	measure 'Days Remaining' =
+			VAR _d = [Ref Date]
+			RETURN
+			    IF ( [Contracts Ending Within 4 Months] > 0, DATEDIFF ( _d, MAX ( FactContracts[End Date] ), DAY ) )
+		formatString: 0
+		displayFolder: 08 Contracts
+		lineageTag: 1e701c21-6267-5c3b-9269-6e92148387c3
+
+	/// Rows in DQ_Issues in the current filter context.
+	measure 'DQ Issues' = COUNTROWS ( DQ_Issues ) + 0
+		formatString: #,0
+		displayFolder: 09 Data quality
+		lineageTag: 01eca8fa-a600-53e8-8ec7-cf48d9bedbae
+
+	/// Staff in the legacy snapshot for an overlap month.
+	measure 'Recon Historical Headcount' = CALCULATE ( DISTINCTCOUNT ( Recon_Overlap[Staff ID] ), Recon_Overlap[Source] = "Historical" )
+		formatString: #,0
+		displayFolder: 09 Data quality
+		lineageTag: 1a324865-8b01-5fab-97b1-1068be20b1fb
+
+	/// Staff derived from CORE and the trackers for an overlap month.
+	measure 'Recon Current Headcount' = CALCULATE ( DISTINCTCOUNT ( Recon_Overlap[Staff ID] ), Recon_Overlap[Source] = "Current" )
+		formatString: #,0
+		displayFolder: 09 Data quality
+		lineageTag: bd5ca767-8438-519b-9a94-86edcf9cd804
+
+	/// Historical minus current headcount for an overlap month.
+	measure 'Recon Difference' = [Recon Historical Headcount] - [Recon Current Headcount]
+		formatString: +#,0;-#,0;0
+		displayFolder: 09 Data quality
+		lineageTag: 3bfff873-a8aa-534e-acae-736605e69560
+
+	/// Expatriates from the deployment log minus expatriates from the monthly snapshots.
+	measure 'Expatriate Count Difference' = [Expatriates (deployment log)] - [Expatriates]
+		formatString: +#,0;-#,0;0
+		displayFolder: 09 Data quality
+		lineageTag: 3f69a02e-03ae-5296-beac-51234cabde8c
+
+	/// Date and time of the last data refresh.
+	measure 'Last Refresh' = MAX ( 'Refresh Info'[Last Refresh] )
+		formatString: yyyy-MM-dd HH:mm
+		displayFolder: 09 Data quality
+		lineageTag: 76fb7031-29b6-5003-8ffb-74ef924feefe
+
+	/// Last month-end loaded.
+	measure 'Data Through' = MAX ( 'Refresh Info'[Data Through] )
+		formatString: yyyy-MM-dd
+		displayFolder: 09 Data quality
+		lineageTag: 689730eb-9533-556d-9a07-e45ccb48aee8
+
+	partition _Measures = m
+		mode: import
+		source =
+			#table(type table [Value = Int64.Type], {{1}})

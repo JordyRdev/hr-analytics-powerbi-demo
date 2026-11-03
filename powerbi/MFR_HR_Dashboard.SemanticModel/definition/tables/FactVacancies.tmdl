@@ -1,0 +1,152 @@
+table FactVacancies
+	lineageTag: abe42b63-cbc3-53d6-a23d-eb21f400af98
+
+	column 'Vacancy ID'
+		dataType: string
+		lineageTag: fcda4e72-0796-59ff-9f05-8ecd65511832
+		summarizeBy: none
+		sourceColumn: Vacancy ID
+
+	column Country
+		dataType: string
+		lineageTag: e00cbcce-b05c-5566-aade-843581a68d53
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Grade
+		dataType: string
+		lineageTag: cd4fe09a-4d79-58b4-87c2-997386a2987e
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column 'Opening Reason'
+		dataType: string
+		lineageTag: df01ed00-2dbc-5b3b-acfa-41be23f86a53
+		summarizeBy: none
+		sourceColumn: Opening Reason
+
+	column 'Opened Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: a978604a-dbd0-5e33-b96c-2b4c4b4e7d77
+		summarizeBy: none
+		sourceColumn: Opened Date
+
+	column 'Planned Start Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 0ed203cf-08ec-57a1-9290-49860a7c610b
+		summarizeBy: none
+		sourceColumn: Planned Start Date
+
+	column 'Planned Duration Months'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: 2828e3d8-e8c1-5884-b86c-ccce7ecb3a4b
+		summarizeBy: none
+		sourceColumn: Planned Duration Months
+
+	column 'Closed Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 43e96926-b04d-578d-b9dc-c9762b9f98d4
+		summarizeBy: none
+		sourceColumn: Closed Date
+
+	column 'Closure Outcome'
+		dataType: string
+		lineageTag: 7c68dd2f-a819-582d-b39e-7605d17d019b
+		summarizeBy: none
+		sourceColumn: Closure Outcome
+
+	column 'Candidate Type'
+		dataType: string
+		lineageTag: ad4d92a6-6ac6-58cb-8d17-73f9eb640bbc
+		summarizeBy: none
+		sourceColumn: Candidate Type
+
+	column 'Time To Done Hours'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: 9a1eaf63-5156-526a-89b0-971e3cf5326c
+		summarizeBy: none
+		sourceColumn: Time To Done Hours
+
+	column 'Date Issue'
+		dataType: boolean
+		lineageTag: 6d985700-9475-5a3f-90e3-2f9af7ea58c1
+		summarizeBy: none
+		sourceColumn: Date Issue
+
+	column Reopened
+		dataType: boolean
+		lineageTag: 6e61f533-2caf-5ac1-bfcb-2c1741f287e5
+		summarizeBy: none
+		sourceColumn: Reopened
+
+	column Source
+		dataType: string
+		lineageTag: 4c859ba1-db1d-5920-8ce5-420006069921
+		summarizeBy: none
+		sourceColumn: Source
+
+	column Status
+		dataType: string
+		lineageTag: 086393a8-b705-58b1-a27f-0f48798931b0
+		summarizeBy: none
+		sourceColumn: Status
+
+	column 'Days to Close'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: fe653180-fc7e-5b8b-a25e-4d89c31dfda2
+		summarizeBy: none
+		sourceColumn: Days to Close
+
+	column 'Time To Done Days'
+		dataType: double
+		formatString: #,0.##
+		lineageTag: 4b1771c1-5c9a-517c-9980-3910c931f7e3
+		summarizeBy: none
+		sourceColumn: Time To Done Days
+
+	column 'Days Bucket'
+		dataType: string
+		lineageTag: ea74918c-ecda-54d7-b96f-0adca9734826
+		summarizeBy: none
+		sourceColumn: Days Bucket
+		sortByColumn: 'Days Bucket Sort'
+
+	column 'Days Bucket Sort'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 7a4283b6-e32b-5727-9586-0a2afb77373a
+		summarizeBy: none
+		sourceColumn: Days Bucket Sort
+
+	partition FactVacancies = m
+		mode: import
+		source =
+			let
+			    migrated = List.Buffer(List.RemoveNulls(Table.Column(Stg_JiraVacancies, "legacy_vacancy_ref"))),
+			    hist = Table.SelectRows(Stg_HistVacancies, each not List.Contains(migrated, [vacancy_id])),
+			    cols = {"vacancy_id", "country", "grade", "opening_reason", "opened", "planned_start", "planned_months", "closed", "outcome", "candidate_type", "time_to_done_hours", "date_issue", "reopened", "source"},
+			    combined = Table.Combine({Table.SelectColumns(hist, cols), Table.SelectColumns(Stg_JiraVacancies, cols)}),
+			    status = Table.AddColumn(combined, "status", each if [closed] = null then "Open" else if [outcome] = "Cancelled Position" then "Cancelled" else "Closed", type text),
+			    days = Table.AddColumn(status, "days_to_close", each if [closed] <> null and [outcome] <> "Cancelled Position" and not [date_issue] then Duration.Days([closed] - [opened]) else null, type nullable number),
+			    ttd = Table.AddColumn(days, "time_to_done_days", each if [days_to_close] = null or [time_to_done_hours] = null then null else [time_to_done_hours] / 24, type nullable number),
+			    bucket = Table.AddColumn(ttd, "days_bucket", each
+			        let d = [days_to_close] in
+			            if d = null then null else if d <= 30 then "0-30" else if d <= 60 then "31-60" else if d <= 90 then "61-90"
+			            else if d <= 120 then "91-120" else if d <= 180 then "121-180" else "181+", type text),
+			    bucketSort = Table.AddColumn(bucket, "days_bucket_sort", each
+			        let d = [days_to_close] in
+			            if d = null then null else if d <= 30 then 1 else if d <= 60 then 2 else if d <= 90 then 3 else if d <= 120 then 4 else if d <= 180 then 5 else 6, Int64.Type),
+			    renamed = Table.RenameColumns(bucketSort, {{"vacancy_id", "Vacancy ID"}, {"country", "Country"}, {"grade", "Grade"}, {"opening_reason", "Opening Reason"},
+			        {"opened", "Opened Date"}, {"planned_start", "Planned Start Date"}, {"planned_months", "Planned Duration Months"}, {"closed", "Closed Date"},
+			        {"outcome", "Closure Outcome"}, {"candidate_type", "Candidate Type"}, {"time_to_done_hours", "Time To Done Hours"}, {"date_issue", "Date Issue"},
+			        {"reopened", "Reopened"}, {"source", "Source"}, {"status", "Status"}, {"days_to_close", "Days to Close"}, {"time_to_done_days", "Time To Done Days"},
+			        {"days_bucket", "Days Bucket"}, {"days_bucket_sort", "Days Bucket Sort"}})
+			in
+			    renamed

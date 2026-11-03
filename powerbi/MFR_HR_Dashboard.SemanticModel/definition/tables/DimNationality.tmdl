@@ -1,0 +1,24 @@
+table DimNationality
+	lineageTag: 4eb7dd55-b2b9-505a-aa15-a3d2188c6d5b
+
+	column Nationality
+		dataType: string
+		lineageTag: c9b0eb96-a3c4-57d2-93a4-61c382a2a8e8
+		summarizeBy: none
+		sourceColumn: Nationality
+
+	column 'GN/GS'
+		dataType: string
+		lineageTag: f8802226-4e19-5eb9-b099-ad155cf7bbb7
+		summarizeBy: none
+		sourceColumn: GN/GS
+
+	partition DimNationality = m
+		mode: import
+		source =
+			let
+			    t = fx_Sheet("reference", "gn_gs_nationality.xlsx", "Nationality_GNGS"),
+			    typed = Table.TransformColumnTypes(t, {{"Nationality", type text}, {"GN/GS", type text}}),
+			    withUnknown = Table.InsertRows(typed, Table.RowCount(typed), {[Nationality = "Unknown", #"GN/GS" = "Unknown"]})
+			in
+			    withUnknown

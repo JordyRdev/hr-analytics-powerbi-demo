@@ -1,0 +1,34 @@
+table DimGrade
+	lineageTag: 7a9af36e-5c00-57b0-9b79-2f38b5fc6490
+
+	column Grade
+		dataType: string
+		lineageTag: f576532d-39d1-5802-a7eb-32539f2b9f45
+		summarizeBy: none
+		sourceColumn: Grade
+		sortByColumn: Sort
+
+	column 'Staff Type'
+		dataType: string
+		lineageTag: be060c1b-613e-5424-b434-ab4de6759852
+		summarizeBy: none
+		sourceColumn: Staff Type
+
+	column Band
+		dataType: string
+		lineageTag: 74d5e626-4512-53df-ba8a-eacdcdd91a11
+		summarizeBy: none
+		sourceColumn: Band
+
+	column Sort
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: b8740b90-48ec-5bf5-8045-d79647049022
+		summarizeBy: none
+		sourceColumn: Sort
+
+	partition DimGrade = m
+		mode: import
+		source =
+			Ref_Grades

@@ -1,0 +1,113 @@
+table FactStaffMonthly
+	lineageTag: 87a73e18-d2ee-5249-8d13-9e8d333cd942
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: 7f501827-318a-5d06-9a5e-bbe9dac66dd2
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column 'Month End'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: f93ef544-0494-5549-8c4b-844ef0fd0e8b
+		summarizeBy: none
+		sourceColumn: Month End
+
+	column Source
+		dataType: string
+		lineageTag: 5d3f3b27-a9d6-50e6-bead-905eb418832b
+		summarizeBy: none
+		sourceColumn: Source
+
+	column Country
+		dataType: string
+		lineageTag: 6043284e-791b-55ff-b1c0-2a2e2c2df2cc
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Nationality
+		dataType: string
+		lineageTag: 812b598a-461e-5bea-80a8-044512ce9782
+		summarizeBy: none
+		sourceColumn: Nationality
+
+	column Grade
+		dataType: string
+		lineageTag: da0ea086-9ced-5bdc-8e8d-c0dccf6268be
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column 'Contract Type'
+		dataType: string
+		lineageTag: 15b3f7bc-1344-500d-8713-2860c261dd49
+		summarizeBy: none
+		sourceColumn: Contract Type
+
+	column Gender
+		dataType: string
+		lineageTag: 8b674056-4b95-50f3-aa1c-e9d798d1e3ae
+		summarizeBy: none
+		sourceColumn: Gender
+
+	column 'Date of Birth'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: bddc4bd1-ad9c-5d31-beda-18f5ea92e63c
+		summarizeBy: none
+		sourceColumn: Date of Birth
+
+	column Unit
+		dataType: string
+		lineageTag: 1151c4c0-f175-5e86-8c14-d946fded4444
+		summarizeBy: none
+		sourceColumn: Unit
+
+	column 'Start Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: beaaf8db-33cf-583c-9e6a-9a6c374f811d
+		summarizeBy: none
+		sourceColumn: Start Date
+
+	column 'Population Detail'
+		dataType: string
+		lineageTag: c3a36f60-fa5c-5038-b5dd-575b4fbef7ba
+		summarizeBy: none
+		sourceColumn: Population Detail
+
+	column Age
+		dataType: double
+		formatString: #,0.##
+		lineageTag: ea02a2c1-8ec8-5f6c-93d4-f01a1d2c7620
+		summarizeBy: none
+		sourceColumn: Age
+
+	column 'Is Expatriate'
+		dataType: boolean
+		lineageTag: 0b5495c0-018f-5733-9c5c-a49cb704d1e8
+		summarizeBy: none
+		sourceColumn: Is Expatriate
+
+	partition FactStaffMonthly = m
+		mode: import
+		source =
+			let
+			    hist = Table.SelectRows(Stg_HistSnap, each [month_end] <= CutOver),
+			    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "dob", "unit", "start_date"}), "source", each "Historical", type text),
+			    histRen = Table.RenameColumns(histSel, {{"dob", "date_of_birth"}, {"start_date", "emp_start"}}),
+			    cur = Table.SelectRows(Stg_CurrentExpanded, each [month_end] > CutOver),
+			    curSel = Table.SelectColumns(cur, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "date_of_birth", "unit", "emp_start", "source"}),
+			    combined = Table.Combine({Table.SelectColumns(histRen, Table.ColumnNames(curSel)), curSel}),
+			    derived = fx_Derive(combined, null),
+			    withAge = Table.AddColumn(derived, "Age", each if [date_of_birth] = null then null else Duration.Days([month_end] - [date_of_birth]) / 365.25, type nullable number),
+			    withExpat = Table.AddColumn(withAge, "Is Expatriate", each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country], type logical),
+			    unknownNat = Table.ReplaceValue(withExpat, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
+			    renamed = Table.RenameColumns(unknownNat, {{"staff_id", "Staff ID"}, {"month_end", "Month End"}, {"source", "Source"}, {"country", "Country"},
+			        {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
+			        {"date_of_birth", "Date of Birth"}, {"unit", "Unit"}, {"emp_start", "Start Date"}, {"population_detail", "Population Detail"}}),
+			    selected = Table.SelectColumns(renamed, {"Staff ID", "Month End", "Source", "Country", "Nationality", "Grade", "Contract Type", "Gender",
+			        "Date of Birth", "Unit", "Start Date", "Population Detail", "Age", "Is Expatriate"}),
+			    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}, {"Date of Birth", type date}, {"Start Date", type date}})
+			in
+			    typed

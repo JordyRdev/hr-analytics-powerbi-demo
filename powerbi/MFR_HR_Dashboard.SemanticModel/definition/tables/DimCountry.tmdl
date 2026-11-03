@@ -1,0 +1,40 @@
+table DimCountry
+	lineageTag: db69f2f0-c16a-58a3-a546-bf970cdc27f9
+
+	column Country
+		dataType: string
+		lineageTag: 40b158c2-de2d-5f7c-a8d3-2ac7604336b1
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Region
+		dataType: string
+		lineageTag: 9bd5ee3b-19f2-53c3-8076-e0ab286e9247
+		summarizeBy: none
+		sourceColumn: Region
+
+	column 'Is HQ'
+		dataType: boolean
+		lineageTag: d8bfede9-9d51-5a87-aa76-43bd2ba2edbf
+		summarizeBy: none
+		sourceColumn: Is HQ
+
+	column 'Office Status'
+		dataType: string
+		lineageTag: 595cdcd1-6076-58f9-9012-16417147546e
+		summarizeBy: none
+		sourceColumn: Office Status
+
+	column ISO3
+		dataType: string
+		lineageTag: 239085c3-6ae0-5f90-bbc3-7d6e04a7c44a
+		summarizeBy: none
+		sourceColumn: ISO3
+
+	partition DimCountry = m
+		mode: import
+		source =
+			let
+			    t = Table.SelectColumns(Ref_Countries, {"Country", "Region", "Is HQ", "Office Status", "ISO3"})
+			in
+			    t

@@ -1,0 +1,53 @@
+table FactVacancyMonthly
+	lineageTag: 373ab06d-0ef5-5f9f-9e94-2a1b633ba05c
+
+	column 'Vacancy ID'
+		dataType: string
+		lineageTag: ec2c258d-00ab-5dc8-ba2c-8edc4858eee7
+		summarizeBy: none
+		sourceColumn: Vacancy ID
+
+	column 'Month End'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 438a86fc-f529-5fad-a302-c968fa0336d2
+		summarizeBy: none
+		sourceColumn: Month End
+
+	column Country
+		dataType: string
+		lineageTag: 655742d2-0871-51e9-91cd-663671d63712
+		summarizeBy: none
+		sourceColumn: Country
+
+	column Grade
+		dataType: string
+		lineageTag: 34cc8a90-1e39-556c-bcb8-09cb562ef347
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column Source
+		dataType: string
+		lineageTag: 91701ba5-8f8d-518e-8de2-19c8602b2726
+		summarizeBy: none
+		sourceColumn: Source
+
+	column 'Is Due'
+		dataType: boolean
+		lineageTag: 99d39c41-4d35-5cb0-8234-357fbe0014c8
+		summarizeBy: none
+		sourceColumn: Is Due
+
+	partition FactVacancyMonthly = m
+		mode: import
+		source =
+			let
+			    v = Table.SelectColumns(FactVacancies, {"Vacancy ID", "Country", "Grade", "Source", "Opened Date", "Closed Date", "Planned Start Date"}),
+			    withMonths = Table.AddColumn(v, "Month End", each
+			        List.Select(AllMonthEnds, (m) => m >= [Opened Date] and ([Closed Date] = null or m < [Closed Date]))),
+			    expanded = Table.SelectRows(Table.ExpandListColumn(withMonths, "Month End"), each [Month End] <> null),
+			    due = Table.AddColumn(expanded, "Is Due", each [Planned Start Date] <> null and [Planned Start Date] < [Month End], type logical),
+			    selected = Table.SelectColumns(due, {"Vacancy ID", "Month End", "Country", "Grade", "Source", "Is Due"}),
+			    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}})
+			in
+			    typed

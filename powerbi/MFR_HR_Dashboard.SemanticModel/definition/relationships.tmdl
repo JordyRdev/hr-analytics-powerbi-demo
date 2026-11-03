@@ -1,0 +1,140 @@
+relationship 767b8bbf-090a-56d6-9344-b2a88b6728e8
+	fromColumn: FactStaffMonthly.'Month End'
+	toColumn: DimDate.Date
+
+relationship 0ff4081f-369e-5a2f-a57d-19cc29dbfcdf
+	fromColumn: FactStaffMonthly.Country
+	toColumn: DimCountry.Country
+
+relationship 8277e012-1cf8-5471-818c-ae2d6b2f3a2a
+	fromColumn: FactStaffMonthly.Nationality
+	toColumn: DimNationality.Nationality
+
+relationship be188e1f-824a-542e-834e-bcb39cb76885
+	fromColumn: FactStaffMonthly.Grade
+	toColumn: DimGrade.Grade
+
+relationship f1de0a71-3d5e-54b9-82bb-336dfa7383d1
+	fromColumn: FactStaffMonthly.'Contract Type'
+	toColumn: DimContractType.'Contract Type'
+
+relationship 63234edd-4137-54bf-8879-f4e35a1ee3ac
+	fromColumn: FactStaffMonthly.'Population Detail'
+	toColumn: DimPopulation.'Population Detail'
+
+relationship a4786869-1e57-5dde-ae7a-eca42ef6137d
+	fromColumn: FactStaffMonthly.Gender
+	toColumn: DimGender.Gender
+
+relationship 9bdb7d51-029d-5de4-9552-21771046d987
+	fromColumn: FactExits.'Exit Date'
+	toColumn: DimDate.Date
+
+relationship d682f606-b132-5c9b-88b8-8f55b5cf8576
+	fromColumn: FactExits.Country
+	toColumn: DimCountry.Country
+
+relationship 684630d9-c5d5-55e5-a9c3-c5b10e95ff66
+	fromColumn: FactExits.Nationality
+	toColumn: DimNationality.Nationality
+
+relationship 19af67c5-5231-5ff9-a7bb-8a47779e7ca1
+	fromColumn: FactExits.Grade
+	toColumn: DimGrade.Grade
+
+relationship 42d470c1-d0da-50cc-a6e0-ce58113ba805
+	fromColumn: FactExits.'Contract Type'
+	toColumn: DimContractType.'Contract Type'
+
+relationship 7b45a30e-7ce3-50f2-b8c0-41258a3fd57a
+	fromColumn: FactExits.'Population Detail'
+	toColumn: DimPopulation.'Population Detail'
+
+relationship 3e1ac343-f7c0-505c-a734-af40cf70f91a
+	fromColumn: FactExits.Gender
+	toColumn: DimGender.Gender
+
+relationship 8321b957-c493-5fcc-b8f8-62fb865e65f1
+	fromColumn: FactContracts.'Start Date'
+	toColumn: DimDate.Date
+
+relationship c68732eb-d8bf-5f4a-9da2-c318d7d64e7d
+	fromColumn: FactContracts.Country
+	toColumn: DimCountry.Country
+
+relationship 161cbe44-42f5-5ecd-9d26-9f8a217e1520
+	fromColumn: FactContracts.Grade
+	toColumn: DimGrade.Grade
+
+relationship d0ec77c6-8dfa-54db-8ae9-0a07c40be359
+	fromColumn: FactContracts.'Contract Type'
+	toColumn: DimContractType.'Contract Type'
+
+relationship c88036b4-71cc-5a6b-849a-3a197b2bdf2f
+	fromColumn: FactContracts.'Population Detail'
+	toColumn: DimPopulation.'Population Detail'
+
+relationship b82f8d56-75c7-53ba-bb51-7814ce495dff
+	fromColumn: FactVacancies.'Opened Date'
+	toColumn: DimDate.Date
+
+relationship 324c6968-af33-5002-a430-cf3d8bd38918
+	isActive: false
+	fromColumn: FactVacancies.'Closed Date'
+	toColumn: DimDate.Date
+
+relationship b954571e-d304-5abc-857c-0431b0a70725
+	fromColumn: FactVacancies.Country
+	toColumn: DimCountry.Country
+
+relationship b9a97093-8977-5147-bab5-4a071e47711f
+	fromColumn: FactVacancies.Grade
+	toColumn: DimGrade.Grade
+
+relationship 08941d74-89a5-5b3a-8775-8cbe87c6e553
+	fromColumn: FactVacancyMonthly.'Month End'
+	toColumn: DimDate.Date
+
+relationship f6e2904d-0e2b-551a-a341-c7e9ff631a55
+	fromColumn: FactVacancyMonthly.Country
+	toColumn: DimCountry.Country
+
+relationship adcdd640-eaf0-5c95-a62a-a85757151a1d
+	fromColumn: FactVacancyMonthly.Grade
+	toColumn: DimGrade.Grade
+
+relationship 76cbf63d-f953-5b72-b8b2-3623f50c70f4
+	fromColumn: FactSurges.'Request Date'
+	toColumn: DimDate.Date
+
+relationship 53802c08-e7e4-50be-b5f4-1a1fcab72fa6
+	fromColumn: FactSurges.Country
+	toColumn: DimCountry.Country
+
+relationship adea37b5-fa36-55b2-8a04-d408b92fcbcc
+	fromColumn: FactSurges.Grade
+	toColumn: DimGrade.Grade
+
+relationship 5e27b1ce-4c79-53eb-bd07-fb0168dab3af
+	fromColumn: FactAppraisals.'Appraisal Date'
+	toColumn: DimDate.Date
+
+relationship 63296c79-1f12-50c3-8563-ec55b7e9ac69
+	fromColumn: FactExpatriation.'Start Date'
+	toColumn: DimDate.Date
+
+relationship 5ad0ba95-a336-5228-a616-57bfbebfbfdf
+	fromColumn: FactExpatriation.Country
+	toColumn: DimCountry.Country
+
+relationship e5f7eb65-e288-5768-a0b7-66de8913b7a8
+	fromColumn: FactExpatriation.Nationality
+	toColumn: DimNationality.Nationality
+
+relationship e2a7d580-c717-522e-9e11-eeaa80f787b9
+	fromColumn: DQ_Issues.'Record Date'
+	toColumn: DimDate.Date
+
+relationship d8fbc723-c2f1-5dd0-95a1-bb5bd6961632
+	fromColumn: Recon_Overlap.'Month End'
+	toColumn: DimDate.Date

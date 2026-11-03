@@ -1,0 +1,36 @@
+table FactAppraisals
+	lineageTag: bd2a1120-9d13-54b3-9238-b96c1bb0d5a3
+
+	column 'Appraisal ID'
+		dataType: string
+		lineageTag: a1a07d81-ea0a-58fa-95b8-7c018deff2b3
+		summarizeBy: none
+		sourceColumn: Appraisal ID
+
+	column 'Staff ID'
+		dataType: string
+		lineageTag: 78b7edf3-51fa-50f2-986a-42b96538aea4
+		summarizeBy: none
+		sourceColumn: Staff ID
+
+	column 'Appraisal Date'
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 3b1d5fb1-4ee1-5438-922a-380b5a4b3eb1
+		summarizeBy: none
+		sourceColumn: Appraisal Date
+
+	column Cycle
+		dataType: int64
+		formatString: #,0
+		lineageTag: ac3318fd-769c-5095-8203-0a848cbe91d4
+		summarizeBy: none
+		sourceColumn: Cycle
+
+	partition FactAppraisals = m
+		mode: import
+		source =
+			let
+			    renamed = Table.RenameColumns(Stg_CoreAppraisals, {{"appraisal_id", "Appraisal ID"}, {"staff_id", "Staff ID"}, {"appraisal_date", "Appraisal Date"}, {"cycle", "Cycle"}})
+			in
+			    renamed

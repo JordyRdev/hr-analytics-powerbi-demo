@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "0cdc5d359f42ad60a697",
+  "position": {
+    "x": 732,
+    "y": 586,
+    "z": 1600,
+    "height": 126,
+    "width": 540,
+    "tabOrder": 1600
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "time_to_done_hours records only the last JIRA workflow stage, a day or two on average. HR reports the full duration, from the date the vacancy is opened to the date it is closed, excluding cancelled vacancies. The scatter shows the two measures are unrelated, so the JIRA field cannot stand in for duration to close.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

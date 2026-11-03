@@ -23,11 +23,11 @@ def build_surges(rng):
             if me.year == 2022 and me.month >= 3:
                 w["Ukraine"] *= 2.5
             if me.year == 2024:
-                w["Haiti"] *= 2.0
+                w[C.SCALING_COUNTRY] *= 2.0
             if me.year == 2024 and 7 <= me.month <= 9:
                 w["Bangladesh"] *= 2.5
             if me >= date(2025, 3, 1):
-                w["Niger"] = 0.0
+                w[C.CLOSING_COUNTRY] = 0.0
             country = _choice(rng, list(w), list(w.values()))
             created = ms + timedelta(days=int(rng.integers(0, (me - ms).days + 1)))
             nat_p = 0.30 + 0.05 * (created.year - 2022) + 0.05 * (created.year >= 2025)

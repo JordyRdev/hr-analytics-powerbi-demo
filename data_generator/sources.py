@@ -26,10 +26,8 @@ TRACKER_LAYOUTS = {
 }
 TRACKER_STD = ["staff_id", "gender", "date_of_birth", "nationality", "grade", "contract_type", "team", "start_date",
                "end_date", "exit_reason", "voluntary_exit", "last_appraisal_date"]
-COUNTRY_LAYOUT = {"Kenya": "A", "Somalia": "A", "South Sudan": "A", "Mali": "A",
-                  "Nigeria": "B", "Niger": "B", "Iraq": "B", "Colombia": "B",
-                  "DR Congo": "C", "Syria": "C", "Afghanistan": "C", "Haiti": "C",
-                  "Ukraine": "D", "Bangladesh": "D"}
+COUNTRY_LAYOUT = {"Kenya": "A", "South Sudan": "A", "Nigeria": "B", "Afghanistan": "B",
+                  "DR Congo": "C", "Syria": "C", "Ukraine": "D", "Bangladesh": "D"}
 TRACKER_FILE_NAME = {"DR Congo": "DRC"}   # file names use the short form HR people type
 
 LEGACY_CONTRACT = {"Fixed-term": "Fixed Term", "Short-term": "Short Term", "Consultancy": "Consultant",
@@ -68,7 +66,7 @@ def core_frames(rng, staff, contracts, appraisals):
     last = last_appraisal(appraisals)
     active = staff[(staff["end"].isna()) | (staff["end"] >= date(2025, 1, 1))]
     core = active[active["kind"] != "National"]
-    pilot = active[(active["kind"] == "National") & active["country"].isin(["Kenya", "Colombia"])]
+    pilot = active[(active["kind"] == "National") & active["country"].isin(["Kenya", "Bangladesh"])]
     dupes = pilot.sample(n=C.DUPLICATES_TRACKER_CORE, random_state=int(rng.integers(0, 2**31 - 1)))
     core = pd.concat([core, dupes]).sort_values("staff_id")
     cat = {"National": "National", "International": "International", "HQ": "HQ"}

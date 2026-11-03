@@ -37,7 +37,7 @@ def test_source_file_exists(rel):
 
 def test_one_tracker_per_field_country():
     names = {p.stem.replace("NS_tracker_", "") for p in (DATA / "country_trackers").glob("*.xlsx")}
-    assert len(names) == 14
+    assert len(names) == 8
     assert {M.clean_country(n) for n in names} == set(M.ref()["countries"]["Country"]) - {M.ref()["hq"]}
 
 
@@ -90,22 +90,22 @@ def test_category_shares():
     s = M.staff_monthly()
     s = s[s["month_end"] == RD]
     n = len(s)
-    assert 1700 <= n <= 1900
+    assert 950 <= n <= 1050
     hq = (s["population_detail"] == "Global - HQ").sum() / n
     nat = (s["population"] == "National").sum() / n
     intl = (s["staff_type"].eq("International") & (s["population_detail"] != "Global - HQ")).sum() / n
     assert 0.03 <= hq <= 0.07
     assert 0.70 <= nat <= 0.80
     assert 0.15 <= intl <= 0.25
-    assert s["country"].nunique() == 14      # 13 field offices open at the end, plus Switzerland
+    assert s["country"].nunique() == 8       # 7 field offices still open, plus Switzerland
 
 
 def test_trend_story():
     f = M.staff_monthly()
     hc = lambda c, d: f[(f["country"] == c) & (f["month_end"] == pd.Timestamp(d))]["staff_id"].nunique()
-    assert hc("Ukraine", "2025-01-31") > 2.2 * hc("Ukraine", "2023-01-31")      # scale-up through 2024
-    assert hc("Niger", "2025-01-31") > 50
-    assert hc("Niger", "2026-10-31") == 0                                       # closed in 2025
+    assert hc("South Sudan", "2025-01-31") > 1.7 * hc("South Sudan", "2023-12-31")   # scale-up through 2024
+    assert hc("Afghanistan", "2025-01-31") > 50
+    assert hc("Afghanistan", "2026-10-31") == 0                                      # closed in 2025
     gs = lambda d: (lambda x: (x["gn_gs"] == "GS").sum() / x["gn_gs"].isin(["GS", "GN"]).sum())(
         f[(f["month_end"] == pd.Timestamp(d)) & (f["staff_type"] == "International")])
     assert gs("2026-10-31") > gs("2022-01-31")
@@ -118,7 +118,7 @@ def test_vacancy_rate_in_plausible_range():
         d = pd.Timestamp(d)
         rate = vm[vm["month_end"] == d]["vacancy_id"].nunique() / (
             f[f["month_end"] == d]["staff_id"].nunique() + vm[vm["month_end"] == d]["vacancy_id"].nunique())
-        assert 0.02 <= rate <= 0.09
+        assert 0.02 <= rate <= 0.10
 
 
 # ---- planted problems ---------------------------------------------------------------------------------------
@@ -216,3 +216,82 @@ def test_expected_kpis_cover_the_headline_measures():
     for k in ("Headcount", "Vacancy Rate", "Retention Rate (12m)", "Turnover Rate (12m)", "Avg Days to Close",
               "GS/GN Ratio", "Appraisal Completion", "Contracts Ending Within 4 Months"):
         assert k in set(saved["kpi"])
+
+
+# ---- size ---------------------------------------------------------------------------------------------------
+def test_data_volume():
+    rows = len(M.staff_monthly())
+    assert 45_000 <= rows <= 75_000, rows
+    total = sum(p.stat().st_size for p in DATA.rglob("*") if p.is_file())
+    assert total < 10 * 1024 * 1024, total
+
+
+def test_about_25_nationalities_with_both_flags():
+    g = M.ref()["gngs"]
+    assert 22 <= len(g) <= 28
+    assert set(g.values()) == {"GN", "GS"}
+    operating = set(M.ref()["countries"]["Country"]) - {M.ref()["hq"]}
+    assert operating <= {k for k, v in g.items() if v == "GS"}
+
+
+# ---- quality bar at the reporting date ----------------------------------------------------------------------
+def _now():
+    f = M.staff_monthly()
+    return f[f["month_end"] == RD]
+
+
+def test_bar_international_staff_per_operating_country():
+    s = _now()
+    countries = M.ref()["countries"]
+    active = countries[(countries["Office Status"] == "Active")]["Country"]       # offices still open at the date
+    n = s[s["staff_type"] == "International"].groupby("country")["staff_id"].nunique()
+    for c in active:
+        if c == M.ref()["hq"]:
+            continue
+        assert n.get(c, 0) >= 10, (c, n.get(c, 0))
+
+
+def test_bar_global_staff_total():
+    assert _now().query("population == 'Global'")["staff_id"].nunique() >= 40
+
+
+def test_bar_staff_per_grade():
+    n = _now().groupby("grade")["staff_id"].nunique()
+    assert len(n) == 11
+    assert n.min() >= 10, n.to_dict()
+
+
+def test_bar_international_contracts_ending_in_4_months():
+    c = M.contracts()
+    c = c[(c["start_date"] <= RD) & (c["end_date"].isna() | (c["end_date"] >= RD))]
+    e = c[(c["staff_type"] == "International") & c["end_date"].notna() & (c["end_date"] > RD) &
+          (c["end_date"] <= M.eomonth(RD, 4))]
+    assert len(e) >= 15, len(e)
+    assert e["grade"].nunique() >= 3, e["grade"].value_counts().to_dict()
+
+
+def test_bar_open_vacancies_every_month_end():
+    vm = M.vacancy_monthly()
+    n = vm.groupby("month_end")["vacancy_id"].nunique()
+    assert len(n) == 58
+    assert n.min() >= 8, n.nsmallest(3).to_dict()
+
+
+def test_bar_vacancies_closed_last_12_months():
+    v = M.vacancies()
+    c = v[(v["closed"] > M.eomonth(RD, -12)) & (v["closed"] <= RD)]
+    assert len(c) >= 30, len(c)
+
+
+def test_bar_surge_requests_per_year_with_both_fill_types():
+    s = M.surges()
+    for year, g in s.groupby(s["request_date"].dt.year):
+        assert len(g) >= 25, (year, len(g))
+        assert {"National", "International"} <= set(g["filled_by"].dropna()), year
+
+
+def test_bar_exits_last_12_months_both_types():
+    e = M.exits()
+    e = e[(e["exit_date"] > M.eomonth(RD, -12)) & (e["exit_date"] <= RD)]
+    assert len(e) >= 15, len(e)
+    assert {"Y", "N"} <= set(e["voluntary"])

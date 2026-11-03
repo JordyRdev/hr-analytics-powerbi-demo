@@ -1,41 +1,41 @@
 kpi,filter,reporting_date,expected_value,tolerance
-Headcount,none,2026-10-31,1797.0,0.0
-Headcount,Population=National,2026-10-31,1346.0,0.0
-Headcount,Population=International,2026-10-31,310.0,0.0
-Headcount,Population=Global,2026-10-31,141.0,0.0
-Headcount,Population Detail=Global - HQ,2026-10-31,90.0,0.0
-Headcount,Country=Kenya,2026-10-31,164.0,0.0
-Headcount,Country=Ukraine,2026-10-31,218.0,0.0
-Headcount,none,2025-10-31,1733.0,0.0
-Headcount,Country=Ukraine,2025-10-31,201.0,0.0
-Female Share,none,2026-10-31,0.407902,0.0001
-Average Age,none,2026-10-31,39.594723,0.01
-Average Age,Population=International,2026-10-31,41.169234,0.01
-GS Share,Staff Type=International,2026-10-31,0.359551,0.0001
-GS/GN Ratio,Staff Type=International,2026-10-31,0.561404,0.0001
-GS Share,Staff Type=International,2025-10-31,0.341232,0.0001
-Expatriates,none,2026-10-31,350.0,0.0
-Open Vacancies,none,2026-10-31,74.0,0.0
-Vacancy Rate,none,2026-10-31,0.039551,0.0001
-Vacancy Rate,Country=Somalia,2026-10-31,0.027027,0.0001
-Vacancy Rate,Staff Type=International,2026-10-31,0.06237,0.0001
-Due Vacancy Rate,none,2026-10-31,0.020844,0.0001
-Avg Planned Duration (months),none,2026-10-31,15.0,0.01
-Vacancies Opened (12m),none,2026-10-31,384.0,0.0
-Avg Days to Close,none,2026-10-31,83.965969,0.01
-Avg Time to Done (days),none,2026-10-31,1.169601,0.01
-Retention Rate (12m),none,2026-10-31,0.822274,0.0001
-Retention Rate (12m),none,2025-10-31,0.80662,0.0001
-Exits (12m),none,2026-10-31,327.0,0.0
-Turnover Rate (12m),none,2026-10-31,0.185708,0.0001
-Voluntary Turnover Rate (12m),none,2026-10-31,0.070989,0.0001
-Appraisal Completion,none,2026-10-31,0.807477,0.0001
-Avg Current Contract Duration G3/G4 (months),none,2026-10-31,16.371981,0.01
-Avg Granted Duration New Joiners G3/G4 (months),none,2026-10-31,12.458333,0.01
-Contracts Ending Within 4 Months,none,2026-10-31,115.0,0.0
-Contracts Ending Within 4 Months %,none,2026-10-31,0.254989,0.0001
-Surge Requests (12m),none,2026-10-31,54.0,0.0
-Surge National Share (12m),none,2026-10-31,0.531915,0.0001
+Headcount,none,2026-10-31,989.0,0.0
+Headcount,Population=National,2026-10-31,743.0,0.0
+Headcount,Population=International,2026-10-31,173.0,0.0
+Headcount,Population=Global,2026-10-31,73.0,0.0
+Headcount,Population Detail=Global - HQ,2026-10-31,50.0,0.0
+Headcount,Country=Kenya,2026-10-31,128.0,0.0
+Headcount,Country=Ukraine,2026-10-31,129.0,0.0
+Headcount,none,2025-10-31,953.0,0.0
+Headcount,Country=Ukraine,2025-10-31,121.0,0.0
+Female Share,none,2026-10-31,0.427705,0.0001
+Average Age,none,2026-10-31,39.558255,0.01
+Average Age,Population=International,2026-10-31,40.654697,0.01
+GS Share,Staff Type=International,2026-10-31,0.444444,0.0001
+GS/GN Ratio,Staff Type=International,2026-10-31,0.8,0.0001
+GS Share,Staff Type=International,2025-10-31,0.421053,0.0001
+Expatriates,none,2026-10-31,187.0,0.0
+Open Vacancies,none,2026-10-31,38.0,0.0
+Vacancy Rate,none,2026-10-31,0.037001,0.0001
+Vacancy Rate,Country=South Sudan,2026-10-31,0.039474,0.0001
+Vacancy Rate,Staff Type=International,2026-10-31,0.042802,0.0001
+Due Vacancy Rate,none,2026-10-31,0.016553,0.0001
+Avg Planned Duration (months),none,2026-10-31,15.373134,0.01
+Vacancies Opened (12m),none,2026-10-31,201.0,0.0
+Avg Days to Close,none,2026-10-31,90.482927,0.01
+Avg Time to Done (days),none,2026-10-31,1.161423,0.01
+Retention Rate (12m),none,2026-10-31,0.834208,0.0001
+Retention Rate (12m),none,2025-10-31,0.756423,0.0001
+Exits (12m),none,2026-10-31,171.0,0.0
+Turnover Rate (12m),none,2026-10-31,0.17641,0.0001
+Voluntary Turnover Rate (12m),none,2026-10-31,0.059835,0.0001
+Appraisal Completion,none,2026-10-31,0.791111,0.0001
+Avg Current Contract Duration G3/G4 (months),none,2026-10-31,16.359649,0.01
+Avg Granted Duration New Joiners G3/G4 (months),none,2026-10-31,11.714286,0.01
+Contracts Ending Within 4 Months,none,2026-10-31,68.0,0.0
+Contracts Ending Within 4 Months %,none,2026-10-31,0.276423,0.0001
+Surge Requests (12m),none,2026-10-31,76.0,0.0
+Surge National Share (12m),none,2026-10-31,0.539683,0.0001
 DQ Issues: Duplicate staff ID,none,2026-10-31,30.0,0.0
 DQ Issues: Contract end before start,none,2026-10-31,11.0,0.0
 DQ Issues: Resolved before created,none,2026-10-31,9.0,0.0

@@ -12,7 +12,7 @@ def _choice(rng, options, weights):
     return options[int(rng.choice(len(options), p=w / w.sum()))]
 
 
-HARD = {"South Sudan": 1.3, "Somalia": 1.25, "Afghanistan": 1.25, "Syria": 1.2, "DR Congo": 1.15, "Mali": 1.15}
+HARD = {"South Sudan": 1.3, "Afghanistan": 1.25, "Syria": 1.2, "DR Congo": 1.15}
 
 
 def _anchors(e):

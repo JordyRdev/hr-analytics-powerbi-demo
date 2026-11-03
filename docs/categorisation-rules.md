@@ -70,11 +70,11 @@ so HR can correct the source. The counts are in `docs/data-quality.md`.
 | Grade | Label | Country | Unit | Staff Type | Population Detail |
 |---|---|---|---|---|---|
 | G4 | International | Switzerland | People & Culture | International | Global - HQ |
-| G4 | International | Somalia | Global Research Unit | International | Global - Field |
-| G3 | International | Somalia | Programmes | International | International |
-| N3 | Local | Somalia | Programmes | National | National |
+| G4 | International | Nigeria | Global Research Unit | International | Global - Field |
+| G3 | International | Nigeria | Programmes | International | International |
+| N3 | Local | Nigeria | Programmes | National | National |
 | N3 | International | Kenya | Programmes | National | National (conflict logged) |
-| blank | Expat | Iraq | Logistics & Supply | International | International (via R2) |
+| blank | Expat | Syria | Logistics & Supply | International | International (via R2) |
 
 ## Expatriate flag
 

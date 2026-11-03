@@ -4,19 +4,13 @@ from config import HQ_COUNTRY
 # canonical name, ISO3, region, office status
 COUNTRIES = [
     ("Kenya", "KEN", "East Africa", "Active"),
-    ("Somalia", "SOM", "East Africa", "Active"),
     ("South Sudan", "SSD", "East Africa", "Active"),
     ("DR Congo", "COD", "Central Africa", "Active"),
     ("Nigeria", "NGA", "West Africa", "Active"),
-    ("Niger", "NER", "West Africa", "Closed 2025"),
-    ("Mali", "MLI", "West Africa", "Active"),
     ("Ukraine", "UKR", "Eastern Europe", "Active"),
     ("Syria", "SYR", "Middle East", "Active"),
-    ("Iraq", "IRQ", "Middle East", "Active"),
-    ("Afghanistan", "AFG", "South Asia", "Active"),
+    ("Afghanistan", "AFG", "South Asia", "Closed 2025"),
     ("Bangladesh", "BGD", "South Asia", "Active"),
-    ("Haiti", "HTI", "Americas", "Active"),
-    ("Colombia", "COL", "Americas", "Active"),
     (HQ_COUNTRY, "CHE", "Europe", "HQ"),
 ]
 FIELD_COUNTRIES = [c[0] for c in COUNTRIES if c[0] != HQ_COUNTRY]
@@ -30,18 +24,16 @@ COUNTRY_VARIANTS = {
     "Bangladesh": ["Bangladesh (Dhaka)"],
     "Ukraine": ["Ukraine - Kyiv"],
     "Switzerland": ["Geneva HQ", "CH"],
-    "Haiti": ["Haiti "],
 }
 
 # Nationality -> GN / GS (illustrative classification, owned by HR and editable in the file)
-GN = ["Switzerland", "United Kingdom", "France", "Germany", "Netherlands", "Belgium", "Italy", "Spain",
-      "Sweden", "Norway", "Denmark", "Ireland", "Canada", "United States", "Australia", "Japan", "Finland"]
-GS = ["Kenya", "Somalia", "South Sudan", "DR Congo", "Nigeria", "Niger", "Mali", "Ukraine", "Syria", "Iraq",
-      "Afghanistan", "Bangladesh", "Haiti", "Colombia", "India", "Pakistan", "Philippines", "Uganda",
-      "Ethiopia", "Lebanon", "Jordan", "Brazil", "Senegal"]
+GN = ["Switzerland", "United Kingdom", "France", "Germany", "Italy", "Spain", "United States", "Canada",
+      "Netherlands", "Belgium"]
+GS = ["Kenya", "South Sudan", "DR Congo", "Nigeria", "Ukraine", "Syria", "Afghanistan", "Bangladesh",
+      "Uganda", "Ethiopia", "Lebanon", "Jordan", "Pakistan", "India", "Philippines"]
 NATIONALITIES = [(n, "GN") for n in GN] + [(n, "GS") for n in GS]
-GN_WEIGHTS = [3, 5, 6, 5, 3, 3, 3, 3, 2, 2, 1, 1, 3, 4, 2, 1, 1]
-GS_COMMON = ["India", "Pakistan", "Philippines", "Uganda", "Ethiopia", "Lebanon", "Jordan", "Brazil", "Senegal"]
+GN_WEIGHTS = [3, 5, 6, 5, 3, 3, 4, 3, 3, 3]
+GS_COMMON = ["Uganda", "Ethiopia", "Lebanon", "Jordan", "Pakistan", "India", "Philippines"]
 
 GRADES = [
     ("N1", "National", "Support", 1), ("N2", "National", "Support", 2),
@@ -80,6 +72,5 @@ LEGACY_EXIT_LABELS = {"Resignation": "Resigned", "Retirement": "Retired", "Perso
                       "End of contract": "Contract ended", "End of project funding": "Project ended",
                       "Dismissal": "Dismissed", "Redundancy": "Redundancy", "Office closure": "Closure"}
 
-SURGE_COUNTRY_WEIGHTS = {"Ukraine": 18, "Syria": 12, "Somalia": 12, "Haiti": 10, "Bangladesh": 9, "South Sudan": 9,
-                         "DR Congo": 8, "Afghanistan": 6, "Iraq": 5, "Nigeria": 5, "Kenya": 4, "Mali": 4,
-                         "Colombia": 3, "Niger": 2}
+SURGE_COUNTRY_WEIGHTS = {"Ukraine": 18, "Syria": 14, "South Sudan": 14, "DR Congo": 10, "Bangladesh": 10,
+                         "Afghanistan": 8, "Nigeria": 6, "Kenya": 6}

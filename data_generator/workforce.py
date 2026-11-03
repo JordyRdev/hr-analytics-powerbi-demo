@@ -152,7 +152,7 @@ def simulate(rng):
                 span = max((hi - lo).days, 0)
                 d = lo + timedelta(days=int(rng.integers(0, span + 1)))
                 e["end"] = d
-                if is_forced and country == "Niger" and me >= date(2025, 2, 1):
+                if is_forced and country == C.CLOSING_COUNTRY and me >= date(2025, 2, 1):
                     e["exit_reason"], e["voluntary"] = "Office closure", "N"
                 elif is_forced:
                     e["exit_reason"] = "End of project funding" if rng.random() < 0.7 else "Redundancy"

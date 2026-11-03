@@ -1,1375 +1,781 @@
 contract_id,staff_id,contract_type,grade,duty_country,team,start_date,end_date,granted_months
-CTR-000019,EMP-000003,Open-ended,G4,Geneva HQ,Global Research Unit,2014-06-22,,
-CTR-000027,EMP-000004,Fixed-term,N5,Kenya,Human Resources,2023-12-22,2025-12-21,24
-CTR-000028,EMP-000004,Fixed-term,N5,Kenya,Human Resources,2025-12-22,2027-12-21,24
-CTR-000153,EMP-000015,Fixed-term,G5,Somalia,Research & Assessment,2024-12-22,2025-12-21,12
-CTR-000154,EMP-000015,Fixed-term,G5,Somalia,Research & Assessment,2025-12-22,2027-12-21,24
-CTR-000173,EMP-000017,Fixed-term,G6,Somalia,Finance & Admin,2024-12-22,2026-12-21,24
-CTR-000253,EMP-000026,Fixed-term,G5,Syria,Human Resources,2024-12-22,2025-12-21,12
-CTR-000254,EMP-000026,Fixed-term,G5,Syrian Arab Republic,Human Resources,2025-12-22,2026-12-21,12
-CTR-000267,EMP-000027,Fixed-term,G3,DR Congo,Research & Assessment,2024-06-22,2025-06-21,12
-CTR-000268,EMP-000027,Fixed-term,G3,DR Congo,Research & Assessment,2025-06-22,2027-06-21,24
-CTR-000269,EMP-000028,Open-ended,G6,Switzerland,Global Research Unit,2014-06-22,,
-CTR-000297,EMP-000030,Fixed-term,G5,Afghanistan,Programmes,2024-02-22,2025-02-21,12
-CTR-000298,EMP-000030,Fixed-term,G5,Afghanistan,Programmes,2025-02-22,2026-02-21,12
-CTR-000299,EMP-000030,Fixed-term,G5,Afghanistan,Programmes,2026-02-22,2027-02-21,12
-CTR-000342,EMP-000034,Fixed-term,G6,DR Congo,Programmes,2023-06-22,2025-06-21,24
-CTR-000343,EMP-000034,Fixed-term,G6,DR Congo,Programmes,2025-06-22,2026-06-21,12
-CTR-000344,EMP-000034,Fixed-term,G6,DR Congo,Programmes,2026-06-22,2028-06-21,24
-CTR-000534,EMP-000052,Fixed-term,G4,Somalia,Logistics & Supply,2024-06-22,2025-06-21,12
-CTR-000535,EMP-000052,Fixed-term,G4,Somalia,Logistics & Supply,2025-06-22,2026-06-21,12
-CTR-000536,EMP-000052,Fixed-term,G4,Somalia,Logistics & Supply,2026-06-22,2026-09-01,12
-CTR-000770,EMP-000074,Fixed-term,G5,Bangladesh,Research & Assessment,2023-12-22,2025-12-21,24
-CTR-000771,EMP-000074,Fixed-term,G5,Bangladesh,Research & Assessment,2025-12-22,2026-12-21,12
-CTR-000973,EMP-000092,Fixed-term,N2,Kenya,Programmes,2024-10-22,2025-10-21,12
-CTR-000974,EMP-000092,Fixed-term,N2,Kenya,Programmes,2025-10-22,2026-06-11,12
-CTR-000993,EMP-000094,Fixed-term,G4,Syria,Research & Assessment,2024-06-22,2025-09-07,24
-CTR-001088,EMP-000102,Fixed-term,G4,Niger,Human Resources,2024-06-22,2025-06-21,12
-CTR-001089,EMP-000102,Fixed-term,G4,Niger,Human Resources,2025-06-22,2025-09-19,6
-CTR-001125,EMP-000105,Fixed-term,G2,Afghanistan,Security,2024-06-22,2025-01-07,12
-CTR-001228,EMP-000115,Fixed-term,G4,DR Congo,Data & IT,2024-12-22,2024-12-10,6
-CTR-001229,EMP-000115,Fixed-term,G4,DR Congo,Data & IT,2025-06-22,2026-10-17,24
-CTR-001544,EMP-000146,Fixed-term,G4,Switzerland,Global Support Unit,2024-09-18,2025-09-17,12
-CTR-001545,EMP-000146,Fixed-term,G4,Switzerland,Global Support Unit,2025-09-18,2026-04-22,12
-CTR-001629,EMP-000154,Open-ended,G6,Switzerland,Global Support Unit,2015-02-01,,
-CTR-001726,EMP-000163,Fixed-term,G1,Switzerland,Global Support Unit,2024-10-17,2026-10-16,24
-CTR-001727,EMP-000163,Fixed-term,G1,Switzerland,Global Support Unit,2026-10-17,2028-10-16,24
-CTR-001737,EMP-000164,Fixed-term,G4,Nigeria,Programmes,2024-09-30,2025-03-29,6
-CTR-001738,EMP-000164,Fixed-term,G4,Nigeria,Programmes,2025-03-30,2027-03-29,24
-CTR-001752,EMP-000165,Fixed-term,G6,Switzerland,Executive Office,2024-09-05,2025-09-04,12
-CTR-001753,EMP-000165,Fixed-term,G6,Switzerland,Executive Office,2025-09-05,2026-01-19,12
-CTR-001880,EMP-000178,Fixed-term,G4,Afghanistan,Programmes,2024-12-09,2025-06-08,6
-CTR-001881,EMP-000178,Fixed-term,G4,Afghanistan,Programmes,2025-06-09,2026-06-08,12
-CTR-001882,EMP-000178,Fixed-term,G4,Afghanistan,Programmes,2026-06-09,2028-06-08,24
-CTR-001894,EMP-000179,Fixed-term,G4,Switzerland,Finance & Legal,2024-08-23,2025-08-22,12
-CTR-001895,EMP-000179,Fixed-term,G4,Switzerland,Finance & Legal,2025-08-23,2027-08-22,24
-CTR-002031,EMP-000192,Fixed-term,G6,Geneva HQ,Executive Office,2024-01-11,2025-01-10,12
-CTR-002032,EMP-000192,Fixed-term,G6,Switzerland,Executive Office,2025-01-11,2026-01-10,12
-CTR-002033,EMP-000192,Fixed-term,G6,Switzerland,Executive Office,2026-01-11,2027-01-10,12
-CTR-002113,EMP-000200,Fixed-term,G6,Switzerland,Global Support Unit,2024-04-17,2026-04-16,24
-CTR-002114,EMP-000200,Fixed-term,G6,Switzerland,Global Support Unit,2026-04-17,2027-04-16,12
-CTR-002156,EMP-000204,Fixed-term,G4,Nigeria,Research & Assessment,2024-08-03,2025-08-02,12
-CTR-002157,EMP-000204,Fixed-term,G4,Nigeria,Research & Assessment,2025-08-03,2026-08-02,12
-CTR-002158,EMP-000204,Fixed-term,G4,Nigeria,Research & Assessment,2026-08-03,2027-08-02,12
-CTR-002224,EMP-000211,Fixed-term,G4,Mali,Data & IT,2024-05-16,2025-05-15,12
-CTR-002225,EMP-000211,Fixed-term,G4,Mali,Data & IT,2025-05-16,2026-05-15,12
-CTR-002226,EMP-000211,Fixed-term,G4,Mali,Data & IT,2026-05-16,2028-05-15,24
-CTR-002284,EMP-000217,Fixed-term,G5,Niger,Data & IT,2024-05-04,2025-03-05,12
-CTR-002321,EMP-000220,Fixed-term,G4,Syrian Arab Republic,Finance & Admin,2024-01-11,2025-01-10,12
-CTR-002322,EMP-000220,Fixed-term,G4,Syria,Finance & Admin,2025-01-11,2025-10-24,12
-CTR-002508,EMP-000240,Fixed-term,G5,Ukraine,Global Research Unit,2024-05-02,2026-04-02,24
-CTR-002597,EMP-000249,Fixed-term,G6,Switzerland,Communications,2024-12-30,2026-03-10,24
-CTR-002696,EMP-000259,Fixed-term,G6,Somalia,Global Research Unit,2023-09-06,2025-09-05,24
-CTR-002697,EMP-000259,Fixed-term,G6,Somalia,Global Research Unit,2025-09-06,2026-09-05,12
-CTR-002698,EMP-000259,Fixed-term,G6,Somalia,Global Research Unit,2026-09-06,2027-09-05,12
-CTR-002876,EMP-000278,Fixed-term,G6,Colombia,Programmes,2023-12-02,2025-12-01,24
-CTR-002877,EMP-000278,Fixed-term,G6,Colombia,Programmes,2025-12-02,2026-12-01,12
-CTR-003004,EMP-000293,Fixed-term,G5,Nigeria,Logistics & Supply,2024-01-30,2026-01-29,24
-CTR-003005,EMP-000293,Fixed-term,G6,Nigeria,Logistics & Supply,2026-01-30,2026-02-03,6
-CTR-003013,EMP-000294,Fixed-term,G6,Kenya,Global Support Unit,2023-07-31,2025-07-30,24
-CTR-003014,EMP-000294,Fixed-term,G6,Kenya,Global Support Unit,2025-07-31,2026-07-30,12
-CTR-003015,EMP-000294,Fixed-term,G6,Kenya,Global Support Unit,2026-07-31,2028-07-30,24
-CTR-003160,EMP-000311,Fixed-term,N3,Colombia,Programmes,2024-04-13,2025-07-11,24
-CTR-003168,EMP-000312,Fixed-term,G3,Switzerland,Communications,2024-04-19,2025-04-18,12
-CTR-003169,EMP-000312,Fixed-term,G3,Switzerland,Communications,2025-04-19,2026-04-18,12
-CTR-003170,EMP-000312,Fixed-term,G3,Switzerland,Communications,2026-04-19,2028-04-18,24
-CTR-003269,EMP-000325,Fixed-term,G6,Somalia,Research & Assessment,2024-11-23,2026-11-22,24
-CTR-003285,EMP-000327,Fixed-term,G5,South Sudan,Logistics & Supply,2024-12-03,2025-06-02,6
-CTR-003286,EMP-000327,Fixed-term,G5,South Sudan,Logistics & Supply,2025-06-03,2026-06-02,12
-CTR-003287,EMP-000327,Fixed-term,G6,South Sudan,Logistics & Supply,2026-06-03,2028-06-02,24
-CTR-003377,EMP-000336,Fixed-term,G4,DR Congo,Programmes,2024-07-06,2025-07-05,12
-CTR-003378,EMP-000336,Fixed-term,G4,DR Congo,Programmes,2025-07-06,2026-07-05,12
-CTR-003379,EMP-000336,Fixed-term,G4,DR Congo,Programmes,2026-07-06,2028-07-05,24
-CTR-003581,EMP-000363,Fixed-term,G6,Switzerland,Global Support Unit,2024-10-17,2026-10-16,24
-CTR-003582,EMP-000363,Fixed-term,G6,Switzerland,Global Support Unit,2026-10-17,2027-04-16,6
-CTR-003598,EMP-000365,Fixed-term,G6,South Sudan,Programmes,2023-04-25,2025-04-24,24
-CTR-003599,EMP-000365,Fixed-term,G6,South Sudan,Programmes,2025-04-25,2027-04-24,24
-CTR-003606,EMP-000366,Fixed-term,G5,Kenya,Data & IT,2024-04-28,2026-04-27,24
-CTR-003607,EMP-000366,Fixed-term,G5,Kenya,Data & IT,2026-04-28,2027-04-27,12
-CTR-003640,EMP-000370,Fixed-term,G5,Switzerland,Global Research Unit,2023-05-12,2025-05-11,24
-CTR-003641,EMP-000370,Fixed-term,G5,Switzerland,Global Research Unit,2025-05-12,2026-08-29,24
-CTR-003874,EMP-000400,Fixed-term,G4,Niger,Logistics & Supply,2024-09-05,2025-03-04,6
-CTR-003875,EMP-000400,Fixed-term,G4,Niger,Logistics & Supply,2025-03-05,2025-09-04,6
-CTR-003876,EMP-000400,Fixed-term,G4,Niger,Logistics & Supply,2025-09-05,2025-11-19,12
-CTR-003910,EMP-000404,Fixed-term,G5,Switzerland,Global Research Unit,2024-03-12,2025-03-11,12
-CTR-003911,EMP-000404,Fixed-term,G5,Switzerland,Global Research Unit,2025-03-12,2027-03-11,24
-CTR-003918,EMP-000405,Fixed-term,G5,Switzerland,Communications,2023-09-14,2025-09-13,24
-CTR-003919,EMP-000405,Fixed-term,G5,Switzerland,Communications,2025-09-14,2026-03-13,6
-CTR-003920,EMP-000405,Fixed-term,G5,Switzerland,Communications,2026-03-14,2027-03-13,12
-CTR-003990,EMP-000414,Fixed-term,G1,South Sudan,Global Support Unit,2023-10-09,2025-02-12,24
-CTR-004012,EMP-000417,Fixed-term,G4,Switzerland,Finance & Legal,2024-04-11,2025-04-10,12
-CTR-004013,EMP-000417,Fixed-term,G4,Switzerland,Finance & Legal,2025-04-11,2025-10-10,6
-CTR-004014,EMP-000417,Fixed-term,G4,Switzerland,Finance & Legal,2025-10-11,2026-04-10,6
-CTR-004015,EMP-000417,Fixed-term,G4,Switzerland,Finance & Legal,2026-04-11,2027-04-10,12
-CTR-004179,EMP-000439,Fixed-term,G5,Switzerland,Global Support Unit,2024-06-12,2025-06-11,12
-CTR-004180,EMP-000439,Fixed-term,G5,Switzerland,Global Support Unit,2025-06-12,2025-11-23,24
-CTR-004249,EMP-000448,Fixed-term,G5,Iraq,Logistics & Supply,2024-07-01,2025-06-13,12
-CTR-004259,EMP-000449,Fixed-term,G4,Afghanistan,Global Support Unit,2024-10-04,2025-10-03,12
-CTR-004260,EMP-000449,Fixed-term,G4,Afghanistan,Global Support Unit,2025-10-04,2025-08-22,12
-CTR-004261,EMP-000449,Fixed-term,G4,Afghanistan,Global Support Unit,2026-10-04,2027-10-03,12
-CTR-004287,EMP-000453,Fixed-term,G3,Bangladesh,Data & IT,2024-01-10,2025-01-09,12
-CTR-004288,EMP-000453,Fixed-term,G3,Bangladesh,Data & IT,2025-01-10,2025-05-08,24
-CTR-004371,EMP-000464,Fixed-term,G6,Switzerland,Finance & Legal,2024-08-03,2026-08-02,24
-CTR-004372,EMP-000464,Fixed-term,G6,Switzerland,Finance & Legal,2026-08-03,2027-08-02,12
-CTR-004521,EMP-000488,Fixed-term,G4,Nigeria,Data & IT,2023-10-15,2025-10-14,24
-CTR-004522,EMP-000488,Fixed-term,G4,Nigeria,Data & IT,2025-10-15,2025-11-23,24
-CTR-004600,EMP-000499,Fixed-term,G3,Switzerland,Global Research Unit,2024-05-05,2026-05-04,24
-CTR-004601,EMP-000499,Fixed-term,G3,Switzerland,Global Research Unit,2026-05-05,2027-05-04,12
-CTR-004666,EMP-000508,Fixed-term,G4,Ukraine,Finance & Admin,2024-11-28,2025-11-27,12
-CTR-004667,EMP-000508,Fixed-term,G4,Ukraine,Finance & Admin,2025-11-28,2026-11-27,12
-CTR-004680,EMP-000510,Fixed-term,G2,"Congo, Dem. Rep.",Research & Assessment,2024-06-10,2025-07-05,24
-CTR-004730,EMP-000516,Fixed-term,G4,Switzerland,Finance & Legal,2024-06-21,2026-06-20,24
-CTR-004731,EMP-000516,Fixed-term,G4,Switzerland,Finance & Legal,2026-06-21,2027-06-20,12
-CTR-004736,EMP-000517,Fixed-term,G5,South Sudan,Research & Assessment,2024-01-21,2025-01-20,12
-CTR-004737,EMP-000517,Fixed-term,G5,South Sudan,Research & Assessment,2025-01-21,2026-01-20,12
-CTR-004738,EMP-000517,Fixed-term,G5,South Sudan,Research & Assessment,2026-01-21,2028-01-20,24
-CTR-004767,EMP-000521,Fixed-term,G4,Switzerland,People & Culture,2024-06-30,2025-06-29,12
-CTR-004768,EMP-000521,Fixed-term,G4,Switzerland,People & Culture,2025-06-30,2026-06-29,12
-CTR-004769,EMP-000521,Fixed-term,G4,Switzerland,People & Culture,2026-06-30,2028-06-29,24
-CTR-004831,EMP-000531,Fixed-term,G3,Bangladesh,Research & Assessment,2024-01-15,2025-01-14,12
-CTR-004832,EMP-000531,Fixed-term,G3,Bangladesh,Research & Assessment,2025-01-15,2026-01-14,12
-CTR-004833,EMP-000531,Fixed-term,G3,Bangladesh,Research & Assessment,2026-01-15,2028-01-14,24
-CTR-004843,EMP-000532,Fixed-term,G3,Nigeria,Programmes,2024-02-15,2026-02-14,24
-CTR-004844,EMP-000532,Fixed-term,G3,Nigeria,Programmes,2026-02-15,2026-08-14,6
-CTR-004845,EMP-000532,Fixed-term,G3,Nigeria,Programmes,2026-08-15,2027-08-14,12
-CTR-004857,EMP-000534,Fixed-term,G4,Kenya,Research & Assessment,2024-07-18,2025-07-17,12
-CTR-004858,EMP-000534,Fixed-term,G4,Kenya,Research & Assessment,2025-07-18,2027-07-17,24
-CTR-004871,EMP-000536,Fixed-term,G6,Switzerland,Global Research Unit,2024-01-22,2025-01-21,12
-CTR-004872,EMP-000536,Fixed-term,G6,Switzerland,Global Research Unit,2025-01-22,2026-01-21,12
-CTR-004873,EMP-000536,Fixed-term,G6,Switzerland,Global Research Unit,2026-01-22,2027-01-21,12
-CTR-004905,EMP-000540,Fixed-term,G5,Niger,Global Research Unit,2023-01-30,2025-01-29,24
-CTR-004906,EMP-000540,Fixed-term,G5,Niger,Global Research Unit,2025-01-30,2025-10-27,12
-CTR-004912,EMP-000541,Fixed-term,G3,South Sudan,Programmes,2024-01-30,2025-01-29,12
-CTR-004913,EMP-000541,Fixed-term,G3,South Sudan,Programmes,2025-01-30,2025-07-29,6
-CTR-004914,EMP-000541,Fixed-term,G3,South Sudan,Programmes,2025-07-30,2026-07-29,12
-CTR-004915,EMP-000541,Fixed-term,G3,South Sudan,Programmes,2026-07-30,2027-07-29,12
-CTR-004943,EMP-000545,Fixed-term,G4,Nigeria,Global Research Unit,2024-08-09,2025-08-08,12
-CTR-004944,EMP-000545,Fixed-term,G4,Nigeria,Global Research Unit,2025-08-09,2027-08-08,24
-CTR-004949,EMP-000546,Fixed-term,G6,South Sudan,Finance & Admin,2024-04-11,2025-04-10,12
-CTR-004950,EMP-000546,Fixed-term,G6,South Sudan,Finance & Admin,2025-04-11,2027-04-10,24
-CTR-005044,EMP-000558,Fixed-term,G6,South Sudan,Data & IT,2024-09-09,2025-06-10,12
-CTR-005158,EMP-000574,Fixed-term,G5,Kenya,Global Support Unit,2024-09-30,2026-09-29,24
-CTR-005159,EMP-000574,Fixed-term,G5,Kenya,Global Support Unit,2026-09-30,2028-09-29,24
-CTR-005169,EMP-000576,Fixed-term,G5,Switzerland,People & Culture,2024-09-30,2025-09-29,12
-CTR-005170,EMP-000576,Fixed-term,G5,Switzerland,People & Culture,2025-09-30,2027-09-29,24
-CTR-005228,EMP-000584,Fixed-term,G5,Switzerland,Global Research Unit,2023-04-17,2025-04-16,24
-CTR-005229,EMP-000584,Fixed-term,G6,Switzerland,Global Research Unit,2025-04-17,2026-04-16,12
-CTR-005230,EMP-000584,Fixed-term,G6,Switzerland,Global Research Unit,2026-04-17,2027-04-16,12
-CTR-005275,EMP-000591,Fixed-term,G6,DRC,Global Research Unit,2024-04-24,2025-04-23,12
-CTR-005276,EMP-000591,Fixed-term,G6,DR Congo,Global Research Unit,2025-04-24,2026-04-23,12
-CTR-005277,EMP-000591,Fixed-term,G6,DR Congo,Global Research Unit,2026-04-24,2027-04-23,12
-CTR-005284,EMP-000592,Fixed-term,N3,Colombia,Human Resources,2024-10-24,2025-04-23,6
-CTR-005285,EMP-000592,Fixed-term,N3,Colombia,Human Resources,2025-04-24,2025-10-23,6
-CTR-005286,EMP-000592,Fixed-term,N3,Colombia,Human Resources,2025-10-24,2026-04-23,6
-CTR-005287,EMP-000592,Fixed-term,N4,Colombia,Human Resources,2026-04-24,2028-04-23,24
-CTR-005385,EMP-000610,Fixed-term,G2,Somalia,Global Support Unit,2024-12-06,2025-12-05,12
-CTR-005386,EMP-000610,Fixed-term,G2,Somalia,Global Support Unit,2025-12-06,2026-12-05,12
-CTR-005483,EMP-000625,Fixed-term,G3,Ukraine,Logistics & Supply,2024-12-24,2025-06-23,6
-CTR-005484,EMP-000625,Fixed-term,G3,Ukraine,Logistics & Supply,2025-06-24,2025-11-06,12
-CTR-005502,EMP-000629,Open-ended,G4,Switzerland,Finance & Legal,2019-07-07,2025-07-07,
-CTR-005507,EMP-000630,Fixed-term,G6,Switzerland,Communications,2024-01-11,2025-01-10,12
-CTR-005508,EMP-000630,Fixed-term,G6,Switzerland,Communications,2025-01-11,2026-01-10,12
-CTR-005509,EMP-000630,Fixed-term,G6,Switzerland,Communications,2026-01-11,2027-01-10,12
-CTR-005524,EMP-000633,Fixed-term,G2,Iraq,Finance & Admin,2023-07-16,2025-07-15,24
-CTR-005525,EMP-000633,Fixed-term,G2,Iraq,Finance & Admin,2025-07-16,2026-07-15,12
-CTR-005526,EMP-000633,Fixed-term,G2,Iraq,Finance & Admin,2026-07-16,2027-07-15,12
-CTR-005583,EMP-000642,Fixed-term,G3,Somalia,Finance & Admin,2024-02-03,2025-02-02,12
-CTR-005584,EMP-000642,Fixed-term,G3,Somalia,Finance & Admin,2025-02-03,2027-02-02,24
-CTR-005605,EMP-000645,Fixed-term,G3,Somalia,Finance & Admin,2024-02-06,2025-02-05,12
-CTR-005606,EMP-000645,Fixed-term,G4,Somalia,Finance & Admin,2025-02-06,2025-08-05,6
-CTR-005607,EMP-000645,Fixed-term,G4,Somalia,Finance & Admin,2025-08-06,2026-08-05,12
-CTR-005608,EMP-000645,Fixed-term,G5,Somalia,Finance & Admin,2026-08-06,2027-08-05,12
-CTR-005614,EMP-000646,Fixed-term,G5,DR Congo,Research & Assessment,2024-08-07,2025-08-06,12
-CTR-005615,EMP-000646,Fixed-term,G5,DR Congo,Research & Assessment,2025-08-07,2027-08-06,24
-CTR-005628,EMP-000648,Fixed-term,G6,Syria,Data & IT,2024-08-11,2025-08-10,12
-CTR-005629,EMP-000648,Fixed-term,G6,Syria,Data & IT,2025-08-11,2026-02-10,6
-CTR-005630,EMP-000648,Fixed-term,G6,Syria,Data & IT,2026-02-11,2027-02-10,12
-CTR-005673,EMP-000654,Fixed-term,G6,DR Congo,Global Support Unit,2024-08-23,2025-04-05,24
-CTR-005715,EMP-000662,Fixed-term,G3,Niger,Global Research Unit,2024-03-14,2025-03-13,12
-CTR-005716,EMP-000662,Fixed-term,G4,Niger,Global Research Unit,2025-03-14,2025-04-02,12
-CTR-005723,EMP-000664,Fixed-term,G1,Bangladesh,Programmes,2024-09-20,2025-09-19,12
-CTR-005724,EMP-000664,Fixed-term,G1,Bangladesh,Programmes,2025-09-20,2026-01-16,12
-CTR-005734,EMP-000666,Fixed-term,G6,Mali,Data & IT,2023-03-22,2025-03-21,24
-CTR-005735,EMP-000666,Fixed-term,G6,Mali,Data & IT,2025-03-22,2026-03-21,12
-CTR-005736,EMP-000666,Fixed-term,G6,Mali,Data & IT,2026-03-22,2026-04-23,24
-CTR-005755,EMP-000669,Fixed-term,G6,DR Congo,Programmes,2024-09-26,2024-09-05,12
-CTR-005756,EMP-000669,Fixed-term,G6,DR Congo,Programmes,2025-09-26,2027-09-25,24
-CTR-005857,EMP-000686,Fixed-term,G4,Iraq,Programmes,2024-10-25,2025-04-24,6
-CTR-005858,EMP-000686,Fixed-term,G4,Iraq,Programmes,2025-04-25,2025-07-15,12
-CTR-005910,EMP-000695,Fixed-term,G4,Kenya,Logistics & Supply,2024-05-03,2026-01-30,24
-CTR-005951,EMP-000702,Fixed-term,G2,Bangladesh,Global Support Unit,2024-07-19,2025-10-03,24
-CTR-006056,EMP-000718,Fixed-term,G6,Syria,Research & Assessment,2024-10-20,2026-10-19,24
-CTR-006057,EMP-000718,Fixed-term,G6,Syria,Research & Assessment,2026-10-20,2028-10-19,24
-CTR-006079,EMP-000721,Fixed-term,G2,Afghanistan,Human Resources,2024-12-26,2025-05-18,12
-CTR-006123,EMP-000730,Open-ended,G4,Switzerland,Global Research Unit,2020-01-20,,
-CTR-006204,EMP-000743,Fixed-term,G5,DR Congo,Data & IT,2024-08-18,2025-08-17,12
-CTR-006205,EMP-000743,Fixed-term,G5,DR Congo,Data & IT,2025-08-18,2027-08-17,24
-CTR-006215,EMP-000745,Fixed-term,G6,Switzerland,Global Support Unit,2024-02-22,2025-02-21,12
-CTR-006216,EMP-000745,Fixed-term,G6,Switzerland,Global Support Unit,2025-02-22,2027-02-21,24
-CTR-006325,EMP-000765,Open-ended,G3,Switzerland,People & Culture,2020-03-17,,
-CTR-006418,EMP-000780,Fixed-term,G4,Nigeria,Global Research Unit,2024-10-03,2026-06-26,24
-CTR-006451,EMP-000786,Fixed-term,G4,Ukraine,Programmes,2023-04-10,2025-04-09,24
-CTR-006452,EMP-000786,Fixed-term,G4,Ukraine,Programmes,2025-04-10,2025-06-10,24
-CTR-006473,EMP-000791,Fixed-term,G6,Mali,Logistics & Supply,2024-10-20,2026-10-19,24
-CTR-006474,EMP-000791,Fixed-term,G6,Mali,Logistics & Supply,2026-10-20,2027-04-19,6
-CTR-006635,EMP-000822,Fixed-term,G5,South Sudan,Human Resources,2023-11-15,2025-11-14,24
-CTR-006636,EMP-000822,Fixed-term,G5,South Sudan,Human Resources,2025-11-15,2026-11-14,12
-CTR-006837,EMP-000858,Fixed-term,G2,DR Congo,Programmes,2023-07-03,2025-07-02,24
-CTR-006838,EMP-000858,Fixed-term,G2,DR Congo,Programmes,2025-07-03,2026-07-02,12
-CTR-006839,EMP-000858,Fixed-term,G2,DR Congo,Programmes,2026-07-03,2028-07-02,24
-CTR-006948,EMP-000879,Fixed-term,G5,Switzerland,Global Research Unit,2024-07-22,2025-01-21,6
-CTR-006949,EMP-000879,Fixed-term,G5,Switzerland,Global Research Unit,2025-01-22,2026-01-21,12
-CTR-006950,EMP-000879,Fixed-term,G5,Switzerland,Global Research Unit,2026-01-22,2027-01-21,12
-CTR-006998,EMP-000890,Fixed-term,G1,Switzerland,Global Research Unit,2024-08-06,2026-08-05,24
-CTR-006999,EMP-000890,Fixed-term,G1,Switzerland,Global Research Unit,2026-08-06,2027-08-05,12
-CTR-007009,EMP-000892,Fixed-term,G6,Haiti,Programmes,2024-02-09,2026-02-08,24
-CTR-007010,EMP-000892,Fixed-term,G6,Haiti,Programmes,2026-02-09,2027-02-08,12
-CTR-007021,EMP-000894,Fixed-term,G3,Kenya,Human Resources,2023-08-11,2025-08-10,24
-CTR-007022,EMP-000894,Fixed-term,G3,Kenya,Human Resources,2025-08-11,2025-07-18,12
-CTR-007023,EMP-000894,Fixed-term,G3,Kenya,Human Resources,2026-08-11,2027-02-10,6
-CTR-007026,EMP-000895,Fixed-term,G4,Switzerland,Global Research Unit,2023-02-12,2025-02-11,24
-CTR-007027,EMP-000895,Fixed-term,G4,Switzerland,Global Research Unit,2025-02-12,2026-02-11,12
-CTR-007028,EMP-000895,Fixed-term,G4,Switzerland,Global Research Unit,2026-02-12,2027-02-11,12
-CTR-007066,EMP-000899,Fixed-term,G6,Syria,Research & Assessment,2024-10-20,2025-10-19,12
-CTR-007067,EMP-000899,Fixed-term,G6,Syria,Research & Assessment,2025-10-20,2026-04-19,6
-CTR-007068,EMP-000899,Fixed-term,G6,Syria,Research & Assessment,2026-04-20,2028-04-19,24
-CTR-007125,EMP-000910,Open-ended,G3,Switzerland,Global Support Unit,2020-09-03,,
-CTR-007194,EMP-000921,Fixed-term,G5,Haiti,Logistics & Supply,2024-09-22,2025-03-21,6
-CTR-007195,EMP-000921,Fixed-term,G5,Haiti,Logistics & Supply,2025-03-22,2027-03-21,24
-CTR-007215,EMP-000925,Fixed-term,G3,Switzerland,Finance & Legal,2024-10-05,2025-04-04,6
-CTR-007216,EMP-000925,Fixed-term,G3,Switzerland,Finance & Legal,2025-04-05,2027-04-04,24
-CTR-007295,EMP-000941,Fixed-term,G5,Switzerland,Global Support Unit,2024-10-20,2026-10-19,24
-CTR-007296,EMP-000941,Fixed-term,G5,Switzerland,Global Support Unit,2026-10-20,2028-10-19,24
-CTR-007324,EMP-000948,Open-ended,G2,Switzerland,Communications,2020-10-29,,
-CTR-007395,EMP-000963,Fixed-term,G5,Niger,Logistics & Supply,2024-05-13,2025-05-12,12
-CTR-007396,EMP-000963,Fixed-term,G5,Niger,Logistics & Supply,2025-05-13,2025-08-04,24
-CTR-007435,EMP-000972,Open-ended,G4,Switzerland,Finance & Legal,2020-11-21,,
-CTR-007445,EMP-000974,Fixed-term,G1,Switzerland,Global Research Unit,2023-03-22,2025-03-17,24
-CTR-007522,EMP-000989,Fixed-term,G3,Kenya,Research & Assessment,2024-06-11,2025-06-10,12
-CTR-007523,EMP-000989,Fixed-term,G3,Kenya,Research & Assessment,2025-06-11,2025-07-19,12
-CTR-007555,EMP-000995,Fixed-term,G4,Kenya,Finance & Admin,2024-06-18,2025-06-17,12
-CTR-007556,EMP-000995,Fixed-term,G4,Kenya,Finance & Admin,2025-06-18,2027-06-17,24
-CTR-007754,EMP-001034,Fixed-term,N1,Kenya,Finance & Admin,2024-02-18,2025-02-17,12
-CTR-007755,EMP-001034,Fixed-term,N1,Kenya,Finance & Admin,2025-02-18,2026-02-17,12
-CTR-007756,EMP-001034,Fixed-term,N1,Kenya,Finance & Admin,2026-02-18,2026-07-23,12
-CTR-007762,EMP-001035,Fixed-term,G6,Mali,Finance & Admin,2024-11-19,2025-11-18,12
-CTR-007763,EMP-001035,Fixed-term,G6,Mali,Finance & Admin,2025-11-19,2026-02-15,12
-CTR-007771,EMP-001037,Fixed-term,G3,Kenya,Security,2024-07-21,2026-07-20,24
-CTR-007772,EMP-001037,Fixed-term,G3,Kenya,Security,2026-07-21,2027-07-20,12
-CTR-007777,EMP-001038,Fixed-term,G4,Nigeria,Global Research Unit,2024-01-21,2025-01-20,12
-CTR-007778,EMP-001038,Fixed-term,G4,Nigeria,Global Research Unit,2025-01-21,2026-01-20,12
-CTR-007779,EMP-001038,Fixed-term,G4,Nigeria,Global Research Unit,2026-01-21,2026-07-20,6
-CTR-007780,EMP-001038,Fixed-term,G4,Nigeria,Global Research Unit,2026-07-21,2027-01-20,6
-CTR-007787,EMP-001040,Fixed-term,G5,Afghanistan ,Programmes,2024-01-22,2026-01-21,24
-CTR-007788,EMP-001040,Fixed-term,G5,Afghanistan,Programmes,2026-01-22,2027-01-21,12
-CTR-007824,EMP-001048,Fixed-term,G6,Somalia,Research & Assessment,2024-07-27,2025-07-26,12
-CTR-007825,EMP-001048,Fixed-term,G6,Somalia,Research & Assessment,2025-07-27,2026-07-26,12
-CTR-007826,EMP-001048,Fixed-term,G6,Somalia,Research & Assessment,2026-07-27,2026-07-30,12
-CTR-007851,EMP-001052,Fixed-term,G6,Afghanistan,Research & Assessment,2023-02-02,2025-02-01,24
-CTR-007852,EMP-001052,Fixed-term,G6,Afghanistan,Research & Assessment,2025-02-02,2025-03-08,12
-CTR-007870,EMP-001056,Fixed-term,N4,Colombia,Research & Assessment,2024-02-11,2025-02-10,12
-CTR-007871,EMP-001056,Fixed-term,N4,Colombia,Research & Assessment,2025-02-11,2027-02-10,24
-CTR-007875,EMP-001057,Fixed-term,G4,Syria,Programmes,2024-08-12,2025-08-11,12
-CTR-007876,EMP-001057,Fixed-term,G4,Syria,Programmes,2025-08-12,2026-02-11,6
-CTR-007877,EMP-001057,Fixed-term,G4,Syria,Programmes,2026-02-12,2027-02-11,12
-CTR-007920,EMP-001065,Fixed-term,G2,DR Congo,Research & Assessment,2024-08-24,2025-08-23,12
-CTR-007921,EMP-001065,Fixed-term,G2,DR Congo,Research & Assessment,2025-08-24,2026-08-23,12
-CTR-007922,EMP-001065,Fixed-term,G2,DR Congo,Research & Assessment,2026-08-24,2028-08-23,24
-CTR-007938,EMP-001069,Fixed-term,G6,Syria,Research & Assessment,2024-03-01,2026-02-28,24
-CTR-007939,EMP-001069,Fixed-term,G6,Syria,Research & Assessment,2026-03-01,2026-09-08,12
-CTR-007954,EMP-001073,Fixed-term,G6,Switzerland,People & Culture,2024-09-05,2025-09-04,12
-CTR-007955,EMP-001073,Fixed-term,G6,Switzerland,People & Culture,2025-09-05,2026-09-04,12
-CTR-007956,EMP-001073,Fixed-term,G6,Switzerland,People & Culture,2026-09-05,2028-09-04,24
-CTR-008084,EMP-001092,Fixed-term,G4,South Sudan,Data & IT,2024-03-21,2025-03-20,12
-CTR-008085,EMP-001092,Fixed-term,G4,South Sudan,Data & IT,2025-03-21,2025-08-23,12
-CTR-008130,EMP-001102,Fixed-term,G3,Kenya,Human Resources,2024-03-28,2025-03-27,12
-CTR-008131,EMP-001102,Fixed-term,G3,Kenya,Human Resources,2025-03-28,2025-09-27,6
-CTR-008132,EMP-001102,Fixed-term,G3,Kenya,Human Resources,2025-09-28,2026-09-27,12
-CTR-008133,EMP-001102,Fixed-term,G4,Kenya,Human Resources,2026-09-28,2027-09-27,12
-CTR-008144,EMP-001104,Fixed-term,G5,Somalia,Programmes,2024-03-29,2026-03-28,24
-CTR-008145,EMP-001104,Fixed-term,G5,Somalia,Programmes,2026-03-29,2028-03-28,24
-CTR-008209,EMP-001118,Fixed-term,G4,Kenya,Research & Assessment,2024-10-19,2025-02-14,12
-CTR-008214,EMP-001119,Fixed-term,G3,Kenya,Programmes,2024-10-20,2025-10-19,12
-CTR-008215,EMP-001119,Fixed-term,G3,Kenya,Programmes,2025-10-20,2026-10-19,12
-CTR-008216,EMP-001119,Fixed-term,G3,Kenya,Programmes,2026-10-20,2027-10-19,12
-CTR-008228,EMP-001122,Fixed-term,G3,Somalia,Programmes,2024-10-24,2025-10-23,12
-CTR-008229,EMP-001122,Fixed-term,G3,Somalia,Programmes,2025-10-24,2026-10-23,12
-CTR-008230,EMP-001122,Fixed-term,G3,Somalia,Programmes,2026-10-24,2027-04-23,6
-CTR-008231,EMP-001123,Open-ended,G4,Switzerland,Global Research Unit,2021-04-24,2025-05-29,
-CTR-008317,EMP-001140,Fixed-term,G6,Colombia,Global Research Unit,2023-03-12,2025-03-11,24
-CTR-008318,EMP-001140,Fixed-term,G6,Colombia,Global Research Unit,2025-03-12,2027-03-11,24
-CTR-008328,EMP-001144,Fixed-term,G6,Switzerland,Global Support Unit,2024-05-18,2026-05-17,24
-CTR-008329,EMP-001144,Fixed-term,G6,Switzerland,Global Support Unit,2026-05-18,2027-05-17,12
-CTR-008334,EMP-001145,Fixed-term,G6,Mali,Logistics & Supply,2024-05-18,2025-02-10,24
-CTR-008397,EMP-001158,Fixed-term,G6,Niger,Research & Assessment,2023-06-02,2025-06-01,24
-CTR-008398,EMP-001158,Fixed-term,G6,Niger,Research & Assessment,2025-06-02,2025-09-05,12
-CTR-008408,EMP-001160,Fixed-term,G4,Nigeria,Research & Assessment,2024-04-04,2026-04-03,24
-CTR-008409,EMP-001160,Fixed-term,G4,Nigeria,Research & Assessment,2026-04-04,2027-04-03,12
-CTR-008436,EMP-001167,Fixed-term,G4,Iraq,Security,2024-12-10,2025-04-12,6
-CTR-008455,EMP-001170,Fixed-term,G3,Mali,Programmes,2024-01-11,2025-01-10,12
-CTR-008456,EMP-001170,Fixed-term,G3,Mali,Programmes,2025-01-11,2025-06-19,24
-CTR-008466,EMP-001173,Fixed-term,G2,Somalia,Research & Assessment,2023-12-13,2025-12-12,24
-CTR-008467,EMP-001173,Fixed-term,G2,Somalia,Research & Assessment,2025-12-13,2027-12-12,24
-CTR-008475,EMP-001176,Fixed-term,N3,Kenya,Programmes,2024-06-16,2025-06-15,12
-CTR-008476,EMP-001176,Fixed-term,N3,Kenya,Programmes,2025-06-16,2025-12-15,6
-CTR-008477,EMP-001176,Fixed-term,N4,Kenya,Programmes,2025-12-16,2027-12-15,24
-CTR-008509,EMP-001186,Open-ended,G3,Switzerland,Global Support Unit,2021-06-24,,
-CTR-008596,EMP-001207,Fixed-term,G2,DR Congo,Global Research Unit,2024-01-16,2025-01-15,12
-CTR-008597,EMP-001207,Fixed-term,G2,DR Congo,Global Research Unit,2025-01-16,2027-01-15,24
-CTR-008687,EMP-001229,Fixed-term,G5,South Sudan,Human Resources,2023-03-08,2025-03-07,24
-CTR-008688,EMP-001229,Fixed-term,G5,South Sudan,Human Resources,2025-03-08,2027-03-07,24
-CTR-008711,EMP-001234,Fixed-term,G4,Somalia,Programmes,2024-08-12,2026-08-11,24
-CTR-008712,EMP-001234,Fixed-term,G4,Somalia,Programmes,2026-08-12,2027-08-11,12
-CTR-008721,EMP-001237,Fixed-term,G3,Bangladesh,Programmes,2024-02-13,2025-02-12,12
-CTR-008722,EMP-001237,Fixed-term,G3,Bangladesh,Programmes,2025-02-13,2025-08-09,24
-CTR-008783,EMP-001252,Fixed-term,G2,Niger,Programmes,2024-08-23,2025-06-13,12
-CTR-008820,EMP-001263,Fixed-term,G4,Colombia,Research & Assessment,2024-02-28,2026-02-27,24
-CTR-008821,EMP-001263,Fixed-term,G5,Colombia,Research & Assessment,2026-02-28,2026-06-18,12
-CTR-008830,EMP-001265,Fixed-term,G5,Ukraine,Programmes,2024-09-02,2026-09-01,24
-CTR-008831,EMP-001265,Fixed-term,G5,Ukraine,Programmes,2026-09-02,2027-09-01,12
-CTR-008881,EMP-001274,Fixed-term,G5,Somalia,Programmes,2024-07-09,2025-07-08,12
-CTR-008882,EMP-001274,Fixed-term,G5,Somalia,Programmes,2025-07-09,2026-05-29,12
-CTR-008896,EMP-001277,Fixed-term,G4,Kenya,Finance & Admin,2023-09-09,2025-09-08,24
-CTR-008897,EMP-001277,Fixed-term,G4,Kenya,Finance & Admin,2025-09-09,2027-09-08,24
-CTR-008949,EMP-001286,Fixed-term,G3,Somalia,Programmes,2024-09-18,2025-09-17,12
-CTR-008950,EMP-001286,Fixed-term,G3,Somalia,Programmes,2025-09-18,2026-08-29,12
-CTR-008957,EMP-001288,Fixed-term,G3,South Sudan,Programmes,2024-09-19,2026-09-18,24
-CTR-008958,EMP-001288,Fixed-term,G4,South Sudan,Programmes,2026-09-19,2028-09-18,24
-CTR-008976,EMP-001291,Fixed-term,G4,Bangladesh,Programmes,2024-11-21,2026-11-20,24
-CTR-008981,EMP-001292,Fixed-term,G4,Nigeria,Logistics & Supply,2024-05-21,2025-05-20,12
-CTR-008982,EMP-001292,Fixed-term,G5,Nigeria,Logistics & Supply,2025-05-21,2025-11-20,6
-CTR-008983,EMP-001292,Fixed-term,G5,Nigeria,Logistics & Supply,2025-11-21,2026-11-20,12
-CTR-008993,EMP-001295,Open-ended,G5,Switzerland,Global Support Unit,2021-09-23,2025-06-22,
-CTR-009001,EMP-001296,Fixed-term,G6,Switzerland,People & Culture,2024-11-23,2025-05-22,6
-CTR-009002,EMP-001296,Fixed-term,G6,Switzerland,People & Culture,2025-05-23,2026-10-15,24
-CTR-009012,EMP-001299,Fixed-term,G4,South Sudan,Human Resources,2024-03-29,2025-03-28,12
-CTR-009013,EMP-001299,Fixed-term,G4,South Sudan,Human Resources,2025-03-29,2027-03-28,24
-CTR-009021,EMP-001301,Fixed-term,G3,Switzerland,Executive Office,2024-04-01,2025-03-31,12
-CTR-009022,EMP-001301,Fixed-term,G3,Switzerland,Executive Office,2025-04-01,2026-03-31,12
-CTR-009023,EMP-001301,Fixed-term,G3,Switzerland,Executive Office,2026-04-01,2027-03-31,12
-CTR-009038,EMP-001305,Fixed-term,G4,Syria,Logistics & Supply,2024-04-02,2025-04-01,12
-CTR-009039,EMP-001305,Fixed-term,G4,Syrian Arab Republic,Logistics & Supply,2025-04-02,2025-10-01,6
-CTR-009040,EMP-001305,Fixed-term,G4,Syria,Logistics & Supply,2025-10-02,2025-10-07,6
-CTR-009043,EMP-001306,Fixed-term,G4,Switzerland,People & Culture,2023-01-03,2025-01-02,24
-CTR-009044,EMP-001306,Fixed-term,G4,Switzerland,People & Culture,2025-01-03,2026-01-02,12
-CTR-009045,EMP-001306,Fixed-term,G5,Switzerland,People & Culture,2026-01-03,2027-01-02,12
-CTR-009068,EMP-001311,Fixed-term,G5,DR Congo,Programmes,2024-10-07,2025-10-06,12
-CTR-009069,EMP-001311,Fixed-term,G5,DR Congo,Programmes,2025-10-07,2026-10-06,12
-CTR-009070,EMP-001311,Fixed-term,G5,D.R. Congo,Programmes,2026-10-07,2027-10-06,12
-CTR-009074,EMP-001312,Fixed-term,G3,Switzerland,People & Culture,2023-10-08,2025-10-07,24
-CTR-009075,EMP-001312,Fixed-term,G3,Switzerland,People & Culture,2025-10-08,2026-10-07,12
-CTR-009076,EMP-001312,Fixed-term,G3,Switzerland,People & Culture,2026-10-08,2028-10-07,24
-CTR-009132,EMP-001321,Fixed-term,G1,DR Congo,Logistics & Supply,2024-06-20,2026-06-19,24
-CTR-009133,EMP-001321,Fixed-term,G1,DR Congo,Logistics & Supply,2026-06-20,2027-06-19,12
-CTR-009231,EMP-001342,Fixed-term,G6,South Sudan,Programmes,2024-05-04,2026-01-06,24
-CTR-009247,EMP-001346,Fixed-term,G4,Kenya,Global Support Unit,2024-05-06,2025-01-19,24
-CTR-009277,EMP-001352,Fixed-term,G4,South Sudan,Logistics & Supply,2024-05-10,2025-01-27,24
-CTR-009280,EMP-001353,Fixed-term,N4,Colombia,Data & IT,2023-11-12,2025-11-11,24
-CTR-009281,EMP-001353,Fixed-term,N4,Colombia,Data & IT,2025-11-12,2026-05-11,6
-CTR-009282,EMP-001353,Fixed-term,N4,Colombia,Data & IT,2026-05-12,2028-05-11,24
-CTR-009286,EMP-001354,Fixed-term,G2,Switzerland,Communications,2024-07-12,2025-01-11,6
-CTR-009287,EMP-001354,Fixed-term,G3,Switzerland,Communications,2025-01-12,2026-01-11,12
-CTR-009288,EMP-001354,Fixed-term,G4,Switzerland,Communications,2026-01-12,2028-01-11,24
-CTR-009330,EMP-001365,Fixed-term,G3,Somalia,Research & Assessment,2023-06-20,2025-06-19,24
-CTR-009331,EMP-001365,Fixed-term,G3,Somalia,Research & Assessment,2025-06-20,2026-06-19,12
-CTR-009332,EMP-001365,Fixed-term,G3,Somalia,Research & Assessment,2026-06-20,2027-06-19,12
-CTR-009381,EMP-001376,Fixed-term,G4,Niger,Data & IT,2024-12-04,2025-05-26,6
-CTR-009432,EMP-001390,Fixed-term,G6,Switzerland,People & Culture,2023-12-15,2025-12-14,24
-CTR-009433,EMP-001390,Fixed-term,G6,Switzerland,People & Culture,2025-12-15,2027-12-14,24
-CTR-009449,EMP-001395,Fixed-term,G3,Switzerland,Executive Office,2024-12-19,2025-12-18,12
-CTR-009450,EMP-001395,Fixed-term,G3,Switzerland,Executive Office,2025-12-19,2026-12-18,12
-CTR-009478,EMP-001402,Fixed-term,G3,DR Congo,Logistics & Supply,2023-01-07,2025-01-06,24
-CTR-009479,EMP-001402,Fixed-term,G3,DR Congo,Logistics & Supply,2025-01-07,2026-03-25,24
-CTR-009519,EMP-001413,Fixed-term,G6,Kenya,Programmes,2023-01-18,2025-01-17,24
-CTR-009520,EMP-001413,Fixed-term,G6,Kenya,Programmes,2025-01-18,2026-01-17,12
-CTR-009521,EMP-001413,Fixed-term,G6,Kenya,Programmes,2026-01-18,2026-07-28,24
-CTR-009524,EMP-001415,Fixed-term,G2,Iraq,Global Research Unit,2023-01-19,2025-01-18,24
-CTR-009525,EMP-001415,Fixed-term,G2,Iraq,Global Research Unit,2025-01-19,2025-07-18,6
-CTR-009526,EMP-001415,Fixed-term,G2,Iraq,Global Research Unit,2025-07-19,2026-07-18,12
-CTR-009527,EMP-001415,Fixed-term,G2,Iraq,Global Research Unit,2026-07-19,2027-01-18,6
-CTR-009534,EMP-001417,Fixed-term,G3,Syria,Logistics & Supply,2024-07-23,2025-01-22,6
-CTR-009535,EMP-001417,Fixed-term,G3,Syria,Logistics & Supply,2025-01-23,2026-01-22,12
-CTR-009536,EMP-001417,Fixed-term,G3,Syria,Logistics & Supply,2026-01-23,2027-01-22,12
-CTR-009548,EMP-001419,Fixed-term,G3,Mali,Programmes,2024-01-27,2025-01-26,12
-CTR-009549,EMP-001419,Fixed-term,G3,Mali,Programmes,2025-01-27,2026-05-13,24
-CTR-009554,EMP-001420,Fixed-term,G4,Afghanistan,Logistics & Supply,2024-07-30,2025-06-21,12
-CTR-009567,EMP-001424,Fixed-term,G3,Kenya,Logistics & Supply,2024-08-01,2025-01-31,6
-CTR-009568,EMP-001424,Fixed-term,G3,Kenya,Logistics & Supply,2025-02-01,2026-08-27,24
-CTR-009571,EMP-001425,Fixed-term,G2,DR Congo,Programmes,2024-08-02,2025-08-01,12
-CTR-009572,EMP-001425,Fixed-term,G2,D.R. Congo,Programmes,2025-08-02,2026-08-01,12
-CTR-009573,EMP-001425,Fixed-term,G2,DR Congo,Programmes,2026-08-02,2027-08-01,12
-CTR-009583,EMP-001428,Fixed-term,G4,DR Congo,Programmes,2024-08-05,2025-08-04,12
-CTR-009584,EMP-001428,Fixed-term,G4,DR Congo,Programmes,2025-08-05,2026-08-04,12
-CTR-009585,EMP-001428,Fixed-term,G4,DR Congo,Programmes,2026-08-05,2028-08-04,24
-CTR-009601,EMP-001432,Fixed-term,G4,Syria,Logistics & Supply,2024-02-12,2026-02-11,24
-CTR-009602,EMP-001432,Fixed-term,G5,Syrian Arab Republic,Logistics & Supply,2026-02-12,2026-08-11,6
-CTR-009603,EMP-001432,Fixed-term,G5,Syria,Logistics & Supply,2026-08-12,2028-08-11,24
-CTR-009644,EMP-001439,Fixed-term,G2,DR Congo,Research & Assessment,2024-02-25,2026-02-24,24
-CTR-009645,EMP-001439,Fixed-term,G2,DR Congo,Research & Assessment,2026-02-25,2027-02-24,12
-CTR-009646,EMP-001440,Open-ended,G4,Switzerland,Global Research Unit,2022-02-26,,
-CTR-009650,EMP-001441,Fixed-term,G2,South Sudan,Data & IT,2024-08-27,2024-08-10,12
-CTR-009651,EMP-001441,Fixed-term,G2,South Sudan,Data & IT,2025-08-27,2027-08-26,24
-CTR-009797,EMP-001474,Fixed-term,G5,Bangladesh,Logistics & Supply,2024-10-01,2025-09-30,12
-CTR-009798,EMP-001474,Fixed-term,G6,Bangladesh,Logistics & Supply,2025-10-01,2025-10-26,24
-CTR-009823,EMP-001481,Fixed-term,G5,South Sudan,Programmes,2024-10-11,2025-04-10,6
-CTR-009824,EMP-001481,Fixed-term,G6,S. Sudan,Programmes,2025-04-11,2026-04-10,12
-CTR-009825,EMP-001481,Fixed-term,G6,S. Sudan,Programmes,2026-04-11,2028-04-10,24
-CTR-009838,EMP-001484,Fixed-term,G4,South Sudan,Global Research Unit,2024-04-14,2025-04-13,12
-CTR-009839,EMP-001484,Fixed-term,G5,South Sudan,Global Research Unit,2025-04-14,2026-01-28,24
-CTR-009850,EMP-001487,Fixed-term,G4,Mali,Finance & Admin,2024-04-16,2025-04-15,12
-CTR-009851,EMP-001487,Fixed-term,G4,Mali,Finance & Admin,2025-04-16,2025-10-15,6
-CTR-009852,EMP-001487,Fixed-term,G4,Mali,Finance & Admin,2025-10-16,2025-11-21,12
-CTR-009863,EMP-001490,Fixed-term,G1,Kenya,Logistics & Supply,2024-04-21,2026-04-20,24
-CTR-009864,EMP-001490,Fixed-term,G1,Kenya,Logistics & Supply,2026-04-21,2028-04-20,24
-CTR-009867,EMP-001491,Fixed-term,G6,Somalia,Research & Assessment,2024-04-21,2026-04-20,24
-CTR-009868,EMP-001491,Fixed-term,G6,Somalia,Research & Assessment,2026-04-21,2027-04-20,12
-CTR-009883,EMP-001495,Fixed-term,G3,Switzerland,Global Support Unit,2024-04-25,2025-04-24,12
-CTR-009884,EMP-001495,Fixed-term,G3,Switzerland,Global Support Unit,2025-04-25,2027-04-24,24
-CTR-009892,EMP-001497,Fixed-term,G4,Colombia,Research & Assessment,2024-04-27,2025-04-26,12
-CTR-009893,EMP-001497,Fixed-term,G4,Colombia,Research & Assessment,2025-04-27,2027-04-26,24
-CTR-009897,EMP-001498,Fixed-term,G3,Bangladesh,Logistics & Supply,2024-10-27,2025-10-26,12
-CTR-009898,EMP-001498,Fixed-term,G3,Bangladesh,Logistics & Supply,2025-10-27,2026-04-17,12
-CTR-009918,EMP-001504,Fixed-term,G6,Syria,Logistics & Supply,2023-05-01,2025-04-30,24
-CTR-009919,EMP-001504,Fixed-term,G6,Syria,Logistics & Supply,2025-05-01,2026-03-21,24
-CTR-009922,EMP-001506,Open-ended,G5,Switzerland,Global Research Unit,2022-05-06,2025-03-21,
-CTR-009925,EMP-001507,Fixed-term,G3,Haiti ,Finance & Admin,2024-05-06,2025-05-05,12
-CTR-009926,EMP-001507,Fixed-term,G4,Haiti,Finance & Admin,2025-05-06,2026-10-04,24
-CTR-009951,EMP-001513,Fixed-term,G3,South Sudan,Programmes,2024-05-16,2025-05-15,12
-CTR-009952,EMP-001513,Fixed-term,G3,South Sudan,Programmes,2025-05-16,2027-05-15,24
-CTR-009974,EMP-001518,Fixed-term,G5,Niger,Programmes,2024-05-17,2025-05-16,12
-CTR-009975,EMP-001518,Fixed-term,G5,Niger,Programmes,2025-05-17,2025-11-04,24
-CTR-009991,EMP-001522,Fixed-term,G5,Nigeria,Logistics & Supply,2024-05-22,2025-05-21,12
-CTR-009992,EMP-001522,Fixed-term,G6,Nigeria,Logistics & Supply,2025-05-22,2026-05-21,12
-CTR-009993,EMP-001522,Fixed-term,G6,Nigeria,Logistics & Supply,2026-05-22,2027-05-21,12
-CTR-009995,EMP-001523,Fixed-term,G2,Switzerland,Global Support Unit,2024-05-22,2025-05-21,12
-CTR-009996,EMP-001523,Fixed-term,G2,Switzerland,Global Support Unit,2025-05-22,2025-11-21,6
-CTR-009997,EMP-001523,Fixed-term,G2,Switzerland,Global Support Unit,2025-11-22,2027-11-21,24
-CTR-010011,EMP-001527,Fixed-term,G6,South Sudan,Research & Assessment,2024-12-03,2025-12-02,12
-CTR-010012,EMP-001527,Fixed-term,G6,South Sudan,Research & Assessment,2025-12-03,2025-12-07,12
-CTR-010019,EMP-001530,Open-ended,G4,Switzerland,Global Research Unit,2022-06-11,,
-CTR-010055,EMP-001538,Fixed-term,N3,Kenya,Programmes,2024-12-17,2025-12-16,12
-CTR-010056,EMP-001538,Fixed-term,N3,Kenya,Programmes,2025-12-17,2026-02-25,24
-CTR-010116,EMP-001549,Fixed-term,G3,Iraq,Programmes,2023-12-23,2025-12-21,24
-CTR-010120,EMP-001550,Fixed-term,G4,Iraq,Programmes,2024-12-23,2025-12-22,12
-CTR-010121,EMP-001550,Fixed-term,G5,Iraq,Programmes,2025-12-23,2026-12-22,12
-CTR-010146,EMP-001557,Fixed-term,G5,Colombia,Research & Assessment,2023-03-29,2025-03-28,24
-CTR-010147,EMP-001557,Fixed-term,G5,Colombia,Research & Assessment,2025-03-29,2026-03-28,12
-CTR-010148,EMP-001557,Fixed-term,G5,Colombia,Research & Assessment,2026-03-29,2027-03-28,12
-CTR-010202,EMP-001569,Fixed-term,N1,Kenya,Security,2024-01-07,2025-01-06,12
-CTR-010203,EMP-001569,Fixed-term,N1,Kenya,Security,2025-01-07,2026-01-06,12
-CTR-010204,EMP-001569,Fixed-term,N1,Kenya,Security,2026-01-07,2028-01-06,24
-CTR-010312,EMP-001597,Fixed-term,G5,South Sudan,Security,2024-08-10,2026-08-09,24
-CTR-010313,EMP-001597,Fixed-term,G6,South Sudan,Security,2026-08-10,2028-08-09,24
-CTR-010324,EMP-001600,Fixed-term,G3,South Sudan,Programmes,2024-08-15,2025-08-14,12
-CTR-010325,EMP-001600,Fixed-term,G3,South Sudan,Programmes,2025-08-15,2027-08-14,24
-CTR-010327,EMP-001601,Fixed-term,G5,Haiti,Programmes,2023-02-15,2025-02-14,24
-CTR-010328,EMP-001601,Fixed-term,G5,Haiti,Programmes,2025-02-15,2026-02-14,12
-CTR-010329,EMP-001601,Fixed-term,G5,Haiti,Programmes,2026-02-15,2026-08-14,6
-CTR-010330,EMP-001601,Fixed-term,G5,Haiti,Programmes,2026-08-15,2027-08-14,12
-CTR-010341,EMP-001604,Fixed-term,G5,South Sudan,Finance & Admin,2024-08-16,2025-08-15,12
-CTR-010342,EMP-001604,Fixed-term,G5,South Sudan,Finance & Admin,2025-08-16,2026-08-15,12
-CTR-010343,EMP-001604,Fixed-term,G6,South Sudan,Finance & Admin,2026-08-16,2027-08-15,12
-CTR-010349,EMP-001605,Fixed-term,G5,Switzerland,Communications,2023-10-19,2025-10-18,24
-CTR-010350,EMP-001605,Fixed-term,G5,Switzerland,Communications,2025-10-19,2026-10-18,12
-CTR-010351,EMP-001605,Fixed-term,G5,Switzerland,Communications,2026-10-19,2028-10-18,24
-CTR-010358,EMP-001607,Fixed-term,G2,Ukraine - Kyiv,Programmes,2023-02-24,2025-02-23,24
-CTR-010359,EMP-001607,Fixed-term,G2,Ukraine,Programmes,2025-02-24,2027-02-23,24
-CTR-010378,EMP-001612,Fixed-term,G3,Mali,Global Support Unit,2024-08-28,2025-02-27,6
-CTR-010379,EMP-001612,Fixed-term,G3,Mali,Global Support Unit,2025-02-28,2025-08-27,6
-CTR-010380,EMP-001612,Fixed-term,G3,Mali,Global Support Unit,2025-08-28,2026-08-27,12
-CTR-010381,EMP-001612,Fixed-term,G3,Mali,Global Support Unit,2026-08-28,2028-08-27,24
-CTR-010421,EMP-001624,Fixed-term,G4,South Sudan,Logistics & Supply,2024-09-12,2025-09-11,12
-CTR-010422,EMP-001624,Fixed-term,G5,South-Sudan,Logistics & Supply,2025-09-12,2026-09-11,12
-CTR-010423,EMP-001624,Fixed-term,G5,South Sudan,Logistics & Supply,2026-09-12,2028-09-11,24
-CTR-010433,EMP-001628,Fixed-term,G5,DR Congo,Programmes,2024-03-16,2025-03-15,12
-CTR-010434,EMP-001628,Fixed-term,G6,Democratic Republic of the Congo,Programmes,2025-03-16,2025-09-15,6
-CTR-010435,EMP-001628,Fixed-term,G6,DR Congo,Programmes,2025-09-16,2026-09-15,12
-CTR-010436,EMP-001628,Fixed-term,G6,DR Congo,Programmes,2026-09-16,2028-09-15,24
-CTR-010439,EMP-001629,Fixed-term,G4,DR Congo,Programmes,2024-09-16,2025-09-15,12
-CTR-010440,EMP-001629,Fixed-term,G4,DR Congo,Programmes,2025-09-16,2026-09-15,12
-CTR-010441,EMP-001629,Fixed-term,G5,DR Congo,Programmes,2026-09-16,2027-09-15,12
-CTR-010445,EMP-001630,Fixed-term,G2,Bangladesh,Programmes,2024-09-18,2026-09-17,24
-CTR-010446,EMP-001630,Fixed-term,G2,Bangladesh,Programmes,2026-09-18,2027-09-17,12
-CTR-010459,EMP-001634,Fixed-term,G2,Syria,Logistics & Supply,2024-09-21,2025-03-20,6
-CTR-010460,EMP-001634,Fixed-term,G3,Syria,Logistics & Supply,2025-03-21,2026-03-20,12
-CTR-010461,EMP-001634,Fixed-term,G3,Syria,Logistics & Supply,2026-03-21,2028-03-20,24
-CTR-010464,EMP-001635,Fixed-term,G4,Iraq,Programmes,2024-03-21,2025-03-20,12
-CTR-010465,EMP-001635,Fixed-term,G4,Iraq,Programmes,2025-03-21,2026-03-20,12
-CTR-010466,EMP-001635,Fixed-term,G5,Iraq,Programmes,2026-03-21,2026-08-01,12
-CTR-010468,EMP-001636,Fixed-term,G3,Niger,Data & IT,2023-03-22,2025-03-21,24
-CTR-010469,EMP-001636,Fixed-term,G3,Niger,Data & IT,2025-03-22,2025-07-19,12
-CTR-010516,EMP-001647,Fixed-term,G4,Switzerland,Finance & Legal,2024-10-06,2025-10-05,12
-CTR-010517,EMP-001647,Fixed-term,G4,Switzerland,Finance & Legal,2025-10-06,2026-10-05,12
-CTR-010518,EMP-001647,Fixed-term,G4,Switzerland,Finance & Legal,2026-10-06,2027-04-05,6
-CTR-010524,EMP-001649,Open-ended,G4,Switzerland,Global Research Unit,2022-10-07,,
-CTR-010544,EMP-001652,Fixed-term,G1,Nigeria,Global Support Unit,2024-10-13,2025-10-12,12
-CTR-010545,EMP-001652,Fixed-term,G1,Nigeria,Global Support Unit,2025-10-13,2026-01-25,12
-CTR-010569,EMP-001655,Short-term,G3,Kenya,Programmes,2024-12-14,2025-02-13,2
-CTR-010570,EMP-001655,Short-term,G3,Kenya,Programmes,2025-02-14,2025-05-13,3
-CTR-010571,EMP-001655,Fixed-term,G3,Kenya,Programmes,2025-05-14,2026-05-13,12
-CTR-010572,EMP-001655,Fixed-term,G3,Kenya,Programmes,2026-05-14,2027-05-13,12
-CTR-010593,EMP-001660,Fixed-term,G5,Afghanistan,Finance & Admin,2024-10-23,2026-10-22,24
-CTR-010594,EMP-001660,Fixed-term,G5,Afghanistan,Finance & Admin,2026-10-23,2028-10-22,24
-CTR-010601,EMP-001663,Fixed-term,G3,Kenya,Global Research Unit,2024-10-26,2025-04-25,6
-CTR-010602,EMP-001663,Fixed-term,G3,Kenya,Global Research Unit,2025-04-26,2027-04-25,24
-CTR-010621,EMP-001670,Fixed-term,G5,Ukraine,Data & IT,2024-11-07,2025-08-08,12
-CTR-010648,EMP-001676,Short-term,G5,Somalia,Logistics & Supply,2024-07-19,2025-01-18,6
-CTR-010649,EMP-001676,Fixed-term,G5,Somalia,Logistics & Supply,2025-01-19,2025-05-25,24
-CTR-010689,EMP-001686,Fixed-term,G4,Afghanistan,Finance & Admin,2024-12-01,2025-11-30,12
-CTR-010690,EMP-001686,Fixed-term,G5,Afghanistan,Finance & Admin,2025-12-01,2027-11-30,24
-CTR-010732,EMP-001695,Fixed-term,G4,Somalia,Research & Assessment,2024-12-09,2025-06-08,6
-CTR-010733,EMP-001695,Fixed-term,G4,Somalia,Research & Assessment,2025-06-09,2026-06-08,12
-CTR-010734,EMP-001695,Fixed-term,G4,Somalia,Research & Assessment,2026-06-09,2028-06-08,24
-CTR-010737,EMP-001696,Fixed-term,G4,Syria,Research & Assessment,2024-12-10,2025-06-09,6
-CTR-010738,EMP-001696,Fixed-term,G5,Syria,Research & Assessment,2025-06-10,2026-06-09,12
-CTR-010739,EMP-001696,Fixed-term,G5,Syria,Research & Assessment,2026-06-10,2027-06-09,12
-CTR-010776,EMP-001707,Fixed-term,G6,Iraq,Human Resources,2023-12-16,2025-12-15,24
-CTR-010777,EMP-001707,Fixed-term,G6,Iraq,Human Resources,2025-12-16,2026-01-25,12
-CTR-010796,EMP-001712,Fixed-term,G3,Kenya,Research & Assessment,2024-09-21,2025-09-20,12
-CTR-010797,EMP-001712,Fixed-term,G3,Kenya,Research & Assessment,2025-09-21,2027-09-20,24
-CTR-010818,EMP-001715,Fixed-term,G3,South Sudan,Global Research Unit,2024-01-25,2025-01-24,12
-CTR-010819,EMP-001715,Fixed-term,G4,South Sudan,Global Research Unit,2025-01-25,2025-03-16,6
-CTR-010861,EMP-001727,Fixed-term,G2,Haiti,Programmes,2024-06-04,2025-06-03,12
-CTR-010862,EMP-001727,Fixed-term,G2,Haiti ,Programmes,2025-06-04,2026-06-03,12
-CTR-010863,EMP-001727,Fixed-term,G2,Haiti,Programmes,2026-06-04,2028-06-03,24
-CTR-010878,EMP-001730,Fixed-term,G5,Switzerland,Finance & Legal,2023-10-06,2025-05-22,24
-CTR-010899,EMP-001738,Fixed-term,G2,D.R. Congo,Finance & Admin,2023-01-23,2025-01-22,24
-CTR-010900,EMP-001738,Fixed-term,G2,DR Congo,Finance & Admin,2025-01-23,2025-01-25,12
-CTR-010927,EMP-001746,Fixed-term,G4,Haiti,Programmes,2024-07-26,2025-07-25,12
-CTR-010928,EMP-001746,Fixed-term,G4,Haiti,Programmes,2025-07-26,2026-02-18,12
-CTR-010982,EMP-001757,Fixed-term,G3,Iraq,Programmes,2023-02-18,2025-02-17,24
-CTR-010983,EMP-001757,Fixed-term,G3,Iraq,Programmes,2025-02-18,2025-08-17,6
-CTR-010984,EMP-001757,Fixed-term,G3,Iraq,Programmes,2025-08-18,2026-08-17,12
-CTR-010985,EMP-001757,Fixed-term,G4,Iraq,Programmes,2026-08-18,2026-08-22,12
-CTR-010986,EMP-001758,Fixed-term,G2,Iraq,Global Research Unit,2023-02-19,2025-02-18,24
-CTR-010987,EMP-001758,Fixed-term,G2,Iraq,Global Research Unit,2025-02-19,2026-02-18,12
-CTR-010988,EMP-001758,Fixed-term,G2,Iraq,Global Research Unit,2026-02-19,2026-09-12,12
-CTR-010990,EMP-001759,Fixed-term,G4,Switzerland,Global Support Unit,2024-02-20,2025-02-19,12
-CTR-010991,EMP-001759,Fixed-term,G4,Switzerland,Global Support Unit,2025-02-20,2026-04-25,24
-CTR-011009,EMP-001764,Open-ended,G4,Switzerland,People & Culture,2023-02-28,,
-CTR-011053,EMP-001776,Fixed-term,G4,Kenya,Human Resources,2024-03-09,2025-03-08,12
-CTR-011054,EMP-001776,Fixed-term,G4,Kenya,Human Resources,2025-03-09,2025-09-08,6
-CTR-011055,EMP-001776,Fixed-term,G4,Kenya,Human Resources,2025-09-09,2026-09-08,12
-CTR-011056,EMP-001776,Fixed-term,G4,Kenya,Human Resources,2026-09-09,2027-09-08,12
-CTR-011078,EMP-001783,Fixed-term,G4,Ukraine,Logistics & Supply,2024-03-17,2025-03-16,12
-CTR-011079,EMP-001783,Fixed-term,G4,Ukraine,Logistics & Supply,2025-03-17,2026-03-16,12
-CTR-011080,EMP-001783,Fixed-term,G4,Ukraine,Logistics & Supply,2026-03-17,2028-03-16,24
-CTR-011112,EMP-001791,Fixed-term,G2,Mali,Programmes,2024-03-23,2025-03-22,12
-CTR-011113,EMP-001791,Fixed-term,G2,Mali,Programmes,2025-03-23,2025-09-22,6
-CTR-011114,EMP-001791,Fixed-term,G2,Mali,Programmes,2025-09-23,2026-03-22,6
-CTR-011115,EMP-001791,Fixed-term,G2,Mali,Programmes,2026-03-23,2028-03-22,24
-CTR-011128,EMP-001795,Fixed-term,G3,Haiti,Data & IT,2023-03-30,2025-03-29,24
-CTR-011129,EMP-001795,Fixed-term,G3,Haiti,Data & IT,2025-03-30,2025-09-29,6
-CTR-011130,EMP-001795,Fixed-term,G3,Haiti,Data & IT,2025-09-30,2026-09-15,24
-CTR-011135,EMP-001797,Fixed-term,G4,Somalia,Programmes,2023-04-02,2025-02-18,24
-CTR-011141,EMP-001799,Fixed-term,G3,Niger,Programmes,2024-04-05,2025-04-04,12
-CTR-011142,EMP-001799,Fixed-term,G3,Niger,Programmes,2025-04-05,2025-05-30,12
-CTR-011154,EMP-001801,Fixed-term,G4,Afghanistan,Security,2024-04-06,2026-04-05,24
-CTR-011155,EMP-001801,Fixed-term,G4,Afghanistan,Security,2026-04-06,2026-10-05,6
-CTR-011156,EMP-001801,Fixed-term,G4,Afghanistan,Security,2026-10-06,2027-10-05,12
-CTR-011157,EMP-001802,Open-ended,G5,Switzerland,Global Research Unit,2023-04-06,,
-CTR-011161,EMP-001803,Fixed-term,G3,Afghanistan,Research & Assessment,2024-11-07,2025-06-16,12
-CTR-011192,EMP-001813,Fixed-term,G4,Colombia,Logistics & Supply,2024-10-18,2026-10-17,24
-CTR-011193,EMP-001813,Fixed-term,G4,Colombia,Logistics & Supply,2026-10-18,2028-10-17,24
-CTR-011214,EMP-001821,Fixed-term,G4,Bangladesh,Finance & Admin,2024-04-24,2025-04-23,12
-CTR-011215,EMP-001821,Fixed-term,G4,Bangladesh,Finance & Admin,2025-04-24,2026-04-23,12
-CTR-011216,EMP-001821,Fixed-term,G4,Bangladesh,Finance & Admin,2026-04-24,2027-04-23,12
-CTR-011229,EMP-001824,Fixed-term,G6,Switzerland,Global Support Unit,2024-04-27,2025-04-26,12
-CTR-011230,EMP-001824,Fixed-term,G6,Switzerland,Global Support Unit,2025-04-27,2026-04-26,12
-CTR-011231,EMP-001824,Fixed-term,G6,Switzerland,Global Support Unit,2026-04-27,2027-04-26,12
-CTR-011300,EMP-001840,Fixed-term,G5,South Sudan,Finance & Admin,2024-05-18,2026-05-17,24
-CTR-011301,EMP-001840,Fixed-term,G5,South Sudan,Finance & Admin,2026-05-18,2028-05-17,24
-CTR-011309,EMP-001843,Fixed-term,G3,Switzerland,People & Culture,2024-11-21,2025-09-15,12
-CTR-011310,EMP-001844,Fixed-term,G2,Kenya,Human Resources,2023-05-22,2025-03-25,24
-CTR-011312,EMP-001846,Fixed-term,G5,Mali,Human Resources,2023-05-29,2025-05-28,24
-CTR-011313,EMP-001846,Fixed-term,G5,Mali,Human Resources,2025-05-29,2027-05-28,24
-CTR-011320,EMP-001849,Fixed-term,G3,Mali,Programmes,2024-12-02,2025-06-01,6
-CTR-011321,EMP-001849,Fixed-term,G3,Mali,Programmes,2025-06-02,2027-06-01,24
-CTR-011362,EMP-001858,Fixed-term,G4,Syria,Programmes,2024-06-11,2026-06-10,24
-CTR-011363,EMP-001858,Fixed-term,G5,Syria,Programmes,2026-06-11,2027-06-10,12
-CTR-011367,EMP-001859,Fixed-term,G3,Somalia,Global Research Unit,2024-12-11,2025-06-10,6
-CTR-011368,EMP-001859,Fixed-term,G3,Somalia,Global Research Unit,2025-06-11,2027-06-10,24
-CTR-011393,EMP-001866,Fixed-term,G3,Nigeria,Research & Assessment,2024-12-16,2025-04-09,12
-CTR-011404,EMP-001869,Fixed-term,G4,South Sudan,Research & Assessment,2024-06-17,2025-06-16,12
-CTR-011405,EMP-001869,Fixed-term,G4,South Sudan,Research & Assessment,2025-06-17,2025-09-25,12
-CTR-011406,EMP-001870,Fixed-term,G6,Syria,Security,2023-06-17,2025-06-16,24
-CTR-011407,EMP-001870,Fixed-term,G6,Syria,Security,2025-06-17,2025-07-15,24
-CTR-011416,EMP-001873,Fixed-term,G4,Mali,Research & Assessment,2024-06-18,2025-06-17,12
-CTR-011417,EMP-001873,Fixed-term,G4,Mali,Research & Assessment,2025-06-18,2026-06-17,12
-CTR-011418,EMP-001873,Fixed-term,G5,Mali,Research & Assessment,2026-06-18,2027-06-17,12
-CTR-011427,EMP-001876,Fixed-term,G2,Nigeria,Finance & Admin,2024-06-19,2024-05-07,24
-CTR-011428,EMP-001876,Fixed-term,G2,Nigeria,Finance & Admin,2026-06-19,2028-06-18,24
-CTR-011456,EMP-001884,Fixed-term,G2,Kenya,Finance & Admin,2024-06-25,2025-06-24,12
-CTR-011457,EMP-001884,Fixed-term,G3,Kenya,Finance & Admin,2025-06-25,2027-06-24,24
-CTR-011462,EMP-001885,Consultancy,G6,Haiti,Research & Assessment,2024-12-25,2025-03-24,3
-CTR-011463,EMP-001885,Fixed-term,G6,Haiti,Research & Assessment,2025-03-25,2026-01-08,24
-CTR-011476,EMP-001888,Consultancy,G5,Somalia,Human Resources,2024-12-03,2025-04-02,4
-CTR-011477,EMP-001888,Consultancy,G5,Somalia,Human Resources,2025-04-03,2025-07-02,3
-CTR-011478,EMP-001888,Fixed-term,G5,Somalia,Human Resources,2025-07-03,2026-07-02,12
-CTR-011479,EMP-001888,Fixed-term,G5,Somalia,Human Resources,2026-07-03,2028-07-02,24
-CTR-011488,EMP-001892,Fixed-term,G3,Somalia,Research & Assessment,2024-07-06,2026-07-05,24
-CTR-011489,EMP-001892,Fixed-term,G3,Somalia,Research & Assessment,2026-07-06,2028-07-05,24
-CTR-011491,EMP-001893,Fixed-term,G4,Iraq,Research & Assessment,2024-07-07,2025-07-06,12
-CTR-011492,EMP-001893,Fixed-term,G4,Iraq,Research & Assessment,2025-07-07,2026-03-25,12
-CTR-011515,EMP-001900,Fixed-term,G3,Colombia,Research & Assessment,2024-09-17,2025-03-16,6
-CTR-011516,EMP-001900,Fixed-term,G4,Colombia,Research & Assessment,2025-03-17,2025-07-27,6
-CTR-011518,EMP-001901,Fixed-term,G5,Ukraine,Security,2024-07-19,2025-07-18,12
-CTR-011519,EMP-001901,Fixed-term,G5,Ukraine,Security,2025-07-19,2026-07-18,12
-CTR-011520,EMP-001901,Fixed-term,G6,Ukraine,Security,2026-07-19,2026-08-18,24
-CTR-011523,EMP-001902,Fixed-term,G6,Bangladesh,Programmes,2024-03-19,2026-03-18,24
-CTR-011524,EMP-001902,Fixed-term,G6,Bangladesh,Programmes,2026-03-19,2028-03-18,24
-CTR-011537,EMP-001907,Fixed-term,G5,Afghanistan ,Logistics & Supply,2024-07-28,2026-07-27,24
-CTR-011538,EMP-001907,Fixed-term,G5,Afghanistan,Logistics & Supply,2026-07-28,2028-07-27,24
-CTR-011546,EMP-001911,Open-ended,G3,Switzerland,People & Culture,2023-07-30,,
-CTR-011548,EMP-001912,Fixed-term,G4,Somalia,Programmes,2024-07-30,2025-07-29,12
-CTR-011549,EMP-001912,Fixed-term,G4,Somalia,Programmes,2025-07-30,2026-06-26,12
-CTR-011569,EMP-001919,Fixed-term,G5,Switzerland,Finance & Legal,2024-11-04,2025-11-03,12
-CTR-011570,EMP-001919,Fixed-term,G5,Switzerland,Finance & Legal,2025-11-04,2026-11-03,12
-CTR-011575,EMP-001922,Fixed-term,G4,Haiti,Programmes,2024-08-05,2025-02-04,6
-CTR-011576,EMP-001922,Fixed-term,G4,Haiti ,Programmes,2025-02-05,2026-02-13,24
-CTR-011578,EMP-001923,Fixed-term,G3,Kenya,Research & Assessment,2024-02-06,2026-02-05,24
-CTR-011579,EMP-001923,Fixed-term,G4,Kenya,Research & Assessment,2026-02-06,2028-02-05,24
-CTR-011588,EMP-001926,Fixed-term,G4,DR Congo,Programmes,2024-08-11,2025-02-13,24
-CTR-011638,EMP-001943,Fixed-term,G3,Mali,Global Research Unit,2023-08-27,2025-08-26,24
-CTR-011639,EMP-001943,Fixed-term,G3,Mali,Global Research Unit,2025-08-27,2026-01-28,12
-CTR-011640,EMP-001944,Fixed-term,G4,Switzerland,Finance & Legal,2023-08-28,2025-08-27,24
-CTR-011641,EMP-001944,Fixed-term,G5,Switzerland,Finance & Legal,2025-08-28,2025-12-26,24
-CTR-011753,EMP-001976,Fixed-term,G3,Mali,Research & Assessment,2024-09-24,2025-03-23,6
-CTR-011754,EMP-001976,Fixed-term,G3,Mali,Research & Assessment,2025-03-24,2027-03-23,24
-CTR-011768,EMP-001980,Fixed-term,G4,Iraq,Research & Assessment,2024-10-03,2025-04-02,6
-CTR-011769,EMP-001980,Fixed-term,G4,Iraq,Research & Assessment,2025-04-03,2027-04-02,24
-CTR-011772,EMP-001981,Fixed-term,G3,Nigeria,Data & IT,2024-10-07,2025-04-06,6
-CTR-011773,EMP-001981,Fixed-term,G3,Nigeria,Data & IT,2025-04-07,2026-04-06,12
-CTR-011774,EMP-001981,Fixed-term,G3,Nigeria,Data & IT,2026-04-07,2028-04-06,24
-CTR-011804,EMP-001992,Fixed-term,G3,Ukraine,Research & Assessment,2024-04-19,2025-04-18,12
-CTR-011805,EMP-001992,Fixed-term,G3,Ukraine,Research & Assessment,2025-04-19,2026-01-15,12
-CTR-011812,EMP-001995,Fixed-term,G3,Afghanistan,Finance & Admin,2023-10-21,2025-10-20,24
-CTR-011813,EMP-001995,Fixed-term,G3,Afghanistan,Finance & Admin,2025-10-21,2026-05-05,12
-CTR-011836,EMP-002002,Fixed-term,G3,Bangladesh,Global Research Unit,2023-10-29,2025-10-28,24
-CTR-011837,EMP-002002,Fixed-term,G3,Bangladesh,Global Research Unit,2025-10-29,2026-10-28,12
-CTR-011838,EMP-002002,Fixed-term,G3,Bangladesh (Dhaka),Global Research Unit,2026-10-29,2028-10-28,24
-CTR-011842,EMP-002003,Consultancy,G4,DR Congo,Logistics & Supply,2024-10-30,2025-04-29,6
-CTR-011843,EMP-002003,Fixed-term,G4,DR Congo,Logistics & Supply,2025-04-30,2026-04-29,12
-CTR-011844,EMP-002003,Fixed-term,G4,D.R. Congo,Logistics & Supply,2026-04-30,2027-04-29,12
-CTR-011849,EMP-002005,Fixed-term,G4,Colombia,Data & IT,2024-05-01,2025-12-22,24
-CTR-011873,EMP-002010,Open-ended,G4,Switzerland,Global Research Unit,2023-11-07,2026-01-28,
-CTR-011887,EMP-002014,Fixed-term,G4,Afghanistan,Global Support Unit,2024-08-12,2025-02-11,6
-CTR-011888,EMP-002014,Fixed-term,G4,Afghanistan,Global Support Unit,2025-02-12,2025-11-19,12
-CTR-011916,EMP-002023,Fixed-term,G5,DR Congo,Programmes,2024-08-25,2025-08-24,12
-CTR-011917,EMP-002023,Fixed-term,G5,DR Congo,Programmes,2025-08-25,2026-08-24,12
-CTR-011918,EMP-002023,Fixed-term,G5,DR Congo,Programmes,2026-08-25,2028-08-24,24
-CTR-011922,EMP-002025,Fixed-term,G3,Syria,Data & IT,2024-11-25,2025-05-24,6
-CTR-011923,EMP-002025,Fixed-term,G4,Syria,Data & IT,2025-05-25,2025-12-20,24
-CTR-011926,EMP-002026,Fixed-term,G3,Afghanistan,Finance & Admin,2024-11-26,2025-01-03,12
-CTR-011949,EMP-002031,Fixed-term,G4,Kenya,Programmes,2024-12-06,2025-12-05,12
-CTR-011950,EMP-002031,Fixed-term,G4,Kenya,Programmes,2025-12-06,2026-12-05,12
-CTR-011952,EMP-002032,Fixed-term,G3,Syria,Data & IT,2024-12-08,2026-12-07,24
-CTR-011977,EMP-002041,Fixed-term,G4,Syria,Data & IT,2024-06-15,2025-06-14,12
-CTR-011978,EMP-002041,Fixed-term,G4,Syria,Data & IT,2025-06-15,2026-06-14,12
-CTR-011979,EMP-002041,Fixed-term,G4,Syria,Data & IT,2026-06-15,2026-06-20,24
-CTR-011992,EMP-002046,Fixed-term,G3,Haiti,Global Support Unit,2024-09-19,2025-09-18,12
-CTR-011993,EMP-002046,Fixed-term,G4,Haiti,Global Support Unit,2025-09-19,2027-09-18,24
-CTR-012006,EMP-002051,Fixed-term,G2,Somalia,Programmes,2024-12-20,2025-12-29,24
-CTR-012039,EMP-002060,Fixed-term,G2,Nigeria,Programmes,2024-03-01,2025-02-28,12
-CTR-012040,EMP-002060,Fixed-term,G2,Nigeria,Programmes,2025-03-01,2026-02-28,12
-CTR-012041,EMP-002060,Fixed-term,G2,Nigeria,Programmes,2026-03-01,2028-02-29,24
-CTR-012046,EMP-002062,Open-ended,G1,Switzerland,Global Support Unit,2024-01-01,,
-CTR-012077,EMP-002071,Fixed-term,G4,Nigeria,Programmes,2024-07-10,2025-07-09,12
-CTR-012078,EMP-002071,Fixed-term,G4,Nigeria,Programmes,2025-07-10,2026-07-09,12
-CTR-012079,EMP-002071,Fixed-term,G4,Nigeria,Programmes,2026-07-10,2027-07-09,12
-CTR-012082,EMP-002072,Short-term,G4,Colombia,Logistics & Supply,2024-11-12,2025-02-11,3
-CTR-012083,EMP-002072,Short-term,G4,Colombia,Logistics & Supply,2025-02-12,2025-04-11,2
-CTR-012084,EMP-002072,Short-term,G5,Colombia,Logistics & Supply,2025-04-12,2025-07-11,3
-CTR-012085,EMP-002072,Short-term,G5,Colombia,Logistics & Supply,2025-07-12,2025-11-11,4
-CTR-012086,EMP-002072,Fixed-term,G5,Colombia,Logistics & Supply,2025-11-12,2026-11-11,12
-CTR-012090,EMP-002074,Fixed-term,G5,Ukraine,Programmes,2024-01-15,2025-01-14,12
-CTR-012091,EMP-002074,Fixed-term,G5,Ukraine,Programmes,2025-01-15,2026-01-14,12
-CTR-012092,EMP-002074,Fixed-term,G5,Ukraine,Programmes,2026-01-15,2026-02-01,24
-CTR-012095,EMP-002076,Fixed-term,G2,Somalia,Human Resources,2024-01-16,2025-01-15,12
-CTR-012096,EMP-002076,Fixed-term,G2,Somalia,Human Resources,2025-01-16,2026-01-15,12
-CTR-012097,EMP-002076,Fixed-term,G2,Somalia,Human Resources,2026-01-16,2027-01-15,12
-CTR-012115,EMP-002080,Fixed-term,G5,Switzerland,Communications,2024-01-18,2025-01-17,12
-CTR-012116,EMP-002080,Fixed-term,G5,CH,Communications,2025-01-18,2027-01-17,24
-CTR-012145,EMP-002091,Consultancy,G3,South Sudan,Programmes,2024-10-26,2025-01-25,3
-CTR-012146,EMP-002091,Consultancy,G3,South Sudan,Programmes,2025-01-26,2025-03-25,2
-CTR-012147,EMP-002091,Fixed-term,G3,South Sudan,Programmes,2025-03-26,2026-03-25,12
-CTR-012148,EMP-002091,Fixed-term,G3,South Sudan,Programmes,2026-03-26,2027-03-25,12
-CTR-012151,EMP-002093,Fixed-term,G4,Ukraine,Programmes,2024-01-27,2025-10-28,24
-CTR-012169,EMP-002097,Fixed-term,G5,Syria,Research & Assessment,2024-11-30,2025-11-29,12
-CTR-012170,EMP-002097,Fixed-term,G5,Syria,Research & Assessment,2025-11-30,2026-05-29,6
-CTR-012171,EMP-002097,Fixed-term,G5,Syria,Research & Assessment,2026-05-30,2027-05-29,12
-CTR-012179,EMP-002100,Open-ended,G5,Switzerland,Global Research Unit,2024-02-01,,
-CTR-012189,EMP-002102,Fixed-term,G5,Ukraine,Finance & Admin,2024-08-03,2025-08-02,12
-CTR-012190,EMP-002102,Fixed-term,G5,Ukraine,Finance & Admin,2025-08-03,2026-08-02,12
-CTR-012191,EMP-002102,Fixed-term,G5,Ukraine,Finance & Admin,2026-08-03,2028-08-02,24
-CTR-012202,EMP-002106,Fixed-term,G4,Ukraine,Global Support Unit,2024-02-05,2025-02-04,12
-CTR-012203,EMP-002106,Fixed-term,G4,Ukraine,Global Support Unit,2025-02-05,2025-08-04,6
-CTR-012204,EMP-002106,Fixed-term,G5,Ukraine,Global Support Unit,2025-08-05,2027-08-04,24
-CTR-012205,EMP-002107,Fixed-term,G1,Kenya,Programmes,2024-02-05,2026-02-04,24
-CTR-012206,EMP-002107,Fixed-term,G1,Kenya,Programmes,2026-02-05,2026-08-04,6
-CTR-012207,EMP-002107,Fixed-term,G1,Kenya,Programmes,2026-08-05,2026-08-28,12
-CTR-012208,EMP-002108,Fixed-term,G3,Ukraine,Global Research Unit,2024-02-06,2025-02-05,12
-CTR-012209,EMP-002108,Fixed-term,G3,Ukraine - Kyiv,Global Research Unit,2025-02-06,2026-02-05,12
-CTR-012210,EMP-002108,Fixed-term,G3,Ukraine,Global Research Unit,2026-02-06,2026-08-05,6
-CTR-012211,EMP-002108,Fixed-term,G3,Ukraine,Global Research Unit,2026-08-06,2027-08-05,12
-CTR-012231,EMP-002114,Fixed-term,G4,Somalia,Research & Assessment,2024-11-08,2025-05-07,6
-CTR-012232,EMP-002114,Fixed-term,G4,Somalia,Research & Assessment,2025-05-08,2027-05-07,24
-CTR-012240,EMP-002116,Short-term,G3,Bangladesh,Programmes,2024-10-10,2025-04-09,6
-CTR-012241,EMP-002116,Short-term,G3,Bangladesh,Programmes,2025-04-10,2025-08-09,4
-CTR-012242,EMP-002116,Short-term,G3,Bangladesh,Programmes,2025-08-10,2025-12-09,4
-CTR-012243,EMP-002116,Short-term,G3,Bangladesh,Programmes,2025-12-10,2025-12-30,2
-CTR-012246,EMP-002118,Fixed-term,G4,Haiti,Programmes,2024-04-11,2025-04-10,12
-CTR-012247,EMP-002118,Fixed-term,G4,Haiti,Programmes,2025-04-11,2026-06-15,24
-CTR-012248,EMP-002119,Fixed-term,G6,South Sudan,Programmes,2024-02-12,2025-02-11,12
-CTR-012249,EMP-002119,Fixed-term,G6,South Sudan,Programmes,2025-02-12,2026-02-11,12
-CTR-012250,EMP-002119,Fixed-term,G6,South Sudan,Programmes,2026-02-12,2028-02-11,24
-CTR-012254,EMP-002122,Fixed-term,G3,Kenya,Logistics & Supply,2024-02-13,2025-02-12,12
-CTR-012255,EMP-002122,Fixed-term,G4,Kenya,Logistics & Supply,2025-02-13,2026-02-12,12
-CTR-012256,EMP-002122,Fixed-term,G4,Kenya,Logistics & Supply,2026-02-13,2027-02-12,12
-CTR-012257,EMP-002123,Fixed-term,G3,South Sudan,Global Research Unit,2024-02-14,2025-10-17,24
-CTR-012263,EMP-002126,Fixed-term,G6,Switzerland,People & Culture,2024-02-16,2025-02-15,12
-CTR-012264,EMP-002126,Fixed-term,G6,Switzerland,People & Culture,2025-02-16,2026-02-15,12
-CTR-012265,EMP-002126,Fixed-term,G6,Switzerland,People & Culture,2026-02-16,2026-08-15,6
-CTR-012266,EMP-002126,Fixed-term,G6,Switzerland,People & Culture,2026-08-16,2027-02-15,6
-CTR-012301,EMP-002135,Fixed-term,G4,Afghanistan,Global Research Unit,2024-09-23,2026-09-22,24
-CTR-012302,EMP-002135,Fixed-term,G4,Afghanistan,Global Research Unit,2026-09-23,2027-09-22,12
-CTR-012336,EMP-002146,Fixed-term,G6,Haiti,Logistics & Supply,2024-09-04,2024-08-22,12
-CTR-012337,EMP-002146,Fixed-term,G6,Haiti,Logistics & Supply,2025-09-04,2026-08-29,24
-CTR-012341,EMP-002148,Fixed-term,G4,Nigeria,Programmes,2024-09-10,2025-03-09,6
-CTR-012342,EMP-002148,Fixed-term,G4,Nigeria,Programmes,2025-03-10,2026-03-09,12
-CTR-012343,EMP-002148,Fixed-term,G4,Nigeria,Programmes,2026-03-10,2026-09-20,12
-CTR-012344,EMP-002149,Fixed-term,G4,Nigeria,Finance & Admin,2024-03-12,2025-03-11,12
-CTR-012345,EMP-002149,Fixed-term,G4,Nigeria,Finance & Admin,2025-03-12,2027-03-11,24
-CTR-012351,EMP-002151,Consultancy,G4,DR Congo,Programmes,2024-12-13,2025-06-12,6
-CTR-012352,EMP-002151,Consultancy,G4,DR Congo,Programmes,2025-06-13,2025-09-12,3
-CTR-012353,EMP-002151,Consultancy,G4,DR Congo,Programmes,2025-09-13,2026-01-12,4
-CTR-012354,EMP-002151,Consultancy,G4,DR Congo,Programmes,2026-01-13,2026-05-12,4
-CTR-012355,EMP-002151,Consultancy,G4,DR Congo,Programmes,2026-05-13,2026-08-12,3
-CTR-012356,EMP-002151,Consultancy,G4,DRC,Programmes,2026-08-13,2026-12-12,4
-CTR-012363,EMP-002154,Fixed-term,N3,Kenya,Finance & Admin,2024-03-16,2026-03-15,24
-CTR-012364,EMP-002154,Fixed-term,N3,Kenya,Finance & Admin,2026-03-16,2028-03-15,24
-CTR-012365,EMP-002155,Open-ended,G5,Switzerland,Global Support Unit,2024-03-17,2025-11-24,
-CTR-012368,EMP-002157,Fixed-term,G5,Ukraine,Programmes,2024-03-17,2025-03-16,12
-CTR-012369,EMP-002157,Fixed-term,G6,Ukraine,Programmes,2025-03-17,2026-09-24,24
-CTR-012381,EMP-002162,Fixed-term,N4,Kenya,Data & IT,2024-03-20,2025-03-19,12
-CTR-012382,EMP-002162,Fixed-term,N4,Kenya,Data & IT,2025-03-20,2025-09-19,6
-CTR-012383,EMP-002162,Fixed-term,N4,Kenya,Data & IT,2025-09-20,2026-09-19,12
-CTR-012384,EMP-002162,Fixed-term,N4,Kenya,Data & IT,2026-09-20,2028-09-19,24
-CTR-012392,EMP-002166,Consultancy,G6,Niger,Finance & Admin,2024-07-23,2025-01-22,6
-CTR-012393,EMP-002166,Fixed-term,G6,Niger,Finance & Admin,2025-01-23,2025-07-21,24
-CTR-012397,EMP-002168,Fixed-term,G5,Syria,Research & Assessment,2024-09-26,2025-03-25,6
-CTR-012398,EMP-002168,Fixed-term,G5,Syria,Research & Assessment,2025-03-26,2025-09-25,6
-CTR-012399,EMP-002168,Fixed-term,G5,Syria,Research & Assessment,2025-09-26,2026-01-02,12
-CTR-012400,EMP-002169,Fixed-term,G6,Nigeria,Finance & Admin,2024-03-26,2025-03-25,12
-CTR-012401,EMP-002169,Fixed-term,G6,Nigeria,Finance & Admin,2025-03-26,2026-03-25,12
-CTR-012402,EMP-002169,Fixed-term,G6,Nigeria,Finance & Admin,2026-03-26,2027-03-25,12
-CTR-012405,EMP-002170,Fixed-term,G3,Syria,Programmes,2024-09-26,2026-09-25,24
-CTR-012406,EMP-002170,Fixed-term,G3,Syria,Programmes,2026-09-26,2027-09-25,12
-CTR-012408,EMP-002172,Fixed-term,G3,Colombia,Programmes,2024-03-27,2026-03-26,24
-CTR-012409,EMP-002172,Fixed-term,G3,Colombia,Programmes,2026-03-27,2028-03-26,24
-CTR-012414,EMP-002175,Fixed-term,G3,Mali,Programmes,2024-09-29,2026-09-28,24
-CTR-012415,EMP-002175,Fixed-term,G3,Mali,Programmes,2026-09-29,2027-09-28,12
-CTR-012421,EMP-002179,Fixed-term,G3,South Sudan,Finance & Admin,2024-04-02,2025-04-01,12
-CTR-012422,EMP-002179,Fixed-term,G3,South Sudan,Finance & Admin,2025-04-02,2027-04-01,24
-CTR-012424,EMP-002180,Fixed-term,G1,South Sudan,Logistics & Supply,2024-10-04,2024-09-29,24
-CTR-012425,EMP-002180,Fixed-term,G1,South Sudan,Logistics & Supply,2026-10-04,2027-10-03,12
-CTR-012426,EMP-002181,Fixed-term,G4,Syria,Logistics & Supply,2024-04-04,2025-04-03,12
-CTR-012427,EMP-002181,Fixed-term,G4,Syria,Logistics & Supply,2025-04-04,2026-04-03,12
-CTR-012428,EMP-002181,Fixed-term,G5,Syria,Logistics & Supply,2026-04-04,2027-04-03,12
-CTR-012437,EMP-002184,Fixed-term,G2,South Sudan,Logistics & Supply,2024-04-06,2025-04-05,12
-CTR-012438,EMP-002184,Fixed-term,G2,South Sudan,Logistics & Supply,2025-04-06,2025-04-15,12
-CTR-012497,EMP-002202,Fixed-term,G3,DR Congo,Logistics & Supply,2024-04-18,2025-04-17,12
-CTR-012498,EMP-002202,Fixed-term,G3,DR Congo,Logistics & Supply,2025-04-18,2026-04-17,12
-CTR-012499,EMP-002202,Fixed-term,G4,DR Congo,Logistics & Supply,2026-04-18,2028-04-17,24
-CTR-012510,EMP-002205,Fixed-term,G3,Ukraine,Global Research Unit,2024-06-19,2025-06-18,12
-CTR-012511,EMP-002205,Fixed-term,G3,Ukraine,Global Research Unit,2025-06-19,2026-06-18,12
-CTR-012512,EMP-002205,Fixed-term,G3,Ukraine,Global Research Unit,2026-06-19,2027-06-18,12
-CTR-012518,EMP-002207,Fixed-term,G4,Colombia,Finance & Admin,2024-04-20,2025-04-19,12
-CTR-012519,EMP-002207,Fixed-term,G4,Colombia,Finance & Admin,2025-04-20,2026-04-19,12
-CTR-012520,EMP-002207,Fixed-term,G4,Colombia,Finance & Admin,2026-04-20,2028-04-19,24
-CTR-012529,EMP-002210,Fixed-term,G4,Mali,Finance & Admin,2024-04-22,2025-04-21,12
-CTR-012530,EMP-002210,Fixed-term,G4,Mali,Finance & Admin,2025-04-22,2026-04-21,12
-CTR-012531,EMP-002210,Fixed-term,G4,Mali,Finance & Admin,2026-04-22,2026-10-21,6
-CTR-012532,EMP-002210,Fixed-term,G4,Mali,Finance & Admin,2026-10-22,2027-10-21,12
-CTR-012542,EMP-002213,Fixed-term,G4,Ukraine,Global Research Unit,2024-10-24,2025-04-23,6
-CTR-012543,EMP-002213,Fixed-term,G4,Ukraine - Kyiv,Global Research Unit,2025-04-24,2025-07-05,6
-CTR-012571,EMP-002221,Fixed-term,G5,Nigeria,Research & Assessment,2024-11-03,2025-04-26,24
-CTR-012574,EMP-002223,Fixed-term,G5,Ukraine,Finance & Admin,2024-05-07,2025-05-06,12
-CTR-012575,EMP-002223,Fixed-term,G5,Ukraine - Kyiv,Finance & Admin,2025-05-07,2026-05-03,24
-CTR-012599,EMP-002231,Fixed-term,G3,Somalia,Security,2024-05-10,2025-05-09,12
-CTR-012600,EMP-002231,Fixed-term,G3,Somalia,Security,2025-05-10,2027-05-09,24
-CTR-012615,EMP-002235,Fixed-term,G6,Afghanistan,Programmes,2024-11-12,2025-04-17,24
-CTR-012627,EMP-002239,Fixed-term,G4,Ukraine,Global Research Unit,2024-05-15,2025-05-14,12
-CTR-012628,EMP-002239,Fixed-term,G4,Ukraine,Global Research Unit,2025-05-15,2026-05-14,12
-CTR-012629,EMP-002239,Fixed-term,G4,Ukraine,Global Research Unit,2026-05-15,2027-05-14,12
-CTR-012659,EMP-002251,Fixed-term,G2,Somalia,Logistics & Supply,2024-11-21,2025-11-20,12
-CTR-012660,EMP-002251,Fixed-term,G2,Somalia,Logistics & Supply,2025-11-21,2026-11-20,12
-CTR-012684,EMP-002259,Fixed-term,G5,Ukraine,Programmes,2024-11-29,2025-10-21,12
-CTR-012687,EMP-002261,Fixed-term,G6,Switzerland,Global Support Unit,2024-06-01,2026-05-31,24
-CTR-012688,EMP-002261,Fixed-term,G6,Switzerland,Global Support Unit,2026-06-01,2027-05-31,12
-CTR-012692,EMP-002264,Fixed-term,G4,South Sudan,Global Research Unit,2024-09-02,2025-09-01,12
-CTR-012693,EMP-002264,Fixed-term,G4,South Sudan,Global Research Unit,2025-09-02,2026-09-01,12
-CTR-012694,EMP-002264,Fixed-term,G4,South Sudan,Global Research Unit,2026-09-02,2027-09-01,12
-CTR-012699,EMP-002267,Fixed-term,G5,Iraq,Global Support Unit,2024-06-04,2025-06-03,12
-CTR-012700,EMP-002267,Fixed-term,G5,Iraq,Global Support Unit,2025-06-04,2026-06-03,12
-CTR-012701,EMP-002267,Fixed-term,G5,Iraq,Global Support Unit,2026-06-04,2026-12-03,6
-CTR-012704,EMP-002269,Fixed-term,N2,Kenya,Finance & Admin,2024-12-06,2025-06-05,6
-CTR-012705,EMP-002269,Fixed-term,N3,Kenya,Finance & Admin,2025-06-06,2025-06-23,6
-CTR-012711,EMP-002272,Consultancy,G4,Ukraine,Logistics & Supply,2024-12-09,2025-03-08,3
-CTR-012712,EMP-002272,Consultancy,G4,Ukraine,Logistics & Supply,2025-03-09,2025-06-08,3
-CTR-012713,EMP-002272,Fixed-term,G4,Ukraine,Logistics & Supply,2025-06-09,2026-06-08,12
-CTR-012714,EMP-002272,Fixed-term,G4,Ukraine,Logistics & Supply,2026-06-09,2027-06-08,12
-CTR-012721,EMP-002276,Fixed-term,G3,Afghanistan,Research & Assessment,2024-06-11,2025-06-10,12
-CTR-012722,EMP-002276,Fixed-term,G3,Afghanistan,Research & Assessment,2025-06-11,2026-06-10,12
-CTR-012723,EMP-002276,Fixed-term,G3,Afghanistan,Research & Assessment,2026-06-11,2028-06-10,24
-CTR-012738,EMP-002283,Open-ended,G2,Switzerland,Finance & Legal,2024-06-18,,
-CTR-012740,EMP-002284,Fixed-term,G2,Nigeria,Global Support Unit,2024-12-18,2026-12-17,24
-CTR-012741,EMP-002285,Fixed-term,G1,Somalia,Global Support Unit,2024-06-19,2025-06-18,12
-CTR-012742,EMP-002285,Fixed-term,G1,Somalia,Global Support Unit,2025-06-19,2027-06-18,24
-CTR-012749,EMP-002288,Fixed-term,G1,Syria,Programmes,2024-06-22,2026-06-21,24
-CTR-012750,EMP-002288,Fixed-term,G1,Syria,Programmes,2026-06-22,2027-06-21,12
-CTR-012754,EMP-002291,Fixed-term,G2,Afghanistan ,Security,2024-06-26,2025-06-25,12
-CTR-012755,EMP-002291,Fixed-term,G2,Afghanistan,Security,2025-06-26,2026-06-25,12
-CTR-012756,EMP-002291,Fixed-term,G2,Afghanistan,Security,2026-06-26,2027-06-25,12
-CTR-012772,EMP-002297,Fixed-term,G5,Somalia,Programmes,2024-06-29,2026-06-28,24
-CTR-012773,EMP-002297,Fixed-term,G5,Somalia,Programmes,2026-06-29,2028-06-28,24
-CTR-012783,EMP-002301,Fixed-term,G3,Somalia,Data & IT,2024-07-01,2025-06-30,12
-CTR-012784,EMP-002301,Fixed-term,G4,Somalia,Data & IT,2025-07-01,2026-04-03,12
-CTR-012790,EMP-002304,Consultancy,G3,Iraq,Research & Assessment,2024-11-04,2025-02-03,3
-CTR-012791,EMP-002304,Fixed-term,G3,Iraq,Research & Assessment,2025-02-04,2026-02-03,12
-CTR-012792,EMP-002304,Fixed-term,G3,Iraq,Research & Assessment,2026-02-04,2028-02-03,24
-CTR-012798,EMP-002307,Fixed-term,G2,Ukraine,Programmes,2024-07-05,2025-07-04,12
-CTR-012799,EMP-002307,Fixed-term,G2,Ukraine,Programmes,2025-07-05,2026-07-04,12
-CTR-012800,EMP-002307,Fixed-term,G2,Ukraine,Programmes,2026-07-05,2026-07-20,6
-CTR-012814,EMP-002312,Fixed-term,G4,Ukraine - Kyiv,Research & Assessment,2024-07-09,2025-01-08,6
-CTR-012815,EMP-002312,Fixed-term,G4,Ukraine,Research & Assessment,2025-01-09,2026-06-26,24
-CTR-012855,EMP-002325,Fixed-term,G2,Bangladesh,Finance & Admin,2024-07-26,2025-07-25,12
-CTR-012856,EMP-002325,Fixed-term,G2,Bangladesh,Finance & Admin,2025-07-26,2026-07-25,12
-CTR-012857,EMP-002325,Fixed-term,G3,Bangladesh,Finance & Admin,2026-07-26,2027-07-25,12
-CTR-012858,EMP-002326,Fixed-term,G4,Niger,Human Resources,2024-07-26,2025-03-17,12
-CTR-012868,EMP-002330,Fixed-term,G6,DR Congo,Research & Assessment,2024-07-28,2025-01-27,6
-CTR-012869,EMP-002330,Fixed-term,G6,DR Congo,Research & Assessment,2025-01-28,2026-01-27,12
-CTR-012870,EMP-002330,Fixed-term,G6,DR Congo,Research & Assessment,2026-01-28,2028-01-27,24
-CTR-012894,EMP-002337,Fixed-term,G3,Ukraine - Kyiv,Logistics & Supply,2024-08-01,2025-07-31,12
-CTR-012895,EMP-002337,Fixed-term,G3,Ukraine,Logistics & Supply,2025-08-01,2026-07-31,12
-CTR-012896,EMP-002337,Fixed-term,G3,Ukraine,Logistics & Supply,2026-08-01,2028-07-31,24
-CTR-012906,EMP-002341,Fixed-term,G4,Iraq,Programmes,2024-08-06,2026-08-05,24
-CTR-012907,EMP-002341,Fixed-term,G4,Iraq,Programmes,2026-08-06,2028-08-05,24
-CTR-012922,EMP-002346,Fixed-term,G3,DR Congo,Security,2024-08-10,2025-05-17,12
-CTR-012926,EMP-002348,Fixed-term,G4,Afghanistan,Logistics & Supply,2024-08-13,2025-02-01,24
-CTR-012928,EMP-002349,Short-term,G5,Ukraine - Kyiv,Research & Assessment,2024-10-15,2025-04-14,6
-CTR-012929,EMP-002349,Short-term,G5,Ukraine,Research & Assessment,2025-04-15,2025-06-14,2
-CTR-012930,EMP-002349,Short-term,G5,Ukraine,Research & Assessment,2025-06-15,2025-09-14,3
-CTR-012931,EMP-002349,Short-term,G5,Ukraine,Research & Assessment,2025-09-15,2026-01-14,4
-CTR-012932,EMP-002349,Short-term,G5,Ukraine,Research & Assessment,2026-01-15,2026-05-14,4
-CTR-012933,EMP-002349,Short-term,G5,Ukraine,Research & Assessment,2026-05-15,2026-08-25,6
-CTR-012934,EMP-002350,Fixed-term,G4,DR Congo,Global Research Unit,2024-08-16,2025-08-15,12
-CTR-012935,EMP-002350,Fixed-term,G4,DR Congo,Global Research Unit,2025-08-16,2025-11-13,12
-CTR-012953,EMP-002358,Fixed-term,G3,Haiti,Finance & Admin,2024-08-30,2025-07-10,12
-CTR-012957,EMP-002360,Fixed-term,G4,Syria,Programmes,2024-08-31,2025-02-27,6
-CTR-012958,EMP-002360,Fixed-term,G5,Syria,Programmes,2025-02-28,2026-02-27,12
-CTR-012959,EMP-002360,Fixed-term,G5,Syrian Arab Republic,Programmes,2026-02-28,2027-02-27,12
-CTR-012966,EMP-002363,Fixed-term,G3,Iraq,Programmes,2024-09-01,2025-02-28,6
-CTR-012967,EMP-002363,Fixed-term,G4,Iraq,Programmes,2025-03-01,2026-02-11,12
-CTR-012968,EMP-002364,Fixed-term,G1,Ukraine,Data & IT,2024-09-01,2025-08-31,12
-CTR-012969,EMP-002364,Fixed-term,G1,Ukraine,Data & IT,2025-09-01,2026-08-31,12
-CTR-012970,EMP-002364,Fixed-term,G1,Ukraine,Data & IT,2026-09-01,2028-08-31,24
-CTR-012971,EMP-002365,Fixed-term,G4,South Sudan,Finance & Admin,2024-09-01,2025-02-28,6
-CTR-012972,EMP-002365,Fixed-term,G4,South Sudan,Finance & Admin,2025-03-01,2025-02-21,6
-CTR-012973,EMP-002365,Fixed-term,G4,South Sudan,Finance & Admin,2025-09-01,2025-10-16,6
-CTR-012989,EMP-002372,Fixed-term,G2,Ukraine,Programmes,2024-09-06,2025-09-05,12
-CTR-012990,EMP-002372,Fixed-term,G2,Ukraine,Programmes,2025-09-06,2026-06-23,12
-CTR-012991,EMP-002373,Fixed-term,G6,Ukraine,Finance & Admin,2024-09-06,2026-09-05,24
-CTR-012992,EMP-002373,Fixed-term,G6,Ukraine,Finance & Admin,2026-09-06,2027-09-05,12
-CTR-012996,EMP-002375,Consultancy,G3,Kenya,Global Support Unit,2024-12-07,2025-02-06,2
-CTR-012997,EMP-002375,Fixed-term,G3,Kenya,Global Support Unit,2025-02-07,2027-02-06,24
-CTR-013013,EMP-002382,Fixed-term,G5,Somalia,Research & Assessment,2024-09-11,2025-09-10,12
-CTR-013014,EMP-002382,Fixed-term,G5,Somalia,Research & Assessment,2025-09-11,2025-12-30,12
-CTR-013029,EMP-002389,Short-term,G4,Somalia,Global Research Unit,2024-09-15,2025-01-13,4
-CTR-013030,EMP-002390,Fixed-term,G5,Kenya,Global Support Unit,2024-09-18,2025-09-17,12
-CTR-013031,EMP-002390,Fixed-term,G5,Kenya,Global Support Unit,2025-09-18,2027-09-17,24
-CTR-013090,EMP-002408,Open-ended,G4,Switzerland,Global Research Unit,2024-10-01,2025-01-11,
-CTR-013091,EMP-002409,Fixed-term,G5,Switzerland,Global Research Unit,2024-10-01,2025-07-07,24
-CTR-013093,EMP-002410,Consultancy,N4,Colombia,Security,2025-01-01,2025-03-31,3
-CTR-013094,EMP-002410,Consultancy,N4,Colombia,Security,2025-04-01,2025-06-30,3
-CTR-013095,EMP-002410,Consultancy,N4,Colombia,Security,2025-07-01,2025-09-30,3
-CTR-013096,EMP-002410,Consultancy,N5,Colombia,Security,2025-10-01,2025-12-31,3
-CTR-013097,EMP-002410,Consultancy,N5,Colombia,Security,2026-01-01,2026-04-30,4
-CTR-013098,EMP-002410,Consultancy,N5,Colombia,Security,2026-05-01,2026-06-30,2
-CTR-013099,EMP-002410,Consultancy,N5,Colombia,Security,2026-07-01,2026-09-30,3
-CTR-013100,EMP-002410,Consultancy,N5,Colombia,Security,2026-10-01,2026-12-31,3
-CTR-013102,EMP-002411,Short-term,G5,Kenya,Finance & Admin,2024-12-02,2025-03-01,3
-CTR-013103,EMP-002411,Short-term,G5,Kenya,Finance & Admin,2025-03-02,2025-04-01,1
-CTR-013104,EMP-002411,Short-term,G6,Kenya,Finance & Admin,2025-04-02,2025-07-01,3
-CTR-013105,EMP-002411,Short-term,G6,Kenya,Finance & Admin,2025-07-02,2025-11-01,4
-CTR-013106,EMP-002411,Short-term,G6,Kenya,Finance & Admin,2025-11-02,2026-02-01,3
-CTR-013107,EMP-002411,Fixed-term,G6,Kenya,Finance & Admin,2026-02-02,2028-02-01,24
-CTR-013123,EMP-002416,Fixed-term,G1,Bangladesh,Programmes,2024-10-08,2025-10-07,12
-CTR-013124,EMP-002416,Fixed-term,G1,Bangladesh,Programmes,2025-10-08,2026-03-17,24
-CTR-013130,EMP-002419,Open-ended,G2,Switzerland,Global Support Unit,2024-10-09,,
-CTR-013133,EMP-002421,Consultancy,G2,Haiti,Programmes,2024-12-11,2025-03-10,3
-CTR-013134,EMP-002421,Fixed-term,G3,Haiti,Programmes,2025-03-11,2026-03-10,12
-CTR-013135,EMP-002421,Fixed-term,G4,Haiti,Programmes,2026-03-11,2028-03-10,24
-CTR-013143,EMP-002423,Fixed-term,G5,Nigeria,Security,2024-10-14,2025-10-13,12
-CTR-013144,EMP-002423,Fixed-term,G5,Nigeria,Security,2025-10-14,2026-04-13,6
-CTR-013145,EMP-002423,Fixed-term,G5,Nigeria,Security,2026-04-14,2027-04-13,12
-CTR-013147,EMP-002425,Fixed-term,G3,Ukraine,Global Support Unit,2024-10-15,2025-10-14,12
-CTR-013148,EMP-002425,Fixed-term,G3,Ukraine,Global Support Unit,2025-10-15,2026-10-14,12
-CTR-013149,EMP-002425,Fixed-term,G4,Ukraine,Global Support Unit,2026-10-15,2027-10-14,12
-CTR-013150,EMP-002426,Short-term,G3,Mali,Logistics & Supply,2024-10-16,2025-02-15,4
-CTR-013151,EMP-002426,Short-term,G4,Mali,Logistics & Supply,2025-02-16,2025-05-15,3
-CTR-013152,EMP-002426,Short-term,G4,Mali,Logistics & Supply,2025-05-16,2025-09-15,4
-CTR-013153,EMP-002426,Short-term,G4,Mali,Logistics & Supply,2025-09-16,2025-12-15,3
-CTR-013154,EMP-002426,Short-term,G4,Mali,Logistics & Supply,2025-12-16,2026-03-15,3
-CTR-013155,EMP-002426,Fixed-term,G5,Mali,Logistics & Supply,2026-03-16,2028-03-15,24
-CTR-013168,EMP-002430,Short-term,G2,Switzerland,Finance & Legal,2024-10-24,2025-02-23,4
-CTR-013169,EMP-002430,Short-term,G2,CH,Finance & Legal,2025-02-24,2025-08-23,6
-CTR-013170,EMP-002430,Short-term,G2,Switzerland,Finance & Legal,2025-08-24,2025-11-23,3
-CTR-013171,EMP-002430,Short-term,G3,Switzerland,Finance & Legal,2025-11-24,2026-01-23,2
-CTR-013172,EMP-002430,Short-term,G3,Switzerland,Finance & Legal,2026-01-24,2026-07-23,6
-CTR-013173,EMP-002430,Fixed-term,G4,Switzerland,Finance & Legal,2026-07-24,2027-07-23,12
-CTR-013174,EMP-002431,Short-term,G3,Colombia,Logistics & Supply,2024-10-24,2025-01-23,3
-CTR-013175,EMP-002431,Short-term,G3,Colombia,Logistics & Supply,2025-01-24,2025-04-23,3
-CTR-013176,EMP-002431,Short-term,G3,Colombia,Logistics & Supply,2025-04-24,2025-05-23,1
-CTR-013177,EMP-002431,Fixed-term,G3,Colombia,Logistics & Supply,2025-05-24,2026-05-23,12
-CTR-013178,EMP-002431,Fixed-term,G3,Colombia,Logistics & Supply,2026-05-24,2026-11-23,6
-CTR-013187,EMP-002435,Fixed-term,G4,Somalia,Data & IT,2024-10-26,2025-10-25,12
-CTR-013188,EMP-002435,Fixed-term,G4,Somalia,Data & IT,2025-10-26,2026-10-25,12
-CTR-013189,EMP-002435,Fixed-term,G4,Somalia,Data & IT,2026-10-26,2027-10-25,12
-CTR-013204,EMP-002443,Short-term,G5,Switzerland,People & Culture,2024-10-31,2025-01-30,3
-CTR-013205,EMP-002443,Short-term,G5,Switzerland,People & Culture,2025-01-31,2025-02-27,1
-CTR-013206,EMP-002443,Short-term,G5,Switzerland,People & Culture,2025-02-28,2025-04-27,2
-CTR-013207,EMP-002443,Fixed-term,G5,Switzerland,People & Culture,2025-04-28,2027-04-27,24
-CTR-013208,EMP-002444,Fixed-term,G5,Ukraine,Global Research Unit,2024-11-02,2025-11-01,12
-CTR-013209,EMP-002444,Fixed-term,G5,Ukraine,Global Research Unit,2025-11-02,2026-05-01,6
-CTR-013210,EMP-002444,Fixed-term,G5,Ukraine,Global Research Unit,2026-05-02,2028-05-01,24
-CTR-013212,EMP-002446,Fixed-term,G5,Ukraine,Programmes,2024-11-02,2025-11-01,12
-CTR-013213,EMP-002446,Fixed-term,G5,Ukraine,Programmes,2025-11-02,2026-11-01,12
-CTR-013224,EMP-002451,Short-term,G3,Somalia,Research & Assessment,2024-11-05,2025-02-04,3
-CTR-013225,EMP-002451,Short-term,G3,Somalia,Research & Assessment,2025-02-05,2025-05-04,3
-CTR-013226,EMP-002451,Short-term,G3,Somalia,Research & Assessment,2025-05-05,2025-08-04,3
-CTR-013227,EMP-002451,Fixed-term,G3,Somalia,Research & Assessment,2025-08-05,2026-02-04,6
-CTR-013228,EMP-002451,Fixed-term,G3,Somalia,Research & Assessment,2026-02-05,2028-02-04,24
-CTR-013230,EMP-002452,Short-term,G4,Switzerland,Global Support Unit,2024-12-07,2025-02-06,2
-CTR-013231,EMP-002452,Fixed-term,G4,Switzerland,Global Support Unit,2025-02-07,2026-02-06,12
-CTR-013232,EMP-002452,Fixed-term,G4,Switzerland,Global Support Unit,2026-02-07,2027-02-06,12
-CTR-013267,EMP-002464,Fixed-term,G3,Nigeria,Global Research Unit,2024-11-20,2025-05-19,6
-CTR-013268,EMP-002464,Fixed-term,G3,Nigeria,Global Research Unit,2025-05-20,2025-10-21,6
-CTR-013269,EMP-002465,Fixed-term,G2,Ukraine,Security,2024-11-21,2025-11-20,12
-CTR-013270,EMP-002465,Fixed-term,G2,Ukraine,Security,2025-11-21,2025-11-13,6
-CTR-013271,EMP-002465,Fixed-term,G2,Ukraine,Security,2026-05-21,2026-11-20,6
-CTR-013276,EMP-002467,Short-term,G4,Iraq,Programmes,2024-11-22,2025-02-21,3
-CTR-013277,EMP-002467,Fixed-term,G4,Iraq,Programmes,2025-02-22,2026-02-21,12
-CTR-013278,EMP-002467,Fixed-term,G4,Iraq,Programmes,2026-02-22,2027-02-21,12
-CTR-013286,EMP-002470,Short-term,N2,Kenya,Programmes,2024-11-26,2025-02-25,3
-CTR-013287,EMP-002470,Fixed-term,N2,Kenya,Programmes,2025-02-26,2027-02-25,24
-CTR-013288,EMP-002471,Fixed-term,N3,Colombia,Programmes,2024-11-27,2025-06-16,12
-CTR-013304,EMP-002478,Consultancy,G5,Syria,Finance & Admin,2024-12-03,2025-03-02,3
-CTR-013305,EMP-002478,Consultancy,G5,Syria,Finance & Admin,2025-03-03,2025-06-02,3
-CTR-013306,EMP-002478,Consultancy,G5,Syria,Finance & Admin,2025-06-03,2025-09-02,3
-CTR-013307,EMP-002478,Consultancy,G5,Syria,Finance & Admin,2025-09-03,2026-01-02,4
-CTR-013308,EMP-002478,Consultancy,G6,Syria,Finance & Admin,2026-01-03,2026-05-02,4
-CTR-013309,EMP-002478,Consultancy,G6,Syria,Finance & Admin,2026-05-03,2026-09-02,4
-CTR-013310,EMP-002478,Consultancy,G6,Syria,Finance & Admin,2026-09-03,2026-11-02,2
-CTR-013314,EMP-002481,Fixed-term,N1,Colombia,Human Resources,2024-12-06,2025-06-05,6
-CTR-013315,EMP-002481,Fixed-term,N1,Colombia,Human Resources,2025-06-06,2026-06-05,12
-CTR-013316,EMP-002481,Fixed-term,N1,Colombia,Human Resources,2026-06-06,2027-06-05,12
-CTR-013339,EMP-002490,Fixed-term,G2,DR Congo,Research & Assessment,2024-12-14,2025-12-13,12
-CTR-013340,EMP-002490,Fixed-term,G2,DR Congo,Research & Assessment,2025-12-14,2026-12-13,12
-CTR-013349,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2024-12-15,2025-02-14,2
-CTR-013350,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2025-02-15,2025-05-14,3
-CTR-013351,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2025-05-15,2025-09-14,4
-CTR-013352,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2025-09-15,2025-11-14,2
-CTR-013353,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2025-11-15,2026-02-14,3
-CTR-013354,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2026-02-15,2026-05-14,3
-CTR-013355,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2026-05-15,2026-08-14,3
-CTR-013356,EMP-002494,Consultancy,G4,Somalia,Research & Assessment,2026-08-15,2026-11-14,3
-CTR-013357,EMP-002495,Fixed-term,G2,Iraq,Finance & Admin,2024-12-16,2026-12-15,24
-CTR-013368,EMP-002501,Consultancy,N2,Kenya,Security,2024-12-21,2025-06-20,6
-CTR-013369,EMP-002501,Consultancy,N2,Kenya,Security,2025-06-21,2025-10-20,4
-CTR-013370,EMP-002501,Fixed-term,N2,Kenya,Security,2025-10-21,2026-10-20,12
-CTR-013371,EMP-002501,Fixed-term,N2,Kenya,Security,2026-10-21,2027-10-20,12
-CTR-013372,EMP-002502,Fixed-term,G4,South-Sudan,Global Support Unit,2024-12-22,2025-06-21,6
-CTR-013373,EMP-002502,Fixed-term,G4,South Sudan,Global Support Unit,2025-06-22,2025-12-21,6
-CTR-013374,EMP-002502,Fixed-term,G4,South Sudan,Global Support Unit,2025-12-22,2026-12-21,12
-CTR-013379,EMP-002505,Fixed-term,G3,Haiti,Global Research Unit,2024-12-25,2025-06-24,6
-CTR-013380,EMP-002505,Fixed-term,G3,Haiti,Global Research Unit,2025-06-25,2026-06-24,12
-CTR-013381,EMP-002505,Fixed-term,G3,Haiti,Global Research Unit,2026-06-25,2027-06-24,12
-CTR-013400,EMP-002512,Fixed-term,G4,South Sudan,Global Research Unit,2024-12-29,2025-12-28,12
-CTR-013401,EMP-002512,Fixed-term,G4,South Sudan,Global Research Unit,2025-12-29,2026-06-28,6
-CTR-013402,EMP-002512,Fixed-term,G4,South Sudan,Global Research Unit,2026-06-29,2026-08-10,24
-CTR-013408,EMP-002515,Consultancy,G3,Afghanistan,Human Resources,2025-01-01,2025-02-28,2
-CTR-013409,EMP-002515,Consultancy,G4,Afghanistan ,Human Resources,2025-03-01,2025-04-30,2
-CTR-013410,EMP-002515,Consultancy,G4,Afghanistan,Human Resources,2025-05-01,2025-07-31,3
-CTR-013411,EMP-002515,Consultancy,G5,Afghanistan,Human Resources,2025-08-01,2026-01-31,6
-CTR-013412,EMP-002515,Fixed-term,G5,Afghanistan,Human Resources,2026-02-01,2027-01-31,12
-CTR-013430,EMP-002523,Consultancy,G5,Ukraine,Research & Assessment,2025-01-09,2025-03-08,2
-CTR-013431,EMP-002523,Consultancy,G5,Ukraine,Research & Assessment,2025-03-09,2025-07-08,4
-CTR-013432,EMP-002523,Consultancy,G6,Ukraine,Research & Assessment,2025-07-09,2025-10-08,3
-CTR-013433,EMP-002523,Fixed-term,G6,Ukraine,Research & Assessment,2025-10-09,2027-10-08,24
-CTR-013450,EMP-002530,Open-ended,G5,Switzerland,People & Culture,2025-01-12,,
-CTR-013481,EMP-002543,Fixed-term,G5,Afghanistan,Programmes,2025-01-21,2026-01-20,12
-CTR-013482,EMP-002543,Fixed-term,G5,Afghanistan,Programmes,2026-01-21,2028-01-20,24
-CTR-013484,EMP-002545,Fixed-term,G2,South Sudan,Global Support Unit,2025-01-22,2026-01-21,12
-CTR-013485,EMP-002545,Fixed-term,G2,South Sudan,Global Support Unit,2026-01-22,2026-07-27,12
-CTR-013489,EMP-002547,Fixed-term,G6,Switzerland,Global Support Unit,2025-01-24,2027-01-23,24
-CTR-013490,EMP-002548,Fixed-term,G5,Somalia,Programmes,2025-01-24,2026-01-23,12
-CTR-013491,EMP-002548,Fixed-term,G6,Somalia,Programmes,2026-01-24,2027-01-23,12
-CTR-013492,EMP-002549,Fixed-term,G1,DR Congo,Research & Assessment,2025-01-25,2027-01-24,24
-CTR-013494,EMP-002551,Fixed-term,G2,Kenya,Research & Assessment,2025-01-27,2026-01-26,12
-CTR-013495,EMP-002551,Fixed-term,G2,Kenya,Research & Assessment,2026-01-27,2028-01-26,24
-CTR-013496,EMP-002552,Fixed-term,G2,Afghanistan,Finance & Admin,2025-01-27,2026-02-12,24
-CTR-013499,EMP-002554,Fixed-term,G5,Ukraine,Human Resources,2025-01-30,2026-01-29,12
-CTR-013500,EMP-002554,Fixed-term,G5,Ukraine,Human Resources,2026-01-30,2026-07-29,6
-CTR-013501,EMP-002554,Fixed-term,G5,Ukraine,Human Resources,2026-07-30,2028-07-29,24
-CTR-013512,EMP-002559,Fixed-term,G6,Afghanistan,Research & Assessment,2025-02-02,2026-02-01,12
-CTR-013513,EMP-002559,Fixed-term,G6,Afghanistan ,Research & Assessment,2026-02-02,2027-02-01,12
-CTR-013526,EMP-002565,Fixed-term,G6,Somalia,Human Resources,2025-02-05,2027-02-04,24
-CTR-013539,EMP-002568,Consultancy,G6,Mali,Logistics & Supply,2025-02-08,2025-04-07,2
-CTR-013540,EMP-002568,Consultancy,G6,Mali,Logistics & Supply,2025-04-08,2025-06-07,2
-CTR-013541,EMP-002568,Consultancy,G6,Mali,Logistics & Supply,2025-06-08,2025-10-07,4
-CTR-013542,EMP-002568,Consultancy,G6,Mali,Logistics & Supply,2025-10-08,2026-02-07,4
-CTR-013543,EMP-002568,Fixed-term,G6,Mali,Logistics & Supply,2026-02-08,2027-02-07,12
-CTR-013544,EMP-002569,Fixed-term,G2,Mali,Research & Assessment,2025-02-08,2025-08-07,6
-CTR-013545,EMP-002569,Fixed-term,G2,Mali,Research & Assessment,2025-08-08,2027-08-07,24
-CTR-013548,EMP-002571,Fixed-term,G2,DR Congo,Programmes,2025-02-09,2026-02-08,12
-CTR-013549,EMP-002571,Fixed-term,G2,DR Congo,Programmes,2026-02-09,2026-07-01,12
-CTR-013555,EMP-002574,Open-ended,G5,Switzerland,Global Support Unit,2025-02-11,,
-CTR-013572,EMP-002583,Fixed-term,G3,Kenya,Finance & Admin,2025-02-21,2026-02-20,12
-CTR-013573,EMP-002583,Fixed-term,G3,Kenya,Finance & Admin,2026-02-21,2026-10-16,24
-CTR-013574,EMP-002584,Fixed-term,G5,Kenya,Human Resources,2025-02-22,2025-09-10,12
-CTR-013577,EMP-002586,Fixed-term,G2,Nigeria,Logistics & Supply,2025-02-24,2026-02-23,12
-CTR-013578,EMP-002586,Fixed-term,G3,Nigeria,Logistics & Supply,2026-02-24,2027-02-23,12
-CTR-013580,EMP-002588,Consultancy,G4,S. Sudan,Finance & Admin,2025-03-03,2025-07-02,4
-CTR-013581,EMP-002588,Fixed-term,G4,South Sudan,Finance & Admin,2025-07-03,2026-05-13,24
-CTR-013604,EMP-002600,Fixed-term,G6,Switzerland,Global Support Unit,2025-03-18,2026-03-17,12
-CTR-013605,EMP-002600,Fixed-term,G6,Switzerland,Global Support Unit,2026-03-18,2028-03-17,24
-CTR-013608,EMP-002602,Fixed-term,G2,Afghanistan ,Human Resources,2025-03-19,2026-03-18,12
-CTR-013609,EMP-002602,Fixed-term,G2,Afghanistan,Human Resources,2026-03-19,2026-09-18,6
-CTR-013610,EMP-002602,Fixed-term,G2,Afghanistan,Human Resources,2026-09-19,2027-09-18,12
-CTR-013624,EMP-002609,Consultancy,G5,Iraq,Research & Assessment,2025-03-30,2025-09-29,6
-CTR-013625,EMP-002609,Consultancy,G5,Iraq,Research & Assessment,2025-09-30,2026-03-29,6
-CTR-013626,EMP-002609,Fixed-term,G5,Iraq,Research & Assessment,2026-03-30,2027-03-29,12
-CTR-013627,EMP-002610,Fixed-term,G6,DR Congo,Programmes,2025-03-30,2025-09-24,12
-CTR-013634,EMP-002612,Consultancy,G1,Somalia,Logistics & Supply,2025-03-31,2025-06-29,3
-CTR-013635,EMP-002612,Consultancy,G1,Somalia,Logistics & Supply,2025-06-30,2025-12-29,6
-CTR-013636,EMP-002612,Consultancy,G1,Somalia,Logistics & Supply,2025-12-30,2026-06-29,6
-CTR-013637,EMP-002612,Fixed-term,G1,Somalia,Logistics & Supply,2026-06-30,2028-06-29,24
-CTR-013640,EMP-002615,Consultancy,G4,Bangladesh,Research & Assessment,2025-04-02,2025-08-01,4
-CTR-013641,EMP-002615,Consultancy,G4,Bangladesh,Research & Assessment,2025-08-02,2025-11-01,3
-CTR-013642,EMP-002615,Consultancy,G4,Bangladesh,Research & Assessment,2025-11-02,2026-02-01,3
-CTR-013643,EMP-002615,Fixed-term,G5,Bangladesh,Research & Assessment,2026-02-02,2027-02-01,12
-CTR-013644,EMP-002616,Fixed-term,G4,Kenya,Logistics & Supply,2025-04-06,2026-04-05,12
-CTR-013645,EMP-002616,Fixed-term,G4,Kenya,Logistics & Supply,2026-04-06,2027-04-05,12
-CTR-013649,EMP-002619,Consultancy,G4,Haiti,Global Research Unit,2025-04-08,2025-08-07,4
-CTR-013650,EMP-002619,Fixed-term,G4,Haiti,Global Research Unit,2025-08-08,2026-07-12,12
-CTR-013651,EMP-002620,Fixed-term,G3,Ukraine,Logistics & Supply,2025-04-09,2025-10-08,6
-CTR-013652,EMP-002620,Fixed-term,G3,Ukraine,Logistics & Supply,2025-10-09,2027-10-08,24
-CTR-013653,EMP-002621,Fixed-term,G4,Afghanistan,Finance & Admin,2025-04-09,2027-04-08,24
-CTR-013659,EMP-002626,Fixed-term,G2,Switzerland,Communications,2025-04-12,2026-01-03,12
-CTR-013669,EMP-002631,Fixed-term,G5,South Sudan,Finance & Admin,2025-04-17,2026-04-16,12
-CTR-013670,EMP-002631,Fixed-term,G5,South Sudan,Finance & Admin,2026-04-17,2026-04-21,24
-CTR-013682,EMP-002635,Fixed-term,G6,South Sudan,Global Research Unit,2025-04-23,2026-04-22,12
-CTR-013683,EMP-002635,Fixed-term,G6,South Sudan,Global Research Unit,2026-04-23,2026-06-10,12
-CTR-013687,EMP-002637,Fixed-term,G3,Nigeria,Programmes,2025-04-24,2027-04-23,24
-CTR-013688,EMP-002638,Fixed-term,G6,Somalia,Research & Assessment,2025-04-25,2026-04-24,12
-CTR-013689,EMP-002638,Fixed-term,G6,Somalia,Research & Assessment,2026-04-25,2027-04-24,12
-CTR-013690,EMP-002639,Consultancy,G6,Nigeria,Research & Assessment,2025-04-26,2025-07-25,3
-CTR-013691,EMP-002639,Consultancy,G6,Nigeria,Research & Assessment,2025-07-26,2026-01-25,6
-CTR-013692,EMP-002639,Consultancy,G6,Nigeria,Research & Assessment,2026-01-26,2026-04-25,3
-CTR-013693,EMP-002639,Fixed-term,G6,Nigeria,Research & Assessment,2026-04-26,2026-10-25,6
-CTR-013694,EMP-002639,Fixed-term,G6,Nigeria,Research & Assessment,2026-10-26,2027-04-25,6
-CTR-013695,EMP-002640,Fixed-term,G4,Afghanistan,Programmes,2025-04-28,2025-12-16,24
-CTR-013698,EMP-002642,Short-term,G4,CH,Global Support Unit,2025-05-01,2025-10-31,6
-CTR-013699,EMP-002642,Short-term,G4,Switzerland,Global Support Unit,2025-11-01,2026-02-28,4
-CTR-013700,EMP-002642,Short-term,G5,Switzerland,Global Support Unit,2026-03-01,2026-04-30,2
-CTR-013701,EMP-002642,Short-term,G5,Switzerland,Global Support Unit,2026-05-01,2026-06-30,2
-CTR-013702,EMP-002642,Short-term,G5,Switzerland,Global Support Unit,2026-07-01,2026-08-31,2
-CTR-013703,EMP-002642,Short-term,G5,Switzerland,Global Support Unit,2026-09-01,2026-09-30,1
-CTR-013704,EMP-002642,Short-term,G6,Switzerland,Global Support Unit,2026-10-01,2026-12-31,3
-CTR-013714,EMP-002647,Fixed-term,G3,DR Congo,Programmes,2025-05-06,2026-05-05,12
-CTR-013715,EMP-002647,Fixed-term,G3,DR Congo,Programmes,2026-05-06,2026-05-26,6
-CTR-013716,EMP-002648,Open-ended,G6,Switzerland,Global Support Unit,2025-05-08,2025-12-19,
-CTR-013717,EMP-002649,Fixed-term,G3,Bangladesh,Research & Assessment,2025-05-09,2026-05-08,12
-CTR-013718,EMP-002649,Fixed-term,G3,Bangladesh,Research & Assessment,2026-05-09,2026-11-08,6
-CTR-013727,EMP-002653,Short-term,G3,Switzerland,Executive Office,2025-05-14,2025-08-13,3
-CTR-013728,EMP-002653,Short-term,G3,Switzerland,Executive Office,2025-08-14,2025-11-13,3
-CTR-013729,EMP-002653,Short-term,G3,CH,Executive Office,2025-11-14,2026-03-13,4
-CTR-013730,EMP-002653,Short-term,G3,Switzerland,Executive Office,2026-03-14,2026-07-13,4
-CTR-013731,EMP-002653,Short-term,G4,Switzerland,Executive Office,2026-07-14,2026-08-13,1
-CTR-013732,EMP-002653,Short-term,G4,Switzerland,Executive Office,2026-08-14,2026-09-13,1
-CTR-013733,EMP-002653,Fixed-term,G4,Switzerland,Executive Office,2026-09-14,2027-09-13,12
-CTR-013738,EMP-002656,Fixed-term,G6,Switzerland,Global Research Unit,2025-05-18,2026-02-04,12
-CTR-013744,EMP-002659,Fixed-term,G4,Iraq,Logistics & Supply,2025-05-23,2026-05-22,12
-CTR-013745,EMP-002659,Fixed-term,G4,Iraq,Logistics & Supply,2026-05-23,2026-11-22,6
-CTR-013759,EMP-002666,Fixed-term,G4,South Sudan,Finance & Admin,2025-06-04,2026-06-14,24
-CTR-013760,EMP-002667,Fixed-term,N1,Colombia,Finance & Admin,2025-06-04,2025-10-13,24
-CTR-013761,EMP-002668,Fixed-term,G3,Ukraine,Security,2025-06-05,2025-12-04,6
-CTR-013762,EMP-002668,Fixed-term,G3,Ukraine,Security,2025-12-05,2026-12-04,12
-CTR-013775,EMP-002673,Fixed-term,G3,DR Congo,Programmes,2025-06-07,2027-06-06,24
-CTR-013777,EMP-002675,Fixed-term,G3,Iraq,Data & IT,2025-06-08,2027-06-07,24
-CTR-013780,EMP-002677,Short-term,G3,Ukraine,Data & IT,2025-06-09,2025-08-08,2
-CTR-013781,EMP-002677,Short-term,G4,Ukraine,Data & IT,2025-08-09,2025-10-08,2
-CTR-013782,EMP-002677,Fixed-term,G4,Ukraine,Data & IT,2025-10-09,2026-10-08,12
-CTR-013783,EMP-002677,Fixed-term,G4,Ukraine,Data & IT,2026-10-09,2027-10-08,12
-CTR-013786,EMP-002679,Fixed-term,G3,Afghanistan,Research & Assessment,2025-06-11,2027-06-10,24
-CTR-013793,EMP-002682,Fixed-term,N5,Colombia,Finance & Admin,2025-06-13,2026-06-12,12
-CTR-013794,EMP-002682,Fixed-term,N5,Colombia,Finance & Admin,2026-06-13,2027-06-12,12
-CTR-013797,EMP-002684,Consultancy,G3,Afghanistan,Research & Assessment,2025-06-16,2025-12-15,6
-CTR-013798,EMP-002684,Fixed-term,G3,Afghanistan,Research & Assessment,2025-12-16,2027-12-15,24
-CTR-013806,EMP-002687,Consultancy,G3,Mali,Finance & Admin,2025-06-18,2025-09-17,3
-CTR-013807,EMP-002687,Fixed-term,G4,Mali,Finance & Admin,2025-09-18,2026-09-17,12
-CTR-013808,EMP-002687,Fixed-term,G4,Mali,Finance & Admin,2026-09-18,2027-09-17,12
-CTR-013858,EMP-002704,Fixed-term,G2,Ukraine,Global Research Unit,2025-07-01,2026-06-30,12
-CTR-013859,EMP-002704,Fixed-term,G2,Ukraine,Global Research Unit,2026-07-01,2028-06-30,24
-CTR-013860,EMP-002705,Fixed-term,G4,Switzerland,People & Culture,2025-07-01,2026-06-30,12
-CTR-013861,EMP-002705,Fixed-term,G4,Switzerland,People & Culture,2026-07-01,2028-06-30,24
-CTR-013862,EMP-002706,Fixed-term,G5,Haiti,Programmes,2025-07-02,2026-01-01,6
-CTR-013863,EMP-002706,Fixed-term,G5,Haiti,Programmes,2026-01-02,2027-01-01,12
-CTR-013866,EMP-002708,Fixed-term,G1,Ukraine,Programmes,2025-07-03,2026-01-02,6
-CTR-013867,EMP-002708,Fixed-term,G1,Ukraine - Kyiv,Programmes,2026-01-03,2026-04-27,12
-CTR-013868,EMP-002709,Fixed-term,G4,Switzerland,Global Research Unit,2025-07-06,2026-07-05,12
-CTR-013869,EMP-002709,Fixed-term,G5,Switzerland,Global Research Unit,2026-07-06,2027-07-05,12
-CTR-013898,EMP-002725,Fixed-term,G6,Switzerland,People & Culture,2025-07-22,2026-07-21,12
-CTR-013899,EMP-002725,Fixed-term,G6,Switzerland,People & Culture,2026-07-22,2027-07-21,12
-CTR-013902,EMP-002727,Fixed-term,G4,DR Congo,Logistics & Supply,2025-07-22,2026-07-21,12
-CTR-013903,EMP-002727,Fixed-term,G4,DR Congo,Logistics & Supply,2026-07-22,2027-01-21,6
-CTR-013909,EMP-002730,Consultancy,G3,Syria,Logistics & Supply,2025-07-25,2025-09-24,2
-CTR-013910,EMP-002730,Consultancy,G3,Syrian Arab Republic,Logistics & Supply,2025-09-25,2026-03-24,6
-CTR-013911,EMP-002730,Consultancy,G3,Syria,Logistics & Supply,2026-03-25,2026-07-24,4
-CTR-013912,EMP-002730,Consultancy,G3,Syria,Logistics & Supply,2026-07-25,2026-05-30,2
-CTR-013913,EMP-002730,Consultancy,G3,Syria,Logistics & Supply,2026-09-25,2027-01-24,4
-CTR-013914,EMP-002731,Fixed-term,G5,Colombia,Programmes,2025-07-26,2026-07-25,12
-CTR-013915,EMP-002731,Fixed-term,G5,Colombia,Programmes,2026-07-26,2028-07-25,24
-CTR-013922,EMP-002733,Fixed-term,G5,Bangladesh,Data & IT,2025-07-29,2027-07-28,24
-CTR-013926,EMP-002736,Fixed-term,G4,Colombia,Finance & Admin,2025-07-31,2026-07-30,12
-CTR-013927,EMP-002736,Fixed-term,G5,Colombia,Finance & Admin,2026-07-31,2028-07-30,24
-CTR-013934,EMP-002742,Fixed-term,G3,Kenya,Global Support Unit,2025-08-09,2026-08-08,12
-CTR-013935,EMP-002742,Fixed-term,G4,Kenya,Global Support Unit,2026-08-09,2028-08-08,24
-CTR-013940,EMP-002745,Fixed-term,G2,Syria,Logistics & Supply,2025-08-13,2025-10-28,24
-CTR-013949,EMP-002751,Fixed-term,G6,Nigeria,Programmes,2025-08-29,2026-01-05,24
-CTR-013950,EMP-002752,Short-term,G4,Kenya,Logistics & Supply,2025-08-31,2025-12-30,4
-CTR-013951,EMP-002752,Short-term,G5,Kenya,Logistics & Supply,2025-12-31,2026-04-29,4
-CTR-013952,EMP-002752,Short-term,G5,Kenya,Logistics & Supply,2026-04-30,2026-07-29,3
-CTR-013953,EMP-002752,Short-term,G5,Kenya,Logistics & Supply,2026-07-30,2026-11-29,4
-CTR-013954,EMP-002753,Fixed-term,G3,DR Congo,Programmes,2025-09-02,2026-03-01,6
-CTR-013955,EMP-002753,Fixed-term,G3,DR Congo,Programmes,2026-03-02,2028-03-01,24
-CTR-013973,EMP-002761,Fixed-term,G5,Ukraine,Data & IT,2025-09-11,2026-09-10,12
-CTR-013974,EMP-002761,Fixed-term,G5,Ukraine,Data & IT,2026-09-11,2027-09-10,12
-CTR-013984,EMP-002764,Fixed-term,G3,Bangladesh,Programmes,2025-09-13,2026-09-12,12
-CTR-013985,EMP-002764,Fixed-term,G3,Bangladesh,Programmes,2026-09-13,2028-09-12,24
-CTR-014000,EMP-002771,Fixed-term,G4,South Sudan,Research & Assessment,2025-09-23,2027-09-22,24
-CTR-014004,EMP-002775,Fixed-term,G5,South Sudan,Global Support Unit,2025-09-27,2026-09-26,12
-CTR-014005,EMP-002775,Fixed-term,G5,South-Sudan,Global Support Unit,2026-09-27,2027-03-26,6
-CTR-014008,EMP-002777,Consultancy,G5,Switzerland,Global Support Unit,2025-09-30,2025-11-29,2
-CTR-014009,EMP-002777,Consultancy,G5,Switzerland,Global Support Unit,2025-11-30,2026-05-29,6
-CTR-014010,EMP-002777,Consultancy,G5,Switzerland,Global Support Unit,2026-05-30,2026-07-29,2
-CTR-014011,EMP-002777,Consultancy,G5,Switzerland,Global Support Unit,2026-07-30,2026-11-29,4
-CTR-014012,EMP-002778,Fixed-term,G2,Kenya,Programmes,2025-10-01,2026-09-30,12
-CTR-014013,EMP-002778,Fixed-term,G2,Kenya,Programmes,2026-10-01,2027-09-30,12
-CTR-014024,EMP-002782,Fixed-term,G4,Syria,Research & Assessment,2025-10-05,2026-10-04,12
-CTR-014025,EMP-002782,Fixed-term,G4,Syria,Research & Assessment,2026-10-05,2027-10-04,12
-CTR-014026,EMP-002783,Fixed-term,G4,Syrian Arab Republic,Research & Assessment,2025-10-05,2026-08-22,24
-CTR-014027,EMP-002784,Fixed-term,G4,South Sudan,Programmes,2025-10-05,2026-10-04,12
-CTR-014028,EMP-002784,Fixed-term,G4,South Sudan,Programmes,2026-10-05,2027-10-04,12
-CTR-014029,EMP-002785,Fixed-term,G3,Ukraine,Programmes,2025-10-05,2026-10-04,12
-CTR-014030,EMP-002785,Fixed-term,G3,Ukraine,Programmes,2026-10-05,2028-10-04,24
-CTR-014033,EMP-002787,Consultancy,G4,Mali,Global Support Unit,2025-10-07,2025-12-06,2
-CTR-014034,EMP-002787,Consultancy,G4,Mali,Global Support Unit,2025-12-07,2026-02-06,2
-CTR-014035,EMP-002787,Consultancy,G4,Mali,Global Support Unit,2026-02-07,2026-05-06,3
-CTR-014036,EMP-002787,Consultancy,G4,Mali,Global Support Unit,2026-05-07,2026-09-06,4
-CTR-014037,EMP-002787,Consultancy,G4,Mali,Global Support Unit,2026-09-07,2026-11-06,2
-CTR-014038,EMP-002788,Fixed-term,G4,Syria,Finance & Admin,2025-10-07,2026-10-06,12
-CTR-014039,EMP-002788,Fixed-term,G4,Syria,Finance & Admin,2026-10-07,2027-04-06,6
-CTR-014041,EMP-002790,Fixed-term,G3,Bangladesh,Programmes,2025-10-08,2026-10-07,12
-CTR-014042,EMP-002790,Fixed-term,G3,Bangladesh,Programmes,2026-10-08,2028-10-07,24
-CTR-014048,EMP-002793,Short-term,G4,Nigeria,Programmes,2025-10-08,2026-01-07,3
-CTR-014049,EMP-002793,Fixed-term,G4,Nigeria,Programmes,2026-01-08,2026-04-08,24
-CTR-014050,EMP-002794,Fixed-term,G3,Ukraine,Security,2025-10-09,2027-10-08,24
-CTR-014061,EMP-002798,Fixed-term,G6,Syria,Global Support Unit,2025-10-11,2026-10-10,12
-CTR-014062,EMP-002798,Fixed-term,G6,Syria,Global Support Unit,2026-10-11,2027-10-10,12
-CTR-014065,EMP-002800,Fixed-term,G2,DR Congo,Human Resources,2025-10-12,2026-10-11,12
-CTR-014066,EMP-002800,Fixed-term,G2,DR Congo,Human Resources,2026-10-12,2028-10-11,24
-CTR-014073,EMP-002803,Fixed-term,G4,Ukraine,Global Support Unit,2025-10-15,2026-10-14,12
-CTR-014074,EMP-002803,Fixed-term,G5,Ukraine,Global Support Unit,2026-10-15,2027-10-14,12
-CTR-014090,EMP-002809,Fixed-term,G4,Bangladesh,Security,2025-10-22,2026-10-21,12
-CTR-014091,EMP-002809,Fixed-term,G4,Bangladesh,Security,2026-10-22,2028-10-21,24
-CTR-014094,EMP-002811,Fixed-term,G6,South Sudan,Programmes,2025-10-25,2026-10-24,12
-CTR-014095,EMP-002811,Fixed-term,G6,South Sudan,Programmes,2026-10-25,2027-10-24,12
-CTR-014129,EMP-002825,Fixed-term,G3,Afghanistan,Global Support Unit,2025-11-12,2027-11-11,24
-CTR-014130,EMP-002826,Fixed-term,G3,Afghanistan,Global Support Unit,2025-11-14,2026-05-13,6
-CTR-014131,EMP-002826,Fixed-term,G3,Afghanistan,Global Support Unit,2026-05-14,2027-05-13,12
-CTR-014136,EMP-002829,Fixed-term,G3,Ukraine,Data & IT,2025-11-16,2027-11-15,24
-CTR-014137,EMP-002830,Fixed-term,G6,Iraq,Finance & Admin,2025-11-16,2026-11-15,12
-CTR-014139,EMP-002832,Fixed-term,G4,Nigeria,Global Research Unit,2025-11-20,2026-11-19,12
-CTR-014141,EMP-002834,Fixed-term,G3,Nigeria,Programmes,2025-11-28,2027-11-27,24
-CTR-014145,EMP-002836,Short-term,G3,Switzerland,Global Support Unit,2025-12-01,2026-03-31,4
-CTR-014146,EMP-002836,Short-term,G3,CH,Global Support Unit,2026-04-01,2026-06-30,3
-CTR-014147,EMP-002836,Fixed-term,G3,Switzerland,Global Support Unit,2026-07-01,2028-06-30,24
-CTR-014152,EMP-002838,Fixed-term,G3,DR Congo,Global Research Unit,2025-12-01,2026-02-21,24
-CTR-014164,EMP-002843,Fixed-term,G5,S. Sudan,Research & Assessment,2025-12-04,2027-12-03,24
-CTR-014178,EMP-002853,Short-term,G3,Syria,Data & IT,2025-12-12,2026-03-11,3
-CTR-014179,EMP-002853,Short-term,G3,Syria,Data & IT,2026-03-12,2026-07-11,4
-CTR-014180,EMP-002853,Fixed-term,G3,Syria,Data & IT,2026-07-12,2027-07-11,12
-CTR-014184,EMP-002855,Short-term,G2,Colombia,Logistics & Supply,2025-12-14,2026-06-13,6
-CTR-014185,EMP-002855,Short-term,G2,Colombia,Logistics & Supply,2026-06-14,2026-08-15,6
-CTR-014193,EMP-002860,Fixed-term,G4,Switzerland,Global Research Unit,2025-12-16,2027-12-15,24
-CTR-014194,EMP-002861,Fixed-term,G3,Somalia,Programmes,2025-12-17,2026-12-16,12
-CTR-014195,EMP-002862,Open-ended,G3,Switzerland,Global Support Unit,2025-12-18,,
-CTR-014196,EMP-002863,Consultancy,G5,Switzerland,Global Research Unit,2025-12-18,2026-06-17,6
-CTR-014197,EMP-002863,Consultancy,G5,Switzerland,Global Research Unit,2026-06-18,2026-09-17,3
-CTR-014198,EMP-002863,Consultancy,G5,Switzerland,Global Research Unit,2026-09-18,2027-01-17,4
-CTR-014199,EMP-002864,Fixed-term,N3,Kenya,Programmes,2025-12-18,2026-12-17,12
-CTR-014203,EMP-002867,Fixed-term,G4,Switzerland,Finance & Legal,2025-12-19,2026-12-18,12
-CTR-014204,EMP-002868,Fixed-term,G1,Syria,Global Support Unit,2025-12-21,2026-12-20,12
-CTR-014206,EMP-002870,Fixed-term,G5,Mali,Research & Assessment,2025-12-22,2026-12-21,12
-CTR-014207,EMP-002871,Fixed-term,G1,Switzerland,Global Research Unit,2025-12-24,2027-12-23,24
-CTR-014214,EMP-002876,Open-ended,G4,Switzerland,Finance & Legal,2025-12-29,,
-CTR-014215,EMP-002877,Fixed-term,G3,Bangladesh,Security,2025-12-30,2026-12-29,12
-CTR-014216,EMP-002878,Fixed-term,G2,Haiti,Research & Assessment,2025-12-30,2026-12-29,12
-CTR-014217,EMP-002879,Fixed-term,G6,Somalia,Global Support Unit,2025-12-31,2026-12-30,12
-CTR-014227,EMP-002884,Fixed-term,N2,Kenya,Logistics & Supply,2026-01-03,2026-05-07,12
-CTR-014228,EMP-002885,Consultancy,G2,Ukraine,Programmes,2026-01-05,2026-03-04,2
-CTR-014229,EMP-002885,Consultancy,G2,Ukraine,Programmes,2026-03-05,2026-09-04,6
-CTR-014230,EMP-002885,Consultancy,G2,Ukraine,Programmes,2026-09-05,2026-11-04,2
-CTR-014235,EMP-002889,Consultancy,G2,Bangladesh,Data & IT,2026-01-08,2026-03-07,2
-CTR-014236,EMP-002889,Fixed-term,G2,Bangladesh,Data & IT,2026-03-08,2028-03-07,24
-CTR-014237,EMP-002890,Fixed-term,G3,Haiti,Programmes,2026-01-08,2028-01-07,24
-CTR-014240,EMP-002892,Consultancy,G5,Iraq,Global Research Unit,2026-01-11,2026-07-10,6
-CTR-014241,EMP-002892,Consultancy,G6,Iraq,Global Research Unit,2026-07-11,2026-10-10,3
-CTR-014242,EMP-002892,Fixed-term,G6,Iraq,Global Research Unit,2026-10-11,2027-10-10,12
-CTR-014244,EMP-002894,Fixed-term,G4,South Sudan,Programmes,2026-01-14,2026-07-13,6
-CTR-014245,EMP-002894,Fixed-term,G4,South Sudan,Programmes,2026-07-14,2027-07-13,12
-CTR-014246,EMP-002895,Consultancy,G3,South Sudan,Programmes,2026-01-14,2026-04-13,3
-CTR-014247,EMP-002895,Consultancy,G4,South Sudan,Programmes,2026-04-14,2026-07-13,3
-CTR-014248,EMP-002895,Consultancy,G4,South Sudan,Programmes,2026-07-14,2026-09-13,2
-CTR-014249,EMP-002895,Fixed-term,G4,South Sudan,Programmes,2026-09-14,2027-09-13,12
-CTR-014256,EMP-002899,Fixed-term,G3,Nigeria,Logistics & Supply,2026-01-17,2027-01-16,12
-CTR-014259,EMP-002901,Fixed-term,G5,Iraq,Finance & Admin,2026-01-18,2028-01-17,24
-CTR-014277,EMP-002911,Consultancy,G4,Ukraine,Research & Assessment,2026-01-28,2026-07-27,6
-CTR-014278,EMP-002911,Fixed-term,G4,Ukraine,Research & Assessment,2026-07-28,2027-01-27,6
-CTR-014280,EMP-002913,Fixed-term,G4,Kenya,Human Resources,2026-01-28,2026-09-27,24
-CTR-014281,EMP-002914,Fixed-term,G5,Nigeria,Global Research Unit,2026-01-29,2028-01-28,24
-CTR-014288,EMP-002918,Short-term,G2,DR Congo,Research & Assessment,2026-02-01,2026-04-30,3
-CTR-014289,EMP-002918,Short-term,G2,DR Congo,Research & Assessment,2026-05-01,2026-05-31,1
-CTR-014290,EMP-002918,Short-term,G2,DR Congo,Research & Assessment,2026-06-01,2026-11-30,6
-CTR-014293,EMP-002920,Fixed-term,G5,Haiti,Programmes,2026-02-03,2027-02-02,12
-CTR-014297,EMP-002923,Consultancy,G2,Somalia,Programmes,2026-02-05,2026-04-04,2
-CTR-014298,EMP-002923,Consultancy,G2,Somalia,Programmes,2026-04-05,2026-08-04,4
-CTR-014299,EMP-002923,Fixed-term,G2,Somalia,Programmes,2026-08-05,2027-02-04,6
-CTR-014300,EMP-002924,Fixed-term,G3,Switzerland,Global Support Unit,2026-02-06,2026-06-26,12
-CTR-014302,EMP-002926,Open-ended,G4,Switzerland,Finance & Legal,2026-02-07,,
-CTR-014303,EMP-002927,Fixed-term,G4,Iraq,Programmes,2026-02-07,2027-02-06,12
-CTR-014313,EMP-002934,Fixed-term,G4,Haiti,Research & Assessment,2026-02-14,2027-02-13,12
-CTR-014314,EMP-002935,Fixed-term,G4,Switzerland,Communications,2026-02-15,2027-02-14,12
-CTR-014315,EMP-002936,Short-term,G3,Ukraine,Finance & Admin,2026-02-15,2026-06-14,4
-CTR-014316,EMP-002936,Short-term,G3,Ukraine,Finance & Admin,2026-06-15,2026-10-14,4
-CTR-014317,EMP-002936,Short-term,G3,Ukraine,Finance & Admin,2026-10-15,2026-11-14,1
-CTR-014324,EMP-002940,Fixed-term,G3,Mali,Programmes,2026-02-25,2026-08-24,6
-CTR-014325,EMP-002940,Fixed-term,G3,Mali,Programmes,2026-08-25,2028-08-24,24
-CTR-014332,EMP-002945,Fixed-term,G4,Mali,Global Support Unit,2026-02-28,2027-02-27,12
-CTR-014333,EMP-002946,Consultancy,G6,South Sudan,Programmes,2026-02-28,2026-06-27,4
-CTR-014334,EMP-002946,Consultancy,G6,South Sudan,Programmes,2026-06-28,2026-10-27,4
-CTR-014335,EMP-002946,Consultancy,G6,South Sudan,Programmes,2026-10-28,2026-12-27,2
-CTR-014336,EMP-002947,Consultancy,G3,Afghanistan,Research & Assessment,2026-02-28,2026-04-27,2
-CTR-014337,EMP-002947,Consultancy,G3,Afghanistan,Research & Assessment,2026-04-28,2026-08-27,4
-CTR-014338,EMP-002947,Consultancy,G3,Afghanistan,Research & Assessment,2026-08-28,2026-12-27,4
-CTR-014339,EMP-002948,Fixed-term,G3,Bangladesh,Security,2026-03-04,2028-03-03,24
-CTR-014344,EMP-002952,Fixed-term,G4,Switzerland,Global Research Unit,2026-03-06,2027-03-05,12
-CTR-014347,EMP-002954,Fixed-term,G4,Switzerland,People & Culture,2026-03-08,2028-03-07,24
-CTR-014354,EMP-002958,Fixed-term,G5,Syria,Global Support Unit,2026-03-10,2027-03-09,12
-CTR-014355,EMP-002959,Fixed-term,G5,Bangladesh,Global Research Unit,2026-03-12,2027-03-11,12
-CTR-014356,EMP-002960,Fixed-term,G3,Ukraine,Global Research Unit,2026-03-12,2027-03-11,12
-CTR-014357,EMP-002961,Short-term,G3,Nigeria,Finance & Admin,2026-03-12,2026-09-11,6
-CTR-014358,EMP-002961,Short-term,G3,Nigeria,Finance & Admin,2026-09-12,2026-12-11,3
-CTR-014359,EMP-002962,Fixed-term,G4,Ukraine,Logistics & Supply,2026-03-15,2027-03-14,12
-CTR-014363,EMP-002965,Fixed-term,G6,Iraq,Research & Assessment,2026-03-19,2028-03-18,24
-CTR-014378,EMP-002973,Fixed-term,G6,DR Congo,Logistics & Supply,2026-03-26,2028-03-25,24
-CTR-014381,EMP-002975,Fixed-term,G3,Switzerland,Global Research Unit,2026-03-27,2028-03-26,24
-CTR-014382,EMP-002976,Fixed-term,N3,Kenya,Human Resources,2026-03-29,2027-03-28,12
-CTR-014385,EMP-002978,Fixed-term,G5,Somalia,Research & Assessment,2026-04-01,2027-03-31,12
-CTR-014386,EMP-002979,Fixed-term,N3,Kenya,Logistics & Supply,2026-04-01,2026-07-04,12
-CTR-014406,EMP-002991,Fixed-term,G3,Bangladesh,Programmes,2026-04-12,2027-04-11,12
-CTR-014408,EMP-002993,Fixed-term,G3,Ukraine,Programmes,2026-04-13,2028-04-12,24
-CTR-014411,EMP-002995,Fixed-term,G3,Ukraine,Research & Assessment,2026-04-14,2027-04-13,12
-CTR-014413,EMP-002997,Fixed-term,G4,Kenya,Programmes,2026-04-15,2027-04-14,12
-CTR-014416,EMP-002999,Fixed-term,G2,Nigeria,Programmes,2026-04-17,2027-04-16,12
-CTR-014427,EMP-003007,Consultancy,G3,South-Sudan,Programmes,2026-04-29,2026-06-28,2
-CTR-014428,EMP-003007,Consultancy,G4,South Sudan,Programmes,2026-06-29,2026-12-28,6
-CTR-014436,EMP-003015,Fixed-term,G4,Somalia,Finance & Admin,2026-05-07,2028-05-06,24
-CTR-014439,EMP-003018,Fixed-term,G2,Ukraine,Logistics & Supply,2026-05-10,2027-05-09,12
-CTR-014448,EMP-003024,Fixed-term,G5,South Sudan,Research & Assessment,2026-05-14,2026-07-30,24
-CTR-014454,EMP-003030,Short-term,G2,Ukraine,Research & Assessment,2026-05-19,2026-11-18,6
-CTR-014455,EMP-003031,Consultancy,G4,South Sudan,Programmes,2026-05-21,2026-08-20,3
-CTR-014456,EMP-003031,Consultancy,G4,South Sudan,Programmes,2026-08-21,2026-12-20,4
-CTR-014457,EMP-003032,Fixed-term,G3,Colombia,Finance & Admin,2026-05-22,2028-05-21,24
-CTR-014459,EMP-003034,Fixed-term,G3,Mali,Data & IT,2026-05-24,2027-05-23,12
-CTR-014466,EMP-003040,Fixed-term,G4,Afghanistan,Programmes,2026-05-27,2027-05-26,12
-CTR-014471,EMP-003045,Fixed-term,G4,DR Congo,Programmes,2026-05-31,2026-11-29,6
-CTR-014478,EMP-003052,Fixed-term,G5,Haiti,Logistics & Supply,2026-06-04,2026-12-03,6
-CTR-014479,EMP-003053,Fixed-term,G3,South Sudan,Programmes,2026-06-05,2027-06-04,12
-CTR-014482,EMP-003056,Fixed-term,G4,Ukraine,Data & IT,2026-06-06,2027-06-05,12
-CTR-014483,EMP-003057,Fixed-term,G4,Switzerland,Global Research Unit,2026-06-07,2028-06-06,24
-CTR-014487,EMP-003060,Fixed-term,G1,Mali,Logistics & Supply,2026-06-10,2026-09-21,12
-CTR-014488,EMP-003061,Fixed-term,G6,Somalia,Research & Assessment,2026-06-12,2028-06-11,24
-CTR-014490,EMP-003063,Fixed-term,N3,Kenya,Programmes,2026-06-13,2026-12-12,6
-CTR-014494,EMP-003067,Fixed-term,G3,Haiti,Programmes,2026-06-22,2027-06-21,12
-CTR-014495,EMP-003068,Short-term,N3,Kenya,Research & Assessment,2026-06-23,2026-09-22,3
-CTR-014496,EMP-003068,Short-term,N4,Kenya,Research & Assessment,2026-09-23,2026-10-22,1
-CTR-014497,EMP-003068,Short-term,N4,Kenya,Research & Assessment,2026-10-23,2027-04-22,6
-CTR-014500,EMP-003071,Fixed-term,G4,Somalia,Programmes,2026-06-24,2028-06-23,24
-CTR-014505,EMP-003075,Fixed-term,G4,Switzerland,People & Culture,2026-06-25,2027-06-24,12
-CTR-014506,EMP-003076,Fixed-term,N3,Kenya,Research & Assessment,2026-06-27,2027-06-26,12
-CTR-014509,EMP-003078,Fixed-term,G3,Nigeria,Security,2026-06-27,2028-06-26,24
-CTR-014511,EMP-003080,Fixed-term,N4,Kenya,Research & Assessment,2026-06-29,2028-06-28,24
-CTR-014512,EMP-003081,Fixed-term,G5,Syria,Finance & Admin,2026-06-30,2028-06-29,24
-CTR-014514,EMP-003083,Consultancy,G4,Syria,Global Research Unit,2026-07-05,2026-10-04,3
-CTR-014515,EMP-003083,Fixed-term,G4,Syrian Arab Republic,Global Research Unit,2026-10-05,2028-10-04,24
-CTR-014517,EMP-003085,Consultancy,G6,Kenya,Human Resources,2026-07-07,2026-10-06,3
-CTR-014518,EMP-003085,Consultancy,G6,Kenya,Human Resources,2026-10-07,2026-12-06,2
-CTR-014520,EMP-003087,Fixed-term,G4,Switzerland,Global Research Unit,2026-07-08,2027-07-07,12
-CTR-014522,EMP-003089,Fixed-term,G6,South Sudan,Data & IT,2026-07-09,2027-07-08,12
-CTR-014524,EMP-003091,Fixed-term,G3,DR Congo,Programmes,2026-07-11,2027-07-10,12
-CTR-014526,EMP-003093,Fixed-term,N4,Kenya,Programmes,2026-07-12,2027-07-11,12
-CTR-014527,EMP-003094,Consultancy,G4,Colombia,Security,2026-07-14,2026-09-13,2
-CTR-014528,EMP-003094,Consultancy,G5,Colombia,Security,2026-09-14,2026-12-13,3
-CTR-014542,EMP-003105,Fixed-term,G4,Switzerland,Global Support Unit,2026-07-20,2027-01-19,6
-CTR-014544,EMP-003107,Fixed-term,G1,South Sudan,Research & Assessment,2026-07-21,2028-07-20,24
-CTR-014545,EMP-003108,Fixed-term,G3,Ukraine,Security,2026-07-22,2027-07-21,12
-CTR-014546,EMP-003109,Consultancy,G4,South Sudan,Research & Assessment,2026-07-23,2026-10-22,3
-CTR-014547,EMP-003109,Fixed-term,G4,South Sudan,Research & Assessment,2026-10-23,2027-10-22,12
-CTR-014549,EMP-003111,Consultancy,G1,Bangladesh,Programmes,2026-07-27,2026-10-26,3
-CTR-014550,EMP-003111,Consultancy,G1,Bangladesh,Programmes,2026-10-27,2027-02-26,4
-CTR-014555,EMP-003115,Fixed-term,G6,Nigeria,Human Resources,2026-08-02,2027-08-01,12
-CTR-014556,EMP-003116,Fixed-term,G4,Somalia,Programmes,2026-08-03,2027-08-02,12
-CTR-014561,EMP-003120,Fixed-term,G4,Haiti,Programmes,2026-08-05,2027-02-04,6
-CTR-014562,EMP-003121,Fixed-term,G2,Colombia,Research & Assessment,2026-08-06,2028-08-05,24
-CTR-014571,EMP-003130,Fixed-term,G3,Ukraine,Human Resources,2026-08-13,2027-08-12,12
-CTR-014573,EMP-003132,Fixed-term,G3,Kenya,Programmes,2026-08-16,2027-02-15,6
-CTR-014574,EMP-003133,Fixed-term,G4,South Sudan,Security,2026-08-17,2027-02-16,6
-CTR-014575,EMP-003134,Fixed-term,G5,Iraq,Programmes,2026-08-17,2026-10-31,12
-CTR-014577,EMP-003136,Short-term,G5,Ukraine,Logistics & Supply,2026-08-18,2026-12-17,4
-CTR-014579,EMP-003138,Fixed-term,G6,Kenya,Research & Assessment,2026-08-20,2028-08-19,24
-CTR-014580,EMP-003139,Fixed-term,G3,Ukraine,Programmes,2026-08-22,2027-08-21,12
-CTR-014584,EMP-003143,Fixed-term,G4,Haiti,Data & IT,2026-08-25,2027-08-24,12
-CTR-014585,EMP-003144,Short-term,G3,Kenya,Programmes,2026-08-27,2027-02-26,6
-CTR-014586,EMP-003145,Fixed-term,G3,Iraq,Logistics & Supply,2026-08-28,2027-08-27,12
-CTR-014587,EMP-003146,Fixed-term,G6,Ukraine,Data & IT,2026-08-28,2028-08-27,24
-CTR-014588,EMP-003147,Fixed-term,G2,DR Congo,Logistics & Supply,2026-08-29,2028-08-28,24
-CTR-014593,EMP-003152,Fixed-term,G2,Somalia,Global Support Unit,2026-08-31,2027-02-27,6
-CTR-014597,EMP-003156,Fixed-term,G6,Syria,Finance & Admin,2026-09-09,2027-09-08,12
-CTR-014598,EMP-003157,Fixed-term,G5,Nigeria,Data & IT,2026-09-10,2028-09-09,24
-CTR-014599,EMP-003158,Fixed-term,G1,Kenya,Research & Assessment,2026-09-12,2027-09-11,12
-CTR-014601,EMP-003160,Fixed-term,G4,Mali,Data & IT,2026-09-14,2027-09-13,12
-CTR-014617,EMP-003176,Fixed-term,G2,Syria,Logistics & Supply,2026-09-26,2028-09-25,24
-CTR-014618,EMP-003177,Fixed-term,G6,Haiti,Programmes,2026-09-27,2027-09-26,12
-CTR-014620,EMP-003179,Fixed-term,G3,Iraq,Logistics & Supply,2026-09-27,2028-09-26,24
-CTR-014624,EMP-003183,Fixed-term,G1,Geneva HQ,Finance & Legal,2026-10-02,2027-10-01,12
-CTR-014626,EMP-003185,Fixed-term,G2,Ukraine,Global Support Unit,2026-10-02,2028-10-01,24
-CTR-014628,EMP-003187,Consultancy,G3,Somalia,Programmes,2026-10-03,2027-02-02,4
-CTR-014630,EMP-003189,Fixed-term,G5,DR Congo,Research & Assessment,2026-10-06,2028-10-05,24
-CTR-014637,EMP-003196,Fixed-term,G6,Kenya,Programmes,2026-10-19,2027-04-18,6
-CTR-014639,EMP-003198,Fixed-term,G4,Haiti,Security,2026-10-20,2027-04-19,6
-CTR-014640,EMP-003199,Fixed-term,G3,Switzerland,Global Support Unit,2026-10-21,2027-10-20,12
-CTR-014644,EMP-003203,Short-term,N2,Kenya,Programmes,2026-10-26,2027-04-25,6
-CTR-014646,EMP-003205,Fixed-term,G5,Iraq,Programmes,2026-10-30,2027-10-29,12
+CTR-000058,EMP-000006,Fixed-term,N4,Kenya,Programmes,2023-12-22,2025-12-21,24
+CTR-000059,EMP-000006,Fixed-term,N4,Kenya,Programmes,2025-12-22,2026-12-21,12
+CTR-000105,EMP-000010,Fixed-term,G4,Afghanistan,Finance & Admin,2024-06-22,2025-06-21,12
+CTR-000106,EMP-000010,Fixed-term,G4,Afghanistan,Finance & Admin,2025-06-22,2025-10-16,24
+CTR-000303,EMP-000028,Fixed-term,G6,South Sudan,Programmes,2024-02-22,2025-02-21,12
+CTR-000304,EMP-000028,Fixed-term,G6,South Sudan,Programmes,2025-02-22,2026-02-21,12
+CTR-000305,EMP-000028,Fixed-term,G6,South Sudan,Programmes,2026-02-22,2027-02-21,12
+CTR-000341,EMP-000031,Fixed-term,G4,Switzerland,Global Research Unit,2024-12-22,2026-12-21,24
+CTR-000406,EMP-000036,Fixed-term,G6,Syria,Research & Assessment,2024-10-22,2026-10-21,24
+CTR-000407,EMP-000036,Fixed-term,G6,Syria,Research & Assessment,2026-10-22,2028-10-21,24
+CTR-000408,EMP-000037,Open-ended,G5,Switzerland,Finance & Legal,2014-06-22,,
+CTR-000420,EMP-000038,Fixed-term,N5,Kenya,Security,2024-12-22,2026-12-21,24
+CTR-000448,EMP-000041,Fixed-term,G4,Switzerland,Global Research Unit,2023-10-22,2025-10-21,24
+CTR-000449,EMP-000041,Fixed-term,G4,Switzerland,Global Research Unit,2025-10-22,2026-04-21,6
+CTR-000450,EMP-000041,Fixed-term,G4,Switzerland,Global Research Unit,2026-04-22,2028-04-21,24
+CTR-000518,EMP-000047,Fixed-term,G4,Kenya,Data & IT,2024-12-22,2025-12-21,12
+CTR-000519,EMP-000047,Fixed-term,G4,Kenya,Data & IT,2025-12-22,2027-12-21,24
+CTR-000608,EMP-000056,Fixed-term,G4,Kenya,Research & Assessment,2023-06-22,2025-06-21,24
+CTR-000609,EMP-000056,Fixed-term,G5,Kenya,Research & Assessment,2025-06-22,2026-03-10,12
+CTR-000656,EMP-000061,Fixed-term,G6,Switzerland,Global Support Unit,2024-12-22,2025-06-21,6
+CTR-000657,EMP-000061,Fixed-term,G6,Switzerland,Global Support Unit,2025-06-22,2025-12-15,12
+CTR-000747,EMP-000069,Fixed-term,G6,Switzerland,Global Support Unit,2024-06-22,2025-06-21,12
+CTR-000748,EMP-000069,Fixed-term,G6,Switzerland,Global Support Unit,2025-06-22,2025-12-21,6
+CTR-000749,EMP-000069,Fixed-term,G6,CH,Global Support Unit,2025-12-22,2026-12-21,12
+CTR-000788,EMP-000073,Open-ended,G5,Switzerland,Global Support Unit,2014-06-22,,
+CTR-000954,EMP-000088,Fixed-term,G3,Ukraine,Security,2024-08-16,2025-02-15,6
+CTR-000955,EMP-000088,Fixed-term,G3,Ukraine,Security,2025-02-16,2025-08-15,6
+CTR-000956,EMP-000088,Fixed-term,G4,Ukraine,Security,2025-08-16,2027-08-15,24
+CTR-001060,EMP-000100,Open-ended,G6,Switzerland,Communications,2015-07-17,,
+CTR-001220,EMP-000117,Open-ended,G5,Switzerland,Global Research Unit,2016-02-14,,
+CTR-001297,EMP-000125,Fixed-term,G5,DR Congo,Logistics & Supply,2024-04-04,2025-01-07,24
+CTR-001313,EMP-000127,Fixed-term,G5,Switzerland,People & Culture,2023-04-10,2025-04-09,24
+CTR-001314,EMP-000127,Fixed-term,G5,Switzerland,People & Culture,2025-04-10,2026-04-09,12
+CTR-001315,EMP-000127,Fixed-term,G5,Geneva HQ,People & Culture,2026-04-10,2027-04-09,12
+CTR-001374,EMP-000134,Fixed-term,G6,DR Congo,Logistics & Supply,2024-12-25,2025-12-24,12
+CTR-001375,EMP-000134,Fixed-term,G6,DR Congo,Logistics & Supply,2025-12-25,2026-12-24,12
+CTR-001448,EMP-000141,Fixed-term,G5,Ukraine,Programmes,2023-08-28,2025-08-27,24
+CTR-001449,EMP-000141,Fixed-term,G5,Ukraine,Programmes,2025-08-28,2026-02-27,6
+CTR-001450,EMP-000141,Fixed-term,G5,Ukraine,Programmes,2026-02-28,2028-02-27,24
+CTR-001556,EMP-000153,Fixed-term,N5,Kenya,Logistics & Supply,2024-05-03,2025-05-02,12
+CTR-001557,EMP-000153,Fixed-term,N5,Kenya,Logistics & Supply,2025-05-03,2025-09-28,12
+CTR-001588,EMP-000157,Fixed-term,G5,Ukraine,Finance & Admin,2024-06-29,2025-06-28,12
+CTR-001589,EMP-000157,Fixed-term,G5,Ukraine,Finance & Admin,2025-06-29,2026-06-28,12
+CTR-001590,EMP-000157,Fixed-term,G5,Ukraine,Finance & Admin,2026-06-29,2026-12-28,6
+CTR-001633,EMP-000162,Fixed-term,G5,Syria,Programmes,2024-01-29,2026-01-28,24
+CTR-001634,EMP-000162,Fixed-term,G5,Syria,Programmes,2026-01-29,2027-01-28,12
+CTR-001653,EMP-000164,Fixed-term,G5,Switzerland,Finance & Legal,2024-09-06,2025-09-05,12
+CTR-001654,EMP-000164,Fixed-term,G5,Switzerland,Finance & Legal,2025-09-06,2026-06-18,12
+CTR-001720,EMP-000171,Fixed-term,G4,Ukraine,Programmes,2024-03-12,2025-03-11,12
+CTR-001721,EMP-000171,Fixed-term,G5,Ukraine,Programmes,2025-03-12,2025-04-15,12
+CTR-001778,EMP-000179,Fixed-term,G5,Switzerland,Global Research Unit,2023-06-15,2025-06-14,24
+CTR-001779,EMP-000179,Fixed-term,G5,Switzerland,Global Research Unit,2025-06-15,2025-07-15,6
+CTR-001844,EMP-000185,Fixed-term,G5,Kenya,Finance & Admin,2025-01-01,2025-12-31,12
+CTR-001845,EMP-000185,Fixed-term,G6,Kenya,Finance & Admin,2026-01-01,2026-12-31,12
+CTR-001916,EMP-000193,Fixed-term,G3,Nigeria,Programmes,2024-08-20,2024-07-28,6
+CTR-001917,EMP-000193,Fixed-term,G3,Nigeria,Programmes,2025-02-20,2026-04-29,24
+CTR-001926,EMP-000194,Fixed-term,G4,Kenya,Global Research Unit,2023-08-24,2025-08-23,24
+CTR-001927,EMP-000194,Fixed-term,G4,Kenya,Global Research Unit,2025-08-24,2026-08-23,12
+CTR-001928,EMP-000194,Fixed-term,G4,Kenya,Global Research Unit,2026-08-24,2027-08-23,12
+CTR-002036,EMP-000208,Fixed-term,G1,Switzerland,Global Support Unit,2023-06-02,2025-06-01,24
+CTR-002037,EMP-000208,Fixed-term,G1,Switzerland,Global Support Unit,2025-06-02,2027-06-01,24
+CTR-002101,EMP-000216,Fixed-term,G5,Ukraine,Logistics & Supply,2024-07-21,2026-07-20,24
+CTR-002102,EMP-000216,Fixed-term,G5,Ukraine,Logistics & Supply,2026-07-21,2028-07-20,24
+CTR-002108,EMP-000217,Fixed-term,G2,Bangladesh,Global Research Unit,2024-07-25,2025-07-24,12
+CTR-002109,EMP-000217,Fixed-term,G2,Bangladesh,Global Research Unit,2025-07-25,2025-10-22,24
+CTR-002182,EMP-000226,Fixed-term,G5,Kenya,Finance & Admin,2024-08-27,2026-01-06,24
+CTR-002207,EMP-000229,Open-ended,G5,Switzerland,Global Support Unit,2018-03-30,,
+CTR-002300,EMP-000241,Fixed-term,G5,Switzerland,Global Support Unit,2024-11-17,2025-11-16,12
+CTR-002301,EMP-000241,Fixed-term,G5,Switzerland,Global Support Unit,2025-11-17,2027-11-16,24
+CTR-002365,EMP-000249,Fixed-term,G5,Switzerland,Global Research Unit,2024-06-20,2025-06-19,12
+CTR-002366,EMP-000249,Fixed-term,G5,Switzerland,Global Research Unit,2025-06-20,2027-06-19,24
+CTR-002407,EMP-000253,Fixed-term,G6,Bangladesh,Data & IT,2024-07-07,2025-07-06,12
+CTR-002408,EMP-000253,Fixed-term,G6,Bangladesh,Data & IT,2025-07-07,2025-12-07,12
+CTR-002414,EMP-000254,Fixed-term,G6,DR Congo,Global Research Unit,2024-07-15,2025-05-11,24
+CTR-002438,EMP-000257,Fixed-term,G2,South Sudan,Human Resources,2023-08-08,2025-08-07,24
+CTR-002439,EMP-000257,Fixed-term,G2,South Sudan,Human Resources,2025-08-08,2027-08-07,24
+CTR-002464,EMP-000261,Fixed-term,G4,Nigeria,Global Research Unit,2024-08-28,2025-02-27,6
+CTR-002465,EMP-000261,Fixed-term,G5,Nigeria,Global Research Unit,2025-02-28,2026-02-27,12
+CTR-002466,EMP-000261,Fixed-term,G5,Nigeria,Global Research Unit,2026-02-28,2026-08-27,6
+CTR-002467,EMP-000261,Fixed-term,G5,Nigeria,Global Research Unit,2026-08-28,2028-08-27,24
+CTR-002498,EMP-000266,Fixed-term,G2,South Sudan,Programmes,2024-02-15,2025-04-07,24
+CTR-002527,EMP-000270,Fixed-term,G4,Afghanistan,Logistics & Supply,2024-10-04,2025-03-24,6
+CTR-002531,EMP-000271,Fixed-term,G5,Bangladesh,Research & Assessment,2023-04-05,2025-04-04,24
+CTR-002532,EMP-000271,Fixed-term,G6,Bangladesh,Research & Assessment,2025-04-05,2026-04-04,12
+CTR-002533,EMP-000271,Fixed-term,G6,Bangladesh,Research & Assessment,2026-04-05,2026-03-04,6
+CTR-002534,EMP-000271,Fixed-term,G6,Bangladesh,Research & Assessment,2026-10-05,2027-04-04,6
+CTR-002567,EMP-000276,Fixed-term,N2,Kenya,Research & Assessment,2024-04-29,2026-04-28,24
+CTR-002568,EMP-000276,Fixed-term,N2,Kenya,Research & Assessment,2026-04-29,2026-10-28,6
+CTR-002569,EMP-000276,Fixed-term,N2,Kenya,Research & Assessment,2026-10-29,2027-10-28,12
+CTR-002577,EMP-000277,Fixed-term,G3,Ukraine,Global Research Unit,2024-11-03,2025-07-08,12
+CTR-002640,EMP-000288,Fixed-term,G5,DR Congo,Security,2024-12-22,2025-12-21,12
+CTR-002641,EMP-000288,Fixed-term,G5,DR Congo,Security,2025-12-22,2026-12-21,12
+CTR-002716,EMP-000300,Fixed-term,G3,DR Congo,Finance & Admin,2024-08-14,2025-07-29,12
+CTR-002732,EMP-000303,Fixed-term,G4,Bangladesh,Research & Assessment,2024-08-23,2026-08-22,24
+CTR-002733,EMP-000303,Fixed-term,G4,Bangladesh,Research & Assessment,2026-08-23,2028-08-22,24
+CTR-002759,EMP-000307,Fixed-term,G4,South Sudan,Programmes,2024-08-28,2025-02-27,6
+CTR-002760,EMP-000307,Fixed-term,G4,South Sudan,Programmes,2025-02-28,2027-02-27,24
+CTR-002806,EMP-000313,Fixed-term,G4,Ukraine - Kyiv,Data & IT,2024-09-27,2025-03-26,6
+CTR-002807,EMP-000313,Fixed-term,G4,Ukraine,Data & IT,2025-03-27,2025-12-11,12
+CTR-002854,EMP-000320,Fixed-term,G5,Ukraine,Logistics & Supply,2024-04-25,2025-04-24,12
+CTR-002855,EMP-000320,Fixed-term,G5,Ukraine,Logistics & Supply,2025-04-25,2025-03-25,6
+CTR-002856,EMP-000320,Fixed-term,G5,Ukraine,Logistics & Supply,2025-10-25,2025-12-24,24
+CTR-002904,EMP-000327,Fixed-term,G3,South Sudan,Human Resources,2024-11-29,2025-11-26,24
+CTR-002963,EMP-000336,Fixed-term,G4,Afghanistan,Programmes,2024-06-24,2025-06-23,12
+CTR-002964,EMP-000336,Fixed-term,G4,Afghanistan,Programmes,2025-06-24,2025-10-08,6
+CTR-002976,EMP-000338,Fixed-term,G6,Switzerland,Finance & Legal,2024-07-03,2026-07-02,24
+CTR-002977,EMP-000338,Fixed-term,G6,Switzerland,Finance & Legal,2026-07-03,2027-01-02,6
+CTR-002984,EMP-000339,Fixed-term,G2,Kenya,Global Research Unit,2024-03-04,2025-03-03,12
+CTR-002985,EMP-000339,Fixed-term,G2,Kenya,Global Research Unit,2025-03-04,2026-03-03,12
+CTR-002986,EMP-000339,Fixed-term,G3,Kenya,Global Research Unit,2026-03-04,2027-03-03,12
+CTR-003001,EMP-000342,Fixed-term,G6,Afghanistan,Programmes,2024-01-18,2025-01-17,12
+CTR-003002,EMP-000342,Fixed-term,G6,Afghanistan,Programmes,2025-01-18,2025-06-28,12
+CTR-003018,EMP-000344,Fixed-term,G3,Switzerland,People & Culture,2023-08-20,2025-06-06,24
+CTR-003051,EMP-000349,Fixed-term,G3,Kenya,Finance & Admin,2024-03-04,2025-03-03,12
+CTR-003052,EMP-000349,Fixed-term,G3,Kenya,Finance & Admin,2025-03-04,2025-05-22,12
+CTR-003098,EMP-000357,Open-ended,G4,Switzerland,Global Support Unit,2019-09-07,2026-06-19,
+CTR-003112,EMP-000361,Fixed-term,G4,Ukraine,Programmes,2023-10-16,2025-10-15,24
+CTR-003113,EMP-000361,Fixed-term,G4,Ukraine,Programmes,2025-10-16,2026-10-15,12
+CTR-003114,EMP-000361,Fixed-term,G4,Ukraine,Programmes,2026-10-16,2027-10-15,12
+CTR-003154,EMP-000366,Fixed-term,G2,Ukraine,Logistics & Supply,2024-10-23,2025-04-22,6
+CTR-003155,EMP-000366,Fixed-term,G2,Ukraine,Logistics & Supply,2025-04-23,2027-04-22,24
+CTR-003210,EMP-000376,Fixed-term,N4,Bangladesh,Programmes,2024-11-24,2025-11-23,12
+CTR-003211,EMP-000376,Fixed-term,N4,Bangladesh,Programmes,2025-11-24,2026-05-23,6
+CTR-003212,EMP-000376,Fixed-term,N4,Bangladesh,Programmes,2026-05-24,2027-05-23,12
+CTR-003302,EMP-000390,Fixed-term,G3,Syria,Programmes,2023-04-05,2025-04-04,24
+CTR-003303,EMP-000390,Fixed-term,G3,Syria,Programmes,2025-04-05,2025-05-24,24
+CTR-003316,EMP-000392,Fixed-term,G5,Syrian Arab Republic,Security,2024-04-08,2025-04-07,12
+CTR-003317,EMP-000392,Fixed-term,G5,Syria,Security,2025-04-08,2026-04-07,12
+CTR-003318,EMP-000392,Fixed-term,G5,Syria,Security,2026-04-08,2027-04-07,12
+CTR-003341,EMP-000397,Fixed-term,G2,Kenya,Programmes,2024-02-23,2025-02-22,12
+CTR-003342,EMP-000397,Fixed-term,G3,Kenya,Programmes,2025-02-23,2027-02-22,24
+CTR-003373,EMP-000402,Fixed-term,G6,Switzerland,Global Support Unit,2024-03-05,2026-03-04,24
+CTR-003374,EMP-000402,Fixed-term,G6,Switzerland,Global Support Unit,2026-03-05,2027-03-04,12
+CTR-003387,EMP-000404,Fixed-term,G3,South Sudan,Logistics & Supply,2024-09-11,2025-02-20,12
+CTR-003415,EMP-000409,Fixed-term,G3,Kenya,Programmes,2024-03-18,2025-03-17,12
+CTR-003416,EMP-000409,Fixed-term,G3,Kenya,Programmes,2025-03-18,2027-03-17,24
+CTR-003422,EMP-000410,Fixed-term,G5,Switzerland,Global Support Unit,2024-09-23,2025-08-27,12
+CTR-003427,EMP-000411,Fixed-term,G4,Switzerland,Finance & Legal,2024-09-24,2025-03-23,6
+CTR-003428,EMP-000411,Fixed-term,G4,Switzerland,Finance & Legal,2025-03-24,2026-03-23,12
+CTR-003429,EMP-000411,Fixed-term,G4,Switzerland,Finance & Legal,2026-03-24,2026-09-23,6
+CTR-003430,EMP-000411,Fixed-term,G5,Switzerland,Finance & Legal,2026-09-24,2027-09-23,12
+CTR-003467,EMP-000417,Fixed-term,G2,Switzerland,Global Support Unit,2024-10-04,2025-01-02,24
+CTR-003529,EMP-000427,Fixed-term,N4,Kenya,Programmes,2023-11-03,2025-11-02,24
+CTR-003530,EMP-000427,Fixed-term,N4,Kenya,Programmes,2025-11-03,2026-05-02,6
+CTR-003531,EMP-000427,Fixed-term,N4,Kenya,Programmes,2026-05-03,2026-07-26,12
+CTR-003564,EMP-000432,Fixed-term,G6,Syrian Arab Republic,Logistics & Supply,2024-11-09,2026-11-08,24
+CTR-003578,EMP-000436,Fixed-term,G6,DR Congo,Finance & Admin,2024-05-13,2025-05-12,12
+CTR-003579,EMP-000436,Fixed-term,G6,DR Congo,Finance & Admin,2025-05-13,2026-05-12,12
+CTR-003580,EMP-000436,Fixed-term,G6,D.R. Congo,Finance & Admin,2026-05-13,2028-05-12,24
+CTR-003587,EMP-000438,Open-ended,G6,Switzerland,Global Research Unit,2020-05-21,,
+CTR-003607,EMP-000443,Fixed-term,G5,South Sudan,Programmes,2024-12-06,2026-12-05,24
+CTR-003665,EMP-000453,Fixed-term,G5,Syria,Logistics & Supply,2023-12-26,2025-12-25,24
+CTR-003666,EMP-000453,Fixed-term,G5,Syria,Logistics & Supply,2025-12-26,2026-12-25,12
+CTR-003688,EMP-000455,Fixed-term,G6,Syria,Data & IT,2024-11-10,2025-11-09,12
+CTR-003689,EMP-000455,Fixed-term,G6,Syria,Data & IT,2025-11-10,2026-06-19,24
+CTR-003763,EMP-000474,Fixed-term,G3,Kenya,Programmes,2024-02-06,2025-02-05,12
+CTR-003764,EMP-000474,Fixed-term,G3,Kenya,Programmes,2025-02-06,2026-02-05,12
+CTR-003765,EMP-000474,Fixed-term,G3,Kenya,Programmes,2026-02-06,2027-02-05,12
+CTR-003851,EMP-000491,Fixed-term,G2,South Sudan,Research & Assessment,2023-09-25,2025-09-24,24
+CTR-003852,EMP-000491,Fixed-term,G2,South Sudan,Research & Assessment,2025-09-25,2026-03-24,6
+CTR-003853,EMP-000491,Fixed-term,G2,South Sudan,Research & Assessment,2026-03-25,2027-03-24,12
+CTR-003938,EMP-000508,Fixed-term,G6,Syria,Programmes,2024-11-07,2025-11-06,12
+CTR-003939,EMP-000508,Fixed-term,G6,Syria,Programmes,2025-11-07,2026-05-06,6
+CTR-003940,EMP-000508,Fixed-term,G6,Syria,Programmes,2026-05-07,2027-05-06,12
+CTR-003945,EMP-000509,Fixed-term,G2,Kenya,Security,2024-11-10,2025-11-09,12
+CTR-003946,EMP-000509,Fixed-term,G2,Kenya,Security,2025-11-10,2026-11-09,12
+CTR-003962,EMP-000512,Fixed-term,G2,Ukraine,Logistics & Supply,2024-11-16,2025-11-15,12
+CTR-003963,EMP-000512,Fixed-term,G2,Ukraine,Logistics & Supply,2025-11-16,2026-03-04,6
+CTR-003971,EMP-000515,Fixed-term,G1,South Sudan,Global Support Unit,2024-11-19,2025-11-18,12
+CTR-003972,EMP-000515,Fixed-term,G1,South Sudan,Global Support Unit,2025-11-19,2026-11-18,12
+CTR-004048,EMP-000529,Fixed-term,G5,DR Congo,Research & Assessment,2024-12-16,2024-11-12,12
+CTR-004049,EMP-000529,Fixed-term,G5,DR Congo,Research & Assessment,2025-12-16,2026-01-04,24
+CTR-004060,EMP-000531,Fixed-term,G4,Switzerland,Global Research Unit,2024-06-18,2025-06-17,12
+CTR-004061,EMP-000531,Fixed-term,G5,Switzerland,Global Research Unit,2025-06-18,2026-06-17,12
+CTR-004062,EMP-000531,Fixed-term,G5,Switzerland,Global Research Unit,2026-06-18,2027-06-17,12
+CTR-004080,EMP-000536,Fixed-term,G3,Syria,Human Resources,2024-12-25,2026-12-24,24
+CTR-004108,EMP-000541,Fixed-term,G5,Bangladesh,Research & Assessment,2023-12-30,2025-12-29,24
+CTR-004109,EMP-000541,Fixed-term,G5,Bangladesh,Research & Assessment,2025-12-30,2026-06-29,6
+CTR-004110,EMP-000541,Fixed-term,G5,Bangladesh,Research & Assessment,2026-06-30,2027-06-29,12
+CTR-004191,EMP-000559,Open-ended,G1,Switzerland,Executive Office,2021-01-22,,
+CTR-004210,EMP-000563,Fixed-term,G6,Ukraine,Global Support Unit,2023-02-07,2025-02-06,24
+CTR-004211,EMP-000563,Fixed-term,G6,Ukraine,Global Support Unit,2025-02-07,2026-02-06,12
+CTR-004212,EMP-000563,Fixed-term,G6,Ukraine,Global Support Unit,2026-02-07,2026-08-06,6
+CTR-004213,EMP-000563,Fixed-term,G6,Ukraine,Global Support Unit,2026-08-07,2027-08-06,12
+CTR-004244,EMP-000570,Fixed-term,G1,Afghanistan,Logistics & Supply,2024-06-25,2025-06-24,12
+CTR-004245,EMP-000570,Fixed-term,G1,Afghanistan,Logistics & Supply,2025-06-25,2025-07-08,12
+CTR-004247,EMP-000571,Fixed-term,G2,South Sudan,Programmes,2023-02-27,2025-02-26,24
+CTR-004248,EMP-000571,Fixed-term,G2,South Sudan,Programmes,2025-02-27,2025-06-12,12
+CTR-004255,EMP-000572,Fixed-term,G2,DR Congo,Security,2024-11-28,2025-05-27,6
+CTR-004256,EMP-000572,Fixed-term,G3,DR Congo,Security,2025-05-28,2027-05-27,24
+CTR-004261,EMP-000574,Open-ended,G4,Switzerland,Global Support Unit,2021-03-04,2025-04-24,
+CTR-004352,EMP-000593,Fixed-term,N5,Bangladesh,Logistics & Supply,2024-03-27,2025-03-26,12
+CTR-004353,EMP-000593,Fixed-term,N5,Bangladesh,Logistics & Supply,2025-03-27,2026-03-26,12
+CTR-004354,EMP-000593,Fixed-term,N5,Bangladesh,Logistics & Supply,2026-03-27,2026-09-26,6
+CTR-004355,EMP-000593,Fixed-term,N5,Bangladesh,Logistics & Supply,2026-09-27,2027-09-26,12
+CTR-004394,EMP-000602,Fixed-term,G4,Switzerland,People & Culture,2024-04-14,2026-04-13,24
+CTR-004395,EMP-000602,Fixed-term,G4,Switzerland,People & Culture,2026-04-14,2028-04-13,24
+CTR-004399,EMP-000603,Fixed-term,G4,South Sudan,Research & Assessment,2024-04-17,2025-12-23,24
+CTR-004514,EMP-000628,Fixed-term,G6,Switzerland,Finance & Legal,2024-06-01,2025-05-31,12
+CTR-004515,EMP-000628,Fixed-term,G6,Switzerland,Finance & Legal,2025-06-01,2027-05-31,24
+CTR-004537,EMP-000633,Fixed-term,G6,Syria,Programmes,2023-06-14,2025-06-13,24
+CTR-004538,EMP-000633,Fixed-term,G6,Syria,Programmes,2025-06-14,2026-03-02,24
+CTR-004576,EMP-000642,Fixed-term,G3,Ukraine,Finance & Admin,2024-06-29,2025-01-11,12
+CTR-004608,EMP-000651,Fixed-term,G4,Nigeria,Global Support Unit,2024-07-29,2025-01-28,6
+CTR-004609,EMP-000651,Fixed-term,G4,Nigeria,Global Support Unit,2025-01-29,2025-06-01,12
+CTR-004703,EMP-000670,Fixed-term,G4,DR Congo,Finance & Admin,2023-02-28,2025-02-27,24
+CTR-004704,EMP-000670,Fixed-term,G5,DR Congo,Finance & Admin,2025-02-28,2026-02-27,12
+CTR-004705,EMP-000670,Fixed-term,G5,DR Congo,Finance & Admin,2026-02-28,2027-02-27,12
+CTR-004854,EMP-000697,Open-ended,G4,Switzerland,Global Research Unit,2021-10-19,,
+CTR-004855,EMP-000698,Open-ended,G2,Switzerland,Global Research Unit,2021-10-20,2025-05-26,
+CTR-004863,EMP-000700,Fixed-term,G5,Ukraine,Logistics & Supply,2024-04-22,2026-04-21,24
+CTR-004864,EMP-000700,Fixed-term,G5,Ukraine,Logistics & Supply,2026-04-22,2028-04-21,24
+CTR-005057,EMP-000741,Fixed-term,G6,South Sudan,Finance & Admin,2024-03-17,2025-11-05,24
+CTR-005077,EMP-000748,Fixed-term,G3,Afghanistan,Global Support Unit,2024-01-10,2025-01-09,12
+CTR-005078,EMP-000748,Fixed-term,G3,Afghanistan,Global Support Unit,2025-01-10,2025-11-13,12
+CTR-005080,EMP-000749,Fixed-term,G4,Syria,Research & Assessment,2024-01-13,2025-01-12,12
+CTR-005081,EMP-000749,Fixed-term,G5,Syria,Research & Assessment,2025-01-13,2026-01-12,12
+CTR-005082,EMP-000749,Fixed-term,G6,Syria,Research & Assessment,2026-01-13,2027-01-12,12
+CTR-005092,EMP-000751,Fixed-term,G4,South Sudan,Logistics & Supply,2024-01-19,2026-01-18,24
+CTR-005093,EMP-000751,Fixed-term,G4,South Sudan,Logistics & Supply,2026-01-19,2028-01-18,24
+CTR-005141,EMP-000764,Fixed-term,G3,Syria,Logistics & Supply,2024-02-22,2025-02-21,12
+CTR-005142,EMP-000764,Fixed-term,G3,Syria,Logistics & Supply,2025-02-22,2026-02-21,12
+CTR-005143,EMP-000764,Fixed-term,G3,Syria,Logistics & Supply,2026-02-22,2028-02-21,24
+CTR-005147,EMP-000765,Fixed-term,G5,Afghanistan,Programmes,2024-08-23,2025-08-16,24
+CTR-005160,EMP-000768,Fixed-term,G5,Nigeria,Data & IT,2024-09-04,2025-03-03,6
+CTR-005161,EMP-000768,Fixed-term,G6,Nigeria,Data & IT,2025-03-04,2026-03-03,12
+CTR-005162,EMP-000768,Fixed-term,G6,Nigeria,Data & IT,2026-03-04,2027-03-03,12
+CTR-005167,EMP-000769,Fixed-term,G1,Syria,Research & Assessment,2024-09-24,2026-09-23,24
+CTR-005168,EMP-000769,Fixed-term,G1,Syria,Research & Assessment,2026-09-24,2027-09-23,12
+CTR-005183,EMP-000773,Fixed-term,G4,Ukraine - Kyiv,Finance & Admin,2024-04-03,2025-04-02,12
+CTR-005184,EMP-000773,Fixed-term,G4,Ukraine,Finance & Admin,2025-04-03,2027-04-02,24
+CTR-005224,EMP-000780,Fixed-term,G3,Syria,Global Research Unit,2024-05-14,2025-01-14,12
+CTR-005278,EMP-000793,Fixed-term,G2,DR Congo,Finance & Admin,2024-05-05,2025-05-04,12
+CTR-005279,EMP-000793,Fixed-term,G2,"Congo, Dem. Rep.",Finance & Admin,2025-05-05,2026-05-04,12
+CTR-005280,EMP-000793,Fixed-term,G2,"Congo, Dem. Rep.",Finance & Admin,2026-05-05,2027-05-04,12
+CTR-005286,EMP-000794,Fixed-term,N3,Bangladesh,Finance & Admin,2023-06-06,2025-06-05,24
+CTR-005287,EMP-000794,Fixed-term,N4,Bangladesh,Finance & Admin,2025-06-06,2025-06-28,24
+CTR-005306,EMP-000798,Short-term,N4,Kenya,Programmes,2024-11-08,2025-01-07,2
+CTR-005307,EMP-000798,Short-term,N4,Kenya,Programmes,2025-01-08,2025-04-07,3
+CTR-005308,EMP-000798,Short-term,N5,Kenya,Programmes,2025-04-08,2025-07-07,3
+CTR-005309,EMP-000798,Fixed-term,N5,Kenya,Programmes,2025-07-08,2027-07-07,24
+CTR-005315,EMP-000800,Fixed-term,G3,Syria,Programmes,2024-11-11,2025-05-10,6
+CTR-005316,EMP-000800,Fixed-term,G3,Syrian Arab Republic,Programmes,2025-05-11,2026-05-10,12
+CTR-005317,EMP-000800,Fixed-term,G3,Syria,Programmes,2026-05-11,2028-05-10,24
+CTR-005338,EMP-000805,Open-ended,G3,Switzerland,Global Research Unit,2022-05-19,,
+CTR-005347,EMP-000807,Fixed-term,G3,Bangladesh,Finance & Admin,2024-11-21,2025-11-20,12
+CTR-005348,EMP-000807,Fixed-term,G3,Bangladesh,Finance & Admin,2025-11-21,2026-11-20,12
+CTR-005375,EMP-000815,Fixed-term,G2,Kenya,Data & IT,2024-12-01,2026-05-08,24
+CTR-005391,EMP-000819,Fixed-term,G5,Nigeria,Finance & Admin,2024-06-12,2025-07-01,24
+CTR-005396,EMP-000820,Fixed-term,G6,Syria,Programmes,2023-06-13,2025-06-12,24
+CTR-005397,EMP-000820,Fixed-term,G6,Syria,Programmes,2025-06-13,2026-06-12,12
+CTR-005398,EMP-000820,Fixed-term,G6,Syria,Programmes,2026-06-13,2028-06-12,24
+CTR-005428,EMP-000827,Fixed-term,G4,Ukraine,Research & Assessment,2024-07-14,2025-01-13,6
+CTR-005429,EMP-000827,Fixed-term,G4,Ukraine,Research & Assessment,2025-01-14,2025-12-05,12
+CTR-005442,EMP-000830,Fixed-term,G3,DR Congo,Global Support Unit,2024-01-24,2025-01-23,12
+CTR-005443,EMP-000830,Fixed-term,G3,DR Congo,Global Support Unit,2025-01-24,2027-01-23,24
+CTR-005455,EMP-000834,Fixed-term,G3,Switzerland,Global Research Unit,2024-09-30,2025-03-29,6
+CTR-005456,EMP-000834,Fixed-term,G3,Switzerland,Global Research Unit,2025-03-30,2026-03-29,12
+CTR-005457,EMP-000834,Fixed-term,G4,Switzerland,Global Research Unit,2026-03-30,2027-03-29,12
+CTR-005461,EMP-000835,Fixed-term,G5,DR Congo,Programmes,2024-04-02,2025-04-01,12
+CTR-005462,EMP-000835,Fixed-term,G5,DR Congo,Programmes,2025-04-02,2025-12-14,12
+CTR-005497,EMP-000844,Fixed-term,G5,Kenya,Human Resources,2024-08-15,2025-08-14,12
+CTR-005498,EMP-000844,Fixed-term,G6,Kenya,Human Resources,2025-08-15,2026-08-14,12
+CTR-005499,EMP-000844,Fixed-term,G6,Kenya,Human Resources,2026-08-15,2028-08-14,24
+CTR-005540,EMP-000857,Fixed-term,N3,Kenya,Programmes,2024-08-31,2025-08-30,12
+CTR-005541,EMP-000857,Fixed-term,N3,Kenya,Programmes,2025-08-31,2026-08-30,12
+CTR-005542,EMP-000857,Fixed-term,N4,Kenya,Programmes,2026-08-31,2027-08-30,12
+CTR-005562,EMP-000864,Open-ended,G2,Switzerland,Finance & Legal,2022-09-06,,
+CTR-005571,EMP-000865,Short-term,G5,Bangladesh,Programmes,2024-10-08,2025-04-07,6
+CTR-005572,EMP-000865,Short-term,G5,Bangladesh,Programmes,2025-04-08,2025-10-07,6
+CTR-005573,EMP-000865,Fixed-term,G5,Bangladesh (Dhaka),Programmes,2025-10-08,2026-10-07,12
+CTR-005574,EMP-000865,Fixed-term,G6,Bangladesh,Programmes,2026-10-08,2026-10-09,24
+CTR-005595,EMP-000869,Fixed-term,G4,Ukraine,Programmes,2024-03-20,2025-03-19,12
+CTR-005596,EMP-000869,Fixed-term,G4,Ukraine,Programmes,2025-03-20,2026-03-19,12
+CTR-005597,EMP-000869,Fixed-term,G4,Ukraine,Programmes,2026-03-20,2027-03-19,12
+CTR-005627,EMP-000877,Fixed-term,G4,Syria,Programmes,2024-10-06,2025-04-05,6
+CTR-005628,EMP-000877,Fixed-term,G4,Syria,Programmes,2025-04-06,2026-04-05,12
+CTR-005629,EMP-000877,Fixed-term,G4,Syria,Programmes,2026-04-06,2026-10-05,6
+CTR-005630,EMP-000877,Fixed-term,G4,Syria,Programmes,2026-10-06,2027-10-05,12
+CTR-005632,EMP-000878,Fixed-term,G5,Bangladesh,Human Resources,2023-10-06,2025-10-05,24
+CTR-005633,EMP-000878,Fixed-term,G5,Bangladesh,Human Resources,2025-10-06,2026-10-05,12
+CTR-005634,EMP-000878,Fixed-term,G5,Bangladesh,Human Resources,2026-10-06,2027-10-05,12
+CTR-005646,EMP-000881,Fixed-term,G2,Nigeria,Finance & Admin,2024-10-12,2025-10-11,12
+CTR-005647,EMP-000881,Fixed-term,G2,Nigeria,Finance & Admin,2025-10-12,2025-10-17,12
+CTR-005703,EMP-000896,Fixed-term,G5,Geneva HQ,Communications,2024-05-07,2025-05-06,12
+CTR-005704,EMP-000896,Fixed-term,G5,Switzerland,Communications,2025-05-07,2027-05-06,24
+CTR-005738,EMP-000909,Fixed-term,G4,Kenya,Programmes,2024-03-28,2025-07-10,24
+CTR-005752,EMP-000914,Fixed-term,G6,Bangladesh,Programmes,2024-12-02,2025-12-01,12
+CTR-005753,EMP-000914,Fixed-term,G6,Bangladesh,Programmes,2025-12-02,2026-12-01,12
+CTR-005761,EMP-000918,Fixed-term,G5,DR Congo,Data & IT,2023-12-08,2025-12-07,24
+CTR-005762,EMP-000918,Fixed-term,G6,DR Congo,Data & IT,2025-12-08,2026-03-08,12
+CTR-005767,EMP-000920,Fixed-term,N2,Bangladesh,Finance & Admin,2024-12-15,2025-12-14,12
+CTR-005768,EMP-000920,Fixed-term,N2,Bangladesh,Finance & Admin,2025-12-15,2026-12-14,12
+CTR-005772,EMP-000922,Fixed-term,G5,Nigeria,Data & IT,2023-12-31,2025-12-30,24
+CTR-005773,EMP-000922,Fixed-term,G5,Nigeria,Data & IT,2025-12-31,2026-12-30,12
+CTR-005788,EMP-000925,Fixed-term,G3,Switzerland,Global Research Unit,2024-12-02,2025-02-26,12
+CTR-005796,EMP-000926,Consultancy,G6,Afghanistan,Programmes,2024-12-03,2025-04-02,4
+CTR-005797,EMP-000926,Consultancy,G6,Afghanistan,Programmes,2025-04-03,2025-04-21,2
+CTR-005807,EMP-000928,Fixed-term,G3,South Sudan,Data & IT,2024-07-04,2025-07-03,12
+CTR-005808,EMP-000928,Fixed-term,G4,South Sudan,Data & IT,2025-07-04,2026-07-03,12
+CTR-005809,EMP-000928,Fixed-term,G4,South Sudan,Data & IT,2026-07-04,2028-07-03,24
+CTR-005817,EMP-000931,Fixed-term,G3,Kenya,Programmes,2024-03-06,2026-03-05,24
+CTR-005818,EMP-000931,Fixed-term,G3,Kenya,Programmes,2026-03-06,2027-03-05,12
+CTR-005821,EMP-000932,Fixed-term,G5,Afghanistan,Programmes,2024-07-07,2025-07-06,12
+CTR-005822,EMP-000932,Fixed-term,G5,Afghanistan,Programmes,2025-07-07,2025-09-13,12
+CTR-005896,EMP-000950,Fixed-term,G3,South Sudan,Global Support Unit,2024-02-05,2025-02-04,12
+CTR-005897,EMP-000950,Fixed-term,G4,South Sudan,Global Support Unit,2025-02-05,2026-02-04,12
+CTR-005898,EMP-000950,Fixed-term,G4,South Sudan,Global Support Unit,2026-02-05,2026-08-16,12
+CTR-005902,EMP-000952,Fixed-term,G5,Nigeria,Finance & Admin,2024-08-09,2025-08-08,12
+CTR-005903,EMP-000952,Fixed-term,G6,Nigeria,Finance & Admin,2025-08-09,2026-02-08,6
+CTR-005904,EMP-000952,Fixed-term,G6,Nigeria,Finance & Admin,2026-02-09,2027-02-08,12
+CTR-005907,EMP-000953,Fixed-term,G4,Nigeria,Data & IT,2024-08-12,2025-08-11,12
+CTR-005908,EMP-000953,Fixed-term,G5,Nigeria,Data & IT,2025-08-12,2026-08-11,12
+CTR-005909,EMP-000953,Fixed-term,G5,Nigeria,Data & IT,2026-08-12,2027-08-11,12
+CTR-005939,EMP-000961,Fixed-term,G4,Ukraine - Kyiv,Global Research Unit,2024-08-22,2025-08-21,12
+CTR-005940,EMP-000961,Fixed-term,G4,Ukraine,Global Research Unit,2025-08-22,2026-08-21,12
+CTR-005941,EMP-000961,Fixed-term,G4,Ukraine,Global Research Unit,2026-08-22,2028-08-21,24
+CTR-005966,EMP-000967,Fixed-term,G3,DR Congo,Security,2023-09-06,2025-09-05,24
+CTR-005967,EMP-000967,Fixed-term,G3,DR Congo,Security,2025-09-06,2026-09-05,12
+CTR-005968,EMP-000967,Fixed-term,G3,DR Congo,Security,2026-09-06,2027-09-05,12
+CTR-005970,EMP-000968,Fixed-term,G3,South Sudan,Security,2023-09-08,2025-06-13,24
+CTR-005978,EMP-000972,Fixed-term,G3,DR Congo,Logistics & Supply,2024-09-10,2025-12-21,24
+CTR-005984,EMP-000975,Fixed-term,G5,Switzerland,Global Research Unit,2023-03-12,2025-03-11,24
+CTR-005985,EMP-000975,Fixed-term,G5,Switzerland,Global Research Unit,2025-03-12,2025-09-11,6
+CTR-005986,EMP-000975,Fixed-term,G5,Switzerland,Global Research Unit,2025-09-12,2026-09-11,12
+CTR-005987,EMP-000975,Fixed-term,G5,Switzerland,Global Research Unit,2026-09-12,2027-03-11,6
+CTR-006000,EMP-000981,Fixed-term,G5,Kenya,Programmes,2024-09-23,2025-09-22,12
+CTR-006001,EMP-000981,Fixed-term,G5,Kenya,Programmes,2025-09-23,2027-09-22,24
+CTR-006003,EMP-000982,Fixed-term,G4,Ukraine,Programmes,2024-03-26,2025-03-25,12
+CTR-006004,EMP-000982,Fixed-term,G4,Ukraine,Programmes,2025-03-26,2026-09-19,24
+CTR-006015,EMP-000985,Fixed-term,G3,Kenya,Programmes,2024-04-03,2026-04-02,24
+CTR-006016,EMP-000985,Fixed-term,G3,Kenya,Programmes,2026-04-03,2028-04-02,24
+CTR-006029,EMP-000988,Fixed-term,G5,Bangladesh,Programmes,2024-04-09,2025-04-08,12
+CTR-006030,EMP-000988,Fixed-term,G5,Bangladesh,Programmes,2025-04-09,2027-04-08,24
+CTR-006148,EMP-001019,Fixed-term,N5,Kenya,Programmes,2024-10-04,2026-10-03,24
+CTR-006149,EMP-001019,Fixed-term,N5,Kenya,Programmes,2026-10-04,2027-10-03,12
+CTR-006154,EMP-001021,Fixed-term,G5,South Sudan,Logistics & Supply,2023-06-09,2025-01-01,24
+CTR-006160,EMP-001023,Fixed-term,G6,DR Congo,Logistics & Supply,2024-06-14,2025-06-13,12
+CTR-006161,EMP-001023,Fixed-term,G6,DR Congo,Logistics & Supply,2025-06-14,2026-06-13,12
+CTR-006162,EMP-001023,Fixed-term,G6,DR Congo,Logistics & Supply,2026-06-14,2027-06-13,12
+CTR-006175,EMP-001029,Fixed-term,G5,Kenya,Logistics & Supply,2024-01-05,2025-01-04,12
+CTR-006176,EMP-001029,Fixed-term,G5,Kenya,Logistics & Supply,2025-01-05,2027-01-04,24
+CTR-006192,EMP-001037,Fixed-term,G3,DR Congo,Programmes,2024-01-18,2025-01-17,12
+CTR-006193,EMP-001037,Fixed-term,G3,DR Congo,Programmes,2025-01-18,2027-01-17,24
+CTR-006195,EMP-001038,Fixed-term,G5,Switzerland,Communications,2024-01-22,2026-01-21,24
+CTR-006196,EMP-001038,Fixed-term,G5,Switzerland,Communications,2026-01-22,2027-01-21,12
+CTR-006197,EMP-001039,Fixed-term,G6,Nigeria,Research & Assessment,2023-07-24,2025-07-23,24
+CTR-006198,EMP-001039,Fixed-term,G6,Nigeria,Research & Assessment,2025-07-24,2025-08-08,12
+CTR-006200,EMP-001040,Fixed-term,N2,Kenya,Research & Assessment,2024-07-25,2025-01-24,6
+CTR-006201,EMP-001040,Fixed-term,N2,Kenya,Research & Assessment,2025-01-25,2026-01-24,12
+CTR-006202,EMP-001040,Fixed-term,N2,Kenya,Research & Assessment,2026-01-25,2026-07-24,6
+CTR-006203,EMP-001040,Fixed-term,N2,Kenya,Research & Assessment,2026-07-25,2027-01-24,6
+CTR-006241,EMP-001052,Fixed-term,G4,Switzerland,Communications,2024-08-15,2025-08-14,12
+CTR-006242,EMP-001052,Fixed-term,G4,Switzerland,Communications,2025-08-15,2026-02-14,6
+CTR-006243,EMP-001052,Fixed-term,G4,Switzerland,Communications,2026-02-15,2027-02-14,12
+CTR-006246,EMP-001054,Fixed-term,G3,DR Congo,Finance & Admin,2023-08-21,2025-08-20,24
+CTR-006247,EMP-001054,Fixed-term,G3,DR Congo,Finance & Admin,2025-08-21,2026-10-01,24
+CTR-006283,EMP-001063,Fixed-term,G6,Nigeria,Logistics & Supply,2024-07-07,2025-07-06,12
+CTR-006284,EMP-001063,Fixed-term,G6,Nigeria,Logistics & Supply,2025-07-07,2026-07-06,12
+CTR-006285,EMP-001063,Fixed-term,G6,Nigeria,Logistics & Supply,2026-07-07,2027-07-06,12
+CTR-006303,EMP-001071,Fixed-term,G3,South Sudan,Programmes,2024-09-20,2025-01-27,12
+CTR-006306,EMP-001072,Fixed-term,N4,Kenya,Data & IT,2024-09-26,2025-09-25,12
+CTR-006307,EMP-001072,Fixed-term,N4,Kenya,Data & IT,2025-09-26,2026-09-25,12
+CTR-006308,EMP-001072,Fixed-term,N4,Kenya,Data & IT,2026-09-26,2027-03-25,6
+CTR-006328,EMP-001078,Fixed-term,G3,Nigeria,Global Research Unit,2023-10-12,2025-10-11,24
+CTR-006329,EMP-001078,Fixed-term,G3,Nigeria,Global Research Unit,2025-10-12,2026-10-11,12
+CTR-006330,EMP-001078,Fixed-term,G3,Nigeria,Global Research Unit,2026-10-12,2028-10-11,24
+CTR-006341,EMP-001083,Fixed-term,G4,Afghanistan,Finance & Admin,2024-10-17,2024-09-13,6
+CTR-006342,EMP-001083,Fixed-term,G4,Afghanistan,Finance & Admin,2025-04-17,2025-05-22,12
+CTR-006344,EMP-001084,Fixed-term,N3,Kenya,Programmes,2024-10-20,2025-10-19,12
+CTR-006345,EMP-001084,Fixed-term,N4,Kenya,Programmes,2025-10-20,2026-10-19,12
+CTR-006346,EMP-001084,Fixed-term,N4,Kenya,Programmes,2026-10-20,2028-10-19,24
+CTR-006347,EMP-001085,Fixed-term,G4,Syria,Programmes,2023-10-20,2025-10-19,24
+CTR-006348,EMP-001085,Fixed-term,G4,Syria,Programmes,2025-10-20,2026-10-19,12
+CTR-006349,EMP-001085,Fixed-term,G4,Syrian Arab Republic,Programmes,2026-10-20,2027-10-19,12
+CTR-006374,EMP-001092,Fixed-term,G5,Nigeria,Programmes,2024-04-02,2025-02-18,12
+CTR-006379,EMP-001093,Consultancy,G3,Switzerland,Communications,2024-12-03,2025-06-02,6
+CTR-006380,EMP-001093,Consultancy,G3,Switzerland,Communications,2025-06-03,2025-12-02,6
+CTR-006381,EMP-001093,Fixed-term,G3,Geneva HQ,Communications,2025-12-03,2026-12-02,12
+CTR-006383,EMP-001094,Fixed-term,G5,South Sudan,Programmes,2024-11-13,2025-11-12,12
+CTR-006384,EMP-001094,Fixed-term,G5,South Sudan,Programmes,2025-11-13,2026-05-12,6
+CTR-006385,EMP-001094,Fixed-term,G5,South Sudan,Programmes,2026-05-13,2028-05-12,24
+CTR-006392,EMP-001097,Fixed-term,G5,Ukraine,Data & IT,2024-06-19,2025-06-18,12
+CTR-006393,EMP-001097,Fixed-term,G5,Ukraine,Data & IT,2025-06-19,2025-10-25,6
+CTR-006434,EMP-001107,Fixed-term,G1,South Sudan,Research & Assessment,2024-12-13,2025-12-12,12
+CTR-006435,EMP-001107,Fixed-term,G1,South Sudan,Research & Assessment,2025-12-13,2027-12-12,24
+CTR-006439,EMP-001109,Fixed-term,G3,DR Congo,Data & IT,2024-12-14,2025-12-13,12
+CTR-006440,EMP-001109,Fixed-term,G3,DR Congo,Data & IT,2025-12-14,2026-06-13,6
+CTR-006441,EMP-001109,Fixed-term,G3,DR Congo,Data & IT,2026-06-14,2028-06-13,24
+CTR-006450,EMP-001114,Open-ended,G5,Switzerland,Global Support Unit,2023-12-27,2025-06-15,
+CTR-006452,EMP-001116,Open-ended,G1,Switzerland,Communications,2023-12-28,,
+CTR-006471,EMP-001123,Fixed-term,G3,South Sudan,Data & IT,2024-01-03,2025-01-02,12
+CTR-006472,EMP-001123,Fixed-term,G3,South Sudan,Data & IT,2025-01-03,2027-01-02,24
+CTR-006515,EMP-001135,Fixed-term,G6,South Sudan,Programmes,2024-01-16,2026-01-15,24
+CTR-006516,EMP-001135,Fixed-term,G6,South Sudan,Programmes,2026-01-16,2028-01-15,24
+CTR-006529,EMP-001140,Fixed-term,N5,Kenya,Research & Assessment,2024-01-22,2025-01-21,12
+CTR-006530,EMP-001140,Fixed-term,N5,Kenya,Research & Assessment,2025-01-22,2025-02-17,12
+CTR-006531,EMP-001141,Fixed-term,G5,South Sudan,Data & IT,2024-01-23,2025-01-06,12
+CTR-006542,EMP-001144,Consultancy,G4,Ukraine,Global Support Unit,2024-12-25,2025-03-24,3
+CTR-006543,EMP-001144,Consultancy,G4,Ukraine,Global Support Unit,2025-03-25,2025-07-24,4
+CTR-006544,EMP-001144,Fixed-term,G4,Ukraine,Global Support Unit,2025-07-25,2026-07-24,12
+CTR-006545,EMP-001144,Fixed-term,G4,Ukraine,Global Support Unit,2026-07-25,2028-07-24,24
+CTR-006558,EMP-001150,Fixed-term,G2,South Sudan,Programmes,2024-02-01,2025-01-31,12
+CTR-006559,EMP-001150,Fixed-term,G2,South Sudan,Programmes,2025-02-01,2025-06-26,24
+CTR-006560,EMP-001151,Fixed-term,G4,South Sudan,Global Research Unit,2024-02-05,2025-02-04,12
+CTR-006561,EMP-001151,Fixed-term,G4,South Sudan,Global Research Unit,2025-02-05,2027-02-04,24
+CTR-006573,EMP-001154,Fixed-term,G5,South Sudan,Global Support Unit,2024-02-07,2025-02-06,12
+CTR-006574,EMP-001154,Fixed-term,G5,South Sudan,Global Support Unit,2025-02-07,2026-02-06,12
+CTR-006575,EMP-001154,Fixed-term,G6,South Sudan,Global Support Unit,2026-02-07,2028-02-06,24
+CTR-006582,EMP-001158,Fixed-term,G4,Afghanistan,Global Support Unit,2024-02-17,2025-02-16,12
+CTR-006583,EMP-001158,Fixed-term,G4,Afghanistan ,Global Support Unit,2025-02-17,2025-08-21,24
+CTR-006584,EMP-001159,Fixed-term,G4,DR Congo,Research & Assessment,2024-02-18,2025-02-17,12
+CTR-006585,EMP-001159,Fixed-term,G4,DR Congo,Research & Assessment,2025-02-18,2026-02-17,12
+CTR-006586,EMP-001159,Fixed-term,G4,DR Congo,Research & Assessment,2026-02-18,2027-02-17,12
+CTR-006597,EMP-001162,Fixed-term,G4,Kenya,Finance & Admin,2024-02-20,2025-02-19,12
+CTR-006598,EMP-001162,Fixed-term,G4,Kenya,Finance & Admin,2025-02-20,2026-01-25,12
+CTR-006608,EMP-001165,Short-term,G3,Bangladesh,Programmes,2024-08-25,2025-02-04,6
+CTR-006620,EMP-001169,Fixed-term,G5,South Sudan,Global Support Unit,2024-11-03,2026-11-02,24
+CTR-006658,EMP-001180,Consultancy,G5,Nigeria,Logistics & Supply,2024-12-12,2025-03-11,3
+CTR-006659,EMP-001180,Fixed-term,G5,Nigeria,Logistics & Supply,2025-03-12,2026-03-11,12
+CTR-006660,EMP-001180,Fixed-term,G5,Nigeria,Logistics & Supply,2026-03-12,2026-09-11,6
+CTR-006661,EMP-001180,Fixed-term,G5,Nigeria,Logistics & Supply,2026-09-12,2027-09-11,12
+CTR-006681,EMP-001190,Fixed-term,N2,Kenya,Finance & Admin,2024-03-20,2025-07-22,24
+CTR-006682,EMP-001191,Fixed-term,G3,Switzerland,Executive Office,2024-03-20,2025-03-19,12
+CTR-006683,EMP-001191,Fixed-term,G3,Switzerland,Executive Office,2025-03-20,2026-02-01,12
+CTR-006688,EMP-001194,Open-ended,G5,Switzerland,Global Research Unit,2024-03-24,,
+CTR-006689,EMP-001195,Fixed-term,G4,Ukraine,Security,2024-03-28,2025-03-27,12
+CTR-006690,EMP-001195,Fixed-term,G5,Ukraine,Security,2025-03-28,2026-03-27,12
+CTR-006691,EMP-001195,Fixed-term,G5,Ukraine,Security,2026-03-28,2027-03-27,12
+CTR-006707,EMP-001201,Fixed-term,G5,Afghanistan,Security,2024-10-03,2025-03-06,12
+CTR-006726,EMP-001207,Consultancy,G3,South Sudan,Programmes,2024-12-08,2025-02-07,2
+CTR-006727,EMP-001207,Fixed-term,G3,South-Sudan,Programmes,2025-02-08,2025-08-07,6
+CTR-006728,EMP-001207,Fixed-term,G3,South Sudan,Programmes,2025-08-08,2026-08-07,12
+CTR-006729,EMP-001207,Fixed-term,G3,South Sudan,Programmes,2026-08-08,2027-08-07,12
+CTR-006735,EMP-001209,Fixed-term,G4,Kenya,Security,2024-10-11,2025-10-10,12
+CTR-006736,EMP-001209,Fixed-term,G5,Kenya,Security,2025-10-11,2027-10-10,24
+CTR-006742,EMP-001211,Fixed-term,G3,DR Congo,Research & Assessment,2024-04-12,2026-04-11,24
+CTR-006743,EMP-001211,Fixed-term,G3,DR Congo,Research & Assessment,2026-04-12,2027-04-11,12
+CTR-006759,EMP-001216,Fixed-term,G2,Bangladesh,Global Research Unit,2024-10-18,2025-10-17,12
+CTR-006760,EMP-001216,Fixed-term,G2,Bangladesh,Global Research Unit,2025-10-18,2027-10-17,24
+CTR-006771,EMP-001220,Short-term,G4,Afghanistan,Research & Assessment,2024-11-24,2025-01-23,2
+CTR-006772,EMP-001220,Short-term,G4,Afghanistan,Research & Assessment,2025-01-24,2025-04-17,3
+CTR-006795,EMP-001228,Fixed-term,G3,South Sudan,Security,2024-05-04,2025-09-17,24
+CTR-006818,EMP-001237,Fixed-term,G6,Ukraine,Programmes,2024-11-17,2025-03-24,12
+CTR-006819,EMP-001238,Fixed-term,G2,Bangladesh,Global Research Unit,2024-05-17,2025-05-16,12
+CTR-006820,EMP-001238,Fixed-term,G2,Bangladesh,Global Research Unit,2025-05-17,2027-05-16,24
+CTR-006831,EMP-001243,Fixed-term,G4,Kenya,Programmes,2024-05-27,2025-05-26,12
+CTR-006832,EMP-001243,Fixed-term,G4,Kenya,Programmes,2025-05-27,2027-05-26,24
+CTR-006840,EMP-001246,Short-term,G6,Afghanistan,Data & IT,2024-10-04,2025-01-03,3
+CTR-006841,EMP-001246,Fixed-term,G6,Afghanistan,Data & IT,2025-01-04,2025-11-25,12
+CTR-006851,EMP-001253,Fixed-term,G2,DR Congo,Programmes,2024-06-16,2025-06-15,12
+CTR-006852,EMP-001253,Fixed-term,G3,DR Congo,Programmes,2025-06-16,2027-06-15,24
+CTR-006853,EMP-001254,Fixed-term,G5,South Sudan,Programmes,2024-06-16,2025-06-15,12
+CTR-006854,EMP-001254,Fixed-term,G5,South Sudan,Programmes,2025-06-16,2026-10-12,24
+CTR-006861,EMP-001257,Fixed-term,G2,Syria,Research & Assessment,2024-06-20,2025-06-19,12
+CTR-006862,EMP-001257,Fixed-term,G2,Syria,Research & Assessment,2025-06-20,2026-10-25,24
+CTR-006886,EMP-001264,Fixed-term,N3,Kenya,Logistics & Supply,2024-06-26,2025-06-25,12
+CTR-006887,EMP-001264,Fixed-term,N3,Kenya,Logistics & Supply,2025-06-26,2026-06-25,12
+CTR-006888,EMP-001264,Fixed-term,N3,Kenya,Logistics & Supply,2026-06-26,2027-06-25,12
+CTR-006892,EMP-001266,Fixed-term,G5,Nigeria,Global Support Unit,2024-06-28,2025-06-27,12
+CTR-006893,EMP-001266,Fixed-term,G5,Nigeria,Global Support Unit,2025-06-28,2025-07-17,12
+CTR-006913,EMP-001274,Fixed-term,G3,DR Congo,Programmes,2024-07-07,2025-01-06,6
+CTR-006914,EMP-001274,Fixed-term,G3,D.R. Congo,Programmes,2025-01-07,2026-01-06,12
+CTR-006915,EMP-001274,Fixed-term,G3,DR Congo,Programmes,2026-01-07,2026-07-06,6
+CTR-006916,EMP-001274,Fixed-term,G3,DR Congo,Programmes,2026-07-07,2028-07-06,24
+CTR-006921,EMP-001277,Fixed-term,G1,Afghanistan ,Research & Assessment,2024-07-09,2025-07-08,12
+CTR-006922,EMP-001277,Fixed-term,G1,Afghanistan,Research & Assessment,2025-07-09,2025-07-15,6
+CTR-006960,EMP-001288,Fixed-term,G2,Ukraine,Research & Assessment,2024-07-17,2025-07-16,12
+CTR-006961,EMP-001288,Fixed-term,G2,Ukraine,Research & Assessment,2025-07-17,2026-01-16,6
+CTR-006962,EMP-001288,Fixed-term,G2,Ukraine - Kyiv,Research & Assessment,2026-01-17,2027-01-16,12
+CTR-006988,EMP-001298,Fixed-term,G4,Afghanistan,Security,2024-08-01,2025-01-31,6
+CTR-006989,EMP-001298,Fixed-term,G4,Afghanistan,Security,2025-02-01,2025-06-12,24
+CTR-007024,EMP-001307,Fixed-term,G2,South Sudan,Logistics & Supply,2024-08-11,2025-08-10,12
+CTR-007025,EMP-001307,Fixed-term,G2,South Sudan,Logistics & Supply,2025-08-11,2026-08-10,12
+CTR-007026,EMP-001307,Fixed-term,G2,South Sudan,Logistics & Supply,2026-08-11,2028-08-10,24
+CTR-007043,EMP-001313,Fixed-term,G3,South Sudan,Research & Assessment,2024-08-19,2025-08-18,12
+CTR-007044,EMP-001313,Fixed-term,G4,South Sudan,Research & Assessment,2025-08-19,2026-08-18,12
+CTR-007045,EMP-001313,Fixed-term,G4,South Sudan,Research & Assessment,2026-08-19,2027-08-18,12
+CTR-007060,EMP-001321,Fixed-term,G3,Ukraine,Programmes,2024-08-24,2025-05-05,12
+CTR-007062,EMP-001322,Consultancy,G5,DR Congo,Finance & Admin,2024-10-25,2025-04-24,6
+CTR-007063,EMP-001322,Consultancy,G5,DR Congo,Finance & Admin,2025-04-25,2025-06-24,2
+CTR-007064,EMP-001322,Consultancy,G5,DR Congo,Finance & Admin,2025-06-25,2025-10-24,4
+CTR-007065,EMP-001322,Consultancy,G6,DR Congo,Finance & Admin,2025-10-25,2026-04-24,6
+CTR-007066,EMP-001322,Consultancy,G6,DR Congo,Finance & Admin,2026-04-25,2026-10-24,6
+CTR-007067,EMP-001322,Fixed-term,G6,DR Congo,Finance & Admin,2026-10-25,2028-10-24,24
+CTR-007071,EMP-001324,Fixed-term,G5,South Sudan,Global Support Unit,2024-08-26,2025-05-29,12
+CTR-007072,EMP-001325,Consultancy,G3,South Sudan,Finance & Admin,2024-08-29,2025-02-27,6
+CTR-007073,EMP-001325,Consultancy,G3,South Sudan,Finance & Admin,2025-02-28,2025-02-05,3
+CTR-007074,EMP-001325,Fixed-term,G3,South Sudan,Finance & Admin,2025-05-28,2026-05-04,24
+CTR-007075,EMP-001326,Fixed-term,G3,South Sudan,Research & Assessment,2024-08-29,2025-08-28,12
+CTR-007076,EMP-001326,Fixed-term,G3,South Sudan,Research & Assessment,2025-08-29,2026-08-28,12
+CTR-007077,EMP-001326,Fixed-term,G3,South Sudan,Research & Assessment,2026-08-29,2028-08-28,24
+CTR-007078,EMP-001327,Fixed-term,G3,Nigeria,Logistics & Supply,2024-08-30,2025-08-29,12
+CTR-007079,EMP-001327,Fixed-term,G3,Nigeria,Logistics & Supply,2025-08-30,2026-08-29,12
+CTR-007080,EMP-001327,Fixed-term,G3,Nigeria,Logistics & Supply,2026-08-30,2028-08-29,24
+CTR-007090,EMP-001331,Consultancy,G6,Nigeria,Programmes,2024-09-02,2025-01-01,4
+CTR-007091,EMP-001331,Consultancy,G6,Nigeria,Programmes,2025-01-02,2025-04-01,3
+CTR-007092,EMP-001331,Fixed-term,G6,Nigeria,Programmes,2025-04-02,2027-04-01,24
+CTR-007093,EMP-001332,Fixed-term,G6,DR Congo,Global Research Unit,2024-09-02,2025-09-01,12
+CTR-007094,EMP-001332,Fixed-term,G6,DR Congo,Global Research Unit,2025-09-02,2025-12-05,12
+CTR-007099,EMP-001335,Consultancy,G5,Syria,Programmes,2024-11-03,2025-02-02,3
+CTR-007100,EMP-001335,Consultancy,G5,Syria,Programmes,2025-02-03,2025-05-02,3
+CTR-007101,EMP-001335,Fixed-term,G5,Syria,Programmes,2025-05-03,2026-05-02,12
+CTR-007102,EMP-001335,Fixed-term,G5,Syria,Programmes,2026-05-03,2026-08-01,12
+CTR-007108,EMP-001338,Fixed-term,G3,Kenya,Programmes,2024-09-11,2025-09-10,12
+CTR-007109,EMP-001338,Fixed-term,G3,Kenya,Programmes,2025-09-11,2026-03-10,6
+CTR-007110,EMP-001338,Fixed-term,G3,Kenya,Programmes,2026-03-11,2027-03-10,12
+CTR-007123,EMP-001344,Fixed-term,G6,Switzerland,Global Research Unit,2024-09-18,2025-09-17,12
+CTR-007124,EMP-001344,Fixed-term,G6,Switzerland,Global Research Unit,2025-09-18,2025-10-06,12
+CTR-007133,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2024-10-22,2025-01-21,3
+CTR-007134,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2025-01-22,2025-07-21,6
+CTR-007135,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2025-07-22,2025-09-21,2
+CTR-007136,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2025-09-22,2025-12-21,3
+CTR-007137,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2025-12-22,2026-03-21,3
+CTR-007138,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2026-03-22,2026-09-21,6
+CTR-007139,EMP-001347,Short-term,G3,Switzerland,Global Research Unit,2026-09-22,2027-03-21,6
+CTR-007149,EMP-001351,Fixed-term,G1,Syria,Programmes,2024-09-29,2024-09-14,12
+CTR-007150,EMP-001351,Fixed-term,G1,Syria,Programmes,2025-09-29,2027-09-28,24
+CTR-007151,EMP-001352,Consultancy,G3,Bangladesh (Dhaka),Data & IT,2024-09-29,2025-01-28,4
+CTR-007152,EMP-001352,Consultancy,G3,Bangladesh,Data & IT,2025-01-29,2025-04-28,3
+CTR-007153,EMP-001352,Consultancy,G3,Bangladesh,Data & IT,2025-04-29,2025-10-28,6
+CTR-007154,EMP-001352,Consultancy,G4,Bangladesh,Data & IT,2025-10-29,2026-02-27,4
+CTR-007155,EMP-001352,Consultancy,G4,Bangladesh,Data & IT,2026-02-28,2026-05-27,3
+CTR-007156,EMP-001352,Fixed-term,G4,Bangladesh,Data & IT,2026-05-28,2026-06-11,12
+CTR-007157,EMP-001353,Short-term,G3,S. Sudan,Programmes,2024-10-02,2025-01-01,3
+CTR-007158,EMP-001353,Fixed-term,G3,South Sudan,Programmes,2025-01-02,2025-05-13,24
+CTR-007164,EMP-001356,Fixed-term,G2,Nigeria,Research & Assessment,2024-10-05,2025-01-23,12
+CTR-007167,EMP-001358,Fixed-term,G5,South Sudan,Finance & Admin,2024-10-09,2025-02-25,24
+CTR-007197,EMP-001370,Fixed-term,G3,Nigeria,Programmes,2024-10-20,2025-10-19,12
+CTR-007198,EMP-001370,Fixed-term,G3,Nigeria,Programmes,2025-10-20,2027-10-19,24
+CTR-007213,EMP-001376,Fixed-term,G3,Ukraine,Programmes,2024-10-25,2025-04-24,6
+CTR-007214,EMP-001376,Fixed-term,G4,Ukraine,Programmes,2025-04-25,2026-08-23,24
+CTR-007218,EMP-001378,Fixed-term,G4,Syria,Programmes,2024-10-25,2025-04-24,6
+CTR-007219,EMP-001378,Fixed-term,G4,Syria,Programmes,2025-04-25,2026-04-24,12
+CTR-007220,EMP-001378,Fixed-term,G4,Syria,Programmes,2026-04-25,2027-04-24,12
+CTR-007253,EMP-001388,Fixed-term,G3,Switzerland,Global Research Unit,2024-11-06,2025-11-05,12
+CTR-007254,EMP-001388,Fixed-term,G3,Switzerland,Global Research Unit,2025-11-06,2026-01-08,24
+CTR-007260,EMP-001392,Fixed-term,G3,Bangladesh (Dhaka),Logistics & Supply,2024-11-18,2025-11-17,12
+CTR-007261,EMP-001392,Fixed-term,G3,Bangladesh,Logistics & Supply,2025-11-18,2026-11-17,12
+CTR-007274,EMP-001399,Fixed-term,G5,South Sudan,Programmes,2024-11-26,2025-05-25,6
+CTR-007275,EMP-001399,Fixed-term,G6,South Sudan,Programmes,2025-05-26,2025-07-01,12
+CTR-007276,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2024-11-30,2025-01-29,2
+CTR-007277,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2025-01-30,2025-04-29,3
+CTR-007278,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2025-04-30,2025-06-29,2
+CTR-007279,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2025-06-30,2025-08-29,2
+CTR-007280,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2025-08-30,2026-02-27,6
+CTR-007281,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2026-02-28,2026-05-27,3
+CTR-007282,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2026-05-28,2026-07-27,2
+CTR-007283,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2026-07-28,2026-10-27,3
+CTR-007284,EMP-001400,Short-term,G6,Bangladesh,Research & Assessment,2026-10-28,2027-01-27,3
+CTR-007285,EMP-001401,Fixed-term,G4,Kenya,Programmes,2024-12-01,2025-11-30,12
+CTR-007286,EMP-001401,Fixed-term,G4,Kenya,Programmes,2025-12-01,2026-11-30,12
+CTR-007304,EMP-001408,Open-ended,G5,Switzerland,Executive Office,2024-12-08,,
+CTR-007309,EMP-001410,Fixed-term,G5,Ukraine,Global Research Unit,2024-12-09,2025-12-08,12
+CTR-007310,EMP-001410,Fixed-term,G5,Ukraine,Global Research Unit,2025-12-09,2026-12-08,12
+CTR-007311,EMP-001411,Fixed-term,G2,South Sudan,Research & Assessment,2024-12-11,2025-12-10,12
+CTR-007312,EMP-001411,Fixed-term,G2,South Sudan,Research & Assessment,2025-12-11,2027-12-10,24
+CTR-007321,EMP-001417,Fixed-term,G6,South Sudan,Programmes,2024-12-17,2025-06-16,6
+CTR-007322,EMP-001417,Fixed-term,G6,South Sudan,Programmes,2025-06-17,2026-09-26,24
+CTR-007339,EMP-001426,Fixed-term,G6,Syria,Data & IT,2024-12-28,2025-12-27,12
+CTR-007340,EMP-001426,Fixed-term,G6,Syria,Data & IT,2025-12-28,2027-12-27,24
+CTR-007346,EMP-001428,Fixed-term,G3,South Sudan,Programmes,2024-12-29,2025-12-28,12
+CTR-007347,EMP-001428,Fixed-term,G4,South Sudan,Programmes,2025-12-29,2026-12-28,12
+CTR-007353,EMP-001432,Fixed-term,G2,Bangladesh,Global Research Unit,2025-01-03,2026-01-02,12
+CTR-007354,EMP-001432,Fixed-term,G2,Bangladesh,Global Research Unit,2026-01-03,2027-01-02,12
+CTR-007367,EMP-001437,Consultancy,G3,Syria,Global Research Unit,2025-01-09,2025-05-08,4
+CTR-007368,EMP-001437,Consultancy,G3,Syria,Global Research Unit,2025-05-09,2025-07-08,2
+CTR-007369,EMP-001437,Consultancy,G3,Syria,Global Research Unit,2025-07-09,2025-10-08,3
+CTR-007370,EMP-001437,Fixed-term,G3,Syria,Global Research Unit,2025-10-09,2026-04-08,6
+CTR-007371,EMP-001437,Fixed-term,G4,Syria,Global Research Unit,2026-04-09,2027-04-08,12
+CTR-007374,EMP-001439,Fixed-term,G3,South Sudan,Programmes,2025-01-11,2026-01-10,12
+CTR-007375,EMP-001439,Fixed-term,G3,South Sudan,Programmes,2026-01-11,2026-07-10,6
+CTR-007376,EMP-001439,Fixed-term,G3,South Sudan,Programmes,2026-07-11,2027-07-10,12
+CTR-007390,EMP-001447,Fixed-term,G4,S. Sudan,Research & Assessment,2025-01-18,2025-08-22,12
+CTR-007398,EMP-001451,Fixed-term,G6,DR Congo,Finance & Admin,2025-01-29,2027-01-28,24
+CTR-007399,EMP-001452,Fixed-term,G4,Nigeria,Logistics & Supply,2025-01-29,2026-01-28,12
+CTR-007400,EMP-001452,Fixed-term,G4,Nigeria,Logistics & Supply,2026-01-29,2027-01-28,12
+CTR-007408,EMP-001456,Short-term,G1,Switzerland,People & Culture,2025-02-02,2025-05-01,3
+CTR-007409,EMP-001456,Fixed-term,G1,Switzerland,People & Culture,2025-05-02,2026-05-01,12
+CTR-007410,EMP-001456,Fixed-term,G1,Switzerland,People & Culture,2026-05-02,2027-05-01,12
+CTR-007414,EMP-001459,Consultancy,G2,South-Sudan,Research & Assessment,2025-02-07,2025-05-06,3
+CTR-007415,EMP-001459,Consultancy,G2,South Sudan,Research & Assessment,2025-05-07,2025-09-06,4
+CTR-007416,EMP-001459,Consultancy,G2,South Sudan,Research & Assessment,2025-09-07,2026-03-06,6
+CTR-007417,EMP-001459,Consultancy,G2,South Sudan,Research & Assessment,2026-03-07,2026-04-01,3
+CTR-007424,EMP-001464,Fixed-term,G4,South Sudan,Logistics & Supply,2025-02-11,2027-02-10,24
+CTR-007426,EMP-001466,Fixed-term,G4,Kenya,Programmes,2025-02-13,2026-02-12,12
+CTR-007427,EMP-001466,Fixed-term,G4,Kenya,Programmes,2026-02-13,2028-02-12,24
+CTR-007440,EMP-001470,Short-term,N2,Kenya,Logistics & Supply,2025-02-14,2025-08-13,6
+CTR-007441,EMP-001470,Short-term,N2,Kenya,Logistics & Supply,2025-08-14,2025-11-13,3
+CTR-007442,EMP-001470,Fixed-term,N2,Kenya,Logistics & Supply,2025-11-14,2027-11-13,24
+CTR-007443,EMP-001471,Fixed-term,N2,Bangladesh,Programmes,2025-02-14,2026-02-13,12
+CTR-007444,EMP-001471,Fixed-term,N2,Bangladesh,Programmes,2026-02-14,2028-02-13,24
+CTR-007446,EMP-001473,Fixed-term,G3,Ukraine,Programmes,2025-02-19,2027-02-18,24
+CTR-007447,EMP-001474,Fixed-term,G2,Nigeria,Logistics & Supply,2025-02-20,2025-08-19,6
+CTR-007448,EMP-001474,Fixed-term,G2,Nigeria,Logistics & Supply,2025-08-20,2027-08-19,24
+CTR-007466,EMP-001484,Fixed-term,G5,Switzerland,Global Research Unit,2025-03-14,2026-03-13,12
+CTR-007467,EMP-001484,Fixed-term,G5,Switzerland,Global Research Unit,2026-03-14,2028-03-13,24
+CTR-007480,EMP-001489,Consultancy,G3,Ukraine,Programmes,2025-03-23,2025-05-22,2
+CTR-007481,EMP-001489,Consultancy,G3,Ukraine,Programmes,2025-05-23,2025-07-22,2
+CTR-007482,EMP-001489,Consultancy,G3,Ukraine,Programmes,2025-07-23,2025-10-22,3
+CTR-007483,EMP-001489,Consultancy,G3,Ukraine,Programmes,2025-10-23,2025-11-08,4
+CTR-007495,EMP-001494,Consultancy,G3,Bangladesh,Global Research Unit,2025-04-02,2025-10-01,6
+CTR-007496,EMP-001494,Consultancy,G3,Bangladesh (Dhaka),Global Research Unit,2025-10-02,2025-12-01,2
+CTR-007497,EMP-001494,Consultancy,G3,Bangladesh,Global Research Unit,2025-12-02,2026-02-01,2
+CTR-007498,EMP-001494,Fixed-term,G3,Bangladesh,Global Research Unit,2026-02-02,2027-02-01,12
+CTR-007499,EMP-001495,Fixed-term,G4,South Sudan,Finance & Admin,2025-04-03,2025-10-02,6
+CTR-007500,EMP-001495,Fixed-term,G4,South Sudan,Finance & Admin,2025-10-03,2026-03-26,12
+CTR-007508,EMP-001498,Fixed-term,G2,South Sudan,Programmes,2025-04-07,2026-04-06,12
+CTR-007509,EMP-001498,Fixed-term,G2,South Sudan,Programmes,2026-04-07,2026-04-29,12
+CTR-007510,EMP-001499,Fixed-term,G5,Syria,Human Resources,2025-04-10,2026-04-09,12
+CTR-007511,EMP-001499,Fixed-term,G5,Syria,Human Resources,2026-04-10,2027-04-09,12
+CTR-007517,EMP-001502,Fixed-term,G5,Ukraine,Finance & Admin,2025-04-17,2027-04-16,24
+CTR-007524,EMP-001505,Fixed-term,G1,DR Congo,Research & Assessment,2025-04-23,2026-04-22,12
+CTR-007525,EMP-001505,Fixed-term,G1,DR Congo,Research & Assessment,2026-04-23,2027-04-22,12
+CTR-007534,EMP-001509,Consultancy,G4,South Sudan,Logistics & Supply,2025-05-03,2025-08-02,3
+CTR-007535,EMP-001509,Consultancy,G4,South Sudan,Logistics & Supply,2025-08-03,2025-12-02,4
+CTR-007536,EMP-001509,Consultancy,G4,South Sudan,Logistics & Supply,2025-12-03,2026-02-02,2
+CTR-007537,EMP-001509,Consultancy,G4,South Sudan,Logistics & Supply,2026-02-03,2026-05-02,3
+CTR-007538,EMP-001509,Consultancy,G4,South Sudan,Logistics & Supply,2026-05-03,2026-07-02,2
+CTR-007539,EMP-001509,Fixed-term,G4,South Sudan,Logistics & Supply,2026-07-03,2027-07-02,12
+CTR-007544,EMP-001512,Fixed-term,G4,Nigeria,Programmes,2025-05-06,2027-05-05,24
+CTR-007545,EMP-001513,Fixed-term,G3,South Sudan,Human Resources,2025-05-09,2026-05-08,12
+CTR-007546,EMP-001513,Fixed-term,G3,South Sudan,Human Resources,2026-05-09,2027-05-08,12
+CTR-007547,EMP-001514,Open-ended,G4,Switzerland,Global Research Unit,2025-05-09,,
+CTR-007548,EMP-001515,Fixed-term,G3,Democratic Republic of the Congo,Data & IT,2025-05-11,2026-05-10,12
+CTR-007549,EMP-001515,Fixed-term,G3,DR Congo,Data & IT,2026-05-11,2026-11-10,6
+CTR-007556,EMP-001520,Fixed-term,G4,Syria,Human Resources,2025-05-24,2027-05-23,24
+CTR-007557,EMP-001521,Fixed-term,G1,Ukraine,Programmes,2025-05-25,2026-05-24,12
+CTR-007558,EMP-001521,Fixed-term,G1,Ukraine,Programmes,2026-05-25,2027-05-24,12
+CTR-007562,EMP-001524,Fixed-term,N5,Bangladesh,Finance & Admin,2025-05-29,2026-05-28,12
+CTR-007563,EMP-001524,Fixed-term,N5,Bangladesh,Finance & Admin,2026-05-29,2026-08-20,24
+CTR-007564,EMP-001525,Fixed-term,G3,Switzerland,People & Culture,2025-05-29,2026-05-28,12
+CTR-007565,EMP-001525,Fixed-term,G3,Switzerland,People & Culture,2026-05-29,2028-05-28,24
+CTR-007570,EMP-001528,Fixed-term,G3,Kenya,Research & Assessment,2025-05-30,2025-04-23,6
+CTR-007571,EMP-001528,Fixed-term,G3,Kenya,Research & Assessment,2025-11-30,2026-11-29,12
+CTR-007572,EMP-001529,Open-ended,G2,Switzerland,Global Research Unit,2025-06-01,,
+CTR-007591,EMP-001537,Fixed-term,G5,S. Sudan,Research & Assessment,2025-06-08,2026-06-07,12
+CTR-007592,EMP-001537,Fixed-term,G6,South Sudan,Research & Assessment,2026-06-08,2027-06-07,12
+CTR-007601,EMP-001541,Fixed-term,G4,South Sudan,Security,2025-06-17,2026-06-16,12
+CTR-007602,EMP-001541,Fixed-term,G5,South Sudan,Security,2026-06-17,2028-06-16,24
+CTR-007605,EMP-001543,Open-ended,G3,Switzerland,Global Support Unit,2025-06-17,,
+CTR-007617,EMP-001547,Fixed-term,G3,South Sudan,Research & Assessment,2025-06-21,2026-06-20,12
+CTR-007618,EMP-001547,Fixed-term,G3,South Sudan,Research & Assessment,2026-06-21,2027-06-20,12
+CTR-007624,EMP-001550,Fixed-term,G4,South Sudan,Research & Assessment,2025-06-25,2025-12-24,6
+CTR-007625,EMP-001550,Fixed-term,G4,South Sudan,Research & Assessment,2025-12-25,2027-12-24,24
+CTR-007630,EMP-001552,Fixed-term,G3,Nigeria,Logistics & Supply,2025-06-27,2027-06-26,24
+CTR-007638,EMP-001555,Consultancy,G5,CH,Global Research Unit,2025-06-30,2025-10-29,4
+CTR-007639,EMP-001555,Fixed-term,G5,Switzerland,Global Research Unit,2025-10-30,2026-10-29,12
+CTR-007640,EMP-001555,Fixed-term,G6,Switzerland,Global Research Unit,2026-10-30,2027-10-29,12
+CTR-007649,EMP-001560,Fixed-term,G5,Ukraine,Security,2025-07-12,2026-07-11,12
+CTR-007650,EMP-001560,Fixed-term,G5,Ukraine,Security,2026-07-12,2027-01-11,6
+CTR-007651,EMP-001561,Fixed-term,G3,Nigeria,Programmes,2025-07-13,2026-01-12,6
+CTR-007652,EMP-001561,Fixed-term,G4,Nigeria,Programmes,2026-01-13,2027-01-12,12
+CTR-007666,EMP-001568,Fixed-term,G3,South Sudan,Programmes,2025-07-25,2027-07-24,24
+CTR-007668,EMP-001570,Fixed-term,G5,DRC,Programmes,2025-07-27,2026-07-26,12
+CTR-007669,EMP-001570,Fixed-term,G5,DR Congo,Programmes,2026-07-27,2027-07-26,12
+CTR-007676,EMP-001573,Fixed-term,G5,Nigeria,Finance & Admin,2025-07-29,2026-01-28,6
+CTR-007677,EMP-001573,Fixed-term,G5,Nigeria,Finance & Admin,2026-01-29,2027-01-28,12
+CTR-007678,EMP-001574,Fixed-term,N1,Kenya,Research & Assessment,2025-07-30,2025-07-04,12
+CTR-007679,EMP-001574,Fixed-term,N1,Kenya,Research & Assessment,2026-07-30,2027-01-29,6
+CTR-007684,EMP-001578,Fixed-term,G3,Kenya,Programmes,2025-08-06,2026-06-03,12
+CTR-007687,EMP-001580,Fixed-term,G3,Bangladesh,Research & Assessment,2025-08-18,2026-08-17,12
+CTR-007688,EMP-001580,Fixed-term,G3,Bangladesh,Research & Assessment,2026-08-18,2027-08-17,12
+CTR-007689,EMP-001581,Fixed-term,G2,Nigeria,Logistics & Supply,2025-08-22,2027-08-21,24
+CTR-007690,EMP-001582,Fixed-term,G5,South Sudan,Programmes,2025-08-28,2026-08-27,12
+CTR-007691,EMP-001582,Fixed-term,G5,South Sudan,Programmes,2026-08-28,2027-08-27,12
+CTR-007692,EMP-001583,Open-ended,G5,Switzerland,Global Research Unit,2025-08-31,,
+CTR-007695,EMP-001585,Fixed-term,G3,South Sudan,Programmes,2025-09-05,2026-03-24,12
+CTR-007698,EMP-001587,Fixed-term,G5,Switzerland,Global Support Unit,2025-09-15,2026-09-14,12
+CTR-007699,EMP-001587,Fixed-term,G5,Switzerland,Global Support Unit,2026-09-15,2028-09-14,24
+CTR-007717,EMP-001595,Consultancy,G4,Nigeria,Programmes,2025-10-03,2026-01-02,3
+CTR-007718,EMP-001595,Consultancy,G4,Nigeria,Programmes,2026-01-03,2026-05-02,4
+CTR-007719,EMP-001595,Consultancy,G4,Nigeria,Programmes,2026-05-03,2026-07-02,2
+CTR-007720,EMP-001595,Consultancy,G5,Nigeria,Programmes,2026-07-03,2026-10-02,3
+CTR-007721,EMP-001595,Consultancy,G5,Nigeria,Programmes,2026-10-03,2027-02-02,4
+CTR-007736,EMP-001601,Fixed-term,G3,Ukraine - Kyiv,Programmes,2025-10-09,2026-10-08,12
+CTR-007737,EMP-001601,Fixed-term,G3,Ukraine,Programmes,2026-10-09,2027-10-08,12
+CTR-007761,EMP-001611,Fixed-term,G3,Bangladesh,Programmes,2025-10-18,2026-10-17,12
+CTR-007762,EMP-001611,Fixed-term,G3,Bangladesh,Programmes,2026-10-18,2027-10-17,12
+CTR-007766,EMP-001614,Consultancy,G3,Ukraine - Kyiv,Global Support Unit,2025-10-24,2025-09-03,4
+CTR-007767,EMP-001614,Consultancy,G3,Ukraine,Global Support Unit,2026-02-24,2026-06-23,4
+CTR-007768,EMP-001614,Fixed-term,G3,Ukraine,Global Support Unit,2026-06-24,2026-08-07,24
+CTR-007781,EMP-001621,Fixed-term,G2,South Sudan,Human Resources,2025-10-31,2026-10-30,12
+CTR-007782,EMP-001621,Fixed-term,G3,South Sudan,Human Resources,2026-10-31,2027-10-30,12
+CTR-007792,EMP-001627,Fixed-term,G4,Bangladesh,Research & Assessment,2025-11-03,2026-05-02,6
+CTR-007793,EMP-001627,Fixed-term,G4,Bangladesh,Research & Assessment,2026-05-03,2027-05-02,12
+CTR-007796,EMP-001629,Consultancy,G3,Ukraine,Research & Assessment,2025-11-03,2026-03-02,4
+CTR-007797,EMP-001629,Fixed-term,G3,Ukraine,Research & Assessment,2026-03-03,2026-09-02,6
+CTR-007798,EMP-001629,Fixed-term,G3,Ukraine,Research & Assessment,2026-09-03,2027-09-02,12
+CTR-007800,EMP-001631,Short-term,G4,Kenya,Logistics & Supply,2025-11-11,2026-02-10,3
+CTR-007801,EMP-001631,Fixed-term,G4,Kenya,Logistics & Supply,2026-02-11,2026-08-10,6
+CTR-007802,EMP-001631,Fixed-term,G4,Kenya,Logistics & Supply,2026-08-11,2028-08-10,24
+CTR-007804,EMP-001633,Fixed-term,G4,Switzerland,Executive Office,2025-11-17,2026-11-16,12
+CTR-007805,EMP-001634,Short-term,G4,Switzerland,Global Research Unit,2025-11-18,2025-12-17,1
+CTR-007806,EMP-001634,Short-term,G4,Switzerland,Global Research Unit,2025-12-18,2026-03-17,3
+CTR-007807,EMP-001634,Short-term,G4,Switzerland,Global Research Unit,2026-03-18,2026-09-17,6
+CTR-007808,EMP-001634,Short-term,G4,Switzerland,Global Research Unit,2026-09-18,2026-11-17,2
+CTR-007809,EMP-001635,Fixed-term,G5,Ukraine,Security,2025-11-19,2026-11-18,12
+CTR-007812,EMP-001638,Consultancy,G5,Nigeria,Research & Assessment,2025-12-01,2026-05-31,6
+CTR-007813,EMP-001638,Fixed-term,G5,Nigeria,Research & Assessment,2026-06-01,2026-06-10,24
+CTR-007815,EMP-001640,Short-term,G6,DR Congo,Finance & Admin,2025-12-04,2026-04-03,4
+CTR-007816,EMP-001640,Short-term,G6,DR Congo,Finance & Admin,2026-04-04,2026-05-03,1
+CTR-007817,EMP-001640,Short-term,G6,DR Congo,Finance & Admin,2026-05-04,2026-08-05,4
+CTR-007818,EMP-001641,Fixed-term,G3,Syria,Programmes,2025-12-06,2026-06-05,6
+CTR-007819,EMP-001641,Fixed-term,G3,Syria,Programmes,2026-06-06,2026-12-05,6
+CTR-007820,EMP-001642,Fixed-term,G4,Ukraine,Finance & Admin,2025-12-06,2026-12-05,12
+CTR-007822,EMP-001644,Fixed-term,G4,"Congo, Dem. Rep.",Research & Assessment,2025-12-10,2026-03-20,12
+CTR-007827,EMP-001647,Fixed-term,G2,DR Congo,Programmes,2025-12-10,2027-12-09,24
+CTR-007838,EMP-001654,Fixed-term,G5,South Sudan,Programmes,2025-12-22,2027-12-21,24
+CTR-007842,EMP-001657,Fixed-term,G3,Ukraine,Finance & Admin,2025-12-26,2027-12-25,24
+CTR-007846,EMP-001660,Fixed-term,G5,DR Congo,Logistics & Supply,2025-12-29,2026-12-28,12
+CTR-007848,EMP-001662,Fixed-term,G3,South Sudan,Data & IT,2025-12-30,2026-12-29,12
+CTR-007850,EMP-001664,Consultancy,G5,Kenya,Logistics & Supply,2026-01-04,2026-04-03,3
+CTR-007851,EMP-001664,Consultancy,G6,Kenya,Logistics & Supply,2026-04-04,2026-06-03,2
+CTR-007852,EMP-001664,Fixed-term,G6,Kenya,Logistics & Supply,2026-06-04,2027-06-03,12
+CTR-007859,EMP-001667,Consultancy,G6,Bangladesh,Finance & Admin,2026-01-06,2026-05-05,4
+CTR-007860,EMP-001667,Consultancy,G6,Bangladesh,Finance & Admin,2026-05-06,2026-07-05,2
+CTR-007861,EMP-001667,Consultancy,G6,Bangladesh,Finance & Admin,2026-07-06,2027-01-05,6
+CTR-007865,EMP-001669,Fixed-term,G4,Ukraine,Logistics & Supply,2026-01-08,2028-01-07,24
+CTR-007882,EMP-001679,Fixed-term,G4,Switzerland,People & Culture,2026-01-24,2028-01-23,24
+CTR-007883,EMP-001680,Fixed-term,G5,Kenya,Programmes,2026-01-26,2028-01-25,24
+CTR-007885,EMP-001682,Fixed-term,G4,DR Congo,Logistics & Supply,2026-01-29,2028-01-28,24
+CTR-007891,EMP-001687,Fixed-term,G6,Switzerland,Global Support Unit,2026-02-11,2028-02-10,24
+CTR-007893,EMP-001689,Fixed-term,G3,South Sudan,Finance & Admin,2026-02-14,2028-02-13,24
+CTR-007894,EMP-001690,Fixed-term,N4,Bangladesh (Dhaka),Research & Assessment,2026-02-17,2028-02-16,24
+CTR-007904,EMP-001699,Consultancy,G4,DR Congo,Global Support Unit,2026-03-10,2026-02-27,3
+CTR-007905,EMP-001699,Consultancy,G4,DR Congo,Global Support Unit,2026-06-10,2026-09-09,3
+CTR-007906,EMP-001699,Consultancy,G4,DR Congo,Global Support Unit,2026-09-10,2027-01-09,4
+CTR-007909,EMP-001702,Fixed-term,G5,Switzerland,Global Research Unit,2026-03-11,2027-03-10,12
+CTR-007910,EMP-001703,Fixed-term,G4,Ukraine,Finance & Admin,2026-03-12,2028-03-11,24
+CTR-007911,EMP-001704,Fixed-term,N2,Kenya,Programmes,2026-03-12,2026-06-05,12
+CTR-007916,EMP-001707,Fixed-term,G4,South Sudan,Research & Assessment,2026-03-18,2027-03-17,12
+CTR-007923,EMP-001712,Fixed-term,G3,South Sudan,Data & IT,2026-04-02,2027-04-01,12
+CTR-007929,EMP-001715,Fixed-term,N4,Kenya,Finance & Admin,2026-04-05,2027-04-04,12
+CTR-007931,EMP-001717,Consultancy,G4,Nigeria,Programmes,2026-04-10,2026-06-09,2
+CTR-007932,EMP-001717,Fixed-term,G5,Nigeria,Programmes,2026-06-10,2028-06-09,24
+CTR-007936,EMP-001720,Fixed-term,G4,South Sudan,Programmes,2026-04-14,2027-04-13,12
+CTR-007939,EMP-001722,Fixed-term,G3,Kenya,Research & Assessment,2026-04-17,2027-04-16,12
+CTR-007947,EMP-001728,Consultancy,G3,Syria,Research & Assessment,2026-04-21,2026-07-20,3
+CTR-007948,EMP-001728,Consultancy,G3,Syria,Research & Assessment,2026-07-21,2026-10-20,3
+CTR-007949,EMP-001728,Consultancy,G4,Syria,Research & Assessment,2026-10-21,2027-01-20,3
+CTR-007959,EMP-001734,Fixed-term,G4,DR Congo,Finance & Admin,2026-04-26,2026-10-25,6
+CTR-007960,EMP-001734,Fixed-term,G5,DR Congo,Finance & Admin,2026-10-26,2028-10-25,24
+CTR-007962,EMP-001736,Fixed-term,G4,South Sudan,Logistics & Supply,2026-04-28,2026-07-14,24
+CTR-007969,EMP-001740,Fixed-term,G3,Nigeria,Research & Assessment,2026-05-04,2027-05-03,12
+CTR-007978,EMP-001746,Fixed-term,G6,Kenya,Research & Assessment,2026-05-14,2026-09-14,12
+CTR-007989,EMP-001755,Fixed-term,G4,Switzerland,Finance & Legal,2026-06-06,2027-06-05,12
+CTR-007993,EMP-001758,Fixed-term,G4,Bangladesh,Programmes,2026-06-10,2026-10-12,12
+CTR-008000,EMP-001763,Consultancy,G4,Kenya,Research & Assessment,2026-06-20,2026-12-19,6
+CTR-008002,EMP-001765,Fixed-term,G1,DR Congo,Global Support Unit,2026-06-24,2027-06-23,12
+CTR-008004,EMP-001767,Fixed-term,G4,South Sudan,Finance & Admin,2026-06-29,2027-06-28,12
+CTR-008005,EMP-001768,Fixed-term,G4,Switzerland,Finance & Legal,2026-06-30,2027-06-29,12
+CTR-008006,EMP-001769,Fixed-term,G3,Syria,Programmes,2026-06-30,2027-06-29,12
+CTR-008009,EMP-001771,Consultancy,G4,Syria,Programmes,2026-07-01,2026-10-31,4
+CTR-008010,EMP-001771,Consultancy,G4,Syria,Programmes,2026-11-01,2027-01-31,3
+CTR-008011,EMP-001772,Fixed-term,N4,Kenya,Logistics & Supply,2026-07-01,2028-06-30,24
+CTR-008012,EMP-001773,Fixed-term,N2,Kenya,Logistics & Supply,2026-07-04,2027-07-03,12
+CTR-008026,EMP-001784,Fixed-term,G4,Nigeria,Finance & Admin,2026-07-23,2027-07-22,12
+CTR-008028,EMP-001786,Consultancy,G5,Switzerland,People & Culture,2026-08-04,2027-02-03,6
+CTR-008029,EMP-001787,Consultancy,G5,Bangladesh,Programmes,2026-08-05,2026-12-04,4
+CTR-008030,EMP-001788,Short-term,G6,Ukraine,Logistics & Supply,2026-08-07,2026-11-06,3
+CTR-008031,EMP-001789,Fixed-term,G4,Ukraine,Global Research Unit,2026-08-09,2027-02-08,6
+CTR-008032,EMP-001790,Fixed-term,G2,South Sudan,Global Research Unit,2026-08-09,2028-08-08,24
+CTR-008034,EMP-001792,Fixed-term,N4,Bangladesh,Logistics & Supply,2026-08-09,2027-08-08,12
+CTR-008036,EMP-001794,Fixed-term,G6,S. Sudan,Research & Assessment,2026-08-17,2027-08-16,12
+CTR-008040,EMP-001797,Fixed-term,G2,Ukraine,Research & Assessment,2026-08-20,2027-08-19,12
+CTR-008044,EMP-001801,Fixed-term,G2,South Sudan,Security,2026-08-28,2027-08-27,12
+CTR-008047,EMP-001804,Fixed-term,G3,DR Congo,Human Resources,2026-09-02,2027-09-01,12
+CTR-008050,EMP-001807,Fixed-term,G3,Kenya,Data & IT,2026-09-07,2027-09-06,12
+CTR-008051,EMP-001808,Fixed-term,N1,Bangladesh,Research & Assessment,2026-09-08,2027-03-07,6
+CTR-008052,EMP-001809,Fixed-term,G4,Syria,Data & IT,2026-09-08,2028-09-07,24
+CTR-008056,EMP-001813,Fixed-term,N3,Bangladesh,Data & IT,2026-09-14,2027-09-13,12
+CTR-008061,EMP-001818,Consultancy,G2,Kenya,Logistics & Supply,2026-09-19,2027-03-18,6
+CTR-008065,EMP-001822,Consultancy,G3,South Sudan,Research & Assessment,2026-10-02,2027-02-01,4
+CTR-008066,EMP-001823,Fixed-term,G3,South Sudan,Global Research Unit,2026-10-05,2027-10-04,12
+CTR-008067,EMP-001824,Consultancy,G4,South Sudan,Data & IT,2026-10-11,2027-04-10,6
+CTR-008068,EMP-001825,Fixed-term,G5,Ukraine,Data & IT,2026-10-12,2027-10-11,12
+CTR-008069,EMP-001826,Fixed-term,G4,DR Congo,Programmes,2026-10-14,2027-10-13,12
+CTR-008071,EMP-001828,Fixed-term,G2,Bangladesh,Security,2026-10-31,2027-10-30,12
+CTR-008072,EMP-001829,Fixed-term,G3,Bangladesh,Research & Assessment,2026-10-31,2027-10-30,12

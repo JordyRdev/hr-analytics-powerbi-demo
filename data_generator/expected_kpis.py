@@ -19,7 +19,7 @@ FILTERS = {
     "Population Detail=Global - HQ": {"population_detail": "Global - HQ"},
     "Staff Type=International": {"staff_type": "International"},
     "Country=Kenya": {"country": "Kenya"},
-    "Country=Somalia": {"country": "Somalia"},
+    "Country=South Sudan": {"country": "South Sudan"},
     "Country=Ukraine": {"country": "Ukraine"},
 }
 
@@ -117,7 +117,7 @@ def build():
     vm = M.vacancy_monthly()
     add("Open Vacancies", "none", RD, vm[vm["month_end"] == RD]["vacancy_id"].nunique(), 0)
     add("Vacancy Rate", "none", RD, vacancy_rate(RD, "none"), 0.0001)
-    add("Vacancy Rate", "Country=Somalia", RD, vacancy_rate(RD, "Country=Somalia"), 0.0001)
+    add("Vacancy Rate", "Country=South Sudan", RD, vacancy_rate(RD, "Country=South Sudan"), 0.0001)
     add("Vacancy Rate", "Staff Type=International", RD, vacancy_rate(RD, "Staff Type=International"), 0.0001)
     add("Due Vacancy Rate", "none", RD, vacancy_rate(RD, "none", due=True), 0.0001)
     v = M.vacancies()

@@ -19,7 +19,16 @@ import workforce as W
 import writers as WR
 
 
+def clear_outputs():
+    """Remove files from a previous run so renamed or dropped sources do not linger."""
+    for sub in ("core_hris", "jira", "country_trackers", "historical", "reference"):
+        for f in (C.DATA / sub).glob("*"):
+            if f.is_file():
+                f.unlink()
+
+
 def main():
+    clear_outputs()
     rng = np.random.default_rng(C.SEED)
     emps = W.finalise(rng, W.simulate(rng))
     contracts = W.build_contracts(rng, emps)

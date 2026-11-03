@@ -164,7 +164,69 @@ def build():
     jv = j[j["issue_type"] == "Vacancy"]
     add("DQ Issues: Resolved before created", "none", RD,
         int((M.dates(jv["resolved"]) < M.dates(jv["created"])).sum()), 0)
+    # more data-quality counts: rows the DQ_Issues table should hold per check
+    f = M.staff_monthly()
+    per_staff = f.groupby("staff_id").agg(dob=("date_of_birth", "max"), nat=("nationality", "max"))
+    add("DQ Issues: Missing date of birth", "none", RD, int(per_staff["dob"].isna().sum()), 0)
+    add("DQ Issues: Missing nationality", "none", RD, int(f.groupby("staff_id")["nationality"].apply(lambda x: x.isna().all()).sum()), 0)
+    legacy = M.ref()["legacy"]
+    cs2 = M.derive(M.core_staff().copy(), "staff_category")
+    core_bad = int((cs2["staff_category"].map(legacy) != cs2["staff_type"]).sum())
+    h = M.derive(M.historical_snapshots()[["staff_id", "grade", "label", "country", "unit", "nationality"]].copy(), "label")
+    hist_bad = h[h["label"].map(legacy) != h["staff_type"]]["staff_id"].nunique()
+    add("DQ Issues: Category label vs grade", "none", RD, core_bad + hist_bad, 0)
+    add("DQ Issues: Overlap month mismatch", "none", RD, overlap_mismatch(), 0)
+    add("DQ Issues: Legacy vacancy not migrated", "none", RD, orphan_vacancies(), 0)
+    add("DQ Issues: Country spelling variant", "none", RD, variant_rows(), 0)
     return pd.DataFrame(rows)
+
+
+def overlap_mismatch():
+    spans = M._span_frame()
+    hist = M.historical_snapshots()
+    total = 0
+    for me in (M.CUTOVER, pd.Timestamp(2025, 1, 31)):
+        cur = set(spans[(spans["span_start"] <= me) & (spans["span_end"].isna() | (spans["span_end"] >= me))]["staff_id"])
+        old = set(hist[hist["month_end"] == me]["staff_id"])
+        total += len(cur ^ old)
+    return total
+
+
+def orphan_vacancies():
+    vl = pd.read_excel(M.DATA / "historical" / "Vacancy_Log_2022_2024.xlsx", dtype=object)
+    j = pd.read_csv(M.DATA / "jira" / "jira_recruitment_export.csv", dtype=str)
+    open_ids = set(vl.loc[vl["Date Closed"].isna(), "Vacancy Ref"])
+    return len(open_ids - set(j["legacy_vacancy_ref"].dropna()))
+
+
+def variant_rows():
+    """Rows where a country or nationality value differs from its cleaned form, per source."""
+    def differs(series):
+        return series.map(lambda v: isinstance(v, str) and v != M.clean_country(v))
+
+    n = 0
+    cs = pd.read_csv(M.DATA / "core_hris" / "core_staff_export.csv", dtype=str)
+    n += int((differs(cs["duty_country"]) | differs(cs["nationality"])).sum())
+    cc = pd.read_csv(M.DATA / "core_hris" / "core_contracts_export.csv", dtype=str)
+    n += int(differs(cc["duty_country"]).sum())
+    j = pd.read_csv(M.DATA / "jira" / "jira_recruitment_export.csv", dtype=str)
+    n += int(differs(j["country"]).sum())
+    for p in sorted((M.DATA / "country_trackers").glob("*.xlsx")):
+        t = M._read_tracker(p)
+        n += int(differs(t["nationality"]).sum())
+        n += int(p.stem.replace("NS_tracker_", "") != M.clean_country(p.stem.replace("NS_tracker_", "")))
+    for p in sorted((M.DATA / "historical").glob("Staff_Snapshots_*.xlsx")):
+        h = pd.read_excel(p, dtype=object)
+        n += int((differs(h["Location"]) | differs(h["Nationality"])).sum())
+    vl = pd.read_excel(M.DATA / "historical" / "Vacancy_Log_2022_2024.xlsx", dtype=object)
+    n += int(differs(vl["Country"]).sum())
+    sl = pd.read_excel(M.DATA / "historical" / "Surge_Log_2022_2024.xlsx", dtype=object)
+    n += int(differs(sl["Country"]).sum())
+    el = pd.read_excel(M.DATA / "historical" / "Expatriation_Log_2022_2024.xlsx", dtype=object)
+    n += int((differs(el["Posted To"]) | differs(el["Nationality"])).sum())
+    lv = pd.read_excel(M.DATA / "historical" / "Leavers_Log_2022_2024.xlsx", dtype=object)
+    n += int((differs(lv["Location"]) | differs(lv["Nationality"])).sum())
+    return n
 
 
 def write_expected_kpis(path):

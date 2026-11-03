@@ -1,0 +1,232 @@
+-- Validation queries for Part B. One query per row of expected_kpis.csv, same order.
+-- Run each against the open model and compare `value` to expected_value within tolerance.
+
+-- 01 | Headcount | none | 2026-10-31 | expected 989.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 02 | Headcount | Population=National | 2026-10-31 | expected 743.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Population=National", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimPopulation[Population] = "National", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 03 | Headcount | Population=International | 2026-10-31 | expected 173.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Population=International", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimPopulation[Population] = "International", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 04 | Headcount | Population=Global | 2026-10-31 | expected 73.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Population=Global", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimPopulation[Population] = "Global", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 05 | Headcount | Population Detail=Global - HQ | 2026-10-31 | expected 50.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Population Detail=Global - HQ", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimPopulation[Population Detail] = "Global - HQ", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 06 | Headcount | Country=Kenya | 2026-10-31 | expected 128.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Country=Kenya", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimCountry[Country] = "Kenya", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 07 | Headcount | Country=Ukraine | 2026-10-31 | expected 129.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Country=Ukraine", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimCountry[Country] = "Ukraine", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 08 | Headcount | none | 2025-10-31 | expected 953.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "none", "reporting_date", DATE ( 2025, 10, 31 ),
+      "value", CALCULATE ( [Headcount], 'Reporting Date'[Month End] = DATE ( 2025, 10, 31 ) ) )
+
+-- 09 | Headcount | Country=Ukraine | 2025-10-31 | expected 121.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Headcount", "filter", "Country=Ukraine", "reporting_date", DATE ( 2025, 10, 31 ),
+      "value", CALCULATE ( [Headcount], DimCountry[Country] = "Ukraine", 'Reporting Date'[Month End] = DATE ( 2025, 10, 31 ) ) )
+
+-- 10 | Female Share | none | 2026-10-31 | expected 0.427705 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Female Share", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Female Share], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 11 | Average Age | none | 2026-10-31 | expected 39.558255 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Average Age", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Average Age], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 12 | Average Age | Population=International | 2026-10-31 | expected 40.654697 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Average Age", "filter", "Population=International", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Average Age], DimPopulation[Population] = "International", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 13 | GS Share | Staff Type=International | 2026-10-31 | expected 0.444444 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "GS Share", "filter", "Staff Type=International", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [GS Share], DimGrade[Staff Type] = "International", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 14 | GS/GN Ratio | Staff Type=International | 2026-10-31 | expected 0.8 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "GS/GN Ratio", "filter", "Staff Type=International", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [GS/GN Ratio], DimGrade[Staff Type] = "International", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 15 | GS Share | Staff Type=International | 2025-10-31 | expected 0.421053 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "GS Share", "filter", "Staff Type=International", "reporting_date", DATE ( 2025, 10, 31 ),
+      "value", CALCULATE ( [GS Share], DimGrade[Staff Type] = "International", 'Reporting Date'[Month End] = DATE ( 2025, 10, 31 ) ) )
+
+-- 16 | Expatriates | none | 2026-10-31 | expected 187.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Expatriates", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Expatriates], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 17 | Open Vacancies | none | 2026-10-31 | expected 38.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Open Vacancies", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Open Vacancies], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 18 | Vacancy Rate | none | 2026-10-31 | expected 0.037001 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Vacancy Rate", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Vacancy Rate], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 19 | Vacancy Rate | Country=South Sudan | 2026-10-31 | expected 0.039474 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Vacancy Rate", "filter", "Country=South Sudan", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Vacancy Rate], DimCountry[Country] = "South Sudan", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 20 | Vacancy Rate | Staff Type=International | 2026-10-31 | expected 0.042802 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Vacancy Rate", "filter", "Staff Type=International", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Vacancy Rate], DimGrade[Staff Type] = "International", 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 21 | Due Vacancy Rate | none | 2026-10-31 | expected 0.016553 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Due Vacancy Rate", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Due Vacancy Rate], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 22 | Avg Planned Duration (months) | none | 2026-10-31 | expected 15.373134 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Avg Planned Duration (months)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Avg Planned Duration (months)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 23 | Vacancies Opened (12m) | none | 2026-10-31 | expected 201.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Vacancies Opened (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Vacancies Opened], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 24 | Avg Days to Close | none | 2026-10-31 | expected 90.482927 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Avg Days to Close", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Avg Days to Close], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 25 | Avg Time to Done (days) | none | 2026-10-31 | expected 1.161423 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Avg Time to Done (days)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Avg Time To Done (days)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 26 | Retention Rate (12m) | none | 2026-10-31 | expected 0.834208 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Retention Rate (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Retention Rate (12m)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 27 | Retention Rate (12m) | none | 2025-10-31 | expected 0.756423 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Retention Rate (12m)", "filter", "none", "reporting_date", DATE ( 2025, 10, 31 ),
+      "value", CALCULATE ( [Retention Rate (12m)], 'Reporting Date'[Month End] = DATE ( 2025, 10, 31 ) ) )
+
+-- 28 | Exits (12m) | none | 2026-10-31 | expected 171.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Exits (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Exits (12m)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 29 | Turnover Rate (12m) | none | 2026-10-31 | expected 0.17641 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Turnover Rate (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Turnover Rate (12m)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 30 | Voluntary Turnover Rate (12m) | none | 2026-10-31 | expected 0.059835 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Voluntary Turnover Rate (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Voluntary Turnover Rate (12m)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 31 | Appraisal Completion | none | 2026-10-31 | expected 0.791111 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Appraisal Completion", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Appraisal Completion], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 32 | Avg Current Contract Duration G3/G4 (months) | none | 2026-10-31 | expected 16.359649 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Avg Current Contract Duration G3/G4 (months)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Avg Current Contract Duration G3/G4 (months)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 33 | Avg Granted Duration New Joiners G3/G4 (months) | none | 2026-10-31 | expected 11.714286 (tol 0.01)
+EVALUATE
+ROW ( "kpi", "Avg Granted Duration New Joiners G3/G4 (months)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Avg Granted Duration New Joiners G3/G4 (months)], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 34 | Contracts Ending Within 4 Months | none | 2026-10-31 | expected 68.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Contracts Ending Within 4 Months", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Contracts Ending Within 4 Months], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 35 | Contracts Ending Within 4 Months % | none | 2026-10-31 | expected 0.276423 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Contracts Ending Within 4 Months %", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Contracts Ending Within 4 Months %], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 36 | Surge Requests (12m) | none | 2026-10-31 | expected 76.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "Surge Requests (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Surge Requests], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 37 | Surge National Share (12m) | none | 2026-10-31 | expected 0.539683 (tol 0.0001)
+EVALUATE
+ROW ( "kpi", "Surge National Share (12m)", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [Surge National Share], 'Reporting Date'[Month End] = DATE ( 2026, 10, 31 ) ) )
+
+-- 38 | DQ Issues: Duplicate staff ID | none | 2026-10-31 | expected 30.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Duplicate staff ID", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Duplicate staff ID" ) )
+
+-- 39 | DQ Issues: Contract end before start | none | 2026-10-31 | expected 11.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Contract end before start", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Contract end before start" ) )
+
+-- 40 | DQ Issues: Resolved before created | none | 2026-10-31 | expected 9.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Resolved before created", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Resolved before created" ) )
+
+-- 41 | DQ Issues: Missing date of birth | none | 2026-10-31 | expected 36.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Missing date of birth", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Missing date of birth" ) )
+
+-- 42 | DQ Issues: Missing nationality | none | 2026-10-31 | expected 18.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Missing nationality", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Missing nationality" ) )
+
+-- 43 | DQ Issues: Category label vs grade | none | 2026-10-31 | expected 36.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Category label vs grade", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Category label vs grade" ) )
+
+-- 44 | DQ Issues: Overlap month mismatch | none | 2026-10-31 | expected 58.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Overlap month mismatch", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Overlap month mismatch" ) )
+
+-- 45 | DQ Issues: Legacy vacancy not migrated | none | 2026-10-31 | expected 6.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Legacy vacancy not migrated", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Legacy vacancy not migrated" ) )
+
+-- 46 | DQ Issues: Country spelling variant | none | 2026-10-31 | expected 2754.0 (tol 0.0)
+EVALUATE
+ROW ( "kpi", "DQ Issues: Country spelling variant", "filter", "none", "reporting_date", DATE ( 2026, 10, 31 ),
+      "value", CALCULATE ( [DQ Issues], DQ_Issues[Check] = "Country spelling variant" ) )

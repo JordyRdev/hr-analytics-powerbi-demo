@@ -39,3 +39,9 @@ Surge National Share (12m),none,2026-10-31,0.539683,0.0001
 DQ Issues: Duplicate staff ID,none,2026-10-31,30.0,0.0
 DQ Issues: Contract end before start,none,2026-10-31,11.0,0.0
 DQ Issues: Resolved before created,none,2026-10-31,9.0,0.0
+DQ Issues: Missing date of birth,none,2026-10-31,36.0,0.0
+DQ Issues: Missing nationality,none,2026-10-31,18.0,0.0
+DQ Issues: Category label vs grade,none,2026-10-31,36.0,0.0
+DQ Issues: Overlap month mismatch,none,2026-10-31,58.0,0.0
+DQ Issues: Legacy vacancy not migrated,none,2026-10-31,6.0,0.0
+DQ Issues: Country spelling variant,none,2026-10-31,2754.0,0.0

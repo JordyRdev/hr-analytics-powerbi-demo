@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.pbix
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+PART_B_NOTES.md
+.DS_Store

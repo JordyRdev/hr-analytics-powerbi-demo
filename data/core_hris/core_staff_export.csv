@@ -1,0 +1,661 @@
+staff_id,date_of_birth,gender,nationality,staff_category,contract_type,grade,duty_country,team,start_date,end_date,exit_reason,voluntary_exit,last_appraisal_date
+EMP-000003,1970-12-15,Male,Italy,HQ,Open-ended,G4,Switzerland,Global Research Unit,2014-06-22,,,,2026-07-16
+EMP-000004,1981-08-17,Male,Kenya,International,Fixed-term,N5,Kenya,Human Resources,2014-06-22,,,,2026-07-31
+EMP-000015,1999-03-28,Female,Switzerland,International,Fixed-term,G5,Somalia,Research & Assessment,2014-06-22,,,,2026-07-01
+EMP-000017,1981-10-10,Male,Haiti,International,Fixed-term,G6,Somalia,Finance & Admin,2014-06-22,,,,2026-06-22
+EMP-000026,1978-05-14,Male,Nigeria,International,Fixed-term,G5,Syria,Human Resources,2014-06-22,,,,2024-08-09
+EMP-000027,1970-09-09,Female,Finland,International,Fixed-term,G3,DR Congo,Research & Assessment,2014-06-22,,,,2026-06-03
+EMP-000028,1976-05-26,Female,United Kingdom,HQ,Open-ended,G6,Switzerland,Global Research Unit,2014-06-22,,,,2026-07-14
+EMP-000030,1981-07-06,Female,Denmark,International,Fixed-term,G5,Afghanistan,Programmes,2014-06-22,,,,2025-06-28
+EMP-000034,1986-10-24,Female,Pakistan,International,Fixed-term,G6,DR Congo,Programmes,2014-06-22,,,,2025-06-22
+EMP-000052,1995-05-19,Male,Italy,International,Fixed-term,G4,Somalia,Logistics & Supply,2014-06-22,2026-09-01,Personal reasons,Y,2026-08-04
+EMP-000074,1978-12-16,Female,Finland,International,Fixed-term,G5,Bangladesh,Research & Assessment,2014-06-22,,,,2026-06-30
+EMP-000092,1984-06-11,Male,Kenya,International,Fixed-term,N2,Kenya,Programmes,2014-06-22,2026-06-11,Personal reasons,Y,2024-06-09
+EMP-000094,1974-12-20,Female,Brazil,International,Fixed-term,G4,Syria,Research & Assessment,2014-06-22,2025-09-07,Redundancy,N,2025-08-01
+EMP-000102,1991-08-08,Male,Germany,International,Fixed-term,G4,Niger,Human Resources,2014-06-22,2025-09-19,Office closure,N,2025-07-13
+EMP-000105,1990-11-27,Female,Spain,International,Fixed-term,G2,Afghanistan,Security,2014-06-22,2025-01-07,Resignation,Y,2024-07-18
+EMP-000115,1991-12-08,Male,France,International,Fixed-term,G4,DR Congo,Data & IT,2014-06-22,2026-10-17,End of project funding,N,2026-06-16
+EMP-000146,1969-07-11,Female,France,HQ,Fixed-term,G4,Switzerland,Global Support Unit,2014-09-18,2026-04-22,End of project funding,N,2024-11-12
+EMP-000154,1978-06-18,Male,United Kingdom,HQ,Open-ended,G6,Switzerland,Global Support Unit,2015-02-01,,,,2026-02-03
+EMP-000163,1985-02-18,Male,CH,HQ,Fixed-term,G1,Switzerland,Global Support Unit,2015-03-17,,,,2026-02-28
+EMP-000164,1990-09-27,Female,Uganda,International,Fixed-term,G4,Nigeria,Programmes,2015-03-30,,,,2025-03-31
+EMP-000165,1980-01-30,Female,Ireland,HQ,Fixed-term,G6,Switzerland,Executive Office,2015-04-05,2026-01-19,End of project funding,N,2025-04-09
+EMP-000178,1981-09-28,Male,Sweden,International,Fixed-term,G4,Afghanistan,Programmes,2015-06-09,,,,2025-07-25
+EMP-000179,1963-03-10,Male,Geneva HQ,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2015-06-23,,,,2026-06-20
+EMP-000192,1976-03-16,Female,Belgium,HQ,Fixed-term,G6,Switzerland,Executive Office,2015-09-11,,,,2026-10-26
+EMP-000200,1993-06-02,Male,Jordan,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2015-10-17,,,,2026-10-09
+EMP-000204,1972-09-18,Female,Germany,International,Fixed-term,G4,Nigeria,Research & Assessment,2015-11-03,,,,2025-11-23
+EMP-000211,2000-01-01,Female,United States,International,Fixed-term,G4,Mali,Data & IT,2015-11-16,,,,2026-01-08
+EMP-000217,1982-01-05,Male,Germany,International,Fixed-term,G5,Niger,Data & IT,2016-01-04,2025-03-05,Office closure,N,2025-01-22
+EMP-000220,1979-10-21,Male,India,International,Fixed-term,G4,Syria,Finance & Admin,2016-01-11,2025-10-24,End of project funding,N,
+EMP-000240,2000-01-01,Male,Australia,International,Fixed-term,G5,Ukraine,Global Research Unit,2016-05-02,2026-04-02,Resignation,Y,2025-06-01
+EMP-000249,1973-12-07,Male,Ukraine,HQ,Fixed-term,G6,Switzerland,Communications,2016-06-30,2026-03-10,Resignation,Y,2025-06-25
+EMP-000259,1975-01-28,Male,United Kingdom,International,Fixed-term,G6,Somalia,Global Research Unit,2016-09-06,,,,2026-08-26
+EMP-000278,1987-01-07,Male,Brazil,International,Fixed-term,G6,Colombia,Programmes,2016-12-02,,,,2024-12-19
+EMP-000293,1986-05-22,Male,Sweden,International,Fixed-term,G6,Nigeria,Logistics & Supply,2017-01-30,2026-02-03,Redundancy,N,2025-01-10
+EMP-000294,1982-08-26,Female,Sweden,International,Fixed-term,G6,Kenya,Global Support Unit,2017-01-31,,,,2026-03-23
+EMP-000311,1980-08-14,Male,Colombia,International,Fixed-term,N3,Colombia,Programmes,2017-04-13,2025-07-11,End of contract,N,2025-06-10
+EMP-000312,1977-06-15,Female,France,HQ,Fixed-term,G3,Switzerland,Communications,2017-04-19,,,,2024-04-16
+EMP-000325,1982-05-25,Male,Jordan,International,Fixed-term,G6,Somalia,Research & Assessment,2017-05-23,,,,2026-06-13
+EMP-000327,1992-03-03,Female,Italy,International,Fixed-term,G6,South Sudan,Logistics & Supply,2017-06-03,,,,2025-06-17
+EMP-000336,1984-01-29,Male,Sweden,International,Fixed-term,G4,DR Congo,Programmes,2017-07-06,,,,2025-07-07
+EMP-000363,1979-01-17,Female,Netherlands,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2017-10-17,,,,
+EMP-000365,1985-12-26,Female,Finland,International,Fixed-term,G6,South Sudan,Programmes,2017-10-25,,,,2026-10-06
+EMP-000366,1990-03-17,Male,United Kingdom,International,Fixed-term,G5,Kenya,Data & IT,2017-10-28,,,,2025-10-13
+EMP-000370,1975-03-04,Male,Netherlands,HQ,Fixed-term,G5,Switzerland,Global Research Unit,2017-11-12,2026-08-29,Resignation,Y,2026-01-02
+EMP-000400,1995-02-26,Male,United Kingdom,International,Fixed-term,G4,Niger,Logistics & Supply,2018-03-05,2025-11-19,Office closure,N,2025-02-21
+EMP-000404,1986-05-09,Male,Australia,HQ,Fixed-term,G5,Switzerland,Global Research Unit,2018-03-12,,,,2026-05-02
+EMP-000405,1984-05-31,Female,United States,HQ,Fixed-term,G5,Switzerland,Communications,2018-03-14,,,,2026-05-06
+EMP-000414,1985-11-14,Male,South Sudan,International,Fixed-term,G1,S. Sudan,Global Support Unit,2018-04-09,2025-02-12,End of project funding,N,
+EMP-000417,1980-08-17,Female,Pakistan,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2018-04-11,,,,2026-05-10
+EMP-000439,1998-04-18,Male,Afghanistan,HQ,Fixed-term,G5,Switzerland,Global Support Unit,2018-06-12,2025-11-23,Resignation,Y,2025-06-11
+EMP-000448,1994-01-13,Female,Switzerland,International,Fixed-term,G5,Iraq,Logistics & Supply,2018-07-01,2025-06-13,Resignation,Y,2024-07-05
+EMP-000449,1974-02-22,Male,Germany,International,Fixed-term,G4,Afghanistan,Global Support Unit,2018-07-04,,,,2026-07-16
+EMP-000453,1989-10-07,Female,France,International,Fixed-term,G3,Bangladesh,Data & IT,2018-07-10,2025-05-08,End of project funding,N,2024-06-29
+EMP-000464,1980-12-12,Female,Norway,HQ,Fixed-term,G6,Switzerland,Finance & Legal,2018-08-03,,,,2026-08-28
+EMP-000488,1994-10-25,Female,India,International,Fixed-term,G4,Nigeria,Data & IT,2018-10-15,2025-11-23,Resignation,Y,
+EMP-000499,1981-04-25,Female,Italy,HQ,Fixed-term,G3,Switzerland,Global Research Unit,2018-11-05,,,,2024-11-20
+EMP-000508,1974-06-20,Male,Canada,International,Fixed-term,G4,Ukraine,Finance & Admin,2018-11-28,,,,2025-12-10
+EMP-000510,1972-07-04,Male,Italy,International,Fixed-term,G2,DR Congo,Research & Assessment,2018-12-10,2025-07-05,End of contract,N,2024-11-26
+EMP-000516,1971-07-23,Female,Canada,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2018-12-21,,,,2026-02-12
+EMP-000517,1967-02-10,Female,Germany,International,Fixed-term,G5,South Sudan,Research & Assessment,2018-12-21,,,,
+EMP-000521,1975-07-03,Female,France,HQ,Fixed-term,G4,Switzerland,People & Culture,2018-12-31,,,,2025-02-06
+EMP-000531,1979-08-31,Female,Haiti,International,Fixed-term,G3,Bangladesh,Research & Assessment,2019-01-15,,,,2024-02-13
+EMP-000532,1986-07-28,Male,Belgium,International,Fixed-term,G3,Nigeria,Programmes,2019-01-15,,,,2026-02-23
+EMP-000534,1964-12-30,Female,United Kingdom,International,Fixed-term,G4,Kenya,Research & Assessment,2019-01-18,,,,2026-01-06
+EMP-000536,1984-03-13,Female,Italy,HQ,Fixed-term,G6,Switzerland,Global Research Unit,2019-01-22,,,,2025-01-15
+EMP-000540,1975-12-05,Male,Norway,International,Fixed-term,G5,Niger,Global Research Unit,2019-01-30,2025-10-27,Office closure,N,
+EMP-000541,1975-03-27,Male,Netherlands,International,Fixed-term,G3,South Sudan,Programmes,2019-01-30,,,,2026-03-13
+EMP-000545,1977-02-09,Female,France,International,Fixed-term,G4,Nigeria,Global Research Unit,2019-02-09,,,,2026-01-22
+EMP-000546,1994-11-14,Male,Switzerland,International,Fixed-term,G6,South Sudan,Finance & Admin,2019-02-11,,,,2026-03-05
+EMP-000558,1989-02-16,Male,Haiti,International,Fixed-term,G6,South Sudan,Data & IT,2019-03-09,2025-06-10,Resignation,Y,2024-03-30
+EMP-000574,1978-08-13,Female,Canada,International,Fixed-term,G5,Kenya,Global Support Unit,2019-03-31,,,,2026-04-08
+EMP-000576,1971-03-03,Male,United Kingdom,HQ,Fixed-term,G5,Switzerland,People & Culture,2019-03-31,,,,2026-05-14
+EMP-000584,1991-10-02,Female,Lebanon,HQ,Fixed-term,G6,Switzerland,Global Research Unit,2019-04-17,,,,2025-04-08
+EMP-000591,1985-02-03,Male,Senegal,International,Fixed-term,G6,DR Congo,Global Research Unit,2019-04-24,,,,2026-06-04
+EMP-000592,1983-12-27,Male,Colombia,International,Fixed-term,N4,Colombia,Human Resources,2019-04-24,,,,2026-05-13
+EMP-000610,,Female,United Kingdom,International,Fixed-term,G2,Somalia,Global Support Unit,2019-06-06,,,,2026-06-09
+EMP-000625,1989-05-13,Male,Pakistan,International,Fixed-term,G3,Ukraine,Logistics & Supply,2019-06-24,2025-11-06,Personal reasons,Y,2025-06-13
+EMP-000629,1979-05-07,Male,Canada,HQ,Open-ended,G4,Switzerland,Finance & Legal,2019-07-07,2025-07-07,End of contract,N,2025-06-22
+EMP-000630,1975-09-08,Male,Denmark,HQ,Fixed-term,G6,Switzerland,Communications,2019-07-11,,,,2026-08-01
+EMP-000633,1981-05-22,Female,Japan,International,Fixed-term,G2,Iraq,Finance & Admin,2019-07-16,,,,2026-07-29
+EMP-000642,1977-02-08,Male,Denmark,International,Fixed-term,G3,Somalia,Finance & Admin,2019-08-03,,,,2025-09-06
+EMP-000645,1998-06-27,Male,Australia,International,Fixed-term,G5,Somalia,Finance & Admin,2019-08-06,,,,2026-09-09
+EMP-000646,1990-10-17,Female,Canada,International,Fixed-term,G5,DR Congo,Research & Assessment,2019-08-07,,,,2026-09-03
+EMP-000648,1985-02-05,Male,Syrian Arab Republic,International,Fixed-term,G6,Syria,Data & IT,2019-08-11,,,,2026-08-23
+EMP-000654,1983-03-06,Male,Germany,International,Fixed-term,G6,DR Congo,Global Support Unit,2019-08-23,2025-04-05,End of project funding,N,2024-09-17
+EMP-000662,1977-04-03,Female,Pakistan,International,Fixed-term,G4,Niger,Global Research Unit,2019-09-14,2025-04-02,Office closure,N,2024-10-25
+EMP-000664,1996-09-27,Male,Denmark,International,Fixed-term,G1,Bangladesh,Programmes,2019-09-20,2026-01-16,Resignation,Y,2025-09-30
+EMP-000666,1977-03-26,Female,Philippines,International,Fixed-term,G6,Mali,Data & IT,2019-09-22,2026-04-23,End of project funding,N,2025-11-17
+EMP-000669,1992-07-02,Male,Denmark,International,Fixed-term,G6,DR Congo,Programmes,2019-09-26,,,,2025-11-05
+EMP-000686,1994-01-05,Male,Ethiopia,International,Fixed-term,G4,Iraq,Programmes,2019-10-25,2025-07-15,End of project funding,N,2024-12-21
+EMP-000695,1988-06-30,Female,Japan,International,Fixed-term,G4,Kenya,Logistics & Supply,2019-11-03,2026-01-30,End of project funding,N,2025-10-21
+EMP-000702,1971-04-07,Female,Uganda,International,Fixed-term,G2,Bangladesh,Global Support Unit,2019-11-19,2025-10-03,Redundancy,N,2024-10-31
+EMP-000718,1978-05-08,Male,Bangladesh,International,Fixed-term,G6,Syria,Research & Assessment,2019-12-20,,,,2026-01-27
+EMP-000721,1971-07-25,Female,Canada,International,Fixed-term,G2,Afghanistan,Human Resources,2019-12-26,2025-05-18,End of contract,N,2025-01-01
+EMP-000730,1978-06-06,Male,Bangladesh,HQ,Open-ended,G4,Switzerland,Global Research Unit,2020-01-20,,,,2026-02-12
+EMP-000743,1987-02-15,Male,United Kingdom,International,Fixed-term,G5,Democratic Republic of the Congo,Data & IT,2020-02-18,,,,2026-03-16
+EMP-000745,1967-09-05,Female,Switzerland,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2020-02-22,,,,2025-02-16
+EMP-000765,1992-10-08,Male,Brazil,HQ,Open-ended,G3,Switzerland,People & Culture,2020-03-17,,,,2026-05-09
+EMP-000780,1983-03-13,Female,France,International,Fixed-term,G4,Nigeria,Global Research Unit,2020-04-03,2026-06-26,Resignation,Y,2026-06-01
+EMP-000786,1993-01-21,Male,Canada,International,Fixed-term,G4,Ukraine,Programmes,2020-04-10,2025-06-10,Resignation,Y,2025-06-01
+EMP-000791,1980-01-29,Male,Australia,International,Fixed-term,G6,Mali,Logistics & Supply,2020-04-20,,,,2025-04-29
+EMP-000822,1986-02-26,Male,Brazil,International,Fixed-term,G5,South Sudan,Human Resources,2020-05-15,,,,2026-05-19
+EMP-000858,1966-02-19,Female,,International,Fixed-term,G2,DR Congo,Programmes,2020-07-03,,,,2026-07-29
+EMP-000879,1976-11-06,Male,United States,HQ,Fixed-term,G5,Switzerland,Global Research Unit,2020-07-22,,,,
+EMP-000890,1979-11-07,Female,United States,HQ,Fixed-term,G1,Switzerland,Global Research Unit,2020-08-06,,,,2026-07-31
+EMP-000892,1980-06-18,Female,United States,International,Fixed-term,G6,Haiti,Programmes,2020-08-09,,,,2026-09-24
+EMP-000894,1992-08-11,Female,India,International,Fixed-term,G3,Kenya,Human Resources,2020-08-11,,,,2026-08-15
+EMP-000895,1979-07-21,Female,United States,HQ,Fixed-term,G4,CH,Global Research Unit,2020-08-12,,,,2026-08-03
+EMP-000899,1985-06-05,Male,Netherlands,International,Fixed-term,G6,Syria,Research & Assessment,2020-08-20,,,,2026-08-28
+EMP-000910,1975-04-03,Male,Germany,HQ,Open-ended,G3,Switzerland,Global Support Unit,2020-09-03,,,,2026-08-18
+EMP-000921,1981-02-23,Female,France,International,Fixed-term,G5,Haiti,Logistics & Supply,2020-09-22,,,,2024-10-23
+EMP-000925,1982-09-30,Female,Philippines,HQ,Fixed-term,G3,Switzerland,Finance & Legal,2020-10-05,,,,2026-10-17
+EMP-000941,1978-11-01,Male,France,HQ,Fixed-term,G5,Switzerland,Global Support Unit,2020-10-20,,,,2025-12-10
+EMP-000948,1995-11-23,Female,Colombia,HQ,Open-ended,G2,Switzerland,Communications,2020-10-29,,,,2025-11-18
+EMP-000963,1972-06-15,Female,France,International,Fixed-term,G5,Niger,Logistics & Supply,2020-11-13,2025-08-04,Office closure,N,2024-12-22
+EMP-000972,1968-10-12,Female,Brazil,HQ,Open-ended,G4,Switzerland,Finance & Legal,2020-11-21,,,,2025-12-28
+EMP-000974,1991-03-28,Female,India,HQ,Fixed-term,G1,Switzerland,Global Research Unit,2020-11-22,2025-03-17,End of contract,N,2025-01-07
+EMP-000989,1981-12-27,Female,Finland,International,Fixed-term,G3,Kenya,Research & Assessment,2020-12-11,2025-07-19,End of project funding,N,2024-12-15
+EMP-000995,1994-09-04,Male,Denmark,International,Fixed-term,G4,Kenya,Finance & Admin,2020-12-18,,,,2025-12-20
+EMP-001034,1998-03-09,Male,Kenya,International,Fixed-term,N1,Kenya,Finance & Admin,2021-01-18,2026-07-23,End of contract,N,2026-02-21
+EMP-001035,1972-09-17,Female,Jordan,International,Fixed-term,G6,Mali,Finance & Admin,2021-01-19,2026-02-15,End of project funding,N,2024-01-01
+EMP-001037,1980-09-29,Female,France,International,Fixed-term,G3,Kenya,Security,2021-01-21,,,,2025-02-04
+EMP-001038,1980-11-20,Female,Germany,International,Fixed-term,G4,Nigeria,Global Research Unit,2021-01-21,,,,2025-03-08
+EMP-001040,1977-02-24,Male,Kenya,International,Fixed-term,G5,Afghanistan,Programmes,2021-01-22,,,,2026-03-10
+EMP-001048,1985-02-21,Male,India,International,Fixed-term,G6,Somalia,Research & Assessment,2021-01-27,2026-07-30,End of project funding,N,2026-02-15
+EMP-001052,1984-10-25,Female,Germany,International,Fixed-term,G6,Afghanistan,Research & Assessment,2021-02-02,2025-03-08,Resignation,Y,
+EMP-001056,1977-02-02,Male,Colombia,International,Fixed-term,N4,Colombia,Research & Assessment,2021-02-11,,,,2026-02-28
+EMP-001057,1994-01-02,Male,France,International,Fixed-term,G4,Syria,Programmes,2021-02-12,,,,2026-03-29
+EMP-001065,1984-03-26,Male,DR Congo,International,Fixed-term,G2,DR Congo,Research & Assessment,2021-02-24,,,,2025-02-04
+EMP-001069,1988-06-20,Female,Netherlands,International,Fixed-term,G6,Syria,Research & Assessment,2021-03-01,2026-09-08,Redundancy,N,2026-04-03
+EMP-001073,1994-02-28,Male,South Sudan,HQ,Fixed-term,G6,Switzerland,People & Culture,2021-03-05,,,,2026-04-02
+EMP-001092,1980-05-01,Female,Spain,International,Fixed-term,G4,South Sudan,Data & IT,2021-03-21,2025-08-23,End of project funding,N,2025-03-11
+EMP-001102,1983-10-09,Male,France,International,Fixed-term,G4,Kenya,Human Resources,2021-03-28,,,,2025-05-12
+EMP-001104,2000-01-01,Male,India,International,Fixed-term,G5,Somalia,Programmes,2021-03-29,,,,2026-04-18
+EMP-001118,1973-06-06,Female,DR Congo,International,Fixed-term,G4,Kenya,Research & Assessment,2021-04-19,2025-02-14,End of contract,N,2024-06-12
+EMP-001119,1985-05-18,Male,DR Congo,International,Fixed-term,G3,Kenya,Programmes,2021-04-20,,,,2026-05-23
+EMP-001122,1986-07-03,Female,Germany,International,Fixed-term,G3,Somalia,Programmes,2021-04-24,,,,2026-06-01
+EMP-001123,1984-11-26,Female,Iraq,HQ,Open-ended,G4,Switzerland,Global Research Unit,2021-04-24,2025-05-29,Personal reasons,Y,
+EMP-001140,1986-07-15,Female,United States,International,Fixed-term,G6,Colombia,Global Research Unit,2021-05-12,,,,2026-05-04
+EMP-001144,1989-08-24,Male,Japan,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2021-05-18,,,,2025-05-11
+EMP-001145,1983-07-06,Female,United Kingdom,International,Fixed-term,G6,Mali,Logistics & Supply,2021-05-18,2025-02-10,End of project funding,N,2024-06-03
+EMP-001158,1986-07-19,Male,France,International,Fixed-term,G6,Niger,Research & Assessment,2021-06-02,2025-09-05,Office closure,N,
+EMP-001160,1977-10-18,Male,United States,International,Fixed-term,G4,Nigeria,Research & Assessment,2021-06-04,,,,2026-07-02
+EMP-001167,1986-05-02,Male,Sweden,International,Fixed-term,G4,Iraq,Security,2021-06-10,2025-04-12,End of contract,N,
+EMP-001170,1977-01-26,Female,France,International,Fixed-term,G3,Mali,Programmes,2021-06-11,2025-06-19,End of contract,N,2025-06-01
+EMP-001173,1988-01-14,Male,United Kingdom,International,Fixed-term,G2,Somalia,Research & Assessment,2021-06-13,,,,2026-06-21
+EMP-001176,1990-03-02,Male,Kenya,International,Fixed-term,N4,Kenya,Programmes,2021-06-16,,,,2026-06-25
+EMP-001186,1979-05-23,Female,United Kingdom,HQ,Open-ended,G3,Switzerland,Global Support Unit,2021-06-24,,,,2026-08-20
+EMP-001207,1977-06-11,Female,Norway,International,Fixed-term,G2,DR Congo,Global Research Unit,2021-07-16,,,,2026-07-04
+EMP-001229,1986-01-08,Male,Lebanon,International,Fixed-term,G5,South Sudan,Human Resources,2021-08-08,,,,2026-08-31
+EMP-001234,1979-04-03,Male,Sweden,International,Fixed-term,G4,Somalia,Programmes,2021-08-12,,,,2026-09-12
+EMP-001237,1985-05-21,Male,Ukraine,International,Fixed-term,G3,Bangladesh,Programmes,2021-08-13,2025-08-09,End of project funding,N,
+EMP-001252,1990-02-13,Male,United Kingdom,International,Fixed-term,G2,Niger,Programmes,2021-08-23,2025-06-13,Office closure,N,2024-10-15
+EMP-001263,1992-07-22,Male,Brazil,International,Fixed-term,G5,Colombia,Research & Assessment,2021-08-31,2026-06-18,End of project funding,N,2025-10-27
+EMP-001265,1986-05-05,Female,Ethiopia,International,Fixed-term,G5,Ukraine,Programmes,2021-09-02,,,,2026-09-22
+EMP-001274,1982-04-26,Male,Senegal,International,Fixed-term,G5,Somalia,Programmes,2021-09-09,2026-05-29,Redundancy,N,2025-10-02
+EMP-001277,1975-05-01,Male,Ethiopia,International,Fixed-term,G4,Kenya,Finance & Admin,2021-09-09,,,,2026-10-06
+EMP-001286,1987-11-16,Female,Sweden,International,Fixed-term,G3,Somalia,Programmes,2021-09-18,2026-08-29,End of project funding,N,2025-09-21
+EMP-001288,1979-12-30,Male,Ethiopia,International,Fixed-term,G4,South Sudan,Programmes,2021-09-19,,,,2026-10-04
+EMP-001291,1980-06-19,Female,United States,International,Fixed-term,G4,Bangladesh,Programmes,2021-09-21,,,,2026-09-23
+EMP-001292,1981-05-15,Male,United Kingdom,International,Fixed-term,G5,Nigeria,Logistics & Supply,2021-09-21,,,,2024-10-30
+EMP-001295,1990-03-30,Female,Switzerland,HQ,Open-ended,G5,Switzerland,Global Support Unit,2021-09-23,2025-06-22,End of project funding,N,2024-09-20
+EMP-001296,1968-10-31,Female,Germany,HQ,Fixed-term,G6,Switzerland,People & Culture,2021-09-23,2026-10-15,End of contract,N,2026-10-07
+EMP-001299,1993-04-08,Male,Canada,International,Fixed-term,G4,South Sudan,Human Resources,2021-09-29,,,,2026-09-10
+EMP-001301,1986-01-12,Male,Sweden,HQ,Fixed-term,G3,Switzerland,Executive Office,2021-10-01,,,,2026-09-28
+EMP-001305,1978-01-11,Male,Belgium,International,Fixed-term,G4,Syrian Arab Republic,Logistics & Supply,2021-10-02,2025-10-07,End of project funding,N,2025-09-18
+EMP-001306,1979-03-14,Female,Lebanon,HQ,Fixed-term,G5,Switzerland,People & Culture,2021-10-03,,,,2026-10-21
+EMP-001311,1978-06-19,Male,Belgium,International,Fixed-term,G5,DR Congo,Programmes,2021-10-07,,,,2026-10-22
+EMP-001312,1960-01-01,Male,Switzerland,HQ,Fixed-term,G3,CH,People & Culture,2021-10-08,,,,2025-12-04
+EMP-001321,1980-09-24,Male,Switzerland,International,Fixed-term,G1,DR Congo,Logistics & Supply,2021-10-20,,,,2026-10-02
+EMP-001342,1986-06-24,Male,Spain,International,Fixed-term,G6,South Sudan,Programmes,2021-11-04,2026-01-06,End of contract,N,2025-11-01
+EMP-001346,1985-05-20,Female,Norway,International,Fixed-term,G4,Kenya,Global Support Unit,2021-11-06,2025-01-19,Resignation,Y,
+EMP-001352,1973-06-13,Female,France,International,Fixed-term,G4,South Sudan,Logistics & Supply,2021-11-10,2025-01-27,Resignation,Y,2024-11-18
+EMP-001353,1974-04-08,Male,Colombia,International,Fixed-term,N4,Colombia,Data & IT,2021-11-12,,,,2025-12-08
+EMP-001354,1970-10-06,Female,Sweden,HQ,Fixed-term,G4,Switzerland,Communications,2021-11-12,,,,2025-01-01
+EMP-001365,1979-03-21,Female,Belgium,International,Fixed-term,G3,Somalia,Research & Assessment,2021-11-20,,,,2025-11-25
+EMP-001376,1983-11-28,Male,Spain,International,Fixed-term,G4,Niger,Data & IT,2021-12-04,2025-05-26,Office closure,N,2025-01-15
+EMP-001390,1987-01-14,Male,Norway,HQ,Fixed-term,G6,Switzerland,People & Culture,2021-12-15,,,,2024-12-02
+EMP-001395,1984-07-27,Male,Sweden,HQ,Fixed-term,G3,Switzerland,Executive Office,2021-12-19,,,,
+EMP-001402,1987-02-15,Male,India,International,Fixed-term,G3,DR Congo,Logistics & Supply,2022-01-07,2026-03-25,End of project funding,N,2025-12-26
+EMP-001413,1996-07-15,Male,Syria,International,Fixed-term,G6,Kenya,Programmes,2022-01-18,2026-07-28,End of project funding,N,2026-01-24
+EMP-001415,1984-11-05,Female,United Kingdom,International,Fixed-term,G2,Iraq,Global Research Unit,2022-01-19,,,,2026-03-12
+EMP-001417,1988-09-03,Male,Switzerland,International,Fixed-term,G3,Syria,Logistics & Supply,2022-01-23,,,,2026-03-09
+EMP-001419,1980-01-13,Female,United Kingdom,International,Fixed-term,G3,Mali,Programmes,2022-01-27,2026-05-13,Retirement,Y,2025-01-10
+EMP-001420,1975-06-16,Female,Lebanon,International,Fixed-term,G4,Afghanistan,Logistics & Supply,2022-01-30,2025-06-21,End of project funding,N,2025-02-26
+EMP-001424,1986-01-16,Female,Afghanistan,International,Fixed-term,G3,Kenya,Logistics & Supply,2022-02-01,2026-08-27,Resignation,Y,2026-03-25
+EMP-001425,1974-12-25,Male,Kenya,International,Fixed-term,G2,DR Congo,Programmes,2022-02-02,,,,2026-03-29
+EMP-001428,,Male,Denmark,International,Fixed-term,G4,DR Congo,Programmes,2022-02-05,,,,2026-01-16
+EMP-001432,1982-02-18,Female,South Sudan,International,Fixed-term,G5,Syria,Logistics & Supply,2022-02-12,,,,2026-03-13
+EMP-001439,1980-08-28,Male,United Kingdom,International,Fixed-term,G2,DR Congo,Research & Assessment,2022-02-25,,,,2026-02-12
+EMP-001440,1970-09-21,Female,Italy,HQ,Open-ended,G4,Switzerland,Global Research Unit,2022-02-26,,,,2025-03-02
+EMP-001441,1986-07-14,Female,Italy,International,Fixed-term,G2,South Sudan,Data & IT,2022-02-27,,,,2026-03-19
+EMP-001474,1968-02-13,Male,Pakistan,International,Fixed-term,G6,Bangladesh,Logistics & Supply,2022-04-01,2025-10-26,Resignation,Y,2025-05-27
+EMP-001481,1974-07-16,Female,Italy,International,Fixed-term,G6,South Sudan,Programmes,2022-04-11,,,,2025-04-05
+EMP-001484,1972-05-21,Male,United States,International,Fixed-term,G5,South-Sudan,Global Research Unit,2022-04-14,2026-01-28,End of project funding,N,2025-04-09
+EMP-001487,1980-03-14,Male,Syria,International,Fixed-term,G4,Mali,Finance & Admin,2022-04-16,2025-11-21,Redundancy,N,2025-04-30
+EMP-001490,1999-01-10,Female,Germany,International,Fixed-term,G1,Kenya,Logistics & Supply,2022-04-21,,,,
+EMP-001491,1970-03-13,Female,Belgium,International,Fixed-term,G6,Somalia,Research & Assessment,2022-04-21,,,,2026-06-16
+EMP-001495,1969-09-10,Female,United States,HQ,Fixed-term,G3,Switzerland,Global Support Unit,2022-04-25,,,,2025-04-11
+EMP-001497,1999-06-03,Male,France,International,Fixed-term,G4,Colombia,Research & Assessment,2022-04-27,,,,2026-05-07
+EMP-001498,1980-01-23,Male,Philippines,International,Fixed-term,G3,Bangladesh,Logistics & Supply,2022-04-27,2026-04-17,Resignation,Y,2025-04-19
+EMP-001504,1991-09-06,Female,Canada,International,Fixed-term,G6,Syrian Arab Republic,Logistics & Supply,2022-05-01,2026-03-21,Retirement,Y,2025-06-14
+EMP-001506,1980-10-03,Female,Kenya,HQ,Open-ended,G5,CH,Global Research Unit,2022-05-06,2025-03-21,End of project funding,N,2024-06-24
+EMP-001507,1975-07-06,Male,Belgium,International,Fixed-term,G4,Haiti,Finance & Admin,2022-05-06,2026-10-04,Personal reasons,Y,2026-06-18
+EMP-001513,1991-12-11,Female,Ethiopia,International,Fixed-term,G3,South Sudan,Programmes,2022-05-16,,,,2026-06-16
+EMP-001518,1978-03-23,Male,France,International,Fixed-term,G5,Niger,Programmes,2022-05-17,2025-11-04,Office closure,N,2025-05-22
+EMP-001522,1971-03-10,Male,Belgium,International,Fixed-term,G6,Nigeria,Logistics & Supply,2022-05-22,,,,2026-05-20
+EMP-001523,1976-08-31,Female,Ireland,HQ,Fixed-term,G2,Switzerland,Global Support Unit,2022-05-22,,,,2026-07-06
+EMP-001527,1962-06-01,Male,Ethiopia,International,Fixed-term,G6,South Sudan,Research & Assessment,2022-06-03,2025-12-07,End of contract,N,2025-06-28
+EMP-001530,1984-10-27,Male,Niger,HQ,Open-ended,G4,Switzerland,Global Research Unit,2022-06-11,,,,2026-06-11
+EMP-001538,1981-08-09,Female,Kenya,International,Fixed-term,N3,Kenya,Programmes,2022-06-17,2026-02-25,End of project funding,N,2025-07-04
+EMP-001549,1990-04-30,Male,Spain,International,Fixed-term,G3,Iraq,Programmes,2022-06-23,2025-12-21,End of project funding,N,2025-07-19
+EMP-001550,1982-12-25,Female,Ethiopia,International,Fixed-term,G5,Iraq,Programmes,2022-06-23,,,,2026-07-12
+EMP-001557,1979-10-02,Female,Afghanistan,International,Fixed-term,G5,Colombia,Research & Assessment,2022-06-29,,,,2026-06-16
+EMP-001569,1987-12-20,Male,Kenya,International,Fixed-term,N1,Kenya,Security,2022-07-07,,,,2026-06-20
+EMP-001597,1992-05-30,Male,Ukraine,International,Fixed-term,G6,South Sudan,Security,2022-08-10,,,,2025-08-06
+EMP-001600,1988-07-30,Female,Italy,International,Fixed-term,G3,South Sudan,Programmes,2022-08-15,,,,2026-08-07
+EMP-001601,1988-05-21,Female,United States,International,Fixed-term,G5,Haiti,Programmes,2022-08-15,,,,2026-08-25
+EMP-001604,1980-11-26,Female,France,International,Fixed-term,G6,S. Sudan,Finance & Admin,2022-08-16,,,,2025-10-02
+EMP-001605,1979-03-07,Female,Belgium,HQ,Fixed-term,G5,Switzerland,Communications,2022-08-19,,,,2026-08-18
+EMP-001607,1983-11-07,Male,Bangladesh,International,Fixed-term,G2,Ukraine,Programmes,2022-08-24,,,,2026-10-20
+EMP-001612,1985-01-05,Female,France,International,Fixed-term,G3,Mali,Global Support Unit,2022-08-28,,,,2026-10-08
+EMP-001624,1980-02-23,Female,India,International,Fixed-term,G5,South Sudan,Logistics & Supply,2022-09-12,,,,2026-10-02
+EMP-001628,1973-03-30,Male,Sweden,International,Fixed-term,G6,Democratic Republic of the Congo,Programmes,2022-09-16,,,,2025-09-13
+EMP-001629,1991-10-22,Male,India,International,Fixed-term,G5,DR Congo,Programmes,2022-09-16,,,,2026-09-19
+EMP-001630,1985-09-08,Male,Germany,International,Fixed-term,G2,Bangladesh,Programmes,2022-09-18,,,,2024-11-12
+EMP-001634,1993-12-20,Female,Switzerland,International,Fixed-term,G3,Syria,Logistics & Supply,2022-09-21,,,,2024-09-07
+EMP-001635,1990-04-19,Female,Spain,International,Fixed-term,G5,Iraq,Programmes,2022-09-21,2026-08-01,End of project funding,N,2025-11-17
+EMP-001636,1986-08-01,Male,Finland,International,Fixed-term,G3,Niger,Data & IT,2022-09-22,2025-07-19,Office closure,N,2024-11-10
+EMP-001647,1968-03-13,Female,United Kingdom,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2022-10-06,,,,2025-11-17
+EMP-001649,1988-08-16,Female,Nigeria,HQ,Open-ended,G4,Switzerland,Global Research Unit,2022-10-07,,,,2025-10-07
+EMP-001652,1967-07-16,Female,Germany,International,Fixed-term,G1,Nigeria,Global Support Unit,2022-10-13,2026-01-25,Personal reasons,Y,2025-10-24
+EMP-001655,1983-09-16,Female,Ireland,International,Fixed-term,G3,Kenya,Programmes,2022-10-14,,,,2025-12-02
+EMP-001660,1976-08-12,Male,France,International,Fixed-term,G5,Afghanistan,Finance & Admin,2022-10-23,,,,2026-10-29
+EMP-001663,1978-07-21,Female,Germany,International,Fixed-term,G3,Kenya,Global Research Unit,2022-10-26,,,,2026-10-18
+EMP-001670,1978-11-12,Female,India,International,Fixed-term,G5,Ukraine,Data & IT,2022-11-07,2025-08-08,End of project funding,N,2024-10-30
+EMP-001676,1988-07-13,Male,Afghanistan,International,Fixed-term,G5,Somalia,Logistics & Supply,2022-11-19,2025-05-25,End of project funding,N,2024-10-30
+EMP-001686,1998-11-25,Male,Netherlands,International,Fixed-term,G5,Afghanistan,Finance & Admin,2022-12-01,,,,2025-12-07
+EMP-001695,1985-09-10,Female,France,International,Fixed-term,G4,Somalia,Research & Assessment,2022-12-09,,,,2026-02-06
+EMP-001696,1977-11-02,Male,,International,Fixed-term,G5,Syria,Research & Assessment,2022-12-10,,,,2025-01-09
+EMP-001707,1983-10-31,Male,Nigeria,International,Fixed-term,G6,Iraq,Human Resources,2022-12-16,2026-01-25,Personal reasons,Y,2025-12-19
+EMP-001712,1971-01-19,Female,Germany,International,Fixed-term,G3,Kenya,Research & Assessment,2022-12-21,,,,2025-12-30
+EMP-001715,1988-08-30,Female,Niger,International,Fixed-term,G4,South Sudan,Global Research Unit,2022-12-25,2025-03-16,Resignation,Y,2025-02-22
+EMP-001727,1976-01-10,Female,Germany,International,Fixed-term,G2,Haiti,Programmes,2023-01-04,,,,2026-02-06
+EMP-001730,1987-02-11,Male,Germany,HQ,Fixed-term,G5,CH,Finance & Legal,2023-01-06,2025-05-22,Resignation,Y,2025-01-10
+EMP-001738,1986-11-07,Female,Norway,International,Fixed-term,G2,DRC,Finance & Admin,2023-01-23,2025-01-25,End of project funding,N,2024-03-13
+EMP-001746,1991-01-21,Female,United Kingdom,International,Fixed-term,G4,Haiti,Programmes,2023-01-26,2026-02-18,End of project funding,N,2026-02-09
+EMP-001757,1996-11-25,Male,Belgium,International,Fixed-term,G4,Iraq,Programmes,2023-02-18,2026-08-22,Resignation,Y,2026-02-06
+EMP-001758,2001-02-19,Female,Jordan,International,Fixed-term,G2,Iraq,Global Research Unit,2023-02-19,2026-09-12,Personal reasons,Y,2026-02-27
+EMP-001759,1977-08-13,Male,Australia,HQ,Fixed-term,G4,Switzerland,Global Support Unit,2023-02-20,2026-04-25,End of project funding,N,2026-04-05
+EMP-001764,1979-09-24,Male,France,HQ,Open-ended,G4,Switzerland,People & Culture,2023-02-28,,,,2026-04-14
+EMP-001776,1990-11-17,Male,Pakistan,International,Fixed-term,G4,Kenya,Human Resources,2023-03-09,,,,2026-03-23
+EMP-001783,1975-05-17,Male,United Kingdom,International,Fixed-term,G4,Ukraine,Logistics & Supply,2023-03-17,,,,2026-04-27
+EMP-001791,1975-12-16,Female,Philippines,International,Fixed-term,G2,Mali,Programmes,2023-03-23,,,,2026-03-31
+EMP-001795,1979-12-15,Male,DR Congo,International,Fixed-term,G3,Haiti,Data & IT,2023-03-30,2026-09-15,Redundancy,N,2026-03-25
+EMP-001797,1984-01-09,Female,Philippines,International,Fixed-term,G4,Somalia,Programmes,2023-04-02,2025-02-18,End of contract,N,2024-03-18
+EMP-001799,1979-08-31,Male,Iraq,International,Fixed-term,G3,Niger,Programmes,2023-04-05,2025-05-30,Office closure,N,2024-04-24
+EMP-001801,1983-03-20,Male,Germany,International,Fixed-term,G4,Afghanistan,Security,2023-04-06,,,,2026-05-10
+EMP-001802,1982-03-04,Female,Belgium,HQ,Open-ended,G5,Switzerland,Global Research Unit,2023-04-06,,,,2026-05-10
+EMP-001803,1978-04-20,Male,Afghanistan,International,Fixed-term,G3,Afghanistan,Research & Assessment,2023-04-07,2025-06-16,Resignation,Y,
+EMP-001813,1994-12-14,Male,Belgium,International,Fixed-term,G4,Colombia,Logistics & Supply,2023-04-18,,,,2026-04-09
+EMP-001821,1974-09-09,Male,Sweden,International,Fixed-term,G4,Bangladesh,Finance & Admin,2023-04-24,,,,2026-06-07
+EMP-001824,1985-06-16,Male,Italy,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2023-04-27,,,,2026-05-13
+EMP-001840,1982-11-02,Female,Netherlands,International,Fixed-term,G5,South Sudan,Finance & Admin,2023-05-18,,,,2026-06-13
+EMP-001843,1983-04-19,Female,Belgium,HQ,Fixed-term,G3,Switzerland,People & Culture,2023-05-21,2025-09-15,End of project funding,N,2025-06-15
+EMP-001844,1968-07-28,Female,Belgium,International,Fixed-term,G2,Kenya,Human Resources,2023-05-22,2025-03-25,Resignation,Y,2024-06-02
+EMP-001846,1984-03-06,Male,Philippines,International,Fixed-term,G5,Mali,Human Resources,2023-05-29,,,,2026-05-31
+EMP-001849,1981-06-07,Female,Italy,International,Fixed-term,G3,Mali,Programmes,2023-06-02,,,,2026-06-07
+EMP-001858,1978-09-03,Male,Sweden,International,Fixed-term,G5,Syria,Programmes,2023-06-11,,,,2025-07-04
+EMP-001859,1986-09-12,Female,Denmark,International,Fixed-term,G3,Somalia,Global Research Unit,2023-06-11,,,,2026-06-20
+EMP-001866,1979-07-18,Male,Japan,International,Fixed-term,G3,Nigeria,Research & Assessment,2023-06-16,2025-04-09,End of project funding,N,2024-06-05
+EMP-001869,1986-04-09,Female,Ethiopia,International,Fixed-term,G4,South Sudan,Research & Assessment,2023-06-17,2025-09-25,End of project funding,N,2025-08-05
+EMP-001870,1982-12-24,Female,France,International,Fixed-term,G6,Syria,Security,2023-06-17,2025-07-15,End of project funding,N,2024-06-01
+EMP-001873,1995-11-09,Male,United Kingdom,International,Fixed-term,G5,Mali,Research & Assessment,2023-06-18,,,,2026-08-04
+EMP-001876,2001-06-19,Male,Italy,International,Fixed-term,G2,Nigeria,Finance & Admin,2023-06-19,,,,2026-07-01
+EMP-001884,1961-12-16,Male,United States,International,Fixed-term,G3,Kenya,Finance & Admin,2023-06-25,,,,2026-07-17
+EMP-001885,1985-05-28,Female,Italy,International,Fixed-term,G6,Haiti,Research & Assessment,2023-06-25,2026-01-08,Resignation,Y,2025-07-22
+EMP-001888,1985-02-27,Female,Norway,International,Fixed-term,G5,Somalia,Human Resources,2023-07-03,,,,2026-08-29
+EMP-001892,1976-09-08,Male,France,International,Fixed-term,G3,Somalia,Research & Assessment,2023-07-06,,,,2026-07-16
+EMP-001893,1989-03-28,Female,Switzerland,International,Fixed-term,G4,Iraq,Research & Assessment,2023-07-07,2026-03-25,Resignation,Y,2024-07-15
+EMP-001900,,Male,Canada,International,Fixed-term,G4,Colombia,Research & Assessment,2023-07-17,2025-07-27,End of contract,N,2024-06-29
+EMP-001901,1992-02-27,Male,France,International,Fixed-term,G6,Ukraine,Security,2023-07-19,2026-08-18,Redundancy,N,2026-07-12
+EMP-001902,1986-08-10,Female,Jordan,International,Fixed-term,G6,Bangladesh,Programmes,2023-07-19,,,,2026-07-25
+EMP-001907,1993-10-23,Female,Haiti,International,Fixed-term,G5,Afghanistan,Logistics & Supply,2023-07-28,,,,2026-09-07
+EMP-001911,1977-01-01,Female,United Kingdom,HQ,Open-ended,G3,Switzerland,People & Culture,2023-07-30,,,,2026-09-27
+EMP-001912,1988-07-12,Male,Ireland,International,Fixed-term,G4,Somalia,Programmes,2023-07-30,2026-06-26,Redundancy,N,2025-09-24
+EMP-001919,1982-08-23,Male,Brazil,HQ,Fixed-term,G5,Switzerland,Finance & Legal,2023-08-04,,,,2026-08-08
+EMP-001922,1978-12-23,Male,Niger,International,Fixed-term,G4,Haiti,Programmes,2023-08-05,2026-02-13,End of project funding,N,2025-07-18
+EMP-001923,1997-06-29,Male,Sweden,International,Fixed-term,G4,Kenya,Research & Assessment,2023-08-06,,,,2026-08-23
+EMP-001926,1987-04-15,Female,United Kingdom,International,Fixed-term,G4,DR Congo,Programmes,2023-08-11,2025-02-13,End of contract,N,2024-08-03
+EMP-001943,1972-04-20,Female,India,International,Fixed-term,G3,Mali,Global Research Unit,2023-08-27,2026-01-28,Resignation,Y,2025-09-17
+EMP-001944,1977-08-12,Male,United Kingdom,HQ,Fixed-term,G5,Switzerland,Finance & Legal,2023-08-28,2025-12-26,End of contract,N,2025-09-20
+EMP-001976,1996-04-12,Male,France,International,Fixed-term,G3,Mali,Research & Assessment,2023-09-24,,,,2025-11-07
+EMP-001980,1983-10-08,Male,United Kingdom,International,Fixed-term,G4,Iraq,Research & Assessment,2023-10-03,,,,2026-10-08
+EMP-001981,1975-12-30,Female,Nigeria,International,Fixed-term,G3,Nigeria,Data & IT,2023-10-07,,,,2025-12-04
+EMP-001992,1980-09-17,Male,United Kingdom,International,Fixed-term,G3,Ukraine,Research & Assessment,2023-10-19,2026-01-15,End of project funding,N,2024-10-16
+EMP-001995,1975-05-11,Female,DR Congo,International,Fixed-term,G3,Afghanistan,Finance & Admin,2023-10-21,2026-05-05,End of project funding,N,
+EMP-002002,1979-05-05,Female,France,International,Fixed-term,G3,Bangladesh,Global Research Unit,2023-10-29,,,,2025-11-25
+EMP-002003,1982-03-03,Female,Niger,International,Fixed-term,G4,DR Congo,Logistics & Supply,2023-10-30,,,,2025-12-17
+EMP-002005,1980-09-22,Male,Uganda,International,Fixed-term,G4,Colombia,Data & IT,2023-11-01,2025-12-22,Personal reasons,Y,2025-10-25
+EMP-002010,1977-03-26,Female,Netherlands,HQ,Open-ended,G4,Switzerland,Global Research Unit,2023-11-07,2026-01-28,Resignation,Y,2025-10-27
+EMP-002014,1976-04-11,Female,Germany,International,Fixed-term,G4,Afghanistan,Global Support Unit,2023-11-12,2025-11-19,Personal reasons,Y,2024-06-18
+EMP-002023,1980-09-05,Female,Germany,International,Fixed-term,G5,DR Congo,Programmes,2023-11-25,,,,2025-12-26
+EMP-002025,1993-09-03,Male,Switzerland,International,Fixed-term,G4,Syria,Data & IT,2023-11-25,2025-12-20,Resignation,Y,2025-01-17
+EMP-002026,1977-10-05,Male,United Kingdom,International,Fixed-term,G3,Afghanistan,Finance & Admin,2023-11-26,2025-01-03,End of project funding,N,2024-11-21
+EMP-002031,1980-04-25,Female,Spain,International,Fixed-term,G4,Kenya,Programmes,2023-12-06,,,,2025-12-29
+EMP-002032,1992-11-23,Male,India,International,Fixed-term,G3,Syria,Data & IT,2023-12-08,,,,2025-12-07
+EMP-002041,1980-08-25,Female,United Kingdom,International,Fixed-term,G4,Syrian Arab Republic,Data & IT,2023-12-15,2026-06-20,End of project funding,N,2026-01-30
+EMP-002046,1992-01-27,Other,Iraq,International,Fixed-term,G4,Haiti,Global Support Unit,2023-12-19,,,,2026-02-13
+EMP-002051,1981-01-24,Male,United Kingdom,International,Fixed-term,G2,Somalia,Programmes,2023-12-20,2025-12-29,Retirement,Y,2025-01-22
+EMP-002060,1973-08-28,Female,United States,International,Fixed-term,G2,Nigeria,Programmes,2024-01-01,,,,2025-01-02
+EMP-002062,1973-06-15,Male,Netherlands,HQ,Open-ended,G1,Switzerland,Global Support Unit,2024-01-01,,,,2026-01-07
+EMP-002071,1975-08-26,Female,Jordan,International,Fixed-term,G4,Nigeria,Programmes,2024-01-10,,,,2025-12-27
+EMP-002072,1983-02-18,Male,South Sudan,International,Fixed-term,G5,Colombia,Logistics & Supply,2024-01-12,,,,2026-02-18
+EMP-002074,1975-04-01,Female,Norway,International,Fixed-term,G5,Ukraine,Programmes,2024-01-15,2026-02-01,Redundancy,N,2025-01-25
+EMP-002076,1998-01-22,Female,Netherlands,International,Fixed-term,G2,Somalia,Human Resources,2024-01-16,,,,2026-02-20
+EMP-002080,1984-02-09,Female,Canada,HQ,Fixed-term,G5,Switzerland,Communications,2024-01-18,,,,2026-02-04
+EMP-002091,1990-03-22,Male,Haiti,International,Fixed-term,G3,South Sudan,Programmes,2024-01-26,,,,2026-03-14
+EMP-002093,1983-05-05,Male,Italy,International,Fixed-term,G4,Ukraine,Programmes,2024-01-27,2025-10-28,Resignation,Y,2025-01-26
+EMP-002097,1984-11-03,Male,Belgium,International,Fixed-term,G5,Syria,Research & Assessment,2024-01-30,,,,2026-01-22
+EMP-002100,1985-05-07,Female,Sweden,HQ,Open-ended,G5,Switzerland,Global Research Unit,2024-02-01,,,,2026-03-25
+EMP-002102,1988-01-09,Female,Ethiopia,International,Fixed-term,G5,Ukraine,Finance & Admin,2024-02-03,,,,2026-03-05
+EMP-002106,1991-04-19,Male,Lebanon,International,Fixed-term,G5,Ukraine,Global Support Unit,2024-02-05,,,,2025-02-01
+EMP-002107,1983-11-07,Female,Ukraine,International,Fixed-term,G1,Kenya,Programmes,2024-02-05,2026-08-28,End of project funding,N,2026-03-19
+EMP-002108,1976-06-17,Female,Kenya,International,Fixed-term,G3,Ukraine,Global Research Unit,2024-02-06,,,,2026-01-29
+EMP-002114,1984-10-07,Male,Lebanon,International,Fixed-term,G4,Somalia,Research & Assessment,2024-02-08,,,,2026-01-28
+EMP-002116,1986-11-03,Male,Germany,International,Short-term,G3,Bangladesh,Programmes,2024-02-10,2025-12-30,End of project funding,N,2025-01-21
+EMP-002118,1988-08-08,Female,Italy,International,Fixed-term,G4,Haiti,Programmes,2024-02-11,2026-06-15,Resignation,Y,2025-03-14
+EMP-002119,1993-01-15,Male,France,International,Fixed-term,G6,South Sudan,Programmes,2024-02-12,,,,2026-03-10
+EMP-002122,1974-12-05,Female,Belgium,International,Fixed-term,G4,Kenya,Logistics & Supply,2024-02-13,,,,2026-02-09
+EMP-002123,1983-05-23,Male,Somalia,International,Fixed-term,G3,South-Sudan,Global Research Unit,2024-02-14,2025-10-17,Personal reasons,Y,2025-04-08
+EMP-002126,1982-12-28,Male,Spain,HQ,Fixed-term,G6,Switzerland,People & Culture,2024-02-16,,,,2026-03-04
+EMP-002135,1983-01-27,Male,Bangladesh,International,Fixed-term,G4,Afghanistan,Global Research Unit,2024-02-23,,,,2026-03-04
+EMP-002146,1975-03-02,Female,United Kingdom,International,Fixed-term,G6,Haiti,Logistics & Supply,2024-03-04,2026-08-29,End of contract,N,2026-05-01
+EMP-002148,1990-06-02,Male,Norway,International,Fixed-term,G4,Nigeria,Programmes,2024-03-10,2026-09-20,Redundancy,N,2026-03-16
+EMP-002149,,Female,United Kingdom,International,Fixed-term,G4,Nigeria,Finance & Admin,2024-03-12,,,,2025-02-28
+EMP-002151,1989-03-16,Male,South Sudan,International,Consultancy,G4,DR Congo,Programmes,2024-03-13,,,,2026-05-05
+EMP-002154,1977-12-02,Female,Kenya,International,Fixed-term,N3,Kenya,Finance & Admin,2024-03-16,,,,2026-03-16
+EMP-002155,1976-08-14,Female,France,HQ,Open-ended,G5,Switzerland,Global Support Unit,2024-03-17,2025-11-24,Personal reasons,Y,2025-03-22
+EMP-002157,1993-09-30,Male,Iraq,International,Fixed-term,G6,Ukraine,Programmes,2024-03-17,2026-09-24,Personal reasons,Y,2026-04-24
+EMP-002162,1976-11-17,Male,Kenya,International,Fixed-term,N4,Kenya,Data & IT,2024-03-20,,,,2026-03-08
+EMP-002166,1984-12-14,Female,Netherlands,International,Fixed-term,G6,Niger,Finance & Admin,2024-03-23,2025-07-21,Office closure,N,2025-05-14
+EMP-002168,1995-02-09,Male,Senegal,International,Fixed-term,G5,Syria,Research & Assessment,2024-03-26,2026-01-02,End of project funding,N,2025-04-15
+EMP-002169,1988-09-03,Male,Canada,International,Fixed-term,G6,Nigeria,Finance & Admin,2024-03-26,,,,2025-04-25
+EMP-002170,1982-11-16,Female,Uganda,International,Fixed-term,G3,Syria,Programmes,2024-03-26,,,,2026-04-29
+EMP-002172,1969-03-12,Female,Germany,International,Fixed-term,G3,Colombia,Programmes,2024-03-27,,,,2026-05-24
+EMP-002175,1984-07-29,Male,Senegal,International,Fixed-term,G3,Mali,Programmes,2024-03-29,,,,2026-05-21
+EMP-002179,1990-07-19,Male,India,International,Fixed-term,G3,S. Sudan,Finance & Admin,2024-04-02,,,,2026-04-12
+EMP-002180,1977-06-14,Male,Bangladesh,International,Fixed-term,G1,S. Sudan,Logistics & Supply,2024-04-04,,,,2026-04-23
+EMP-002181,1981-03-28,Female,United States,International,Fixed-term,G5,Syria,Logistics & Supply,2024-04-04,,,,2025-05-18
+EMP-002184,1987-03-03,Male,India,International,Fixed-term,G2,South Sudan,Logistics & Supply,2024-04-06,2025-04-15,End of contract,N,2024-10-28
+EMP-002202,1996-08-04,Female,Niger,International,Fixed-term,G4,DR Congo,Logistics & Supply,2024-04-18,,,,2026-04-18
+EMP-002205,1976-10-05,Female,Netherlands,International,Fixed-term,G3,Ukraine,Global Research Unit,2024-04-19,,,,2026-06-01
+EMP-002207,1979-12-12,Male,Somalia,International,Fixed-term,G4,Colombia,Finance & Admin,2024-04-20,,,,2026-05-25
+EMP-002210,1986-01-17,Female,Germany,International,Fixed-term,G4,Mali,Finance & Admin,2024-04-22,,,,2026-05-02
+EMP-002213,1975-07-10,Male,India,International,Fixed-term,G4,Ukraine,Global Research Unit,2024-04-24,2025-07-05,End of project funding,N,2025-05-26
+EMP-002221,1978-01-04,Male,Senegal,International,Fixed-term,G5,Nigeria,Research & Assessment,2024-05-03,2025-04-26,End of contract,N,2024-11-06
+EMP-002223,1997-09-28,Male,Australia,International,Fixed-term,G5,Ukraine,Finance & Admin,2024-05-07,2026-05-03,Personal reasons,Y,2026-04-27
+EMP-002231,1965-07-23,Male,Germany,International,Fixed-term,G3,Somalia,Security,2024-05-10,,,,2026-06-29
+EMP-002235,1987-07-22,Female,Ethiopia,International,Fixed-term,G6,Afghanistan,Programmes,2024-05-12,2025-04-17,End of contract,N,
+EMP-002239,1974-06-14,Female,Canada,International,Fixed-term,G4,Ukraine,Global Research Unit,2024-05-15,,,,2025-05-09
+EMP-002251,1998-11-20,Female,South Sudan,International,Fixed-term,G2,Somalia,Logistics & Supply,2024-05-21,,,,2026-06-02
+EMP-002259,1976-09-06,Male,United States,International,Fixed-term,G5,Ukraine,Programmes,2024-05-29,2025-10-21,End of contract,N,2025-05-13
+EMP-002261,1993-11-05,Female,Philippines,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2024-06-01,,,,2024-12-02
+EMP-002264,1978-03-20,Male,Senegal,International,Fixed-term,G4,South Sudan,Global Research Unit,2024-06-02,,,,2026-05-13
+EMP-002267,1997-08-04,Male,Australia,International,Fixed-term,G5,Iraq,Global Support Unit,2024-06-04,,,,2025-05-24
+EMP-002269,1982-09-08,Male,Kenya,National,Fixed-term,N3,Kenya,Finance & Admin,2024-06-06,2025-06-23,End of project funding,N,2024-12-06
+EMP-002272,1983-02-26,Female,Jordan,International,Fixed-term,G4,Ukraine,Logistics & Supply,2024-06-09,,,,2025-07-05
+EMP-002276,1978-07-14,Male,Bangladesh,International,Fixed-term,G3,Afghanistan,Research & Assessment,2024-06-11,,,,2025-06-10
+EMP-002283,1972-04-10,Male,Switzerland,HQ,Open-ended,G2,Switzerland,Finance & Legal,2024-06-18,,,,
+EMP-002284,1981-04-30,Male,Uganda,International,Fixed-term,G2,Nigeria,Global Support Unit,2024-06-18,,,,2026-06-29
+EMP-002285,1983-08-17,Male,,International,Fixed-term,G1,Somalia,Global Support Unit,2024-06-19,,,,2026-08-03
+EMP-002288,1981-06-10,Male,Germany,International,Fixed-term,G1,Syrian Arab Republic,Programmes,2024-06-22,,,,2026-06-06
+EMP-002291,1980-06-21,Male,Netherlands,International,Fixed-term,G2,Afghanistan,Security,2024-06-26,,,,2026-08-03
+EMP-002297,1987-04-15,Male,,International,Fixed-term,G5,Somalia,Programmes,2024-06-29,,,,2026-08-10
+EMP-002301,1986-10-14,Female,Afghanistan ,International,Fixed-term,G4,Somalia,Data & IT,2024-07-01,2026-04-03,End of project funding,N,2025-07-16
+EMP-002304,1999-03-08,Male,United Kingdom,International,Fixed-term,G3,Iraq,Research & Assessment,2024-07-04,,,,2026-08-24
+EMP-002307,1986-10-21,Female,Sweden,International,Fixed-term,G2,Ukraine,Programmes,2024-07-05,2026-07-20,Personal reasons,Y,2025-08-03
+EMP-002312,1992-03-16,Male,Senegal,International,Fixed-term,G4,Ukraine,Research & Assessment,2024-07-09,2026-06-26,Resignation,Y,2025-06-29
+EMP-002325,1987-08-17,Female,Canada,International,Fixed-term,G3,Bangladesh,Finance & Admin,2024-07-26,,,,2026-07-09
+EMP-002326,1980-09-16,Female,United Kingdom,International,Fixed-term,G4,Niger,Human Resources,2024-07-26,2025-03-17,Office closure,N,2025-01-29
+EMP-002330,1981-09-22,Male,United Kingdom,International,Fixed-term,G6,DR Congo,Research & Assessment,2024-07-28,,,,2026-09-19
+EMP-002337,1983-05-14,Male,Ireland,International,Fixed-term,G3,Ukraine,Logistics & Supply,2024-08-01,,,,2026-09-16
+EMP-002341,1982-07-12,Male,Iraq,International,Fixed-term,G4,Iraq,Programmes,2024-08-06,,,,2026-09-23
+EMP-002346,1993-04-06,Male,Uganda,International,Fixed-term,G3,DR Congo,Security,2024-08-10,2025-05-17,End of project funding,N,
+EMP-002348,1997-11-30,Female,Bangladesh,International,Fixed-term,G4,Afghanistan,Logistics & Supply,2024-08-13,2025-02-01,Personal reasons,Y,
+EMP-002349,1983-02-16,Female,Finland,International,Short-term,G5,Ukraine - Kyiv,Research & Assessment,2024-08-15,2026-08-25,Retirement,Y,2026-08-19
+EMP-002350,1972-04-07,Female,Niger,International,Fixed-term,G4,DR Congo,Global Research Unit,2024-08-16,2025-11-13,End of project funding,N,2025-03-09
+EMP-002358,1995-12-02,Male,France,International,Fixed-term,G3,Haiti,Finance & Admin,2024-08-30,2025-07-10,Resignation,Y,2025-03-12
+EMP-002360,1985-11-29,Female,Belgium,International,Fixed-term,G5,Syria,Programmes,2024-08-31,,,,2026-09-20
+EMP-002363,1987-05-31,Female,Lebanon,International,Fixed-term,G4,Iraq,Programmes,2024-09-01,2026-02-11,End of project funding,N,2025-10-11
+EMP-002364,1987-05-19,Female,Philippines,International,Fixed-term,G1,Ukraine,Data & IT,2024-09-01,,,,2026-09-16
+EMP-002365,1979-10-16,Male,Australia,International,Fixed-term,G4,South Sudan,Finance & Admin,2024-09-01,2025-10-16,End of contract,N,2025-04-02
+EMP-002372,1990-03-02,Female,United States,International,Fixed-term,G2,Ukraine,Programmes,2024-09-06,2026-06-23,End of project funding,N,2025-08-17
+EMP-002373,1975-09-18,Male,Germany,International,Fixed-term,G6,Ukraine,Finance & Admin,2024-09-06,,,,2026-09-22
+EMP-002375,1989-08-29,Female,Pakistan,International,Fixed-term,G3,Kenya,Global Support Unit,2024-09-07,,,,2026-09-15
+EMP-002382,1987-01-27,Female,Australia,International,Fixed-term,G5,Somalia,Research & Assessment,2024-09-11,2025-12-30,Personal reasons,Y,2025-10-07
+EMP-002389,1989-04-12,Female,Senegal,International,Short-term,G4,Somalia,Global Research Unit,2024-09-15,2025-01-13,Resignation,Y,
+EMP-002390,1992-09-28,Male,United Kingdom,International,Fixed-term,G5,Kenya,Global Support Unit,2024-09-18,,,,2025-04-20
+EMP-002408,1983-09-10,Female,Spain,HQ,Open-ended,G4,Switzerland,Global Research Unit,2024-10-01,2025-01-11,Redundancy,N,
+EMP-002409,1970-02-19,Male,Iraq,HQ,Fixed-term,G5,Switzerland,Global Research Unit,2024-10-01,2025-07-07,Resignation,Y,2025-05-08
+EMP-002410,2000-02-15,Male,Colombia,National,Consultancy,N5,Colombia,Security,2024-10-01,,,,2026-09-25
+EMP-002411,1989-10-24,Male,Ukraine,International,Fixed-term,G6,Kenya,Finance & Admin,2024-10-02,,,,2026-10-05
+EMP-002416,1997-07-16,Female,United Kingdom,International,Fixed-term,G1,Bangladesh,Programmes,2024-10-08,2026-03-17,End of project funding,N,2025-04-23
+EMP-002419,1982-06-08,Male,Netherlands,HQ,Open-ended,G2,Switzerland,Global Support Unit,2024-10-09,,,,2026-10-22
+EMP-002421,1976-08-23,Female,Canada,International,Fixed-term,G4,Haiti,Programmes,2024-10-11,,,,2026-09-26
+EMP-002423,1984-12-22,Male,United Kingdom,International,Fixed-term,G5,Nigeria,Security,2024-10-14,,,,2025-09-25
+EMP-002425,2002-10-16,Female,Germany,International,Fixed-term,G4,Ukraine,Global Support Unit,2024-10-15,,,,2026-09-28
+EMP-002426,1980-01-07,Female,Belgium,International,Fixed-term,G5,Mali,Logistics & Supply,2024-10-16,,,,2026-09-28
+EMP-002430,1984-11-06,Female,Spain,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2024-10-24,,,,2025-10-12
+EMP-002431,1991-08-24,Male,Switzerland,International,Fixed-term,G3,Colombia,Logistics & Supply,2024-10-24,,,,2025-11-23
+EMP-002435,1984-11-17,Male,Sweden,International,Fixed-term,G4,Somalia,Data & IT,2024-10-26,,,,2025-10-13
+EMP-002443,1982-05-18,Male,Italy,HQ,Fixed-term,G5,Geneva HQ,People & Culture,2024-10-31,,,,2025-11-01
+EMP-002444,1983-03-14,Female,France,International,Fixed-term,G5,Ukraine,Global Research Unit,2024-11-02,,,,2025-11-01
+EMP-002446,1997-02-12,Male,Netherlands,International,Fixed-term,G5,Ukraine,Programmes,2024-11-02,,,,2025-12-25
+EMP-002451,2002-11-06,Male,Denmark,International,Fixed-term,G3,Somalia,Research & Assessment,2024-11-05,,,,2025-10-23
+EMP-002452,1979-12-31,Female,Italy,HQ,Fixed-term,G4,Switzerland,Global Support Unit,2024-11-07,,,,2025-06-03
+EMP-002464,1991-02-12,Male,Canada,International,Fixed-term,G3,Nigeria,Global Research Unit,2024-11-20,2025-10-21,End of project funding,N,
+EMP-002465,1973-02-28,Female,Haiti,International,Fixed-term,G2,Ukraine,Security,2024-11-21,,,,2025-11-18
+EMP-002467,1985-10-29,Male,Switzerland,International,Fixed-term,G4,Iraq,Programmes,2024-11-22,,,,2025-11-06
+EMP-002470,1980-08-18,Female,Kenya,National,Fixed-term,N2,Kenya,Programmes,2024-11-26,,,,
+EMP-002471,1990-03-25,Male,Colombia,National,Fixed-term,N3,Colombia,Programmes,2024-11-27,2025-06-16,End of project funding,N,
+EMP-002478,1962-12-04,Male,Philippines,International,Consultancy,G6,Syria,Finance & Admin,2024-12-03,,,,2026-01-07
+EMP-002481,1991-09-06,Female,Colombia,National,Fixed-term,N1,Colombia,Human Resources,2024-12-06,,,,2025-12-01
+EMP-002490,1990-09-15,Male,Jordan,International,Fixed-term,G2,DR Congo,Research & Assessment,2024-12-14,,,,2026-02-02
+EMP-002494,1977-01-05,Male,Belgium,International,Consultancy,G4,Somalia,Research & Assessment,2024-12-15,,,,2026-01-18
+EMP-002495,1970-08-02,Female,Canada,International,Fixed-term,G2,Iraq,Finance & Admin,2024-12-16,,,,2025-12-20
+EMP-002501,1981-03-15,Male,Kenya,National,Fixed-term,N2,Kenya,Security,2024-12-21,,,,
+EMP-002502,1990-06-21,Male,Germany,International,Fixed-term,G4,South Sudan,Global Support Unit,2024-12-22,,,,2026-02-08
+EMP-002505,1986-06-23,Male,Japan,International,Fixed-term,G3,Haiti,Global Research Unit,2024-12-25,,,,2025-12-12
+EMP-002512,,Male,Brazil,International,Fixed-term,G4,South Sudan,Global Research Unit,2024-12-29,2026-08-10,Resignation,Y,2026-01-20
+EMP-002515,1965-03-26,Male,Belgium,International,Fixed-term,G5,Afghanistan,Human Resources,2025-01-01,,,,2025-12-24
+EMP-002523,1977-05-22,Female,South Sudan,International,Fixed-term,G6,Ukraine,Research & Assessment,2025-01-09,,,,2025-07-28
+EMP-002530,,Female,Geneva HQ,HQ,Open-ended,G5,CH,People & Culture,2025-01-12,,,,2025-07-27
+EMP-002543,1985-10-18,Male,India,International,Fixed-term,G5,Afghanistan,Programmes,2025-01-21,,,,2026-03-05
+EMP-002545,1985-01-18,Male,India,International,Fixed-term,G2,South Sudan,Global Support Unit,2025-01-22,2026-07-27,Resignation,Y,2026-01-18
+EMP-002547,1985-09-08,Female,Lebanon,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2025-01-24,,,,2026-03-21
+EMP-002548,1981-12-19,Male,Norway,International,Fixed-term,G6,Somalia,Programmes,2025-01-24,,,,2026-01-21
+EMP-002549,1994-02-14,Male,Belgium,International,Fixed-term,G1,DR Congo,Research & Assessment,2025-01-25,,,,2026-01-12
+EMP-002551,1975-11-09,Male,France,International,Fixed-term,G2,Kenya,Research & Assessment,2025-01-27,,,,2026-01-24
+EMP-002552,1999-07-26,Female,India,International,Fixed-term,G2,Afghanistan,Finance & Admin,2025-01-27,2026-02-12,End of project funding,N,2026-02-04
+EMP-002554,1991-09-16,Male,United States,International,Fixed-term,G5,Ukraine,Human Resources,2025-01-30,,,,2026-03-19
+EMP-002559,1970-11-13,Female,France,International,Fixed-term,G6,Afghanistan,Research & Assessment,2025-02-02,,,,2026-01-24
+EMP-002565,1976-12-26,Female,Uganda,International,Fixed-term,G6,Somalia,Human Resources,2025-02-05,,,,2026-03-17
+EMP-002568,1998-02-26,Female,Uganda,International,Fixed-term,G6,Mali,Logistics & Supply,2025-02-08,,,,2026-02-09
+EMP-002569,1999-08-09,Male,United Kingdom,International,Fixed-term,G2,Mali,Research & Assessment,2025-02-08,,,,2026-03-30
+EMP-002571,1977-05-16,Male,France,International,Fixed-term,G2,DR Congo,Programmes,2025-02-09,2026-07-01,Resignation,Y,2026-02-13
+EMP-002574,1987-11-13,Male,Australia,HQ,Open-ended,G5,Switzerland,Global Support Unit,2025-02-11,,,,2026-02-08
+EMP-002583,1982-04-16,Male,Uganda,International,Fixed-term,G3,Kenya,Finance & Admin,2025-02-21,2026-10-16,End of project funding,N,2026-04-02
+EMP-002584,1981-11-19,Female,Ukraine,International,Fixed-term,G5,Kenya,Human Resources,2025-02-22,2025-09-10,Redundancy,N,2025-08-27
+EMP-002586,1997-09-12,Male,Sweden,International,Fixed-term,G3,Nigeria,Logistics & Supply,2025-02-24,,,,2026-03-07
+EMP-002588,2002-07-16,Male,Brazil,International,Fixed-term,G4,South Sudan,Finance & Admin,2025-03-03,2026-05-13,End of contract,N,2026-03-31
+EMP-002600,1983-03-28,Male,France,HQ,Fixed-term,G6,Switzerland,Global Support Unit,2025-03-18,,,,2026-03-18
+EMP-002602,1987-10-18,Female,Pakistan,International,Fixed-term,G2,Afghanistan,Human Resources,2025-03-19,,,,2026-04-01
+EMP-002609,1992-08-22,Female,Spain,International,Fixed-term,G5,Iraq,Research & Assessment,2025-03-30,,,,2025-09-29
+EMP-002610,1983-05-16,Male,Pakistan,International,Fixed-term,G6,DR Congo,Programmes,2025-03-30,2025-09-24,Personal reasons,Y,
+EMP-002612,1975-01-09,Female,Canada,International,Fixed-term,G1,Somalia,Logistics & Supply,2025-03-31,,,,2026-05-14
+EMP-002615,1991-08-07,Male,Brazil,International,Fixed-term,G5,Bangladesh,Research & Assessment,2025-04-02,,,,2026-05-31
+EMP-002616,1996-05-04,Male,United States,International,Fixed-term,G4,Kenya,Logistics & Supply,2025-04-06,,,,2026-04-01
+EMP-002619,1989-06-23,Male,Kenya,International,Fixed-term,G4,Haiti,Global Research Unit,2025-04-08,2026-07-12,Redundancy,N,2026-05-08
+EMP-002620,1965-05-11,Male,Spain,International,Fixed-term,G3,Ukraine,Logistics & Supply,2025-04-09,,,,2026-04-01
+EMP-002621,1991-04-08,Male,United Kingdom,International,Fixed-term,G4,Afghanistan,Finance & Admin,2025-04-09,,,,2026-03-21
+EMP-002626,1984-01-04,Male,Lebanon,HQ,Fixed-term,G2,Switzerland,Communications,2025-04-12,2026-01-03,End of project funding,N,2025-11-01
+EMP-002631,1990-08-23,Male,Denmark,International,Fixed-term,G5,South Sudan,Finance & Admin,2025-04-17,2026-04-21,End of contract,N,2025-11-23
+EMP-002635,1989-08-15,Male,Democratic Republic of the Congo,International,Fixed-term,G6,South Sudan,Global Research Unit,2025-04-23,2026-06-10,Resignation,Y,2025-11-26
+EMP-002637,1988-08-19,Male,Italy,International,Fixed-term,G3,Nigeria,Programmes,2025-04-24,,,,2026-06-03
+EMP-002638,1985-11-25,Female,Australia,International,Fixed-term,G6,Somalia,Research & Assessment,2025-04-25,,,,2026-06-23
+EMP-002639,1982-03-25,Male,Ukraine,International,Fixed-term,G6,Nigeria,Research & Assessment,2025-04-26,,,,2026-06-02
+EMP-002640,1974-08-13,Female,Sweden,International,Fixed-term,G4,Afghanistan,Programmes,2025-04-28,2025-12-16,Redundancy,N,2025-11-20
+EMP-002642,,Male,Netherlands,HQ,Short-term,G6,Switzerland,Global Support Unit,2025-05-01,,,,2026-04-29
+EMP-002647,1997-03-12,Female,Somalia,International,Fixed-term,G3,DR Congo,Programmes,2025-05-06,2026-05-26,End of project funding,N,2025-11-16
+EMP-002648,1990-07-20,Male,United Kingdom,HQ,Open-ended,G6,Switzerland,Global Support Unit,2025-05-08,2025-12-19,Personal reasons,Y,2025-12-13
+EMP-002649,1972-10-04,Female,Italy,International,Fixed-term,G3,Bangladesh,Research & Assessment,2025-05-09,,,,2026-06-14
+EMP-002653,1976-10-06,Male,Netherlands,HQ,Fixed-term,G4,Switzerland,Executive Office,2025-05-14,,,,2026-05-04
+EMP-002656,1984-03-22,Male,Spain,HQ,Fixed-term,G6,Switzerland,Global Research Unit,2025-05-18,2026-02-04,Redundancy,N,
+EMP-002659,,Male,Norway,International,Fixed-term,G4,Iraq,Logistics & Supply,2025-05-23,,,,2026-06-06
+EMP-002666,1988-07-25,Female,Senegal,International,Fixed-term,G4,South Sudan,Finance & Admin,2025-06-04,2026-06-14,End of project funding,N,2026-06-09
+EMP-002667,2001-06-28,Male,Colombia,National,Fixed-term,N1,Colombia,Finance & Admin,2025-06-04,2025-10-13,End of contract,N,
+EMP-002668,1990-12-23,Female,France,International,Fixed-term,G3,Ukraine,Security,2025-06-05,,,,2026-06-29
+EMP-002673,2003-06-08,Male,Germany,International,Fixed-term,G3,DR Congo,Programmes,2025-06-07,,,,2026-07-28
+EMP-002675,2000-11-07,Male,Uganda,International,Fixed-term,G3,Iraq,Data & IT,2025-06-08,,,,2026-06-22
+EMP-002677,1985-01-08,Female,France,International,Fixed-term,G4,Ukraine,Data & IT,2025-06-09,,,,2026-07-20
+EMP-002679,1994-04-29,Female,Ethiopia,International,Fixed-term,G3,Afghanistan,Research & Assessment,2025-06-11,,,,2026-07-24
+EMP-002682,1997-02-07,Male,Colombia,National,Fixed-term,N5,Colombia,Finance & Admin,2025-06-13,,,,2026-07-22
+EMP-002684,1979-07-07,Female,Afghanistan,International,Fixed-term,G3,Afghanistan,Research & Assessment,2025-06-16,,,,2026-07-28
+EMP-002687,1985-10-13,Male,Norway,International,Fixed-term,G4,Mali,Finance & Admin,2025-06-18,,,,2026-08-06
+EMP-002704,1993-10-24,Female,Senegal,International,Fixed-term,G2,Ukraine,Global Research Unit,2025-07-01,,,,2026-08-29
+EMP-002705,1978-07-05,Male,Canada,HQ,Fixed-term,G4,Switzerland,People & Culture,2025-07-01,,,,2026-08-16
+EMP-002706,1990-09-03,Male,Canada,International,Fixed-term,G5,Haiti,Programmes,2025-07-02,,,,2026-08-28
+EMP-002708,1988-05-01,Male,Uganda,International,Fixed-term,G1,Ukraine,Programmes,2025-07-03,2026-04-27,End of contract,N,2026-01-06
+EMP-002709,2003-07-07,Female,Belgium,HQ,Fixed-term,G5,Switzerland,Global Research Unit,2025-07-06,,,,2026-08-23
+EMP-002725,1988-09-06,Male,Spain,HQ,Fixed-term,G6,Switzerland,People & Culture,2025-07-22,,,,2026-08-30
+EMP-002727,1994-12-27,Male,Germany,International,Fixed-term,G4,"Congo, Dem. Rep.",Logistics & Supply,2025-07-22,,,,2026-02-25
+EMP-002730,1991-05-03,Male,France,International,Consultancy,G3,Syria,Logistics & Supply,2025-07-25,,,,2026-01-26
+EMP-002731,1995-10-20,Male,Brazil,International,Fixed-term,G5,Colombia,Programmes,2025-07-26,,,,2026-07-26
+EMP-002733,1997-06-19,Female,Ethiopia,International,Fixed-term,G5,Bangladesh,Data & IT,2025-07-29,,,,2026-09-15
+EMP-002736,1974-07-06,Female,France,International,Fixed-term,G5,Colombia,Finance & Admin,2025-07-31,,,,2026-08-30
+EMP-002742,1985-11-23,Female,Netherlands,International,Fixed-term,G4,Kenya,Global Support Unit,2025-08-09,,,,2026-08-05
+EMP-002745,1980-09-12,Female,Belgium,International,Fixed-term,G2,Syria,Logistics & Supply,2025-08-13,2025-10-28,Resignation,Y,
+EMP-002751,1984-10-18,Female,France,International,Fixed-term,G6,Nigeria,Programmes,2025-08-29,2026-01-05,End of project funding,N,
+EMP-002752,2002-10-27,Male,Mali,International,Short-term,G5,Kenya,Logistics & Supply,2025-08-31,,,,2026-08-29
+EMP-002753,1991-05-29,Male,Nigeria,International,Fixed-term,G3,DR Congo,Programmes,2025-09-02,,,,2026-10-20
+EMP-002761,1974-04-20,Male,United Kingdom,International,Fixed-term,G5,Ukraine,Data & IT,2025-09-11,,,,2026-09-01
+EMP-002764,2003-09-14,Male,Italy,International,Fixed-term,G3,Bangladesh,Programmes,2025-09-13,,,,
+EMP-002771,1985-04-20,Female,Philippines,International,Fixed-term,G4,South Sudan,Research & Assessment,2025-09-23,,,,2026-10-11
+EMP-002775,1996-03-05,Male,Germany,International,Fixed-term,G5,South Sudan,Global Support Unit,2025-09-27,,,,2026-10-15
+EMP-002777,2001-07-12,Male,Philippines,HQ,Consultancy,G5,Switzerland,Global Support Unit,2025-09-30,,,,
+EMP-002778,,Male,Sweden,International,Fixed-term,G2,Kenya,Programmes,2025-10-01,,,,2026-04-13
+EMP-002782,1989-11-10,Male,Afghanistan,International,Fixed-term,G4,Syria,Research & Assessment,2025-10-05,,,,2026-05-08
+EMP-002783,1991-05-18,Male,Jordan,International,Fixed-term,G4,Syria,Research & Assessment,2025-10-05,2026-08-22,End of project funding,N,2026-04-11
+EMP-002784,1992-12-15,Male,Germany,International,Fixed-term,G4,South Sudan,Programmes,2025-10-05,,,,2026-05-14
+EMP-002785,1978-05-23,Male,United Kingdom,International,Fixed-term,G3,Ukraine,Programmes,2025-10-05,,,,2026-10-07
+EMP-002787,1992-08-05,Male,United States,International,Consultancy,G4,Mali,Global Support Unit,2025-10-07,,,,2026-09-30
+EMP-002788,1977-10-06,Male,Geneva HQ,International,Fixed-term,G4,Syria,Finance & Admin,2025-10-07,,,,2026-10-20
+EMP-002790,2003-03-27,Female,United Kingdom,International,Fixed-term,G3,Bangladesh,Programmes,2025-10-08,,,,2026-05-17
+EMP-002793,2002-11-08,Female,India,International,Fixed-term,G4,Nigeria,Programmes,2025-10-08,2026-04-08,End of contract,N,
+EMP-002794,1979-01-21,Female,Uganda,International,Fixed-term,G3,Ukraine,Security,2025-10-09,,,,2026-10-09
+EMP-002798,1982-04-20,Female,Lebanon,International,Fixed-term,G6,Syria,Global Support Unit,2025-10-11,,,,2026-05-20
+EMP-002800,1994-03-03,Male,United States,International,Fixed-term,G2,DR Congo,Human Resources,2025-10-12,,,,2026-10-30
+EMP-002803,1975-10-05,Male,Senegal,International,Fixed-term,G5,Ukraine,Global Support Unit,2025-10-15,,,,2026-05-01
+EMP-002809,1995-01-14,Male,Uganda,International,Fixed-term,G4,Bangladesh,Security,2025-10-22,,,,2026-05-18
+EMP-002811,,Male,Germany,International,Fixed-term,G6,South Sudan,Programmes,2025-10-25,,,,2026-05-08
+EMP-002825,1993-02-12,Female,Belgium,International,Fixed-term,G3,Afghanistan,Global Support Unit,2025-11-12,,,,2026-06-12
+EMP-002826,1968-05-07,Female,Haiti,International,Fixed-term,G3,Afghanistan ,Global Support Unit,2025-11-14,,,,2026-06-18
+EMP-002829,1983-03-20,Male,Afghanistan ,International,Fixed-term,G3,Ukraine,Data & IT,2025-11-16,,,,2026-05-19
+EMP-002830,1985-01-04,Female,Switzerland,International,Fixed-term,G6,Iraq,Finance & Admin,2025-11-16,,,,2026-05-28
+EMP-002832,1988-05-29,Female,Philippines,International,Fixed-term,G4,Nigeria,Global Research Unit,2025-11-20,,,,2026-06-23
+EMP-002834,1969-08-20,Female,Italy,International,Fixed-term,G3,Nigeria,Programmes,2025-11-28,,,,2026-06-21
+EMP-002836,1990-02-10,Male,Germany,HQ,Fixed-term,G3,Switzerland,Global Support Unit,2025-12-01,,,,2026-06-12
+EMP-002838,1977-06-07,Male,France,International,Fixed-term,G3,DR Congo,Global Research Unit,2025-12-01,2026-02-21,End of project funding,N,
+EMP-002843,2000-01-05,Male,Netherlands,International,Fixed-term,G5,South Sudan,Research & Assessment,2025-12-04,,,,2026-06-05
+EMP-002853,1987-03-04,Female,DR Congo,International,Fixed-term,G3,Syria,Data & IT,2025-12-12,,,,
+EMP-002855,1986-07-03,Male,Brazil,International,Short-term,G2,Colombia,Logistics & Supply,2025-12-14,2026-08-15,Personal reasons,Y,2026-06-26
+EMP-002860,1987-03-23,Female,Canada,HQ,Fixed-term,G4,Switzerland,Global Research Unit,2025-12-16,,,,2026-07-09
+EMP-002861,1972-05-12,Female,Canada,International,Fixed-term,G3,Somalia,Programmes,2025-12-17,,,,
+EMP-002862,1988-09-16,Male,United Kingdom,HQ,Open-ended,G3,Geneva HQ,Global Support Unit,2025-12-18,,,,2026-07-10
+EMP-002863,1973-07-08,Female,Ethiopia,HQ,Consultancy,G5,Switzerland,Global Research Unit,2025-12-18,,,,2026-06-28
+EMP-002864,1966-05-04,Male,Kenya,National,Fixed-term,N3,Kenya,Programmes,2025-12-18,,,,2026-07-27
+EMP-002867,1989-10-29,Female,Germany,HQ,Fixed-term,G4,Switzerland,Finance & Legal,2025-12-19,,,,2026-07-05
+EMP-002868,1984-01-08,Male,Switzerland,International,Fixed-term,G1,Syria,Global Support Unit,2025-12-21,,,,2026-07-11
+EMP-002870,,Male,Germany,International,Fixed-term,G5,Mali,Research & Assessment,2025-12-22,,,,2026-07-26
+EMP-002871,1984-11-27,Female,Philippines,HQ,Fixed-term,G1,Switzerland,Global Research Unit,2025-12-24,,,,
+EMP-002876,1991-03-09,Male,Canada,HQ,Open-ended,G4,Switzerland,Finance & Legal,2025-12-29,,,,
+EMP-002877,1995-06-17,Female,United States,International,Fixed-term,G3,Bangladesh,Security,2025-12-30,,,,2026-07-07
+EMP-002878,1999-05-17,Female,Norway,International,Fixed-term,G2,Haiti,Research & Assessment,2025-12-30,,,,2026-07-11
+EMP-002879,1992-01-25,Male,Jordan,International,Fixed-term,G6,Somalia,Global Support Unit,2025-12-31,,,,2026-07-14
+EMP-002884,1991-05-22,Male,Kenya,National,Fixed-term,N2,Kenya,Logistics & Supply,2026-01-03,2026-05-07,End of project funding,N,
+EMP-002885,1988-07-27,Male,South Sudan,International,Consultancy,G2,Ukraine,Programmes,2026-01-05,,,,
+EMP-002889,1992-08-13,Male,DR Congo,International,Fixed-term,G2,Bangladesh,Data & IT,2026-01-08,,,,2026-07-26
+EMP-002890,1975-09-06,Female,Australia,International,Fixed-term,G3,Haiti,Programmes,2026-01-08,,,,2026-08-07
+EMP-002892,1973-09-22,Female,United Kingdom,International,Fixed-term,G6,Iraq,Global Research Unit,2026-01-11,,,,
+EMP-002894,1986-03-09,Female,Bangladesh,International,Fixed-term,G4,South Sudan,Programmes,2026-01-14,,,,2026-08-18
+EMP-002895,1989-12-11,Female,Uganda,International,Fixed-term,G4,South Sudan,Programmes,2026-01-14,,,,
+EMP-002899,1986-11-02,Male,United Kingdom,International,Fixed-term,G3,Nigeria,Logistics & Supply,2026-01-17,,,,2026-07-21
+EMP-002901,1972-09-12,Male,Netherlands,International,Fixed-term,G5,Iraq,Finance & Admin,2026-01-18,,,,2026-08-10
+EMP-002911,1997-09-11,Female,Lebanon,International,Fixed-term,G4,Ukraine,Research & Assessment,2026-01-28,,,,2026-08-13
+EMP-002913,1994-03-10,Female,France,International,Fixed-term,G4,Kenya,Human Resources,2026-01-28,2026-09-27,Resignation,Y,2026-08-06
+EMP-002914,2003-04-12,Male,Germany,International,Fixed-term,G5,Nigeria,Global Research Unit,2026-01-29,,,,
+EMP-002918,1990-07-13,Male,Senegal,International,Short-term,G2,DR Congo,Research & Assessment,2026-02-01,,,,2026-08-16
+EMP-002920,1997-03-06,Male,Somalia,International,Fixed-term,G5,Haiti,Programmes,2026-02-03,,,,2026-08-04
+EMP-002923,1989-11-02,Female,Philippines,International,Fixed-term,G2,Somalia,Programmes,2026-02-05,,,,2026-09-03
+EMP-002924,1986-10-21,Female,Italy,HQ,Fixed-term,G3,Switzerland,Global Support Unit,2026-02-06,2026-06-26,End of contract,N,
+EMP-002926,1985-12-05,Female,France,HQ,Open-ended,G4,Switzerland,Finance & Legal,2026-02-07,,,,2026-08-19
+EMP-002927,1986-12-11,Male,Brazil,International,Fixed-term,G4,Iraq,Programmes,2026-02-07,,,,2026-08-12
+EMP-002934,1994-08-23,Male,Sweden,International,Fixed-term,G4,Haiti,Research & Assessment,2026-02-14,,,,2026-09-23
+EMP-002935,1991-10-04,Female,Switzerland,HQ,Fixed-term,G4,Switzerland,Communications,2026-02-15,,,,
+EMP-002936,1977-11-26,Female,Somalia,International,Short-term,G3,Ukraine,Finance & Admin,2026-02-15,,,,2026-09-01
+EMP-002940,1975-08-29,Male,Switzerland,International,Fixed-term,G3,Mali,Programmes,2026-02-25,,,,2026-09-22
+EMP-002945,1988-09-23,Female,Canada,International,Fixed-term,G4,Mali,Global Support Unit,2026-02-28,,,,2026-10-06
+EMP-002946,1987-12-26,Other,Philippines,International,Consultancy,G6,South Sudan,Programmes,2026-02-28,,,,2026-09-09
+EMP-002947,1993-06-20,Male,Finland,International,Consultancy,G3,Afghanistan,Research & Assessment,2026-02-28,,,,2026-10-05
+EMP-002948,1984-09-17,Male,India,International,Fixed-term,G3,Bangladesh,Security,2026-03-04,,,,2026-10-10
+EMP-002952,1982-04-02,Female,Netherlands,HQ,Fixed-term,G4,Switzerland,Global Research Unit,2026-03-06,,,,2026-09-23
+EMP-002954,1988-08-22,Female,Colombia,HQ,Fixed-term,G4,Switzerland,People & Culture,2026-03-08,,,,2026-09-20
+EMP-002958,1994-02-21,Female,Philippines,International,Fixed-term,G5,Syria,Global Support Unit,2026-03-10,,,,2026-09-27
+EMP-002959,1996-04-20,Female,France,International,Fixed-term,G5,Bangladesh,Global Research Unit,2026-03-12,,,,2026-09-16
+EMP-002960,1980-10-23,Male,Ethiopia,International,Fixed-term,G3,Ukraine,Global Research Unit,2026-03-12,,,,2026-09-25
+EMP-002961,1997-01-21,Female,Colombia,International,Short-term,G3,Nigeria,Finance & Admin,2026-03-12,,,,2026-10-13
+EMP-002962,1997-02-13,Female,Australia,International,Fixed-term,G4,Ukraine,Logistics & Supply,2026-03-15,,,,2026-10-19
+EMP-002965,1984-03-26,Female,Jordan,International,Fixed-term,G6,Iraq,Research & Assessment,2026-03-19,,,,2026-09-20
+EMP-002973,1977-03-18,Male,Iraq,International,Fixed-term,G6,DR Congo,Logistics & Supply,2026-03-26,,,,2026-10-03
+EMP-002975,1989-11-16,Male,Switzerland,HQ,Fixed-term,G3,Switzerland,Global Research Unit,2026-03-27,,,,2026-10-08
+EMP-002976,1988-06-06,Male,Kenya,National,Fixed-term,N3,Kenya,Human Resources,2026-03-29,,,,
+EMP-002978,1980-05-15,Male,Denmark,International,Fixed-term,G5,Somalia,Research & Assessment,2026-04-01,,,,2026-10-25
+EMP-002979,1994-11-23,Male,Kenya,National,Fixed-term,N3,Kenya,Logistics & Supply,2026-04-01,2026-07-04,Resignation,Y,
+EMP-002991,1987-11-02,Female,Canada,International,Fixed-term,G3,Bangladesh,Programmes,2026-04-12,,,,2026-10-14
+EMP-002993,1975-04-25,Male,Lebanon,International,Fixed-term,G3,Ukraine,Programmes,2026-04-13,,,,
+EMP-002995,1987-07-28,Male,Belgium,International,Fixed-term,G3,Ukraine,Research & Assessment,2026-04-14,,,,2026-10-17
+EMP-002997,1992-03-28,Male,Ireland,International,Fixed-term,G4,Kenya,Programmes,2026-04-15,,,,
+EMP-002999,1986-06-21,Male,Germany,International,Fixed-term,G2,Nigeria,Programmes,2026-04-17,,,,
+EMP-003007,1989-06-24,Male,India,International,Consultancy,G4,South Sudan,Programmes,2026-04-29,,,,
+EMP-003015,1986-05-21,Female,Switzerland,International,Fixed-term,G4,Somalia,Finance & Admin,2026-05-07,,,,
+EMP-003018,1993-10-09,Male,Brazil,International,Fixed-term,G2,Ukraine,Logistics & Supply,2026-05-10,,,,
+EMP-003024,1977-06-19,Male,Nigeria,International,Fixed-term,G5,South Sudan,Research & Assessment,2026-05-14,2026-07-30,Resignation,Y,
+EMP-003030,1992-12-10,Male,Jordan,International,Short-term,G2,Ukraine,Research & Assessment,2026-05-19,,,,
+EMP-003031,1994-09-15,Female,,International,Consultancy,G4,South Sudan,Programmes,2026-05-21,,,,
+EMP-003032,1988-12-15,Female,Ethiopia,International,Fixed-term,G3,Colombia,Finance & Admin,2026-05-22,,,,
+EMP-003034,1998-01-23,Female,Norway,International,Fixed-term,G3,Mali,Data & IT,2026-05-24,,,,
+EMP-003040,1995-05-05,Male,Ireland,International,Fixed-term,G4,Afghanistan,Programmes,2026-05-27,,,,
+EMP-003045,1988-02-06,Male,Senegal,International,Fixed-term,G4,DR Congo,Programmes,2026-05-31,,,,
+EMP-003052,1975-04-01,Female,Belgium,International,Fixed-term,G5,Haiti,Logistics & Supply,2026-06-04,,,,
+EMP-003053,1984-05-15,Male,India,International,Fixed-term,G3,South Sudan,Programmes,2026-06-05,,,,
+EMP-003056,1993-10-12,Female,South Sudan,International,Fixed-term,G4,Ukraine,Data & IT,2026-06-06,,,,
+EMP-003057,1970-11-02,Male,Japan,HQ,Fixed-term,G4,Switzerland,Global Research Unit,2026-06-07,,,,
+EMP-003060,2000-06-19,Male,Lebanon,International,Fixed-term,G1,Mali,Logistics & Supply,2026-06-10,2026-09-21,Resignation,Y,
+EMP-003061,1997-12-04,Female,India,International,Fixed-term,G6,Somalia,Research & Assessment,2026-06-12,,,,
+EMP-003063,2000-12-07,Male,Kenya,National,Fixed-term,N3,Kenya,Programmes,2026-06-13,,,,
+EMP-003067,,Male,Belgium,International,Fixed-term,G3,Haiti,Programmes,2026-06-22,,,,
+EMP-003068,1985-05-17,Female,Kenya,National,Short-term,N4,Kenya,Research & Assessment,2026-06-23,,,,
+EMP-003071,1979-06-21,Female,Uganda,International,Fixed-term,G4,Somalia,Programmes,2026-06-24,,,,
+EMP-003075,1984-01-17,Male,Australia,HQ,Fixed-term,G4,Switzerland,People & Culture,2026-06-25,,,,
+EMP-003076,1982-12-29,Female,Kenya,National,Fixed-term,N3,Kenya,Research & Assessment,2026-06-27,,,,
+EMP-003078,1989-01-14,Male,Pakistan,International,Fixed-term,G3,Nigeria,Security,2026-06-27,,,,
+EMP-003080,1994-11-22,Male,Kenya,National,Fixed-term,N4,Kenya,Research & Assessment,2026-06-29,,,,
+EMP-003081,1996-09-01,Female,Mali,International,Fixed-term,G5,Syria,Finance & Admin,2026-06-30,,,,
+EMP-003083,2002-05-24,Male,Uganda,International,Fixed-term,G4,Syria,Global Research Unit,2026-07-05,,,,
+EMP-003085,1994-07-09,Male,United Kingdom,International,Consultancy,G6,Kenya,Human Resources,2026-07-07,,,,
+EMP-003087,1988-09-04,Male,Ukraine,HQ,Fixed-term,G4,Switzerland,Global Research Unit,2026-07-08,,,,
+EMP-003089,1993-02-03,Female,Ireland,International,Fixed-term,G6,South Sudan,Data & IT,2026-07-09,,,,
+EMP-003091,1986-06-16,Male,Finland,International,Fixed-term,G3,DR Congo,Programmes,2026-07-11,,,,
+EMP-003093,1994-09-09,Female,Kenya,National,Fixed-term,N4,Kenya,Programmes,2026-07-12,,,,
+EMP-003094,1998-11-26,Male,Ethiopia,International,Consultancy,G5,Colombia,Security,2026-07-14,,,,
+EMP-003105,1980-07-31,Male,Brazil,HQ,Fixed-term,G4,Switzerland,Global Support Unit,2026-07-20,,,,
+EMP-003107,1978-01-25,Male,Somalia,International,Fixed-term,G1,South Sudan,Research & Assessment,2026-07-21,,,,
+EMP-003108,1983-09-24,Female,Netherlands,International,Fixed-term,G3,Ukraine,Security,2026-07-22,,,,
+EMP-003109,1996-01-23,Female,Brazil,International,Fixed-term,G4,South Sudan,Research & Assessment,2026-07-23,,,,
+EMP-003111,1988-11-22,Male,United States,International,Consultancy,G1,Bangladesh,Programmes,2026-07-27,,,,
+EMP-003115,1993-08-23,Female,Spain,International,Fixed-term,G6,Nigeria,Human Resources,2026-08-02,,,,
+EMP-003116,1994-09-21,Male,Philippines,International,Fixed-term,G4,Somalia,Programmes,2026-08-03,,,,
+EMP-003120,1983-11-23,Female,Senegal,International,Fixed-term,G4,Haiti,Programmes,2026-08-05,,,,
+EMP-003121,1991-11-12,Male,Kenya,International,Fixed-term,G2,Colombia,Research & Assessment,2026-08-06,,,,
+EMP-003130,1985-05-12,Male,Belgium,International,Fixed-term,G3,Ukraine,Human Resources,2026-08-13,,,,
+EMP-003132,1977-12-14,Male,Senegal,International,Fixed-term,G3,Kenya,Programmes,2026-08-16,,,,
+EMP-003133,1979-06-04,Female,Belgium,International,Fixed-term,G4,South Sudan,Security,2026-08-17,,,,
+EMP-003134,1987-04-17,Female,Pakistan,International,Fixed-term,G5,Iraq,Programmes,2026-08-17,2026-10-31,Resignation,Y,
+EMP-003136,1999-04-13,Male,Australia,International,Short-term,G5,Ukraine,Logistics & Supply,2026-08-18,,,,
+EMP-003138,1987-05-31,Female,Ireland,International,Fixed-term,G6,Kenya,Research & Assessment,2026-08-20,,,,
+EMP-003139,1984-04-03,Male,Jordan,International,Fixed-term,G3,Ukraine,Programmes,2026-08-22,,,,
+EMP-003143,1987-04-01,Male,Finland,International,Fixed-term,G4,Haiti,Data & IT,2026-08-25,,,,
+EMP-003144,1996-12-04,Male,,International,Short-term,G3,Kenya,Programmes,2026-08-27,,,,
+EMP-003145,1993-11-20,Male,United States,International,Fixed-term,G3,Iraq,Logistics & Supply,2026-08-28,,,,
+EMP-003146,1989-03-12,Female,Australia,International,Fixed-term,G6,Ukraine,Data & IT,2026-08-28,,,,
+EMP-003147,1967-09-03,Male,India,International,Fixed-term,G2,DR Congo,Logistics & Supply,2026-08-29,,,,
+EMP-003152,,Female,Germany,International,Fixed-term,G2,Somalia,Global Support Unit,2026-08-31,,,,
+EMP-003156,1995-09-15,Male,United Kingdom,International,Fixed-term,G6,Syria,Finance & Admin,2026-09-09,,,,
+EMP-003157,1994-12-24,Female,Somalia,International,Fixed-term,G5,Nigeria,Data & IT,2026-09-10,,,,
+EMP-003158,1985-02-03,Female,Italy,International,Fixed-term,G1,Kenya,Research & Assessment,2026-09-12,,,,
+EMP-003160,1983-02-09,Male,Bangladesh,International,Fixed-term,G4,Mali,Data & IT,2026-09-14,,,,
+EMP-003176,1992-01-07,Male,Senegal,International,Fixed-term,G2,Syria,Logistics & Supply,2026-09-26,,,,
+EMP-003177,1982-12-01,Female,Norway,International,Fixed-term,G6,Haiti,Programmes,2026-09-27,,,,
+EMP-003179,1979-04-21,Male,Germany,International,Fixed-term,G3,Iraq,Logistics & Supply,2026-09-27,,,,
+EMP-003183,1998-01-17,Female,United Kingdom,HQ,Fixed-term,G1,Switzerland,Finance & Legal,2026-10-02,,,,
+EMP-003185,1998-10-26,Male,India,International,Fixed-term,G2,Ukraine,Global Support Unit,2026-10-02,,,,
+EMP-003187,1994-11-02,Female,Pakistan,International,Consultancy,G3,Somalia,Programmes,2026-10-03,,,,
+EMP-003189,1979-07-15,Male,Brazil,International,Fixed-term,G5,DR Congo,Research & Assessment,2026-10-06,,,,
+EMP-003196,1979-05-28,Male,Niger,International,Fixed-term,G6,Kenya,Programmes,2026-10-19,,,,
+EMP-003198,1983-01-23,Male,Pakistan,International,Fixed-term,G4,Haiti,Security,2026-10-20,,,,
+EMP-003199,1981-09-04,Male,Spain,HQ,Fixed-term,G3,Switzerland,Global Support Unit,2026-10-21,,,,
+EMP-003203,1993-04-19,Male,Kenya,National,Short-term,N2,Kenya,Programmes,2026-10-26,,,,
+EMP-003205,1990-09-16,Female,Netherlands,International,Fixed-term,G5,Iraq,Programmes,2026-10-30,,,,

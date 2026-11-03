@@ -1,0 +1,28 @@
+issue_code,source,description,count
+missing_dob,all,Staff with no date of birth,64
+missing_nationality,all,Staff with no nationality,32
+missing_dob_rows,core_staff_export,CORE rows with no date of birth,13
+missing_dob_rows,country_trackers,Tracker rows with no date of birth,37
+missing_dob_rows,historical_snapshots,Snapshot rows with no birth date,1048
+duplicate_staff_id,core_staff_export / country_trackers,Staff IDs present in both CORE and a tracker,30
+duplicate_conflicting_grade,core_staff_export / country_trackers,Duplicate IDs where the tracker grade differs from the CORE grade,8
+label_vs_grade,core_staff_export,National-grade staff labelled International,12
+label_vs_grade,historical_snapshots,National-grade staff labelled Expat (staff),24
+label_vs_grade_rows,historical_snapshots,Snapshot rows carrying that label,491
+contract_end_before_start,core_contracts_export,Contracts whose end date is before the start date,11
+overlap_missing_in_legacy,historical_snapshots,Staff present in CORE but missing from the legacy snapshot Dec 2024,17
+overlap_stale_in_legacy,historical_snapshots,Leavers still listed in the legacy snapshot Dec 2024,14
+overlap_missing_in_legacy,historical_snapshots,Staff present in CORE but missing from the legacy snapshot Jan 2025,28
+overlap_stale_in_legacy,historical_snapshots,Leavers still listed in the legacy snapshot Jan 2025,14
+jira_resolved_before_created,jira_recruitment_export,Tickets resolved before they were created,9
+jira_reopened,jira_recruitment_export,Tickets reopened at least once (incl. 5 currently reopened),27
+legacy_vacancy_migrated,jira_recruitment_export,Vacancies open at cut-over that were re-created in JIRA with a legacy reference,86
+legacy_vacancy_orphan,historical vacancy log,Vacancies open at cut-over never re-created in JIRA (stay open in the model),6
+country_variant,core_staff_export,"Cells with a non-standard country spelling (duty country, nationality)",31
+country_variant,core_contracts_export,Cells with a non-standard country spelling,50
+country_variant,jira_recruitment_export,Cells with a non-standard country spelling,30
+country_variant,country_trackers,Tracker nationality cells with a non-standard spelling (the DRC tracker file name is a variant too),59
+country_variant,historical_snapshots,"Cells with a non-standard country spelling (location, nationality)",3248
+country_variant,historical logs,"Cells with a non-standard country spelling (vacancy, surge, expatriation logs)",76
+text_dates,Staff_Snapshots_2022.xlsx,Snapshot rows with the birth date stored as text (dd/mm/yyyy),17252
+text_dates,country_trackers,Trackers (layout B) storing all dates as text (dd/mm/yyyy),412

@@ -12,9 +12,11 @@ and how data-quality problems are surfaced instead of hidden. The model, the rep
 |---|---|
 | ![Workforce overview](docs/img/01_workforce.png) | ![Global and International staff](docs/img/02_global_international.png) |
 | ![Diversity](docs/img/03_diversity.png) | ![Staffing and vacancies](docs/img/04_staffing_vacancies.png) |
-| ![Recruitment duration](docs/img/05_recruitment_duration.png) | ![Data quality](docs/img/09_data_quality.png) |
+| ![Recruitment duration](docs/img/05_recruitment_duration.png) | ![Surge deployments](docs/img/06_surge_deployments.png) |
+| ![Retention and turnover](docs/img/07_retention_turnover.png) | ![Contracts](docs/img/08_contracts.png) |
+| ![Data quality](docs/img/09_data_quality.png) | ![Model view](docs/img/model_view.png) |
 
-Model view: `docs/img/model_view.png`
+Pages 1 to 9 in order, then the model view.
 
 ## The problem
 

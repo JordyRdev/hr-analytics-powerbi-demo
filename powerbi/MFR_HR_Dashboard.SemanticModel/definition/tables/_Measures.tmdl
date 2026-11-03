@@ -172,15 +172,19 @@ table _Measures
 	measure 'Expatriates (deployment log)' =
 			VAR _d = [Ref Date]
 			RETURN
-			    CALCULATE (
-			        DISTINCTCOUNT ( FactExpatriation[Staff ID] ),
-			        REMOVEFILTERS ( DimDate ),
-			        FILTER (
-			            ALL ( FactExpatriation[Start Date], FactExpatriation[End Date] ),
-			            FactExpatriation[Start Date] <= _d
-			                && ( ISBLANK ( FactExpatriation[End Date] ) || FactExpatriation[End Date] >= _d )
-			        )
-			    ) + 0
+			    IF (
+			        ISBLANK ( _d ),
+			        BLANK (),
+			        CALCULATE (
+			            DISTINCTCOUNT ( FactExpatriation[Staff ID] ),
+			            REMOVEFILTERS ( DimDate ),
+			            FILTER (
+			                ALL ( FactExpatriation[Start Date], FactExpatriation[End Date] ),
+			                FactExpatriation[Start Date] <= _d
+			                    && ( ISBLANK ( FactExpatriation[End Date] ) || FactExpatriation[End Date] >= _d )
+			            )
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 03 Diversity
 		lineageTag: 21b81219-60c4-583b-976a-4015973e7039
@@ -189,11 +193,15 @@ table _Measures
 	measure 'Open Vacancies' =
 			VAR _d = [Ref Date]
 			RETURN
-			    CALCULATE (
-			        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
-			        REMOVEFILTERS ( DimDate ),
-			        FactVacancyMonthly[Month End] = _d
-			    ) + 0
+			    IF (
+			        ISBLANK ( _d ),
+			        BLANK (),
+			        CALCULATE (
+			            DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+			            REMOVEFILTERS ( DimDate ),
+			            FactVacancyMonthly[Month End] = _d
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 04 Staffing and vacancies
 		lineageTag: 0b9b5773-3c75-5257-b42d-72fce068cb04
@@ -202,12 +210,16 @@ table _Measures
 	measure 'Due Open Vacancies' =
 			VAR _d = [Ref Date]
 			RETURN
-			    CALCULATE (
-			        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
-			        REMOVEFILTERS ( DimDate ),
-			        FactVacancyMonthly[Month End] = _d,
-			        FactVacancyMonthly[Is Due] = TRUE ()
-			    ) + 0
+			    IF (
+			        ISBLANK ( _d ),
+			        BLANK (),
+			        CALCULATE (
+			            DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+			            REMOVEFILTERS ( DimDate ),
+			            FactVacancyMonthly[Month End] = _d,
+			            FactVacancyMonthly[Is Due] = TRUE ()
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 04 Staffing and vacancies
 		lineageTag: 5c9f1fda-7caa-5164-9872-3cfe9af25776
@@ -404,17 +416,27 @@ table _Measures
 		displayFolder: 06 Surge deployments
 		lineageTag: 5c3efdad-414c-50c1-a434-6e7cba76c13e
 
+	/// Surge National Share with the Staff Type filter removed. National fills sit on National grades, so a page filter on International staff would otherwise hide them.
+	measure 'Surge National Share (all staff types)' = CALCULATE ( [Surge National Share], REMOVEFILTERS ( DimGrade[Staff Type] ) )
+		formatString: 0.0%
+		displayFolder: 06 Surge deployments
+		lineageTag: cec6fbf9-c577-59a7-8125-6f02cd8d18c9
+
 	/// Exit events in the 12 months to the reference date.
 	measure 'Exits (12m)' =
 			VAR _end = [Ref Date]
 			VAR _start = EOMONTH ( _end, -12 )
 			RETURN
-			    CALCULATE (
-			        COUNTROWS ( FactExits ),
-			        REMOVEFILTERS ( DimDate ),
-			        FactExits[Exit Date] > _start,
-			        FactExits[Exit Date] <= _end
-			    ) + 0
+			    IF (
+			        ISBLANK ( _end ),
+			        BLANK (),
+			        CALCULATE (
+			            COUNTROWS ( FactExits ),
+			            REMOVEFILTERS ( DimDate ),
+			            FactExits[Exit Date] > _start,
+			            FactExits[Exit Date] <= _end
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 07 Retention and turnover
 		lineageTag: 22b93d16-7f7e-59a7-82a5-a306c13348ce
@@ -433,7 +455,6 @@ table _Measures
 
 	/// Mean of the 12 month-end headcounts in the window.
 	measure 'Average Headcount (12m)' =
-			
 			VAR _end = [Ref Date]
 			VAR _start = EOMONTH ( _end, -12 )
 			VAR _months =
@@ -533,15 +554,19 @@ table _Measures
 	measure 'Contracts in Force' =
 			VAR _d = [Ref Date]
 			RETURN
-			    CALCULATE (
-			        COUNTROWS ( FactContracts ),
-			        REMOVEFILTERS ( DimDate ),
-			        FILTER (
+			    IF (
+			        ISBLANK ( _d ),
+			        BLANK (),
+			        CALCULATE (
+			            COUNTROWS ( FactContracts ),
+			            REMOVEFILTERS ( DimDate ),
+			            FILTER (
 			            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
 			            FactContracts[Start Date] <= _d
 			                && ( ISBLANK ( FactContracts[End Date] ) || FactContracts[End Date] >= _d )
 			        )
-			    ) + 0
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 08 Contracts
 		lineageTag: 0c100b3f-de15-51fb-8c93-7738667920ea
@@ -587,17 +612,21 @@ table _Measures
 	measure 'Contracts Ending Within 4 Months' =
 			VAR _d = [Ref Date]
 			RETURN
-			    CALCULATE (
-			        COUNTROWS ( FactContracts ),
-			        REMOVEFILTERS ( DimDate ),
-			        KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
-			        FILTER (
-			            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
-			            FactContracts[Start Date] <= _d
-			                && FactContracts[End Date] > _d
-			                && FactContracts[End Date] <= EOMONTH ( _d, 4 )
-			        )
-			    ) + 0
+			    IF (
+			        ISBLANK ( _d ),
+			        BLANK (),
+			        CALCULATE (
+			            COUNTROWS ( FactContracts ),
+			            REMOVEFILTERS ( DimDate ),
+			            KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
+			            FILTER (
+			                ALL ( FactContracts[Start Date], FactContracts[End Date] ),
+			                FactContracts[Start Date] <= _d
+			                    && FactContracts[End Date] > _d
+			                    && FactContracts[End Date] <= EOMONTH ( _d, 4 )
+			            )
+			        ) + 0
+			    )
 		formatString: #,0
 		displayFolder: 08 Contracts
 		lineageTag: f985286d-eadd-5898-b15a-24d27cf614d7
@@ -608,11 +637,18 @@ table _Measures
 		displayFolder: 08 Contracts
 		lineageTag: 970dc60d-c8a3-5d1e-a61b-bd05bf160ce3
 
-	/// Days from the reference date to the end of a contract. Blank unless the contract ends within 4 months, so a table of contracts lists only those.
+	/// Days from the reference date to the end of a contract. Blank unless the International contract ends within the next 4 months, so a table of contracts lists only those.
 	measure 'Days Remaining' =
 			VAR _d = [Ref Date]
+			VAR _end = MAX ( FactContracts[End Date] )
+			VAR _start = MIN ( FactContracts[Start Date] )
+			VAR _isInternational =
+			    CALCULATE ( COUNTROWS ( FactContracts ), KEEPFILTERS ( DimGrade[Staff Type] = "International" ) ) > 0
 			RETURN
-			    IF ( [Contracts Ending Within 4 Months] > 0, DATEDIFF ( _d, MAX ( FactContracts[End Date] ), DAY ) )
+			    IF (
+			        _isInternational && _start <= _d && _end > _d && _end <= EOMONTH ( _d, 4 ),
+			        DATEDIFF ( _d, _end, DAY )
+			    )
 		formatString: 0
 		displayFolder: 08 Contracts
 		lineageTag: 1e701c21-6267-5c3b-9269-6e92148387c3

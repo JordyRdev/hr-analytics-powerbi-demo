@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Surge National Share"
+                  "Property": "Surge National Share (all staff types)"
                 }
               },
-              "queryRef": "_Measures.Surge National Share",
-              "nativeQueryRef": "Surge National Share"
+              "queryRef": "_Measures.Surge National Share (all staff types)",
+              "nativeQueryRef": "Surge National Share (all staff types)"
             }
           ]
         }
@@ -133,7 +133,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Filled surge requests filled by National staff divided by all filled surge requests.'"
+                  "Value": "'Surge National Share with the Staff Type filter removed. National fills sit on National grades, so a page filter on International staff would otherwise hide them.'"
                 }
               }
             }

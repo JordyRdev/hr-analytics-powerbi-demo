@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "37d4e221b0420ed2097c",
   "position": {
     "x": 196,
@@ -20,15 +20,64 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Breakdown"
+                      "Entity": "DimCountry"
                     }
                   },
-                  "Property": "Breakdown"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "Breakdown.Breakdown",
-              "nativeQueryRef": "Breakdown",
-              "active": true
+              "queryRef": "DimCountry.Country",
+              "nativeQueryRef": "Country",
+              "active": true,
+              "displayName": "Country"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimGrade"
+                    }
+                  },
+                  "Property": "Grade"
+                }
+              },
+              "queryRef": "DimGrade.Grade",
+              "nativeQueryRef": "Grade",
+              "active": false,
+              "displayName": "Grade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FactVacancies"
+                    }
+                  },
+                  "Property": "Closure Outcome"
+                }
+              },
+              "queryRef": "FactVacancies.Closure Outcome",
+              "nativeQueryRef": "Closure Outcome",
+              "active": false,
+              "displayName": "Closure Outcome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimGrade"
+                    }
+                  },
+                  "Property": "Staff Type"
+                }
+              },
+              "queryRef": "DimGrade.Staff Type",
+              "nativeQueryRef": "Staff Type",
+              "active": false,
+              "displayName": "Staff Type"
             }
           ],
           "fieldParameters": [
@@ -44,7 +93,7 @@
                 }
               },
               "index": 0,
-              "length": 1
+              "length": 4
             }
           ]
         },

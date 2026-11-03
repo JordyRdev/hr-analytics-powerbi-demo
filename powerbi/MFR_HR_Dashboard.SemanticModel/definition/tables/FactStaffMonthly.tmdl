@@ -59,11 +59,6 @@ table FactStaffMonthly
 		summarizeBy: none
 		sourceColumn: Date of Birth
 
-		variation Variation
-			isDefault
-			relationship: 337aa384-0d8b-4f2f-9a5a-20953d3a30e9
-			defaultHierarchy: LocalDateTable_9e69d4f4-40da-4b45-8fea-d52b0bed3015.'Date Hierarchy'
-
 		annotation UnderlyingDateTimeDataType = Date
 
 	column Unit
@@ -79,11 +74,6 @@ table FactStaffMonthly
 		summarizeBy: none
 		sourceColumn: Start Date
 
-		variation Variation
-			isDefault
-			relationship: 17bb8aad-d9eb-438d-ad42-134d229d7474
-			defaultHierarchy: LocalDateTable_d59cde75-a270-4480-a098-40aba33a2ce4.'Date Hierarchy'
-
 		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Population Detail'
@@ -96,10 +86,8 @@ table FactStaffMonthly
 		dataType: double
 		formatString: #,0.##
 		lineageTag: ea02a2c1-8ec8-5f6c-93d4-f01a1d2c7620
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Age
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Is Expatriate'
 		dataType: boolean
@@ -130,7 +118,5 @@ table FactStaffMonthly
 				in
 				    typed
 
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigation
+	annotation PBI_ResultType = Exception
 

@@ -41,21 +41,14 @@ table FactVacancies
 		summarizeBy: none
 		sourceColumn: Planned Start Date
 
-		variation Variation
-			isDefault
-			relationship: 457f9c1f-5a79-475b-ab53-646c98882e46
-			defaultHierarchy: LocalDateTable_5a9f6941-8eea-4003-8328-8d55f41c352e.'Date Hierarchy'
-
 		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Planned Duration Months'
 		dataType: double
 		formatString: #,0.##
 		lineageTag: 2828e3d8-e8c1-5884-b86c-ccce7ecb3a4b
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Planned Duration Months
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Closed Date'
 		dataType: dateTime
@@ -82,10 +75,8 @@ table FactVacancies
 		dataType: double
 		formatString: #,0.##
 		lineageTag: 9a1eaf63-5156-526a-89b0-971e3cf5326c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Time To Done Hours
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Date Issue'
 		dataType: boolean
@@ -115,19 +106,15 @@ table FactVacancies
 		dataType: double
 		formatString: #,0.##
 		lineageTag: fe653180-fc7e-5b8b-a25e-4d89c31dfda2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Days to Close
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Time To Done Days'
 		dataType: double
 		formatString: #,0.##
 		lineageTag: 4b1771c1-5c9a-517c-9980-3910c931f7e3
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Time To Done Days
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Days Bucket'
 		dataType: string
@@ -141,10 +128,8 @@ table FactVacancies
 		isHidden
 		formatString: #,0
 		lineageTag: 7a4283b6-e32b-5727-9586-0a2afb77373a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Days Bucket Sort
-
-		annotation SummarizationSetBy = Automatic
 
 	partition FactVacancies = m
 		mode: import
@@ -154,7 +139,9 @@ table FactVacancies
 				    hist = Table.SelectRows(Stg_HistVacancies, each not List.Contains(migrated, [vacancy_id])),
 				    cols = {"vacancy_id", "country", "grade", "opening_reason", "opened", "planned_start", "planned_months", "closed", "outcome", "candidate_type", "time_to_done_hours", "date_issue", "reopened", "source"},
 				    combined = Table.Combine({Table.SelectColumns(hist, cols), Table.SelectColumns(Stg_JiraVacancies, cols)}),
-				    status = Table.AddColumn(combined, "status", each if [closed] = null then "Open" else if [outcome] = "Cancelled Position" then "Cancelled" else "Closed", type text),
+				    labelled = Table.AddColumn(combined, "cand_fix", each if [closed] <> null and [candidate_type] = null then "None (cancelled)" else [candidate_type], type text),
+				    withCand = Table.RenameColumns(Table.RemoveColumns(labelled, {"candidate_type"}), {{"cand_fix", "candidate_type"}}),
+				    status = Table.AddColumn(withCand, "status", each if [closed] = null then "Open" else if [outcome] = "Cancelled Position" then "Cancelled" else "Closed", type text),
 				    days = Table.AddColumn(status, "days_to_close", each if [closed] <> null and [outcome] <> "Cancelled Position" and not [date_issue] then Duration.Days([closed] - [opened]) else null, type nullable number),
 				    ttd = Table.AddColumn(days, "time_to_done_days", each if [days_to_close] = null or [time_to_done_hours] = null then null else [time_to_done_hours] / 24, type nullable number),
 				    bucket = Table.AddColumn(ttd, "days_bucket", each
@@ -172,7 +159,5 @@ table FactVacancies
 				in
 				    renamed
 
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigation
+	annotation PBI_ResultType = Exception
 

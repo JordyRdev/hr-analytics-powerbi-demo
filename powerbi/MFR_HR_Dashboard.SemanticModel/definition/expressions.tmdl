@@ -11,7 +11,7 @@ expression DataThrough = #date(2026, 10, 31) meta [IsParameterQuery=true, Type="
 expression HistoryStart = #date(2022, 1, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
 	lineageTag: bf62f1a6-4adc-5284-9e13-ceca063a3657
 
-	annotation PBI_ResultType = Date
+	annotation PBI_ResultType = Exception
 
 expression CutOver = #date(2024, 12, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
 	lineageTag: 828f9b9e-f529-5201-a0b2-65524727a2db
@@ -56,6 +56,7 @@ expression fx_ToDate =
 		let
 		    out =
 		        if v = null then null
+		        else if v is number then Date.AddDays(#date(1899, 12, 30), Number.RoundDown(v))
 		        else if v is text then
 		            let t = Text.Trim(v) in
 		                if t = "" then null
@@ -67,8 +68,6 @@ expression fx_ToDate =
 	lineageTag: c8443b23-2244-5920-b403-b949893e77c4
 
 	annotation PBI_ResultType = Function
-
-	annotation PBI_NavigationStepName = Navigation
 
 expression fx_CleanCountry =
 		(value as nullable text) as nullable text =>

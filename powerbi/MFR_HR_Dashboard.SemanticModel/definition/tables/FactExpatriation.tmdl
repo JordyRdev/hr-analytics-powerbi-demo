@@ -35,11 +35,6 @@ table FactExpatriation
 		summarizeBy: none
 		sourceColumn: End Date
 
-		variation Variation
-			isDefault
-			relationship: 2d7a28ae-c5c6-41db-baef-af46d426ca94
-			defaultHierarchy: LocalDateTable_eb5fc95f-21d4-48dc-93fb-eb14bf4c1d1c.'Date Hierarchy'
-
 		annotation UnderlyingDateTimeDataType = Date
 
 	column Source
@@ -62,6 +57,4 @@ table FactExpatriation
 				    renamed = Table.RenameColumns(combined, {{"staff_id", "Staff ID"}, {"country", "Country"}, {"nationality", "Nationality"}, {"start", "Start Date"}, {"end", "End Date"}, {"source", "Source"}})
 				in
 				    renamed
-
-	annotation PBI_ResultType = Table
 

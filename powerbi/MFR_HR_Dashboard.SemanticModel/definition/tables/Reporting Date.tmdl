@@ -8,13 +8,6 @@ table 'Reporting Date'
 		summarizeBy: none
 		sourceColumn: Month End
 
-		variation Variation
-			isDefault
-			relationship: 2f62371f-2b44-410c-9f9b-0e7366085ef3
-			defaultHierarchy: LocalDateTable_ecd68f40-e9c6-473f-b681-866d5f498ffa.'Date Hierarchy'
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column Label
 		dataType: string
 		lineageTag: 405a25ae-b044-53c2-aec4-5d105766cd5e

@@ -39,7 +39,7 @@ MFR reports on about 1,000 staff in eight countries of operation plus HQ. The da
 
 | # | Page | Main content |
 |---|---|---|
-| 1 | Workforce Overview | Headcount by population, gender including HQ, evolution, country mix, map |
+| 1 | Workforce Overview | Headcount by population, gender including HQ, evolution, country mix, headcount by country |
 | 2 | Global & International Staff | Country headcount now and a year earlier, average age, grade by contract type |
 | 3 | Diversity | GS share and GS/GN ratio overall, by grade and over time; nationality ranking; expatriates |
 | 4 | Staffing & Vacancies | Retention, vacancy and due-vacancy rate, open vacancies by month, outcomes |

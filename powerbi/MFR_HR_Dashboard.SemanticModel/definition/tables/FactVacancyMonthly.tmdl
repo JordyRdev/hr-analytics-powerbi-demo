@@ -54,5 +54,3 @@ table FactVacancyMonthly
 				in
 				    typed
 
-	annotation PBI_ResultType = Table
-

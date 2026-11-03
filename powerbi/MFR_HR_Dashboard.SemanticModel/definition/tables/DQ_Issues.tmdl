@@ -139,5 +139,3 @@ table DQ_Issues
 				in
 				    typed
 
-	annotation PBI_ResultType = Table
-

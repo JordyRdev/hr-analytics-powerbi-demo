@@ -23,11 +23,11 @@
                       "Entity": "DimDate"
                     }
                   },
-                  "Property": "Year Month"
+                  "Property": "Year Quarter"
                 }
               },
-              "queryRef": "DimDate.Year Month",
-              "nativeQueryRef": "Year Month",
+              "queryRef": "DimDate.Year Quarter",
+              "nativeQueryRef": "Year Quarter",
               "active": true
             }
           ]
@@ -75,7 +75,7 @@
                     "Entity": "DimDate"
                   }
                 },
-                "Property": "Year Month"
+                "Property": "Year Quarter"
               }
             },
             "direction": "Ascending"
@@ -119,7 +119,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Expatriates: snapshots vs deployment log'"
+                  "Value": "'Expatriates: snapshots vs deployment log (quarter-end)'"
                 }
               }
             },

@@ -53,21 +53,14 @@ table FactContracts
 		summarizeBy: none
 		sourceColumn: End Date
 
-		variation Variation
-			isDefault
-			relationship: 0006dfd0-1f6a-4fbf-b24e-e8444182d40f
-			defaultHierarchy: LocalDateTable_158eedfb-e1fe-456e-b91a-1fbdd447afdf.'Date Hierarchy'
-
 		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Granted Months'
 		dataType: double
 		formatString: #,0.##
 		lineageTag: 91fbf03d-ee4f-5b2d-963d-07f2baa7c13e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Granted Months
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Is New Joiner Contract'
 		dataType: boolean
@@ -103,6 +96,4 @@ table FactContracts
 				        {"granted_months", "Granted Months"}, {"is_new_joiner", "Is New Joiner Contract"}, {"population_detail", "Population Detail"}, {"source", "Source"}})
 				in
 				    renamed
-
-	annotation PBI_ResultType = Table
 

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "c9d64b5392bed1ec91ce",
   "position": {
-    "x": 196,
-    "y": 428,
+    "x": 195.44338264170702,
+    "y": 428.28642492472835,
     "z": 800,
-    "height": 284,
-    "width": 528,
+    "height": 283.51354889383424,
+    "width": 545.31116638303445,
     "tabOrder": 800
   },
   "visual": {
@@ -173,5 +173,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0f429edc292d62e5d007",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Recon_Overlap"
+              }
+            },
+            "Property": "Month End"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cb995d905877484db068",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Recon Historical Headcount"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2999ebcd8a476d3c99ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Recon Current Headcount"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "645ae4857e06d146d3c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Recon Difference"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

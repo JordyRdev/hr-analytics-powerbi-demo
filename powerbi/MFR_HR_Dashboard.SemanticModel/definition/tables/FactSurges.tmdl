@@ -70,5 +70,3 @@ table FactSurges
 				in
 				    renamed
 
-	annotation PBI_ResultType = Table
-

@@ -339,15 +339,19 @@ Format: `#,0`
 Expatriates (deployment log) =
 VAR _d = [Ref Date]
 RETURN
-    CALCULATE (
-        DISTINCTCOUNT ( FactExpatriation[Staff ID] ),
-        REMOVEFILTERS ( DimDate ),
-        FILTER (
-            ALL ( FactExpatriation[Start Date], FactExpatriation[End Date] ),
-            FactExpatriation[Start Date] <= _d
-                && ( ISBLANK ( FactExpatriation[End Date] ) || FactExpatriation[End Date] >= _d )
-        )
-    ) + 0
+    IF (
+        ISBLANK ( _d ),
+        BLANK (),
+        CALCULATE (
+            DISTINCTCOUNT ( FactExpatriation[Staff ID] ),
+            REMOVEFILTERS ( DimDate ),
+            FILTER (
+                ALL ( FactExpatriation[Start Date], FactExpatriation[End Date] ),
+                FactExpatriation[Start Date] <= _d
+                    && ( ISBLANK ( FactExpatriation[End Date] ) || FactExpatriation[End Date] >= _d )
+            )
+        ) + 0
+    )
 ```
 
 ## 04 Staffing and vacancies
@@ -362,11 +366,15 @@ Format: `#,0`
 Open Vacancies =
 VAR _d = [Ref Date]
 RETURN
-    CALCULATE (
-        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
-        REMOVEFILTERS ( DimDate ),
-        FactVacancyMonthly[Month End] = _d
-    ) + 0
+    IF (
+        ISBLANK ( _d ),
+        BLANK (),
+        CALCULATE (
+            DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+            REMOVEFILTERS ( DimDate ),
+            FactVacancyMonthly[Month End] = _d
+        ) + 0
+    )
 ```
 
 ### Due Open Vacancies
@@ -379,12 +387,16 @@ Format: `#,0`
 Due Open Vacancies =
 VAR _d = [Ref Date]
 RETURN
-    CALCULATE (
-        DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
-        REMOVEFILTERS ( DimDate ),
-        FactVacancyMonthly[Month End] = _d,
-        FactVacancyMonthly[Is Due] = TRUE ()
-    ) + 0
+    IF (
+        ISBLANK ( _d ),
+        BLANK (),
+        CALCULATE (
+            DISTINCTCOUNT ( FactVacancyMonthly[Vacancy ID] ),
+            REMOVEFILTERS ( DimDate ),
+            FactVacancyMonthly[Month End] = _d,
+            FactVacancyMonthly[Is Due] = TRUE ()
+        ) + 0
+    )
 ```
 
 ### Filled Positions
@@ -649,6 +661,17 @@ Surge National Share =
 DIVIDE ( [Surge Filled by National], [Surge Requests Filled] )
 ```
 
+### Surge National Share (all staff types)
+
+Surge National Share with the Staff Type filter removed. National fills sit on National grades, so a page filter on International staff would otherwise hide them.
+
+Format: `0.0%`
+
+```dax
+Surge National Share (all staff types) =
+CALCULATE ( [Surge National Share], REMOVEFILTERS ( DimGrade[Staff Type] ) )
+```
+
 ## 07 Retention and turnover
 
 ### Exits (12m)
@@ -662,12 +685,16 @@ Exits (12m) =
 VAR _end = [Ref Date]
 VAR _start = EOMONTH ( _end, -12 )
 RETURN
-    CALCULATE (
-        COUNTROWS ( FactExits ),
-        REMOVEFILTERS ( DimDate ),
-        FactExits[Exit Date] > _start,
-        FactExits[Exit Date] <= _end
-    ) + 0
+    IF (
+        ISBLANK ( _end ),
+        BLANK (),
+        CALCULATE (
+            COUNTROWS ( FactExits ),
+            REMOVEFILTERS ( DimDate ),
+            FactExits[Exit Date] > _start,
+            FactExits[Exit Date] <= _end
+        ) + 0
+    )
 ```
 
 ### Voluntary Exits (12m)
@@ -710,11 +737,13 @@ VAR _months =
 RETURN
     AVERAGEX (
         _months,
-        CALCULATE (
-            DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
-            REMOVEFILTERS ( DimDate ),
-            FactStaffMonthly[Month End] = 'Reporting Date'[Month End]
-        )
+        VAR _m = 'Reporting Date'[Month End]
+        RETURN
+            CALCULATE (
+                DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+                REMOVEFILTERS ( DimDate ),
+                FactStaffMonthly[Month End] = _m
+            )
     )
 ```
 
@@ -823,15 +852,19 @@ Format: `#,0`
 Contracts in Force =
 VAR _d = [Ref Date]
 RETURN
-    CALCULATE (
-        COUNTROWS ( FactContracts ),
-        REMOVEFILTERS ( DimDate ),
-        FILTER (
+    IF (
+        ISBLANK ( _d ),
+        BLANK (),
+        CALCULATE (
+            COUNTROWS ( FactContracts ),
+            REMOVEFILTERS ( DimDate ),
+            FILTER (
             ALL ( FactContracts[Start Date], FactContracts[End Date] ),
             FactContracts[Start Date] <= _d
                 && ( ISBLANK ( FactContracts[End Date] ) || FactContracts[End Date] >= _d )
         )
-    ) + 0
+        ) + 0
+    )
 ```
 
 ### Avg Current Contract Duration G3/G4 (months)
@@ -889,17 +922,21 @@ Format: `#,0`
 Contracts Ending Within 4 Months =
 VAR _d = [Ref Date]
 RETURN
-    CALCULATE (
-        COUNTROWS ( FactContracts ),
-        REMOVEFILTERS ( DimDate ),
-        KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
-        FILTER (
-            ALL ( FactContracts[Start Date], FactContracts[End Date] ),
-            FactContracts[Start Date] <= _d
-                && FactContracts[End Date] > _d
-                && FactContracts[End Date] <= EOMONTH ( _d, 4 )
-        )
-    ) + 0
+    IF (
+        ISBLANK ( _d ),
+        BLANK (),
+        CALCULATE (
+            COUNTROWS ( FactContracts ),
+            REMOVEFILTERS ( DimDate ),
+            KEEPFILTERS ( DimGrade[Staff Type] = "International" ),
+            FILTER (
+                ALL ( FactContracts[Start Date], FactContracts[End Date] ),
+                FactContracts[Start Date] <= _d
+                    && FactContracts[End Date] > _d
+                    && FactContracts[End Date] <= EOMONTH ( _d, 4 )
+            )
+        ) + 0
+    )
 ```
 
 ### Contracts Ending Within 4 Months %
@@ -915,15 +952,22 @@ DIVIDE ( [Contracts Ending Within 4 Months], CALCULATE ( [Headcount], KEEPFILTER
 
 ### Days Remaining
 
-Days from the reference date to the end of a contract. Blank unless the contract ends within 4 months, so a table of contracts lists only those.
+Days from the reference date to the end of a contract. Blank unless the International contract ends within the next 4 months, so a table of contracts lists only those.
 
 Format: `0`
 
 ```dax
 Days Remaining =
 VAR _d = [Ref Date]
+VAR _end = MAX ( FactContracts[End Date] )
+VAR _start = MIN ( FactContracts[Start Date] )
+VAR _isInternational =
+    CALCULATE ( COUNTROWS ( FactContracts ), KEEPFILTERS ( DimGrade[Staff Type] = "International" ) ) > 0
 RETURN
-    IF ( [Contracts Ending Within 4 Months] > 0, DATEDIFF ( _d, MAX ( FactContracts[End Date] ), DAY ) )
+    IF (
+        _isInternational && _start <= _d && _end > _d && _end <= EOMONTH ( _d, 4 ),
+        DATEDIFF ( _d, _end, DAY )
+    )
 ```
 
 ## 09 Data quality

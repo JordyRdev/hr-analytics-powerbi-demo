@@ -95,5 +95,3 @@ table FactExits
 				in
 				    renamed
 
-	annotation PBI_ResultType = Table
-

@@ -24,7 +24,7 @@ table FactAppraisals
 
 	column Cycle
 		dataType: int64
-		formatString: #,0
+		formatString: 0
 		lineageTag: ac3318fd-769c-5095-8203-0a848cbe91d4
 		summarizeBy: none
 		sourceColumn: Cycle
@@ -36,6 +36,4 @@ table FactAppraisals
 				    renamed = Table.RenameColumns(Stg_CoreAppraisals, {{"appraisal_id", "Appraisal ID"}, {"staff_id", "Staff ID"}, {"appraisal_date", "Appraisal Date"}, {"cycle", "Cycle"}})
 				in
 				    renamed
-
-	annotation PBI_ResultType = Table
 

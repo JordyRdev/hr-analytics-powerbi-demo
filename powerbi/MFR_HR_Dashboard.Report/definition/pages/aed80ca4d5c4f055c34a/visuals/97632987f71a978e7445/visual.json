@@ -241,7 +241,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Days from the reference date to the end of a contract. Blank unless the contract ends within 4 months, so a table of contracts lists only those.'"
+                  "Value": "'Days from the reference date to the end of a contract. Blank unless the International contract ends within the next 4 months, so a table of contracts lists only those.'"
                 }
               }
             }

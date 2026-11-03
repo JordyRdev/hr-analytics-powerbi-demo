@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "9cd83ae945f6fda2393d",
   "position": {
     "x": 908,
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Breakdown.Breakdown",
-              "nativeQueryRef": "Breakdown"
+              "nativeQueryRef": "Breakdown",
+              "active": true
             }
           ]
         }

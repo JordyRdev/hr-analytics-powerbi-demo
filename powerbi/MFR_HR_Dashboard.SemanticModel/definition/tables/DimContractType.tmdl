@@ -25,8 +25,9 @@ table DimContractType
 	partition DimContractType = m
 		mode: import
 		source =
-			let
-			    t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Contract_Types"),
-			    typed = Table.TransformColumnTypes(t, {{"Contract Type", type text}, {"Sort", Int64.Type}, {"Has End Date", type logical}})
-			in
-			    typed
+				let
+				    t = fx_Sheet("reference", "staff_category_mapping.xlsx", "Contract_Types"),
+				    typed = Table.TransformColumnTypes(t, {{"Contract Type", type text}, {"Sort", Int64.Type}, {"Has End Date", type logical}})
+				in
+				    typed
+

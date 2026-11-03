@@ -7,7 +7,7 @@ table DimNationality
 		summarizeBy: none
 		sourceColumn: Nationality
 
-	column 'GN/GS'
+	column GN/GS
 		dataType: string
 		lineageTag: f8802226-4e19-5eb9-b099-ad155cf7bbb7
 		summarizeBy: none
@@ -16,9 +16,10 @@ table DimNationality
 	partition DimNationality = m
 		mode: import
 		source =
-			let
-			    t = fx_Sheet("reference", "gn_gs_nationality.xlsx", "Nationality_GNGS"),
-			    typed = Table.TransformColumnTypes(t, {{"Nationality", type text}, {"GN/GS", type text}}),
-			    withUnknown = Table.InsertRows(typed, Table.RowCount(typed), {[Nationality = "Unknown", #"GN/GS" = "Unknown"]})
-			in
-			    withUnknown
+				let
+				    t = fx_Sheet("reference", "gn_gs_nationality.xlsx", "Nationality_GNGS"),
+				    typed = Table.TransformColumnTypes(t, {{"Nationality", type text}, {"GN/GS", type text}}),
+				    withUnknown = Table.InsertRows(typed, Table.RowCount(typed), {[Nationality = "Unknown", #"GN/GS" = "Unknown"]})
+				in
+				    withUnknown
+

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "7c40abaf20c91bb77c8d",
   "position": {
     "x": 8,
@@ -27,16 +27,12 @@
                 }
               },
               "queryRef": "Reporting Date.Label",
-              "nativeQueryRef": "Label"
+              "nativeQueryRef": "Label",
+              "active": true
             }
           ]
         }
       }
-    },
-    "syncGroup": {
-      "groupName": "sync_reporting_date",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "objects": {
       "data": [
@@ -114,6 +110,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "sync_reporting_date",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

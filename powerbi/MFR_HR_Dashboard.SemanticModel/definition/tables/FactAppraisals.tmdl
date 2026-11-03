@@ -20,6 +20,8 @@ table FactAppraisals
 		summarizeBy: none
 		sourceColumn: Appraisal Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Cycle
 		dataType: int64
 		formatString: #,0
@@ -30,7 +32,10 @@ table FactAppraisals
 	partition FactAppraisals = m
 		mode: import
 		source =
-			let
-			    renamed = Table.RenameColumns(Stg_CoreAppraisals, {{"appraisal_id", "Appraisal ID"}, {"staff_id", "Staff ID"}, {"appraisal_date", "Appraisal Date"}, {"cycle", "Cycle"}})
-			in
-			    renamed
+				let
+				    renamed = Table.RenameColumns(Stg_CoreAppraisals, {{"appraisal_id", "Appraisal ID"}, {"staff_id", "Staff ID"}, {"appraisal_date", "Appraisal Date"}, {"cycle", "Cycle"}})
+				in
+				    renamed
+
+	annotation PBI_ResultType = Table
+

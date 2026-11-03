@@ -1,17 +1,21 @@
 expression DataFolder = "C:\hr-analytics-powerbi\data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 072cbbd0-8bea-5f91-9d07-f9e2e33665b4
+
 	annotation PBI_ResultType = Text
 
 expression DataThrough = #date(2026, 10, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
 	lineageTag: 825477a8-fa0a-52d6-8585-9e3bca8671e6
+
 	annotation PBI_ResultType = Date
 
 expression HistoryStart = #date(2022, 1, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
 	lineageTag: bf62f1a6-4adc-5284-9e13-ceca063a3657
+
 	annotation PBI_ResultType = Date
 
 expression CutOver = #date(2024, 12, 31) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
 	lineageTag: 828f9b9e-f529-5201-a0b2-65524727a2db
+
 	annotation PBI_ResultType = Date
 
 expression fx_Path =
@@ -21,6 +25,7 @@ expression fx_Path =
 		in
 		    root & "\" & sub & (if file = null then "" else "\" & file)
 	lineageTag: 5e0adc9a-84a3-5d20-b315-b43e3fb0df87
+
 	annotation PBI_ResultType = Function
 
 expression fx_Sheet =
@@ -31,6 +36,7 @@ expression fx_Sheet =
 		in
 		    Table.PromoteHeaders(data, [PromoteAllScalars = true])
 	lineageTag: 437653f6-2a09-5b6b-9f5b-85fcdf70ec60
+
 	annotation PBI_ResultType = Function
 
 expression fx_Csv =
@@ -42,6 +48,7 @@ expression fx_Csv =
 		in
 		    blanks
 	lineageTag: fa2daee2-7b82-5353-9481-e5e09c085d9a
+
 	annotation PBI_ResultType = Function
 
 expression fx_ToDate =
@@ -49,18 +56,19 @@ expression fx_ToDate =
 		let
 		    out =
 		        if v = null then null
-		        else if v is date then v
-		        else if v is datetime then Date.From(v)
 		        else if v is text then
 		            let t = Text.Trim(v) in
 		                if t = "" then null
 		                else if Text.Contains(t, "/") then try Date.FromText(t, [Format = "dd/MM/yyyy", Culture = "en-GB"]) otherwise null
 		                else try Date.FromText(Text.Start(t, 10), [Format = "yyyy-MM-dd", Culture = "en-US"]) otherwise null
-		        else null
+		        else try Date.From(v) otherwise null
 		in
 		    out
 	lineageTag: c8443b23-2244-5920-b403-b949893e77c4
+
 	annotation PBI_ResultType = Function
+
+	annotation PBI_NavigationStepName = Navigation
 
 expression fx_CleanCountry =
 		(value as nullable text) as nullable text =>
@@ -72,6 +80,7 @@ expression fx_CleanCountry =
 		in
 		    out
 	lineageTag: 4102cc5c-2ce1-5523-8c11-94db0abbeee4
+
 	annotation PBI_ResultType = Function
 
 expression fx_Derive =
@@ -91,6 +100,7 @@ expression fx_Derive =
 		in
 		    withDetail
 	lineageTag: c54182f6-7de4-5fcd-8885-2b1f0935c6cc
+
 	annotation PBI_ResultType = Function
 
 expression fx_StandardiseTracker =
@@ -114,12 +124,14 @@ expression fx_StandardiseTracker =
 		in
 		    withCountry
 	lineageTag: d8ea9052-be23-50a2-a2cf-effa9704db24
+
 	annotation PBI_ResultType = Function
 
 expression fx_D =
 		(d as nullable date, fmt as text, optional culture as nullable text) as nullable text =>
 		if d = null then null else Date.ToText(d, [Format = fmt, Culture = if culture = null then "en-US" else culture])
 	lineageTag: 5109b128-cdf8-5caa-9bd7-f9d08ec676c2
+
 	annotation PBI_ResultType = Function
 
 expression fx_Issue =
@@ -133,6 +145,7 @@ expression fx_Issue =
 		in
 		    e
 	lineageTag: 1a86a514-4d00-5762-b117-9e1fe0d77834
+
 	annotation PBI_ResultType = Function
 
 expression Ref_Countries =
@@ -143,8 +156,7 @@ expression Ref_Countries =
 		    typed
 	lineageTag: f4242319-fa69-55a8-bc11-d56624351856
 
-expression Ref_Variants =
-		fx_Sheet("reference", "country_list.xlsx", "Variants")
+expression Ref_Variants = fx_Sheet("reference", "country_list.xlsx", "Variants")
 	lineageTag: 88e2883d-2fa4-5f4e-bd93-a78399a5cfda
 
 expression Ref_VariantRecord =
@@ -153,8 +165,7 @@ expression Ref_VariantRecord =
 		    List.Transform(Table.Column(Ref_Variants, "Variant"), each Text.Lower(Text.Trim(_))))
 	lineageTag: 99fb6d33-cdad-539d-a750-9824ec889951
 
-expression HQCountry =
-		Table.SelectRows(Ref_Countries, each [Is HQ] = true){0}[Country]
+expression HQCountry = Table.SelectRows(Ref_Countries, each [Is HQ] = true){0}[Country]
 	lineageTag: 6abb1582-899c-5f8b-9d7f-6f061c6e14f1
 
 expression Ref_Grades =
@@ -165,8 +176,7 @@ expression Ref_Grades =
 		    typed
 	lineageTag: b0d3ad3b-ee58-50f6-8501-0f52db3cbf31
 
-expression Ref_GradeRecord =
-		Record.FromList(Table.Column(Ref_Grades, "Staff Type"), Table.Column(Ref_Grades, "Grade"))
+expression Ref_GradeRecord = Record.FromList(Table.Column(Ref_Grades, "Staff Type"), Table.Column(Ref_Grades, "Grade"))
 	lineageTag: c2b905a0-d3d9-53f7-a7f8-1dd0faa171e8
 
 expression Ref_UnitScopeRecord =
@@ -209,12 +219,10 @@ expression Ref_VLabelRecord =
 		in Record.FromList(Table.Column(t, "Standard Label"), List.Transform(Table.ToRows(t), each _{0} & "|" & _{1}))
 	lineageTag: fa5ab206-5dfe-5613-bcca-3d3dde225e3b
 
-expression MonthEndsAll =
-		List.Generate(() => HistoryStart, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
+expression MonthEndsAll = List.Generate(() => HistoryStart, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
 	lineageTag: e33ef2a7-c3b3-55cb-860e-364270d1c989
 
-expression CurrentMonthEnds =
-		List.Generate(() => CutOver, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
+expression CurrentMonthEnds = List.Generate(() => CutOver, each _ <= DataThrough, each Date.EndOfMonth(Date.AddMonths(_, 1)))
 	lineageTag: 9c24e77f-b299-57fa-a5ad-46fa55c48882
 
 expression Stg_CoreStaff =
@@ -273,6 +281,14 @@ expression Stg_TrackerStaff =
 		in
 		    renamed
 	lineageTag: 495e6f61-b107-5d3a-b81b-8ff94f676f77
+
+expression Stg_TrackerCountries =
+		let
+		    files = Folder.Files(fx_Path("country_trackers")),
+		    xlsx = Table.SelectRows(files, each Text.EndsWith([Name], ".xlsx") and not Text.StartsWith([Name], "~$"))
+		in
+		    List.Transform(Table.Column(xlsx, "Name"), each Text.Replace(Text.Replace(_, "NS_tracker_", ""), ".xlsx", ""))
+	lineageTag: 2b23f900-7e26-5472-b286-9f5ecab30f9f
 
 expression Stg_HistSnap =
 		let
@@ -420,3 +436,4 @@ expression Stg_CurrentExpanded =
 		in
 		    typed
 	lineageTag: a9c9a999-9b1c-58f7-a9b1-dd0bd0431157
+

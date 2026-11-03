@@ -34,7 +34,8 @@ table DimCountry
 	partition DimCountry = m
 		mode: import
 		source =
-			let
-			    t = Table.SelectColumns(Ref_Countries, {"Country", "Region", "Is HQ", "Office Status", "ISO3"})
-			in
-			    t
+				let
+				    t = Table.SelectColumns(Ref_Countries, {"Country", "Region", "Is HQ", "Office Status", "ISO3"})
+				in
+				    t
+

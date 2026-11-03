@@ -1,6 +1,6 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "c1dda4158561586f3dd3",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "8fb95fb0f442fdaacb7b",
   "position": {
     "x": 732,
     "y": 428,
@@ -10,7 +10,7 @@
     "tabOrder": 1900
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -50,7 +50,39 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Headcount"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -124,7 +156,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Headcount at the reporting date by duty country. Closed offices show no staff.'"
+                  "Value": "'Headcount at the reporting date by duty country. Closed offices show no staff. A map is not used because map visuals can be disabled by a tenant setting.'"
                 }
               }
             }

@@ -4,10 +4,15 @@ model Model
 	discourageImplicitMeasures
 	sourceQueryCulture: en-US
 	dataAccessOptions
+		fastCombine
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
+
+annotation PBI_QueryOrder = ["DimDate","Reporting Date","DimCountry","DimNationality","DimGrade","DimPopulation","DimContractType","DimGender","FactStaffMonthly","FactContracts","FactExits","FactVacancies","FactVacancyMonthly","FactSurges","FactAppraisals","FactExpatriation","DQ_Issues","Recon_Overlap","Refresh Info","_Measures","DataFolder","DataThrough","HistoryStart","CutOver","fx_Path","fx_Sheet","fx_Csv","fx_ToDate","fx_CleanCountry","fx_Derive","fx_StandardiseTracker","fx_D","fx_Issue","Ref_Countries","Ref_Variants","Ref_VariantRecord","HQCountry","Ref_Grades","Ref_GradeRecord","Ref_UnitScopeRecord","Ref_LegacyRecord","Ref_ContractRecord","Ref_GenderRecord","Ref_ExitRecord","Ref_GNGSRecord","Ref_AliasRecord","Ref_VLabelRecord","MonthEndsAll","CurrentMonthEnds","Stg_CoreStaff","Stg_CoreContracts","Stg_CoreAppraisals","Stg_TrackerStaff","Stg_TrackerCountries","Stg_HistSnap","Stg_HistLeavers","Stg_HistVacancies","Stg_Jira","Stg_JiraVacancies","Stg_HistSurges","Stg_HistExpat","Stg_CurrentSpans","Stg_CurrentExpanded"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
 
 ref table DimDate
 ref table 'Reporting Date'
@@ -30,3 +35,13 @@ ref table Recon_Overlap
 ref table 'Refresh Info'
 ref table Breakdown
 ref table _Measures
+ref table DateTableTemplate_850028f2-7f38-4746-903a-9aab9ac0ce4a
+ref table LocalDateTable_ecd68f40-e9c6-473f-b681-866d5f498ffa
+ref table LocalDateTable_9e69d4f4-40da-4b45-8fea-d52b0bed3015
+ref table LocalDateTable_d59cde75-a270-4480-a098-40aba33a2ce4
+ref table LocalDateTable_158eedfb-e1fe-456e-b91a-1fbdd447afdf
+ref table LocalDateTable_5a9f6941-8eea-4003-8328-8d55f41c352e
+ref table LocalDateTable_eb5fc95f-21d4-48dc-93fb-eb14bf4c1d1c
+ref table LocalDateTable_0ccefc95-24e2-4984-8cb7-32ed4815c53a
+ref table LocalDateTable_470d5f4d-7d3f-4449-8d8e-5a041bdfea2b
+

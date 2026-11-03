@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "7027a6773ac1aaab5e81",
   "position": {
     "x": 8,
@@ -27,16 +27,12 @@
                 }
               },
               "queryRef": "DimPopulation.Population",
-              "nativeQueryRef": "Population"
+              "nativeQueryRef": "Population",
+              "active": true
             }
           ]
         }
       }
-    },
-    "syncGroup": {
-      "groupName": "sync_population",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "objects": {
       "data": [
@@ -101,6 +97,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "sync_population",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

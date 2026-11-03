@@ -1,6 +1,6 @@
 table DimDate
-	dataCategory: Time
 	lineageTag: ab339cae-f20d-5746-a9d9-8ed42f19986c
+	dataCategory: Time
 
 	column Date
 		dataType: dateTime
@@ -9,6 +9,8 @@ table DimDate
 		lineageTag: e6e57fa2-9c3a-5f6d-9171-9be65a32b136
 		summarizeBy: none
 		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Year
 		dataType: int64
@@ -45,6 +47,8 @@ table DimDate
 		summarizeBy: none
 		sourceColumn: Month End
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'Year Month'
 		dataType: string
 		lineageTag: b02cf60f-cda7-56cc-88f0-00bae55902ea
@@ -60,17 +64,18 @@ table DimDate
 	partition DimDate = m
 		mode: import
 		source =
-			let
-			    first = Date.StartOfMonth(HistoryStart),
-			    days = List.Dates(first, Duration.Days(DataThrough - first) + 1, #duration(1, 0, 0, 0)),
-			    t = Table.FromList(days, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
-			    typed = Table.TransformColumnTypes(t, {{"Date", type date}}),
-			    y = Table.AddColumn(typed, "Year", each Date.Year([Date]), Int64.Type),
-			    q = Table.AddColumn(y, "Quarter", each "Q" & Text.From(Date.QuarterOfYear([Date])), type text),
-			    mn = Table.AddColumn(q, "Month Number", each Date.Month([Date]), Int64.Type),
-			    mname = Table.AddColumn(mn, "Month Name", each fx_D([Date], "MMM", "en-US"), type text),
-			    me = Table.AddColumn(mname, "Month End", each Date.EndOfMonth([Date]), type date),
-			    ym = Table.AddColumn(me, "Year Month", each fx_D([Date], "yyyy-MM", "en-US"), type text),
-			    ime = Table.AddColumn(ym, "Is Month End", each [Date] = Date.EndOfMonth([Date]), type logical)
-			in
-			    ime
+				let
+				    first = Date.StartOfMonth(HistoryStart),
+				    days = List.Dates(first, Duration.Days(DataThrough - first) + 1, #duration(1, 0, 0, 0)),
+				    t = Table.FromList(days, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
+				    typed = Table.TransformColumnTypes(t, {{"Date", type date}}),
+				    y = Table.AddColumn(typed, "Year", each Date.Year([Date]), Int64.Type),
+				    q = Table.AddColumn(y, "Quarter", each "Q" & Text.From(Date.QuarterOfYear([Date])), type text),
+				    mn = Table.AddColumn(q, "Month Number", each Date.Month([Date]), Int64.Type),
+				    mname = Table.AddColumn(mn, "Month Name", each fx_D([Date], "MMM", "en-US"), type text),
+				    me = Table.AddColumn(mname, "Month End", each Date.EndOfMonth([Date]), type date),
+				    ym = Table.AddColumn(me, "Year Month", each fx_D([Date], "yyyy-MM", "en-US"), type text),
+				    ime = Table.AddColumn(ym, "Is Month End", each [Date] = Date.EndOfMonth([Date]), type logical)
+				in
+				    ime
+

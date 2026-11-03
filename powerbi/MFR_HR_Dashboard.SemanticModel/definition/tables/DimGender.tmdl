@@ -19,7 +19,8 @@ table DimGender
 	partition DimGender = m
 		mode: import
 		source =
-			let
-			    t = #table(type table [Gender = text, #"Gender Sort" = Int64.Type], {{"Female", 1}, {"Male", 2}, {"Other", 3}})
-			in
-			    t
+				let
+				    t = #table(type table [Gender = text, #"Gender Sort" = Int64.Type], {{"Female", 1}, {"Male", 2}, {"Other", 3}})
+				in
+				    t
+

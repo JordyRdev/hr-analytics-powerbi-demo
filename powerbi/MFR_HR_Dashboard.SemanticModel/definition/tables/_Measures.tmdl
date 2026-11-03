@@ -1,14 +1,6 @@
+/// Holds the report measures. The Value column is a placeholder.
 table _Measures
 	lineageTag: 945d8787-a30e-58ce-a08b-b55ce1cf4435
-	description: Holds the report measures. The Value column is a placeholder.
-
-	column Value
-		dataType: int64
-		isHidden
-		formatString: #,0
-		lineageTag: fd554e27-db6b-5c26-aa29-ff6ffbb69db8
-		summarizeBy: none
-		sourceColumn: Value
 
 	/// Month-end picked in the Reporting Date slicer. Latest month-end when nothing is selected.
 	measure 'Selected Reporting Date' = MAX ( 'Reporting Date'[Month End] )
@@ -441,6 +433,7 @@ table _Measures
 
 	/// Mean of the 12 month-end headcounts in the window.
 	measure 'Average Headcount (12m)' =
+			
 			VAR _end = [Ref Date]
 			VAR _start = EOMONTH ( _end, -12 )
 			VAR _months =
@@ -451,11 +444,13 @@ table _Measures
 			RETURN
 			    AVERAGEX (
 			        _months,
-			        CALCULATE (
-			            DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
-			            REMOVEFILTERS ( DimDate ),
-			            FactStaffMonthly[Month End] = 'Reporting Date'[Month End]
-			        )
+			        VAR _m = 'Reporting Date'[Month End]
+			        RETURN
+			            CALCULATE (
+			                DISTINCTCOUNT ( FactStaffMonthly[Staff ID] ),
+			                REMOVEFILTERS ( DimDate ),
+			                FactStaffMonthly[Month End] = _m
+			            )
 			    )
 		formatString: #,0.0
 		displayFolder: 07 Retention and turnover
@@ -664,7 +659,15 @@ table _Measures
 		displayFolder: 09 Data quality
 		lineageTag: 689730eb-9533-556d-9a07-e45ccb48aee8
 
+	column Value
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: fd554e27-db6b-5c26-aa29-ff6ffbb69db8
+		summarizeBy: none
+		sourceColumn: Value
+
 	partition _Measures = m
 		mode: import
-		source =
-			#table(type table [Value = Int64.Type], {{1}})
+		source = #table(type table [Value = Int64.Type], {{1}})
+

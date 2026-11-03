@@ -44,6 +44,8 @@ table FactContracts
 		summarizeBy: none
 		sourceColumn: Start Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'End Date'
 		dataType: dateTime
 		formatString: yyyy-MM-dd
@@ -51,12 +53,21 @@ table FactContracts
 		summarizeBy: none
 		sourceColumn: End Date
 
+		variation Variation
+			isDefault
+			relationship: 0006dfd0-1f6a-4fbf-b24e-e8444182d40f
+			defaultHierarchy: LocalDateTable_158eedfb-e1fe-456e-b91a-1fbdd447afdf.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'Granted Months'
 		dataType: double
 		formatString: #,0.##
 		lineageTag: 91fbf03d-ee4f-5b2d-963d-07f2baa7c13e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Granted Months
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Is New Joiner Contract'
 		dataType: boolean
@@ -79,16 +90,19 @@ table FactContracts
 	partition FactContracts = m
 		mode: import
 		source =
-			let
-			    startByStaff = Record.FromList(Table.Column(Stg_CoreStaff, "start_date"), Table.Column(Stg_CoreStaff, "staff_id")),
-			    withStart = Table.AddColumn(Stg_CoreContracts, "emp_start", each Record.FieldOrDefault(startByStaff, [staff_id], null), type nullable date),
-			    newJoiner = Table.AddColumn(withStart, "is_new_joiner", each [start_date] = [emp_start], type logical),
-			    derived = fx_Derive(newJoiner, null),
-			    withSource = Table.AddColumn(derived, "source", each "CORE", type text),
-			    selected = Table.SelectColumns(withSource, {"contract_id", "staff_id", "contract_type", "grade", "country", "unit", "start_date", "end_date_fixed",
-			        "granted_months", "is_new_joiner", "population_detail", "source"}),
-			    renamed = Table.RenameColumns(selected, {{"contract_id", "Contract ID"}, {"staff_id", "Staff ID"}, {"contract_type", "Contract Type"}, {"grade", "Grade"},
-			        {"country", "Country"}, {"unit", "Unit"}, {"start_date", "Start Date"}, {"end_date_fixed", "End Date"},
-			        {"granted_months", "Granted Months"}, {"is_new_joiner", "Is New Joiner Contract"}, {"population_detail", "Population Detail"}, {"source", "Source"}})
-			in
-			    renamed
+				let
+				    startByStaff = Record.FromList(Table.Column(Stg_CoreStaff, "start_date"), Table.Column(Stg_CoreStaff, "staff_id")),
+				    withStart = Table.AddColumn(Stg_CoreContracts, "emp_start", each Record.FieldOrDefault(startByStaff, [staff_id], null), type nullable date),
+				    newJoiner = Table.AddColumn(withStart, "is_new_joiner", each [start_date] = [emp_start], type logical),
+				    derived = fx_Derive(newJoiner, null),
+				    withSource = Table.AddColumn(derived, "source", each "CORE", type text),
+				    selected = Table.SelectColumns(withSource, {"contract_id", "staff_id", "contract_type", "grade", "country", "unit", "start_date", "end_date_fixed",
+				        "granted_months", "is_new_joiner", "population_detail", "source"}),
+				    renamed = Table.RenameColumns(selected, {{"contract_id", "Contract ID"}, {"staff_id", "Staff ID"}, {"contract_type", "Contract Type"}, {"grade", "Grade"},
+				        {"country", "Country"}, {"unit", "Unit"}, {"start_date", "Start Date"}, {"end_date_fixed", "End Date"},
+				        {"granted_months", "Granted Months"}, {"is_new_joiner", "Is New Joiner Contract"}, {"population_detail", "Population Detail"}, {"source", "Source"}})
+				in
+				    renamed
+
+	annotation PBI_ResultType = Table
+

@@ -14,6 +14,8 @@ table FactSurges
 		summarizeBy: none
 		sourceColumn: Request Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Country
 		dataType: string
 		lineageTag: 17a0aec0-aff7-5bf7-af22-6c77fb095063
@@ -54,16 +56,19 @@ table FactSurges
 	partition FactSurges = m
 		mode: import
 		source =
-			let
-			    hist = Table.SelectColumns(Stg_HistSurges, {"surge_id", "request_date", "country", "grade", "status", "filled_by", "planned_months"}),
-			    histSrc = Table.AddColumn(hist, "source", each "Historical", type text),
-			    j = Table.SelectRows(Stg_Jira, each [issue_type] = "Surge"),
-			    jm = Table.AddColumn(j, "surge_status", each if [status] = "Done" then "Filled" else if [status] = "Cancelled" then "Cancelled" else "Open", type text),
-			    jSel = Table.SelectColumns(jm, {"issue_key", "created", "country", "grade", "surge_status", "filled_by_staff_type", "planned_duration_months"}),
-			    jRen = Table.RenameColumns(jSel, {{"issue_key", "surge_id"}, {"created", "request_date"}, {"surge_status", "status"}, {"filled_by_staff_type", "filled_by"}, {"planned_duration_months", "planned_months"}}),
-			    jSrc = Table.AddColumn(jRen, "source", each "JIRA", type text),
-			    combined = Table.Combine({histSrc, jSrc}),
-			    renamed = Table.RenameColumns(combined, {{"surge_id", "Surge ID"}, {"request_date", "Request Date"}, {"country", "Country"}, {"grade", "Grade"},
-			        {"status", "Status"}, {"filled_by", "Filled By"}, {"planned_months", "Planned Duration Months"}, {"source", "Source"}})
-			in
-			    renamed
+				let
+				    hist = Table.SelectColumns(Stg_HistSurges, {"surge_id", "request_date", "country", "grade", "status", "filled_by", "planned_months"}),
+				    histSrc = Table.AddColumn(hist, "source", each "Historical", type text),
+				    j = Table.SelectRows(Stg_Jira, each [issue_type] = "Surge"),
+				    jm = Table.AddColumn(j, "surge_status", each if [status] = "Done" then "Filled" else if [status] = "Cancelled" then "Cancelled" else "Open", type text),
+				    jSel = Table.SelectColumns(jm, {"issue_key", "created", "country", "grade", "surge_status", "filled_by_staff_type", "planned_duration_months"}),
+				    jRen = Table.RenameColumns(jSel, {{"issue_key", "surge_id"}, {"created", "request_date"}, {"surge_status", "status"}, {"filled_by_staff_type", "filled_by"}, {"planned_duration_months", "planned_months"}}),
+				    jSrc = Table.AddColumn(jRen, "source", each "JIRA", type text),
+				    combined = Table.Combine({histSrc, jSrc}),
+				    renamed = Table.RenameColumns(combined, {{"surge_id", "Surge ID"}, {"request_date", "Request Date"}, {"country", "Country"}, {"grade", "Grade"},
+				        {"status", "Status"}, {"filled_by", "Filled By"}, {"planned_months", "Planned Duration Months"}, {"source", "Source"}})
+				in
+				    renamed
+
+	annotation PBI_ResultType = Table
+

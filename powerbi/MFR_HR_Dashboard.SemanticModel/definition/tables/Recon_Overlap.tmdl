@@ -14,6 +14,8 @@ table Recon_Overlap
 		summarizeBy: none
 		sourceColumn: Month End
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Source
 		dataType: string
 		lineageTag: b92e6477-1146-59c7-b84e-22f757897f22
@@ -23,13 +25,18 @@ table Recon_Overlap
 	partition Recon_Overlap = m
 		mode: import
 		source =
-			let
-			    months = {CutOver, Date.EndOfMonth(Date.AddMonths(CutOver, 1))},
-			    hist = Table.SelectRows(Stg_HistSnap, each List.Contains(months, [month_end])),
-			    histSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(hist, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Historical", type text),
-			    cur = Table.SelectRows(Stg_CurrentExpanded, each List.Contains(months, [month_end])),
-			    curSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Current", type text),
-			    combined = Table.Combine({histSel, curSel}),
-			    typed = Table.TransformColumnTypes(combined, {{"Month End", type date}})
-			in
-			    typed
+				let
+				    months = {CutOver, Date.EndOfMonth(Date.AddMonths(CutOver, 1))},
+				    hist = Table.SelectRows(Stg_HistSnap, each List.Contains(months, [month_end])),
+				    histSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(hist, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Historical", type text),
+				    cur = Table.SelectRows(Stg_CurrentExpanded, each List.Contains(months, [month_end])),
+				    curSel = Table.AddColumn(Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "month_end"}), {{"staff_id", "Staff ID"}, {"month_end", "Month End"}}), "Source", each "Current", type text),
+				    combined = Table.Combine({histSel, curSel}),
+				    typed = Table.TransformColumnTypes(combined, {{"Month End", type date}})
+				in
+				    typed
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -26,12 +26,21 @@ table FactExpatriation
 		summarizeBy: none
 		sourceColumn: Start Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'End Date'
 		dataType: dateTime
 		formatString: yyyy-MM-dd
 		lineageTag: a4d3c373-e81d-53a8-b366-d29bfa7dfc61
 		summarizeBy: none
 		sourceColumn: End Date
+
+		variation Variation
+			isDefault
+			relationship: 2d7a28ae-c5c6-41db-baef-af46d426ca94
+			defaultHierarchy: LocalDateTable_eb5fc95f-21d4-48dc-93fb-eb14bf4c1d1c.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Source
 		dataType: string
@@ -42,15 +51,17 @@ table FactExpatriation
 	partition FactExpatriation = m
 		mode: import
 		source =
-			let
-			    derived = fx_Derive(Stg_CoreStaff, "staff_category"),
-			    cur = Table.SelectRows(derived, each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country]),
-			    curSel = Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "country", "nationality", "start_date", "end_date"}), {{"start_date", "start"}, {"end_date", "end"}}),
-			    curSrc = Table.AddColumn(curSel, "source", each "CORE", type text),
-			    curIds = List.Buffer(Table.Column(curSrc, "staff_id")),
-			    hist = Table.SelectRows(Stg_HistExpat, each not List.Contains(curIds, [staff_id])),
-			    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "country", "nationality", "start", "end"}), "source", each "Historical", type text),
-			    combined = Table.Combine({histSel, curSrc}),
-			    renamed = Table.RenameColumns(combined, {{"staff_id", "Staff ID"}, {"country", "Country"}, {"nationality", "Nationality"}, {"start", "Start Date"}, {"end", "End Date"}, {"source", "Source"}})
-			in
-			    renamed
+				let
+				    cur = Table.SelectRows(Stg_CoreStaff, each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country]),
+				    curSel = Table.RenameColumns(Table.SelectColumns(cur, {"staff_id", "country", "nationality", "start_date", "end_date"}), {{"start_date", "start"}, {"end_date", "end"}}),
+				    curSrc = Table.AddColumn(curSel, "source", each "CORE", type text),
+				    curIds = List.Buffer(Table.Column(curSrc, "staff_id")),
+				    hist = Table.SelectRows(Stg_HistExpat, each not List.Contains(curIds, [staff_id])),
+				    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "country", "nationality", "start", "end"}), "source", each "Historical", type text),
+				    combined = Table.Combine({histSel, curSrc}),
+				    renamed = Table.RenameColumns(combined, {{"staff_id", "Staff ID"}, {"country", "Country"}, {"nationality", "Nationality"}, {"start", "Start Date"}, {"end", "End Date"}, {"source", "Source"}})
+				in
+				    renamed
+
+	annotation PBI_ResultType = Table
+

@@ -14,6 +14,8 @@ table FactVacancyMonthly
 		summarizeBy: none
 		sourceColumn: Month End
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Country
 		dataType: string
 		lineageTag: 655742d2-0871-51e9-91cd-663671d63712
@@ -41,13 +43,16 @@ table FactVacancyMonthly
 	partition FactVacancyMonthly = m
 		mode: import
 		source =
-			let
-			    v = Table.SelectColumns(FactVacancies, {"Vacancy ID", "Country", "Grade", "Source", "Opened Date", "Closed Date", "Planned Start Date"}),
-			    withMonths = Table.AddColumn(v, "Month End", each
-			        List.Select(MonthEndsAll, (m) => m >= [Opened Date] and ([Closed Date] = null or m < [Closed Date]))),
-			    expanded = Table.SelectRows(Table.ExpandListColumn(withMonths, "Month End"), each [Month End] <> null),
-			    due = Table.AddColumn(expanded, "Is Due", each [Planned Start Date] <> null and [Planned Start Date] < [Month End], type logical),
-			    selected = Table.SelectColumns(due, {"Vacancy ID", "Month End", "Country", "Grade", "Source", "Is Due"}),
-			    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}})
-			in
-			    typed
+				let
+				    v = Table.SelectColumns(FactVacancies, {"Vacancy ID", "Country", "Grade", "Source", "Opened Date", "Closed Date", "Planned Start Date"}),
+				    withMonths = Table.AddColumn(v, "Month End", each
+				        List.Select(MonthEndsAll, (m) => m >= [Opened Date] and ([Closed Date] = null or m < [Closed Date]))),
+				    expanded = Table.SelectRows(Table.ExpandListColumn(withMonths, "Month End"), each [Month End] <> null),
+				    due = Table.AddColumn(expanded, "Is Due", each [Planned Start Date] <> null and [Planned Start Date] < [Month End], type logical),
+				    selected = Table.SelectColumns(due, {"Vacancy ID", "Month End", "Country", "Grade", "Source", "Is Due"}),
+				    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}})
+				in
+				    typed
+
+	annotation PBI_ResultType = Table
+

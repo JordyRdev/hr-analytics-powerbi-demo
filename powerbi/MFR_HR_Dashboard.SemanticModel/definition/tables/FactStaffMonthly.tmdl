@@ -14,6 +14,8 @@ table FactStaffMonthly
 		summarizeBy: none
 		sourceColumn: Month End
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Source
 		dataType: string
 		lineageTag: 5d3f3b27-a9d6-50e6-bead-905eb418832b
@@ -57,6 +59,13 @@ table FactStaffMonthly
 		summarizeBy: none
 		sourceColumn: Date of Birth
 
+		variation Variation
+			isDefault
+			relationship: 337aa384-0d8b-4f2f-9a5a-20953d3a30e9
+			defaultHierarchy: LocalDateTable_9e69d4f4-40da-4b45-8fea-d52b0bed3015.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Unit
 		dataType: string
 		lineageTag: 1151c4c0-f175-5e86-8c14-d946fded4444
@@ -70,6 +79,13 @@ table FactStaffMonthly
 		summarizeBy: none
 		sourceColumn: Start Date
 
+		variation Variation
+			isDefault
+			relationship: 17bb8aad-d9eb-438d-ad42-134d229d7474
+			defaultHierarchy: LocalDateTable_d59cde75-a270-4480-a098-40aba33a2ce4.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'Population Detail'
 		dataType: string
 		lineageTag: c3a36f60-fa5c-5038-b5dd-575b4fbef7ba
@@ -80,8 +96,10 @@ table FactStaffMonthly
 		dataType: double
 		formatString: #,0.##
 		lineageTag: ea02a2c1-8ec8-5f6c-93d4-f01a1d2c7620
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
 
 	column 'Is Expatriate'
 		dataType: boolean
@@ -92,22 +110,27 @@ table FactStaffMonthly
 	partition FactStaffMonthly = m
 		mode: import
 		source =
-			let
-			    hist = Table.SelectRows(Stg_HistSnap, each [month_end] <= CutOver),
-			    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "dob", "unit", "start_date"}), "source", each "Historical", type text),
-			    histRen = Table.RenameColumns(histSel, {{"dob", "date_of_birth"}, {"start_date", "emp_start"}}),
-			    cur = Table.SelectRows(Stg_CurrentExpanded, each [month_end] > CutOver),
-			    curSel = Table.SelectColumns(cur, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "date_of_birth", "unit", "emp_start", "source"}),
-			    combined = Table.Combine({Table.SelectColumns(histRen, Table.ColumnNames(curSel)), curSel}),
-			    derived = fx_Derive(combined, null),
-			    withAge = Table.AddColumn(derived, "Age", each if [date_of_birth] = null then null else Duration.Days([month_end] - [date_of_birth]) / 365.25, type nullable number),
-			    withExpat = Table.AddColumn(withAge, "Is Expatriate", each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country], type logical),
-			    unknownNat = Table.ReplaceValue(withExpat, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
-			    renamed = Table.RenameColumns(unknownNat, {{"staff_id", "Staff ID"}, {"month_end", "Month End"}, {"source", "Source"}, {"country", "Country"},
-			        {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
-			        {"date_of_birth", "Date of Birth"}, {"unit", "Unit"}, {"emp_start", "Start Date"}, {"population_detail", "Population Detail"}}),
-			    selected = Table.SelectColumns(renamed, {"Staff ID", "Month End", "Source", "Country", "Nationality", "Grade", "Contract Type", "Gender",
-			        "Date of Birth", "Unit", "Start Date", "Population Detail", "Age", "Is Expatriate"}),
-			    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}, {"Date of Birth", type date}, {"Start Date", type date}})
-			in
-			    typed
+				let
+				    hist = Table.SelectRows(Stg_HistSnap, each [month_end] <= CutOver),
+				    histSel = Table.AddColumn(Table.SelectColumns(hist, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "dob", "unit", "start_date"}), "source", each "Historical", type text),
+				    histRen = Table.RenameColumns(histSel, {{"dob", "date_of_birth"}, {"start_date", "emp_start"}}),
+				    cur = Table.SelectRows(Stg_CurrentExpanded, each [month_end] > CutOver),
+				    curSel = Table.SelectColumns(cur, {"staff_id", "month_end", "country", "nationality", "grade", "contract_type", "gender", "date_of_birth", "unit", "emp_start", "source"}),
+				    combined = Table.Combine({Table.SelectColumns(histRen, Table.ColumnNames(curSel)), curSel}),
+				    derived = fx_Derive(combined, null),
+				    withAge = Table.AddColumn(derived, "Age", each if [date_of_birth] = null then null else Duration.Days([month_end] - [date_of_birth]) / 365.25, type nullable number),
+				    withExpat = Table.AddColumn(withAge, "Is Expatriate", each [staff_type] = "International" and [country] <> HQCountry and [nationality] <> null and [nationality] <> [country], type logical),
+				    unknownNat = Table.ReplaceValue(withExpat, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
+				    renamed = Table.RenameColumns(unknownNat, {{"staff_id", "Staff ID"}, {"month_end", "Month End"}, {"source", "Source"}, {"country", "Country"},
+				        {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
+				        {"date_of_birth", "Date of Birth"}, {"unit", "Unit"}, {"emp_start", "Start Date"}, {"population_detail", "Population Detail"}}),
+				    selected = Table.SelectColumns(renamed, {"Staff ID", "Month End", "Source", "Country", "Nationality", "Grade", "Contract Type", "Gender",
+				        "Date of Birth", "Unit", "Start Date", "Population Detail", "Age", "Is Expatriate"}),
+				    typed = Table.TransformColumnTypes(selected, {{"Month End", type date}, {"Date of Birth", type date}, {"Start Date", type date}})
+				in
+				    typed
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

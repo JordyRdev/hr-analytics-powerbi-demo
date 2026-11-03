@@ -1,6 +1,6 @@
+/// Field parameter for the Recruitment Duration page. Switches the category of the breakdown chart.
 table Breakdown
 	lineageTag: c59cec24-8444-5a1d-b444-7d730ff08bb0
-	description: Field parameter for the Recruitment Duration page. Switches the category of the breakdown chart.
 
 	column Breakdown
 		lineageTag: 07388d94-11b8-5aae-a07d-ac1b81e9cf5a
@@ -39,3 +39,4 @@ table Breakdown
 				    ("Closure Outcome", NAMEOF('FactVacancies'[Closure Outcome]), 2),
 				    ("Staff Type", NAMEOF('DimGrade'[Staff Type]), 3)
 				}
+

@@ -8,6 +8,11 @@ table 'Refresh Info'
 		summarizeBy: none
 		sourceColumn: Last Refresh
 
+		variation Variation
+			isDefault
+			relationship: c788567c-b0fb-4982-8137-44d71c294a5e
+			defaultHierarchy: LocalDateTable_0ccefc95-24e2-4984-8cb7-32ed4815c53a.'Date Hierarchy'
+
 	column 'Data Through'
 		dataType: dateTime
 		formatString: yyyy-MM-dd
@@ -15,10 +20,18 @@ table 'Refresh Info'
 		summarizeBy: none
 		sourceColumn: Data Through
 
+		variation Variation
+			isDefault
+			relationship: 73657337-9b9a-44bd-92e9-fe1cd2e53091
+			defaultHierarchy: LocalDateTable_470d5f4d-7d3f-4449-8d8e-5a041bdfea2b.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition 'Refresh Info' = m
 		mode: import
 		source =
-			let
-			    t = #table(type table [#"Last Refresh" = datetime, #"Data Through" = date], {{DateTime.LocalNow(), DataThrough}})
-			in
-			    t
+				let
+				    t = #table(type table [#"Last Refresh" = datetime, #"Data Through" = date], {{DateTime.LocalNow(), DataThrough}})
+				in
+				    t
+

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e6cdbe15bfba621de2c2",
   "position": {
     "x": 8,
@@ -27,16 +27,12 @@
                 }
               },
               "queryRef": "DimGender.Gender",
-              "nativeQueryRef": "Gender"
+              "nativeQueryRef": "Gender",
+              "active": true
             }
           ]
         }
       }
-    },
-    "syncGroup": {
-      "groupName": "sync_gender",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "objects": {
       "data": [
@@ -101,6 +97,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "sync_gender",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

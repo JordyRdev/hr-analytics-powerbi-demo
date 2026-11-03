@@ -14,6 +14,8 @@ table FactExits
 		summarizeBy: none
 		sourceColumn: Exit Date
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'Exit Reason'
 		dataType: string
 		lineageTag: 7f8a3e9b-93b9-5f2b-be8f-1031cdbf5aa9
@@ -71,24 +73,27 @@ table FactExits
 	partition FactExits = m
 		mode: import
 		source =
-			let
-			    cols = {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "grade", "unit", "nationality", "gender", "contract_type", "source"},
-			    hist = Table.AddColumn(Table.TransformColumns(Stg_HistLeavers, {{"voluntary", each if _ = "Yes" then "Y" else "N", type text}}), "source", each "Historical", type text),
-			    histSel = Table.SelectColumns(hist, cols),
-			    core = Table.SelectRows(Stg_CoreStaff, each [end_date] <> null and [end_date] > CutOver),
-			    coreSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(core, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
-			        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "CORE", type text), cols),
-			    trk0 = Table.NestedJoin(Stg_TrackerStaff, {"staff_id"}, Stg_CoreStaff, {"staff_id"}, "c", JoinKind.LeftAnti),
-			    trk = Table.SelectRows(trk0, each [end_date] <> null and [end_date] > CutOver),
-			    trkSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(trk, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
-			        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "Tracker", type text), cols),
-			    combined = Table.Combine({histSel, coreSel, trkSel}),
-			    derived = fx_Derive(combined, null),
-			    vol = Table.TransformColumns(derived, {{"voluntary", each if _ = "Y" then "Yes" else if _ = "N" then "No" else null, type text}}),
-			    unknownNat = Table.ReplaceValue(vol, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
-			    selected = Table.SelectColumns(unknownNat, {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "nationality", "grade", "contract_type", "gender", "population_detail", "source"}),
-			    renamed = Table.RenameColumns(selected, {{"staff_id", "Staff ID"}, {"exit_date", "Exit Date"}, {"exit_reason", "Exit Reason"}, {"voluntary", "Voluntary"},
-			        {"country", "Country"}, {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
-			        {"population_detail", "Population Detail"}, {"source", "Source"}})
-			in
-			    renamed
+				let
+				    cols = {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "grade", "unit", "nationality", "gender", "contract_type", "source"},
+				    hist = Table.AddColumn(Table.TransformColumns(Stg_HistLeavers, {{"voluntary", each if _ = "Yes" then "Y" else "N", type text}}), "source", each "Historical", type text),
+				    histSel = Table.SelectColumns(hist, cols),
+				    core = Table.SelectRows(Stg_CoreStaff, each [end_date] <> null and [end_date] > CutOver),
+				    coreSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(core, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
+				        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "CORE", type text), cols),
+				    trk0 = Table.NestedJoin(Stg_TrackerStaff, {"staff_id"}, Stg_CoreStaff, {"staff_id"}, "c", JoinKind.LeftAnti),
+				    trk = Table.SelectRows(trk0, each [end_date] <> null and [end_date] > CutOver),
+				    trkSel = Table.SelectColumns(Table.AddColumn(Table.RenameColumns(Table.SelectColumns(trk, {"staff_id", "end_date", "exit_reason", "voluntary_exit", "country", "grade", "unit", "nationality", "gender", "contract_type"}),
+				        {{"end_date", "exit_date"}, {"voluntary_exit", "voluntary"}}), "source", each "Tracker", type text), cols),
+				    combined = Table.Combine({histSel, coreSel, trkSel}),
+				    derived = fx_Derive(combined, null),
+				    vol = Table.TransformColumns(derived, {{"voluntary", each if _ = "Y" then "Yes" else if _ = "N" then "No" else null, type text}}),
+				    unknownNat = Table.ReplaceValue(vol, null, "Unknown", Replacer.ReplaceValue, {"nationality"}),
+				    selected = Table.SelectColumns(unknownNat, {"staff_id", "exit_date", "exit_reason", "voluntary", "country", "nationality", "grade", "contract_type", "gender", "population_detail", "source"}),
+				    renamed = Table.RenameColumns(selected, {{"staff_id", "Staff ID"}, {"exit_date", "Exit Date"}, {"exit_reason", "Exit Reason"}, {"voluntary", "Voluntary"},
+				        {"country", "Country"}, {"nationality", "Nationality"}, {"grade", "Grade"}, {"contract_type", "Contract Type"}, {"gender", "Gender"},
+				        {"population_detail", "Population Detail"}, {"source", "Source"}})
+				in
+				    renamed
+
+	annotation PBI_ResultType = Table
+

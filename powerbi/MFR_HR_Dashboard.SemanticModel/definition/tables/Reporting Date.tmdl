@@ -8,6 +8,13 @@ table 'Reporting Date'
 		summarizeBy: none
 		sourceColumn: Month End
 
+		variation Variation
+			isDefault
+			relationship: 2f62371f-2b44-410c-9f9b-0e7366085ef3
+			defaultHierarchy: LocalDateTable_ecd68f40-e9c6-473f-b681-866d5f498ffa.'Date Hierarchy'
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Label
 		dataType: string
 		lineageTag: 405a25ae-b044-53c2-aec4-5d105766cd5e
@@ -18,9 +25,10 @@ table 'Reporting Date'
 	partition 'Reporting Date' = m
 		mode: import
 		source =
-			let
-			    t = Table.FromList(MonthEndsAll, Splitter.SplitByNothing(), {"Month End"}, null, ExtraValues.Error),
-			    typed = Table.TransformColumnTypes(t, {{"Month End", type date}}),
-			    lbl = Table.AddColumn(typed, "Label", each fx_D([Month End], "MMM yyyy", "en-US"), type text)
-			in
-			    lbl
+				let
+				    t = Table.FromList(MonthEndsAll, Splitter.SplitByNothing(), {"Month End"}, null, ExtraValues.Error),
+				    typed = Table.TransformColumnTypes(t, {{"Month End", type date}}),
+				    lbl = Table.AddColumn(typed, "Label", each fx_D([Month End], "MMM yyyy", "en-US"), type text)
+				in
+				    lbl
+

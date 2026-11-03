@@ -62,7 +62,7 @@ HQ_UNITS = ["Executive Office", "Finance & Legal", "People & Culture", "Communic
             "Global Research Unit", "Global Support Unit"]
 HQ_UNIT_WEIGHTS = [0.06, 0.16, 0.12, 0.1, 0.32, 0.24]
 
-LEGACY_LABELS = [("Expat", "International"), ("HQ-based", "International"), ("Local", "National"),
+LEGACY_LABELS = [("Expat", "International"), ("HQ-based", "International"), ("HQ", "International"), ("Local", "National"),
                  ("National", "National"), ("International", "International")]
 
 EXIT_REASONS = [

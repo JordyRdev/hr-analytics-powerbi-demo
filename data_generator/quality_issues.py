@@ -53,6 +53,7 @@ def plant(rng, f, staff, orphans):
     for me, s in f["hist_snap"].items():
         s.loc[s["Staff No"].isin(miss_dob), "Birth Date"] = None
         s.loc[s["Staff No"].isin(miss_nat), "Nationality"] = None
+    f["hist_leavers"].loc[f["hist_leavers"]["Staff No"].isin(miss_nat), "Nationality"] = None
     add("missing_dob_rows", "core_staff_export", "CORE rows with no date of birth", cs["date_of_birth"].isna().sum())
     add("missing_dob_rows", "country_trackers", "Tracker rows with no date of birth",
         sum(t["date_of_birth"].isna().sum() for t in f["trackers"].values()))
@@ -147,7 +148,8 @@ def plant(rng, f, staff, orphans):
     counts = {}
     for key, col in [("core_staff", "duty_country"), ("core_staff", "nationality"), ("core_contracts", "duty_country"),
                      ("jira", "country"), ("hist_vac", "Country"), ("hist_surge", "Country"),
-                     ("hist_expat", "Posted To"), ("hist_expat", "Nationality")]:
+                     ("hist_expat", "Posted To"), ("hist_expat", "Nationality"),
+                     ("hist_leavers", "Location"), ("hist_leavers", "Nationality")]:
         f[key][col], n = _vary(rng, f[key][col])
         counts[(key, col)] = n
     for c, t in f["trackers"].items():
@@ -165,8 +167,9 @@ def plant(rng, f, staff, orphans):
     add("country_variant", "country_trackers", "Tracker nationality cells with a non-standard spelling (the DRC tracker file name is a variant too)",
         sum(v for k, v in counts.items() if k[0] == "tracker"))
     add("country_variant", "historical_snapshots", "Cells with a non-standard country spelling (location, nationality)", n_snap)
-    add("country_variant", "historical logs", "Cells with a non-standard country spelling (vacancy, surge, expatriation logs)",
-        counts[("hist_vac", "Country")] + counts[("hist_surge", "Country")] + counts[("hist_expat", "Posted To")] + counts[("hist_expat", "Nationality")])
+    add("country_variant", "historical logs", "Cells with a non-standard country spelling (vacancy, surge, expatriation, leavers logs)",
+        counts[("hist_vac", "Country")] + counts[("hist_surge", "Country")] + counts[("hist_expat", "Posted To")] + counts[("hist_expat", "Nationality")]
+        + counts[("hist_leavers", "Location")] + counts[("hist_leavers", "Nationality")])
 
     # 8 text dates
     add("text_dates", "Staff_Snapshots_2022.xlsx", "Snapshot rows with the birth date stored as text (dd/mm/yyyy)",

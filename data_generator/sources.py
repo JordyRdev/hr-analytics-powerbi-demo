@@ -125,7 +125,10 @@ def leavers_log(staff):
     x = staff[(staff["end"].notna()) & (staff["end"] <= C.CUTOVER)]
     return pd.DataFrame({"Staff No": x["staff_id"], "Leaving Date": x["end"],
                          "Reason": x["exit_reason"].map(R.LEGACY_EXIT_LABELS),
-                         "Voluntary": x["voluntary"].map({"Y": "Yes", "N": "No"})}).sort_values("Leaving Date")
+                         "Voluntary": x["voluntary"].map({"Y": "Yes", "N": "No"}),
+                         "Location": x["country"], "Grade": x["grade_now"], "Unit": x["unit"],
+                         "Nationality": x["nationality"], "Sex": x["gender"].map(LEGACY_SEX),
+                         "Contract": x["ctype_now"].map(LEGACY_CONTRACT)}).sort_values(["Leaving Date", "Staff No"])
 
 
 def expat_log(staff):

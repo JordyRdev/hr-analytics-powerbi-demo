@@ -212,7 +212,7 @@ def build_contracts(rng, emps):
             cid = f"CTR-{n:06d}"
             if ctype == "Open-ended":
                 rows.append(dict(contract_id=cid, staff_id=e["staff_id"], contract_type=ctype, grade=grade,
-                                 duty_country=e["country"], team=e["unit"], start_date=cur, end_date=None,
+                                 duty_country=e["country"], team=e["unit"], start_date=cur, end_date=e["end"],
                                  granted_months=None, is_first=first))
                 break
             dur = _duration(rng, ctype, e["kind"], grade, cur)

@@ -74,6 +74,8 @@ def write_reference():
     ws = wb.create_sheet("Gender_Labels")
     _sheet(ws, ["Label", "Gender"], [("F", "Female"), ("Female", "Female"), ("M", "Male"), ("Male", "Male"),
                                      ("X", "Other"), ("Other", "Other")])
+    ws = wb.create_sheet("Exit_Labels")
+    _sheet(ws, ["Legacy Label", "Exit Reason"], [(v, k) for k, v in R.LEGACY_EXIT_LABELS.items()])
     ws = wb.create_sheet("Population_Rules")
     _sheet(ws, ["Order", "Condition", "Population Detail", "Population"],
            [(1, "Duty country is the HQ country", "Global - HQ", "Global"),
@@ -109,7 +111,8 @@ def write_reference():
     from sources import LEGACY_CANDIDATE, LEGACY_OUTCOME, LEGACY_REASON
     rows = [("Reason", v, k) for k, v in LEGACY_REASON.items()] + \
            [("Outcome", v, k) for k, v in LEGACY_OUTCOME.items()] + \
-           [("Candidate", v, k) for k, v in LEGACY_CANDIDATE.items()]
+           [("Candidate", v, k) for k, v in LEGACY_CANDIDATE.items()] + \
+           [("FilledBy", "Local", "National"), ("FilledBy", "Expat", "International")]
     _sheet(ws, ["Field", "Legacy Label", "Standard Label"], rows)
     _save(wb, d / "vacancy_label_mapping.xlsx")
 
